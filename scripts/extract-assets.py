@@ -49,11 +49,13 @@ def main() -> None:
         seen: set[int] = set()
         for pno, page in enumerate(doc, start=1):
             for idx, img in enumerate(page.get_images(full=True)):
-                xref = img[0]
+                xref, smask = img[0], img[1]
                 if xref in seen:
                     continue
                 seen.add(xref)
                 pix = fitz.Pixmap(doc, xref)
+                if smask > 0:  # keep transparency (logos)
+                    pix = fitz.Pixmap(pix, fitz.Pixmap(doc, smask))
                 if pix.colorspace and pix.colorspace.n > 3:
                     pix = fitz.Pixmap(fitz.csRGB, pix)
                 dest = imgdir / f"{stem}_p{pno:02d}_{idx:02d}.png"
