@@ -379,9 +379,9 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .econbar { margin-top: var(--space-3); }
 .econbar__bar { display: flex; height: 3rem; border-radius: 10px; overflow: hidden; font-family: var(--font-display); font-weight: 600; letter-spacing: 0.04em; }
 .econbar__bar > div { display: flex; align-items: center; justify-content: center; color: var(--cream); font-size: clamp(0.75rem, 1.6vw, 1rem); }
-.econbar__gl { background: var(--green); flex: 78; }
+.econbar__gl { background: var(--green); flex: 66; }
 .econbar__course { background: var(--gold); color: var(--green-ink) !important; flex: 10; }
-.econbar__ins { background: var(--green-soft); flex: 12; }
+.econbar__ins { background: var(--green-soft); flex: 24; }
 .econbar__legend { display: flex; flex-wrap: wrap; gap: 1.2rem; font-family: var(--font-ui); font-size: 0.8rem; margin-top: 0.7rem; opacity: 0.85; }
 
 /* --- course photo wall ------------------------------------------------------ */

@@ -46,8 +46,10 @@ and still to do is in this file. Read it fully before touching anything.
    treatment. "He doesn't endorse this business. He owns part of it."
 4. **ZAR-led, USD alongside at FX 18.5.**
 5. **Margin = 66%** everywhere, always paired with "prizes 100% underwritten by
-   Santam". The 78/10/12 bar stays but labelled strictly as the *entry split*.
-   (User overrode the deck's/Ernie-page's 78% margin claim — do not revert.)
+   Santam". SUPERSEDED 2026-07-14: the entry split itself is now **66 / 10 / 24**
+   (Get Lucky GP / course / Santam insurance) per the user — the old 78/10/12
+   bar is retired and the split now matches the 66% margin and the model's 24%
+   insurance premium. Do not reintroduce 78/10/12.
 6. **Allocation meter parked** — `deal.allocation.show=false` in model.json until
    the user supplies committed amount + close date. No fabricated urgency ever.
 7. **No fabricated quotes** from Ernie or anyone. The pull-quote slot stays a
