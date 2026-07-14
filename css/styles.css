@@ -168,8 +168,8 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .btn--gold:hover { background: var(--gold-soft); }
 .btn--ghost { background: transparent; color: var(--green); }
 .btn--ghost:hover { background: var(--green); color: var(--cream); }
-.section--green .btn--ghost, .section--deep .btn--ghost { color: var(--cream); border-color: var(--cream); }
-.section--green .btn--ghost:hover, .section--deep .btn--ghost:hover { background: var(--cream); color: var(--green); }
+.hero .btn--ghost, .section--green .btn--ghost, .section--deep .btn--ghost { color: var(--gold-soft); border-color: var(--gold-soft); }
+.hero .btn--ghost:hover, .section--green .btn--ghost:hover, .section--deep .btn--ghost:hover { background: var(--gold-soft); color: var(--green-ink); }
 .btn--lg { font-size: 1.15rem; padding: 0.95rem 2.3rem; }
 
 /* --- hero ---------------------------------------------------------------- */
