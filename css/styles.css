@@ -464,8 +464,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .funnel .f-tam { background: var(--green-soft); }
 .funnel .f-sam { background: var(--green-deep); width: 84%; }
 .funnel .f-som { background: var(--green-ink); width: 68%; }
-.funnel .f-exit { background: var(--gold-soft); color: var(--green-ink); width: 56%; font-weight: 700; min-width: min(22rem, 100%); }
-.funnel .f-plan { background: var(--gold); color: var(--green-ink); width: 44%; font-weight: 700; min-width: min(20rem, 100%); }
+.funnel .f-plan { background: var(--gold); color: var(--green-ink); width: 54%; font-weight: 700; min-width: min(22rem, 100%); }
 .funnel > div span { min-width: 0; }
 .funnel > div strong { white-space: nowrap; }
 .funnel strong { font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.03em; }
