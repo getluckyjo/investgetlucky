@@ -586,6 +586,17 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 
+/* --- dataroom model tables -------------------------------------------------------------------- */
+.modeltable { width: 100%; border-collapse: collapse; font-family: var(--font-ui); font-size: 0.92rem; }
+.modeltable th {
+  text-align: left; padding: 0.55rem 0.6rem; border-bottom: 2px solid var(--green);
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green);
+}
+.modeltable td { padding: 0.6rem 0.6rem; border-bottom: 1px solid rgba(52, 82, 48, 0.12); vertical-align: top; }
+.modeltable tr:last-child td { border-bottom: 0; }
+.modeltable td:first-child { font-weight: 700; color: var(--green); width: 11rem; }
+.modeltable .mut { display: block; font-size: 0.76rem; color: var(--gold-text); }
+
 /* --- dataroom ------------------------------------------------------------------------------- */
 .nda-wall { max-width: 34rem; margin-inline: auto; }
 .nda-wall .card { padding: clamp(1.6rem, 4vw, 2.4rem); }

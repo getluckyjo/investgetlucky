@@ -86,27 +86,37 @@
 
   <section class="section section--warm" style="padding-block:3rem;">
     <div class="wrap">
-      <h3>The model in one table</h3>
-      <p class="small" style="max-width:65ch;">Key assumptions from the pro forma workbook above — the single source for every cashflow and forecast figure on this site.</p>
-      <div class="card mt-3" style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-family:var(--font-ui);font-size:0.92rem;min-width:36rem;">
+      <h3>The model in two tables</h3>
+      <p class="small" style="max-width:65ch;">From the pro forma workbook above — the single source for every cashflow and forecast figure on this site. First where the model goes, then the assumptions that drive it.</p>
+
+      <h4 class="mt-3">1 · The trajectory</h4>
+      <div class="card" style="overflow-x:auto;margin-top:0.8rem;">
+        <table class="modeltable tabular" style="min-width:38rem;">
           <thead>
-            <tr style="text-align:left;border-bottom:2px solid var(--green);">
-              <th style="padding:0.6rem 0.4rem;">Driver</th><th style="padding:0.6rem 0.4rem;">Value</th><th style="padding:0.6rem 0.4rem;">Note</th>
-            </tr>
+            <tr><th></th><th>2026</th><th>2029 — 3-yr plan</th><th>2032 — exit vision</th></tr>
           </thead>
           <tbody>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Subscribers — modelled launch base → month 36 → 2032 exit</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>2,000 → 9,720 → 22,886</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">assumption: the raise-funded launch converts a 2,000-subscriber base from the 60,000 members already reached</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Subscription</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>$10 / month</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">$10,000 insured prize per verified ace</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Gross monthly growth</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>10.5% → 8% → 7%</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">slows every year — deliberately conservative</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Monthly churn</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>4%</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">net growth 6.5% / 4% / 3%</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Gross margin (subscription)</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>66%</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">insurance premium 24% of revenue; CAC $12</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Entry split (installed courses)</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>66 / 10 / 24</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Get Lucky gross profit / course / Santam (Authorised FSP 3416) insurance share of each entry — matches the 66% margin used throughout</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Total revenue (2026 → 2029 → 2032)</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>R11.2m → R35.3m → R83.0m</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">subscriptions + sponsorship, FX 18.5 ($605k → $1.91m → $4.49m)</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">EBITDA proxy</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>R0.5m → R3.5m → R15.2m</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">margin ~4.5% → ~10% → ~18%; prize payouts excluded — carried by the insurer</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Valuation milestones</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>R40m → R96.8m → R500m</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">model reproduces these within 2%</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Exit multiple</td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);"><strong>6× revenue</strong></td><td style="padding:0.55rem 0.4rem;border-bottom:1px solid rgba(52,82,48,0.12);">Strava/Peloton/Whoop band 5–10×; downside 3–4× → R250–335m</td></tr>
-            <tr><td style="padding:0.55rem 0.4rem;">Independent DCF today</td><td style="padding:0.55rem 0.4rem;"><strong>R57–78m</strong></td><td style="padding:0.55rem 0.4rem;">this round prices at R36m pre-money</td></tr>
+            <tr><td>Subscribers</td><td>~2,130</td><td>9,720</td><td>22,886</td></tr>
+            <tr><td>Total revenue</td><td>R11.2m <span class="mut">$605k</span></td><td>R35.3m <span class="mut">$1.91m</span></td><td>R83.0m <span class="mut">$4.49m</span></td></tr>
+            <tr><td>EBITDA proxy</td><td>R0.5m <span class="mut">~4.5%</span></td><td>R3.5m <span class="mut">~10%</span></td><td>R15.2m <span class="mut">~18%</span></td></tr>
+            <tr><td>Valuation milestone</td><td>R40m <span class="mut">this round</span></td><td>R96.8m <span class="mut">2.42×</span></td><td>R500m <span class="mut">12.5×</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="mt-3">2 · The assumptions behind it</h4>
+      <div class="card" style="overflow-x:auto;margin-top:0.8rem;">
+        <table class="modeltable" style="min-width:34rem;">
+          <tbody>
+            <tr><td>Launch base</td><td><strong>2,000 subscribers</strong> — the raise-funded launch converts them from the 60,000 members already reached</td></tr>
+            <tr><td>Subscription</td><td><strong>$10/month</strong> for a <strong>$10,000</strong> insured prize per verified ace</td></tr>
+            <tr><td>Growth &amp; churn</td><td><strong>10.5% → 8% → 7%</strong> gross monthly growth — slowed deliberately each year — with churn held at <strong>4%</strong> (net 6.5% / 4% / 3%)</td></tr>
+            <tr><td>Gross margin</td><td><strong>66%</strong> — insurance premium 24% of revenue, CAC $12</td></tr>
+            <tr><td>Entry split (installed)</td><td><strong>66 / 10 / 24</strong> — Get Lucky gross profit / course / Santam insurance, matching the 66% margin</td></tr>
+            <tr><td>Prize risk</td><td><strong>Excluded throughout</strong> — every prize 100% underwritten by Santam (Authorised FSP 3416)</td></tr>
+            <tr><td>Currency</td><td><strong>FX 18.5</strong> ZAR per USD; revenue = subscriptions + sponsorship</td></tr>
+            <tr><td>Exit multiple</td><td><strong>6× revenue</strong> — Strava/Peloton/Whoop trade at 5–10×; the 3–4× downside lands at R250–335m</td></tr>
+            <tr><td>Independent DCF today</td><td><strong>R57–78m</strong> — this round prices at R36m pre-money</td></tr>
           </tbody>
         </table>
       </div>
