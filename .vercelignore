@@ -1,0 +1,7 @@
+# Never serve internal docs or the raw source documents from the site root.
+# Gated copies for the dataroom live under /assets/docs (kept deployed).
+/HANDOFF.md
+/README.md
+/*.pdf
+/*.xlsx
+/scripts
