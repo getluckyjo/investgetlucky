@@ -5,22 +5,33 @@
    not here.
    ========================================================================== */
 
+@font-face {
+  font-family: "PosterGothic";
+  src: url("../assets/fonts/PosterGothicRoundATF-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --green: #345230;
-  --green-deep: #263d23;
-  --green-ink: #182716;
-  --green-soft: #48684a;
-  --cream: #f6f4e1;
-  --cream-warm: #efeacf;
-  --cream-dim: #e6e0c4;
-  --gold: #b3974e;
-  --gold-soft: #cdb87a;
+  /* Brand tokens — exact values from the Get Lucky design system */
+  --green: #335231;
+  --green-deep: #1e3120;
+  --green-ink: #16261a;
+  --green-soft: #4a7a3d;
+  --cream: #f5f0e1;
+  --cream-warm: #e8e0cc;
+  --cream-dim: #e8e0cc;
+  --gold: #c9a94e;
+  --gold-soft: #e8d48b;
+  --gold-text: #94742a; /* darker gold for small text on light surfaces */
   --white: #fdfcf5;
   --red-flag: #b0402f;
 
-  --font-display: "Oswald", "Arial Narrow", "Helvetica Neue", sans-serif;
-  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-display: "PosterGothic", Impact, "Arial Black", "Arial Narrow", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-ui: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-quote: "Iowan Old Style", Georgia, serif;
 
   --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.94rem);
   --step-0: clamp(1rem, 0.96rem + 0.22vw, 1.13rem);
@@ -65,14 +76,14 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: 0.01em;
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: 0.008em;
   text-transform: uppercase;
   color: var(--green);
   margin: 0 0 var(--space-2);
 }
-h1 { font-size: var(--step-6); font-weight: 700; }
+h1 { font-size: var(--step-6); font-weight: 800; }
 h2 { font-size: var(--step-5); }
 h3 { font-size: var(--step-2); }
 h4 { font-size: var(--step-1); }
@@ -258,7 +269,7 @@ section[id], header[id] { scroll-margin-top: 5.2rem; }
   border-left: 4px solid var(--gold);
   padding-left: 1.3rem;
   font-size: var(--step-2);
-  font-family: var(--font-body);
+  font-family: var(--font-quote);
   font-style: italic;
   line-height: 1.4;
   max-width: 34ch;
@@ -532,6 +543,24 @@ section[id], header[id] { scroll-margin-top: 5.2rem; }
 .doclist a:hover { border-color: var(--gold); box-shadow: var(--shadow-soft); }
 .doclist .type { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; flex: none; }
 .doclist .soon { opacity: 0.55; pointer-events: none; }
+
+/* --- brand textures (from the Get Lucky design system) ---------------------------------------- */
+.topo {
+  background-image: radial-gradient(circle at 1px 1px, rgba(201, 169, 78, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+.halftone {
+  background-image: radial-gradient(circle at center, rgba(201, 169, 78, 0.14) 1.4px, transparent 1.5px);
+  background-size: 13px 13px;
+}
+.bracket { position: relative; }
+.bracket::before, .bracket::after {
+  content: ""; position: absolute; width: 22px; height: 22px;
+  border: 2px solid var(--gold); pointer-events: none;
+}
+.bracket::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+.bracket::after { right: 12px; bottom: 12px; border-left: none; border-top: none; }
+.tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
 
 /* --- misc ------------------------------------------------------------------------------------ */
 .center { text-align: center; }
