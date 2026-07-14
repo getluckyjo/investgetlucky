@@ -244,6 +244,128 @@
         </div>
       </div>
     </div>
+
+    <!-- App walkthrough: auto-advancing phone demo of the global product.
+         Concept screens built in HTML/CSS — swap for real screenshots/video
+         when supplied (see README "Assets wanted"). Logic: js/appdemo.js -->
+    <div class="appdemo reveal" id="app" data-appdemo>
+      <div class="appdemo__copy">
+        <p class="eyebrow">The global app</p>
+        <h3>Four taps from tee to $10,000</h3>
+        <p>One subscription turns every par-3 on earth into a Get Lucky hole. Watch the flow — or tap a step.</p>
+        <ol class="appdemo__steps">
+          <li>
+            <button type="button" class="appstep is-active" aria-current="step">
+              <span class="appstep__no">1</span>
+              <span><strong>Open the app</strong><small>$10 a month puts $10,000 on every par-3 you play.</small></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="appstep">
+              <span class="appstep__no">2</span>
+              <span><strong>Pick your course</strong><small>Pebble Beach, Dubai Creek, Royal Melbourne — any registered course, or add your own par-3.</small></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="appstep">
+              <span class="appstep__no">3</span>
+              <span><strong>Film the shot</strong><small>The in-app camera overlays the hole and distance, and tracks the ball in flight.</small></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="appstep">
+              <span class="appstep__no">4</span>
+              <span><strong>Ace? You've won $10,000</strong><small>Upload the course certificate with your shot video — most aces confirmed inside 24 hours. Santam pays.</small></span>
+            </button>
+          </li>
+        </ol>
+        <p class="appdemo__note small">Concept screens — illustrative walkthrough of the global product this raise funds.</p>
+      </div>
+      <div class="appdemo__device">
+        <div class="appphone" role="group" aria-roledescription="carousel" aria-label="Get Lucky app walkthrough">
+          <div class="appphone__progress" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i></div>
+
+          <!-- 1 · Home -->
+          <div class="appscreen appscreen--home is-active" aria-hidden="false" aria-label="Step 1 — home screen">
+            <img class="appscreen__bg" src="assets/img/intl/pebble-beach.jpg" alt="" loading="lazy" style="object-position:50% 45%;">
+            <div class="appscreen__shade" aria-hidden="true"></div>
+            <div class="appscreen__body">
+              <img class="apphome__logo" src="assets/img/logo-dark-bg.png" alt="Get Lucky Golf Club" loading="lazy">
+              <span class="apphome__price">$10 a month</span>
+              <span class="apphome__prize">Win<br>$10,000</span>
+              <span class="apphome__sub">Any par-3 on earth · every prize insured</span>
+              <span class="appbtn">Start the challenge</span>
+            </div>
+          </div>
+
+          <!-- 2 · Choose course -->
+          <div class="appscreen appscreen--courses" aria-hidden="true" aria-label="Step 2 — choose your course and par-3">
+            <div class="appbar">
+              <span class="appbar__title">Choose your course</span>
+              <span class="appbar__hint">Par 3s</span>
+            </div>
+            <ul class="appcourses">
+              <li>
+                <span class="appthumb"><img src="assets/img/intl/pebble-beach.jpg" alt="" loading="lazy"></span>
+                <span class="appcourse"><strong>Pebble Beach</strong><small>USA · Hole 7 · Par 3 · 106 yd</small></span>
+              </li>
+              <li>
+                <span class="appthumb"><img src="assets/img/intl/dubai-creek.jpg" alt="" loading="lazy"></span>
+                <span class="appcourse"><strong>Dubai Creek</strong><small>UAE · Par 3 · 158 yd</small></span>
+              </li>
+              <li class="is-selected">
+                <span class="appthumb"><img src="assets/img/intl/japan-preserve.jpg" alt="" loading="lazy" style="object-position:60% 60%;"></span>
+                <span class="appcourse"><strong>The Preserve, Japan</strong><small>JPN · Par 3 · 141 yd</small></span>
+                <span class="apptick" aria-hidden="true">✓</span>
+              </li>
+              <li>
+                <span class="appthumb"><img src="assets/img/intl/royal-melbourne.jpg" alt="" loading="lazy"></span>
+                <span class="appcourse"><strong>Royal Melbourne</strong><small>AUS · Hole 5 West · Par 3 · 176 yd</small></span>
+              </li>
+              <li>
+                <span class="appthumb"><img src="assets/img/intl/zimbali-lakes.jpg" alt="" loading="lazy"></span>
+                <span class="appcourse"><strong>Zimbali Lakes</strong><small>RSA · Par 3 · 138 yd</small></span>
+              </li>
+            </ul>
+            <span class="appbtn appbtn--center">Play this hole</span>
+          </div>
+
+          <!-- 3 · Film the shot -->
+          <div class="appscreen appscreen--film" aria-hidden="true" aria-label="Step 3 — film the shot with course overlay and shot tracking">
+            <img class="appscreen__bg" src="assets/img/intl/japan-preserve.jpg" alt="" loading="lazy" style="object-position:62% 50%;">
+            <div class="appscreen__shade appscreen__shade--film" aria-hidden="true"></div>
+            <svg class="appfilm__tracer" viewBox="0 0 270 555" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M 240 525 Q 218 150 126 372" />
+              <circle cx="126" cy="372" r="4" />
+            </svg>
+            <div class="appfilm__hud">
+              <span class="appfilm__rec"><i></i>Rec</span>
+              <span class="appfilm__hole">The Preserve, Japan<small>Par 3 · 141 yd to the pin</small></span>
+            </div>
+            <div class="appfilm__foot">
+              <span class="appfilm__track">Shot tracking on</span>
+              <span class="appfilm__shutter" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <!-- 4 · Ace / win -->
+          <div class="appscreen appscreen--win" aria-hidden="true" aria-label="Step 4 — verified ace, you won 10,000 dollars">
+            <div class="appscreen__body appscreen__body--win">
+              <span class="appwin__badge">Verified ace</span>
+              <span class="appwin__ace">Ace!</span>
+              <span class="appwin__amount">You won $10,000</span>
+              <span class="appwin__sub">100% underwritten by Santam</span>
+              <ul class="appwin__checks">
+                <li><span>Shot video</span><span class="state">Submitted ✓</span></li>
+                <li><span>Witness review</span><span class="state">In progress</span></li>
+              </ul>
+              <span class="appupload">⇪ Upload course certificate</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -505,6 +627,7 @@
 
 <script src="vendor/chart.umd.min.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/appdemo.js" defer></script>
 <script src="js/charts.js" defer></script>
 <script src="js/calculator.js" defer></script>
 </body>

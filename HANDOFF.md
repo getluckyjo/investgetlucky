@@ -170,6 +170,23 @@ no-ops on the missing canvas). All contracted numbers, disclaimers,
 Old anchor ids (#how #growth #courses #doneDeal) alias into the merged
 sections.
 
+## App demo phone (2026-07-14, user request)
+
+The product section (`#model`) now ends with `#app` — an auto-advancing phone
+mockup of the global app (one frame, four concept screens, story-style progress
+bar, clickable synced step cards; `js/appdemo.js`): 1 Home (logo over Pebble
+Beach's 7th, $10/mo → win $10,000) · 2 Choose course & par-3 (international
+list with photo thumbs — Pebble Beach, Dubai Creek, The Preserve Japan
+(selected), Royal Melbourne, Zimbali Lakes) · 3 Film the shot (Mt-Fuji
+viewfinder, hole + distance overlay, animated shot tracer) · 4 Verified ace,
+$10,000 won, with **course-certificate upload** at the bottom. The five
+international course photos were uploaded by the user to the repo root
+(2026-07-14) and processed to `assets/img/intl/` (root originals kept but
+excluded from deploy via .vercelignore). Screens are HTML/CSS concepts; the
+user may still upload real app screens + a video — swap instructions in README
+"Assets wanted". Pauses on hover, stops off-screen, no autoplay under reduced
+motion.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
