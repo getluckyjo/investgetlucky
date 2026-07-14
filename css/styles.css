@@ -639,6 +639,9 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .card--brand { background: var(--green); border-color: var(--green); color: var(--cream); }
 .card--brand h4 { color: var(--cream); }
 .card--brand .partnerlogo { height: 1.7rem; width: auto; margin-bottom: 0.9rem; }
+.card--santam { display: grid; grid-template-columns: minmax(11rem, auto) 1fr; gap: clamp(1.2rem, 4vw, 3.5rem); align-items: center; }
+.card--santam p { max-width: 58ch; }
+@media (max-width: 640px) { .card--santam { grid-template-columns: 1fr; gap: 1rem; } }
 
 /* --- how-it-works badge layout ------------------------------------------------------------------- */
 .section-head--badge { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; justify-content: space-between; }
