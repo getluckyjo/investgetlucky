@@ -187,6 +187,21 @@ user may still upload real app screens + a video — swap instructions in README
 "Assets wanted". Pauses on hover, stops off-screen, no autoplay under reduced
 motion.
 
+## Upside section redesign (2026-07-14, user request)
+
+`#market` rebuilt for scannability: funnel (widened bars) beside a 3-stat
+gold-rule stack, then "Two engines, one funnel — both feed the $10
+subscription" with two matching `.engine` panels. Travel is reframed as
+**the download engine** — the ~$1/booked-golfer ace-refunds-the-trip hook
+exists to drive **200,000+ year-1 app installs (company target)** that
+convert to subscribers; the fee is not the story. Simulators reframed as
+**the global multiplier** using the already-cited global data ($2.4bn→$4.8bn
+market, 94M Korean rounds, 19M US off-course, Golfzon 6,500 venues/~60%
+share) plus a named operator chip row (Golfzon, Trackman, Full Swing,
+Foresight, X-Golf, Topgolf Swing Suite, Kakao VX) and the Ernie-opens-doors
+line. Both panels keep the "In development — not yet contracted" badge.
+Footer source ⁴ now includes Grand View Research.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

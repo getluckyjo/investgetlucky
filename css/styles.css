@@ -431,6 +431,19 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .region p { font-family: var(--font-ui); font-size: 0.92rem; line-height: 1.55; }
 .region .src { font-size: 0.72rem; opacity: 0.6; }
 
+.upside-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.6rem, 4vw, 3.5rem); align-items: center; }
+@media (max-width: 860px) { .upside-grid { grid-template-columns: 1fr; } }
+.upside-stats { display: grid; gap: 1.3rem; align-content: center; }
+.ustat { border-left: 3px solid var(--gold); padding: 0.1rem 0 0.1rem 1.1rem; font-family: var(--font-ui); font-size: 0.9rem; line-height: 1.5; opacity: 0.95; }
+.ustat .num { display: block; font-family: var(--font-display); font-weight: 700; font-size: var(--step-3); color: var(--gold-soft); line-height: 1.05; margin-bottom: 0.15rem; }
+.engines-head { margin: clamp(2.2rem, 5vw, 3.5rem) 0 var(--space-3); font-size: var(--step-2); }
+.chiprow { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chiprow span {
+  font-family: var(--font-ui); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.05em;
+  border: 1.5px solid rgba(246, 244, 225, 0.4); border-radius: 999px; padding: 0.26rem 0.75rem;
+  white-space: nowrap;
+}
+
 .funnel { display: grid; gap: 0.55rem; max-width: 46rem; margin-top: var(--space-3); }
 .funnel > div {
   color: var(--cream); font-family: var(--font-ui); font-size: 0.92rem;
@@ -438,9 +451,11 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
   display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
 }
 .funnel .f-tam { background: var(--green-soft); }
-.funnel .f-sam { background: var(--green); width: 78%; }
-.funnel .f-som { background: var(--green-deep); width: 56%; }
-.funnel .f-plan { background: var(--gold); color: var(--green-ink); width: 38%; font-weight: 700; }
+.funnel .f-sam { background: var(--green); width: 84%; }
+.funnel .f-som { background: var(--green-deep); width: 68%; }
+.funnel .f-plan { background: var(--gold); color: var(--green-ink); width: 54%; font-weight: 700; min-width: min(21rem, 100%); }
+.funnel > div span { min-width: 0; }
+.funnel > div strong { white-space: nowrap; }
 .funnel strong { font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.03em; }
 
 /* --- triangulation ----------------------------------------------------------- */
