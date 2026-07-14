@@ -36,7 +36,10 @@
       if (!t0) t0 = t;
       var p = Math.min((t - t0) / DURATION, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+      var v = decimals > 0
+        ? (target * eased).toFixed(decimals)
+        : Math.round(target * eased).toLocaleString("en-US");
+      el.textContent = prefix + v + suffix;
       if (p < 1) requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);

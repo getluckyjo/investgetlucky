@@ -145,6 +145,17 @@ South African golfer of all time" instead. The number remains only in the
 NDA-gated dataroom documents and internal model.json fields. Do not reintroduce
 the percentage into public copy.
 
+## Traction facts v3 (2026-07-14, user-supplied — supersede everything above)
+
+Twelve months July 2025 → July 2026: **10,000 entries · 800 golf course
+activations · 60,000 members reached · 25 premium courses installed (top 100
+on the app) · R9m Santam · Ernie Els founding partner**. Turnover R4.0m
+(R2.5m sponsorship + R1.5m entries) — deliberately NOT shown on the public
+page: revenue-led proof reads weak against the R40m ask, so the page leads
+with the qualitative wins and small absolutes (R3.1m, 25× monthly chart,
+R1.0m assets, R900k Shanky's figure) were removed from public copy. Full
+figures remain in model.json + the NDA dataroom.
+
 ## Copy-tightening pass (2026-07-14, user-approved brief)
 
 The public page was restructured 14 → 9 bands for a 60–90-second investor

@@ -22,20 +22,22 @@
     }
   },
   "traction": {
-    "period": "Jul\u2013Dec 2025",
-    "turnoverZAR": 3100000,
+    "period": "Jul 2025 \u2013 Jul 2026",
+    "turnoverZAR": 4000000,
     "sponsorshipZAR": 2500000,
-    "entriesZAR": 600000,
+    "entriesZAR": 1500000,
+    "entriesCount": 10000,
+    "courseActivations": 800,
     "monthlyRevenueZAR": {
+      "_note": "historical endpoints (Jul\u2013Dec 2025), chart retired from public page",
       "2025-07": 10000,
-      "2025-12": 250000,
-      "_interim": "interpolated for sparkline \u2014 replace with actuals"
+      "2025-12": 250000
     },
     "capitalInvestedZAR": 3000000,
     "cameraAssetsZAR": 1000000,
     "installs": 25,
     "appCourses": 100,
-    "memberReach": 20000,
+    "memberReach": 60000,
     "multiHoleCourses": [
       "The Metropolitan Golf Club",
       "Boschenmeer Golf Club"
