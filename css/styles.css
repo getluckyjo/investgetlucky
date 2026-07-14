@@ -451,8 +451,8 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
   display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
 }
 .funnel .f-tam { background: var(--green-soft); }
-.funnel .f-sam { background: var(--green); width: 84%; }
-.funnel .f-som { background: var(--green-deep); width: 68%; }
+.funnel .f-sam { background: var(--green-deep); width: 84%; }
+.funnel .f-som { background: var(--green-ink); width: 68%; }
 .funnel .f-plan { background: var(--gold); color: var(--green-ink); width: 54%; font-weight: 700; min-width: min(21rem, 100%); }
 .funnel > div span { min-width: 0; }
 .funnel > div strong { white-space: nowrap; }
