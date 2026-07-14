@@ -383,6 +383,7 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .econbar__course { background: var(--gold); color: var(--green-ink) !important; flex: 10; }
 .econbar__ins { background: var(--green-soft); flex: 24; }
 .econbar__legend { display: flex; flex-wrap: wrap; gap: 1.2rem; font-family: var(--font-ui); font-size: 0.8rem; margin-top: 0.7rem; opacity: 0.85; }
+@media (max-width: 400px) { .econbar__word { display: none; } } /* "66%" alone fits; the legend spells it out */
 
 /* --- course photo wall ------------------------------------------------------ */
 .coursewall { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(11rem, 45%), 1fr)); gap: 0.8rem; }
@@ -469,6 +470,15 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .funnel > div span { min-width: 0; }
 .funnel > div strong { white-space: nowrap; }
 .funnel strong { font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.03em; }
+@media (max-width: 640px) {
+  /* narrow bars leave too little room for the labels — show the funnel as a
+     stepped indent instead so every label keeps a full line length */
+  .funnel .f-sam, .funnel .f-som, .funnel .f-plan { width: auto; min-width: 0; }
+  .funnel .f-sam { margin-left: 8%; }
+  .funnel .f-som { margin-left: 16%; }
+  .funnel .f-plan { margin-left: 24%; }
+  .funnel > div { flex-wrap: wrap; gap: 0.15rem 1rem; }
+}
 
 /* --- triangulation ----------------------------------------------------------- */
 .lens { border-top: 5px solid var(--gold); }
@@ -506,6 +516,13 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .dealcard dd .usd { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600; color: var(--gold-text); }
 .usebar { display: flex; height: 2.4rem; border-radius: 8px; overflow: hidden; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; color: var(--cream); }
 .usebar > div { display: flex; align-items: center; justify-content: center; padding-inline: 0.4rem; text-align: center; }
+@media (max-width: 640px) {
+  /* the four in-bar labels clip inside the fixed-height bar on phones —
+     stack them as full-width readable rows, keeping the colour coding */
+  .usebar { flex-direction: column; height: auto; font-size: 0.8rem; }
+  .usebar > div { flex: none !important; justify-content: flex-start; text-align: left; padding: 0.55rem 0.9rem; }
+  .usebar > div:empty { display: none; } /* allocation meter's unlabelled remainder segment */
+}
 
 .circle {
   border: 2px solid var(--gold); border-radius: var(--radius);
@@ -569,7 +586,7 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
   text-transform: uppercase; color: var(--cream); line-height: 1.15; max-width: 22ch; margin-inline: auto;
 }
 .contact-cta .links { display: flex; flex-wrap: wrap; gap: 1.4rem; justify-content: center; margin-top: var(--space-3); font-family: var(--font-ui); }
-.contact-cta .links a { color: var(--gold-soft); font-size: var(--step-1); text-decoration: none; border-bottom: 1px solid rgba(205,184,122,0.4); }
+.contact-cta .links a { color: var(--gold-soft); font-size: var(--step-1); text-decoration: none; border-bottom: 1px solid rgba(205,184,122,0.4); overflow-wrap: anywhere; }
 
 .footer { background: var(--green-ink); color: rgba(246,244,225,0.75); font-family: var(--font-ui); font-size: 0.8rem; padding-block: var(--space-4); }
 .footer .wrap { display: grid; gap: 1.2rem; }
@@ -597,6 +614,11 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .modeltable tr:last-child td { border-bottom: 0; }
 .modeltable td:first-child { font-weight: 700; color: var(--green); width: 11rem; }
 .modeltable .mut { display: block; font-size: 0.76rem; color: var(--gold-text); }
+.scroll-hint { display: none; }
+@media (max-width: 640px) {
+  .modeltable td:first-child { width: 7.5rem; }
+  .scroll-hint { display: block; font-family: var(--font-ui); font-size: 0.74rem; opacity: 0.65; margin: 0.6rem 0 0; }
+}
 
 /* --- dataroom ------------------------------------------------------------------------------- */
 .nda-wall { max-width: 34rem; margin-inline: auto; }
@@ -605,7 +627,8 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .nda-wall input[type="text"], .nda-wall input[type="email"] {
   width: 100%; padding: 0.7rem 0.9rem; border-radius: 8px;
   border: 1.5px solid rgba(52,82,48,0.3); background: var(--cream);
-  font-family: var(--font-ui); font-size: 0.95rem; color: var(--green-ink);
+  font-family: var(--font-ui); font-size: 1rem; /* ≥16px so iOS Safari doesn't zoom on focus */
+  color: var(--green-ink);
 }
 .nda-wall .agree { display: flex; gap: 0.6rem; align-items: flex-start; font-family: var(--font-ui); font-size: 0.85rem; margin: 1.1rem 0; }
 .nda-wall .agree input { margin-top: 0.25rem; width: 1.05rem; height: 1.05rem; accent-color: var(--green); }
