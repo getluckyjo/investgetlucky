@@ -1,0 +1,40 @@
+/* Get Lucky dataroom documents — matches the Ernie one-pager style */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: #1a1a1a;
+  padding: 0;
+}
+.logo { display: block; margin: 0 auto 24pt; width: 140pt; }
+h1 { font-size: 15pt; color: #1e3120; letter-spacing: 0.01em; }
+h1 .x { color: #a08c3f; font-size: 12pt; }
+.subtitle { font-style: italic; color: #a08c3f; font-size: 11pt; margin-top: 2pt; }
+.rule { border: none; border-top: 1.5pt solid #a08c3f; margin: 14pt 0 16pt; }
+.lead { margin-bottom: 4pt; }
+.lead strong { color: #1a1a1a; }
+h2 { font-size: 12pt; color: #335231; margin: 16pt 0 6pt; }
+p { margin-bottom: 8pt; }
+ul { margin: 0 0 8pt 14pt; }
+li { margin-bottom: 6pt; }
+li strong, p strong { color: #1a1a1a; }
+table { width: 100%; border-collapse: collapse; margin: 8pt 0 12pt; }
+th, td { border: 1pt solid #444; padding: 6pt 8pt; text-align: left; vertical-align: top; font-size: 10pt; }
+th { background: #eceae2; color: #1a1a1a; }
+td.label, th.label { background: #eceae2; font-weight: bold; width: 30%; }
+thead th { background: #335231; color: #f5f0e1; border-color: #335231; }
+.note { font-size: 8.5pt; color: #555; margin-top: 4pt; }
+.src { font-size: 8.5pt; color: #555; }
+.footer { margin-top: 14pt; padding-top: 8pt; border-top: 0.75pt solid #bbb; font-size: 8.5pt; color: #666; }
+.contact { color: #666; font-size: 9.5pt; margin-top: 10pt; }
+.pagebreak { break-before: page; }
+sup { font-size: 7pt; color: #555; }
+.badge {
+  display: inline-block; font-size: 8pt; font-weight: bold; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #94742a; border: 1pt solid #a08c3f;
+  border-radius: 10pt; padding: 1.5pt 7pt; margin-bottom: 5pt;
+}
+table, ul { break-inside: avoid; }
+h2 { break-after: avoid; }
+.footer { break-inside: avoid; }

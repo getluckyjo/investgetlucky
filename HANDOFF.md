@@ -202,6 +202,23 @@ Foresight, X-Golf, Topgolf Swing Suite, Kakao VX) and the Ernie-opens-doors
 line. Both panels keep the "In development — not yet contracted" badge.
 Footer source ⁴ now includes Grand View Research.
 
+## Dataroom refresh (2026-07-14, user request)
+
+- **2025 deck removed** from the dataroom (file deleted from assets/docs;
+  root copy still in git history). The model-summary intro no longer
+  references it.
+- **`get-lucky-pro-forma.xlsx`** (user-uploaded "GetLucky_Pro Forma .xlsx",
+  same driver model: Read Me / Assumptions / 36-month Build / Valuation /
+  Investor's Stake) replaces BOTH the old valuation-model entry and the
+  "3-year cashflow — Soon" slot as one doclist row.
+- **Investor FAQ + Global Market Scenarios PDFs regenerated** with the
+  latest site data (traction v3, 66/10/24 split, R1m minimum ticket,
+  use-of-funds 25/30/25/20, 200k-installs travel target, global sim data,
+  R11.2m→R83m model) in the Ernie one-pager style (centered logo, green
+  heads, gold italic subtitle + rule, shaded-label tables). Sources live in
+  `scripts/docs/` with regeneration instructions; keep them in sync with
+  model.json / research.json when figures change.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
