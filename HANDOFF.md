@@ -228,6 +228,19 @@ disclaimer. The comprehensive legal disclaimer in the page footer remains
 and is the sole risk/forward-looking statement on the public page — do not
 re-add per-component disclaimers without the user asking.
 
+## PROJECT PAUSED (2026-07-14) — state at pause
+
+User: "hold on the project for now while we wait on next steps." Everything
+is committed and live: branch `claude/mobile-mockup-course-flow-dtipge` =
+`main` = `origin/main` at `1ec1fef`; Vercel deploys main. Session highlights
+beyond the sections above: app-demo phone (`#app`), Ernie ace portrait,
+Upside redesign (22,886-to-exit funnel), typography tiers, full-width Santam
+tile, why-list icons, use-of-funds 25/30/25/20, R1m minimum ticket, dataroom
+refresh (pro forma + two regenerated PDFs from `scripts/docs/`), model
+summary as trajectory+assumptions tables, public fine-print removed, nav CTA
+resized. Awaiting next steps: possible real app screenshots/video for the
+phone demo (swap instructions in README), plus the open flags below.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
