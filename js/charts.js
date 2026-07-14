@@ -1,6 +1,6 @@
 /* Get Lucky pitch — charts. Data: data/model.json (single source of truth).
    Palette (validated for CVD + contrast on the card surface):
-     series green #478f41 · series gold #b07c10 · ink #182716
+     series green #478f41 · series gold #b07c10 · ink #16261a
    Brand deep green stays for text/UI; these are data-mark variants. */
 
 (function () {
@@ -9,7 +9,7 @@
 
   var GREEN = "#478f41";
   var GOLD = "#b07c10";
-  var INK = "#182716";
+  var INK = "#16261a";
   var GRID = "rgba(24, 39, 22, 0.08)";
   var FONT = { family: "Inter, 'Helvetica Neue', Arial, sans-serif", size: 12 };
 

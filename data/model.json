@@ -6,7 +6,6 @@
     "equityPct": 10,
     "preMoneyZAR": 36000000,
     "postMoneyZAR": 40000000,
-    "founderOwnershipPct": 90,
     "dcfLowZAR": 57000000,
     "dcfHighZAR": 78000000,
     "ernieStakePct": 5,
@@ -34,8 +33,9 @@
     },
     "capitalInvestedZAR": 3000000,
     "cameraAssetsZAR": 1000000,
-    "installs": 20,
-    "memberReach": 15000,
+    "installs": 25,
+    "appCourses": 100,
+    "memberReach": 20000,
     "multiHoleCourses": [
       "The Metropolitan Golf Club",
       "Boschenmeer Golf Club"
@@ -54,6 +54,13 @@
   "unitEconomics": {
     "avgEntryZAR": 200,
     "swingFromZAR": 50,
+    "stakeLadderZAR": [
+      { "stake": 50, "prize": 25000 },
+      { "stake": 100, "prize": 60000 },
+      { "stake": 250, "prize": 200000 },
+      { "stake": 500, "prize": 500000 },
+      { "stake": 1000, "prize": 1000000 }
+    ],
     "splitPct": {
       "getLucky": 78,
       "course": 10,

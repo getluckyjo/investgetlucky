@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" href="assets/img/logo-getlucky.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
 <nav class="nav" aria-label="Main">
   <div class="wrap nav__inner">
     <a class="nav__logo" href="#top" aria-label="Get Lucky Golf — home">
-      <img src="assets/img/logo-getlucky.png" alt="Get Lucky Golf Club" width="92" height="79">
+      <img src="assets/img/logo-color.png" alt="Get Lucky Golf Club" height="46">
     </a>
     <div class="nav__links">
       <a href="#ernie">Ernie Els</a>
@@ -45,19 +45,20 @@
   <div class="hero__bg" aria-hidden="true">
     <img src="assets/img/hero-course.jpg" alt="" fetchpriority="high">
   </div>
+  <div class="texture-layer halftone" aria-hidden="true"></div>
   <div class="wrap hero__inner">
-    <img class="hero__logo" src="assets/img/logo-getlucky.png" alt="Get Lucky Golf Club">
+    <img class="hero__logo" src="assets/img/logo-dark-bg.png" alt="Get Lucky Golf Club">
     <h1>Invest alongside <span class="accent">Ernie Els</span> in the future of golf</h1>
-    <p class="lead">Get Lucky turned the greatest moment in golf — the hole-in-one — into an always-on, AI-verified, fully insured challenge. It's live at 20+ premium courses, generating revenue, and now a four-time major champion owns part of it.</p>
+    <p class="lead">Get Lucky turned the greatest moment in golf — the hole-in-one — into an always-on, verified, fully insured challenge on our own platform. It's live at 100 of South Africa's top courses, permanently installed at 25 of them, generating revenue — and now a four-time major champion owns part of it.</p>
     <div class="hero__ctas">
       <a class="btn btn--gold btn--lg" href="#deal">See the deal — R4m for 10%</a>
       <a class="btn btn--ghost btn--lg" href="dataroom.html">Enter the dataroom</a>
     </div>
-    <div class="statstrip" role="list">
+    <div class="statstrip tabular" role="list">
       <div role="listitem"><span class="num" data-count="3.1" data-prefix="R" data-suffix="m">R3.1m</span><span class="lbl">Turnover — first 6 months</span></div>
-      <div role="listitem"><span class="num" data-count="20" data-suffix="+">20+</span><span class="lbl">Premium partner courses</span></div>
+      <div role="listitem"><span class="num" data-count="100">100</span><span class="lbl">Top SA courses live on the app</span></div>
+      <div role="listitem"><span class="num" data-count="25">25</span><span class="lbl">Partner courses installed</span></div>
       <div role="listitem"><span class="num" data-count="9" data-prefix="R" data-suffix="m">R9m</span><span class="lbl">Contracted Santam sponsorship</span></div>
-      <div role="listitem"><span class="num" data-count="1" data-prefix="R" data-suffix="m">R1m</span><span class="lbl">Top insured prize — every swing</span></div>
     </div>
   </div>
 </header>
@@ -65,14 +66,12 @@
 <main>
 
 <!-- ============================== ERNIE ============================== -->
-<section class="section section--deep" id="ernie">
+<section class="section section--deep topo" id="ernie">
   <div class="wrap">
     <div class="ernie">
       <div class="reveal">
-        <div class="portrait-slot" data-slot="ernie-portrait">
-          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          <strong style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.08em;">Ernie Els</strong>
-          <span class="hint">Official portrait to be supplied</span>
+        <div class="portrait-slot bracket" data-slot="ernie-portrait">
+          <img src="assets/img/ernie-portrait.jpg" alt="Ernie Els celebrates with a fist pump">
         </div>
       </div>
       <div class="reveal">
@@ -82,13 +81,25 @@
         <p class="pullquote">He doesn't endorse this business.<br>He owns part of it.
           <cite>— The difference between a billboard and a believer</cite>
         </p>
-        <ul class="honours" aria-label="Ernie Els career honours">
+        <ul class="honours" aria-label="Ernie Els career honours — the résumé that opens doors">
           <li>4× Major Champion</li>
           <li>World Golf Hall of Fame</li>
           <li>Former World No. 1</li>
           <li>788 weeks in the world top 10</li>
           <li>7× World Match Play Champion</li>
         </ul>
+        <div class="champions halftone tabular" role="figure" aria-label="South African major champions by career major titles">
+          <div class="champions__head"><span>South Africa's major champions</span><span class="flag">The lineage he carries</span></div>
+          <ol>
+            <li><span class="pos">1</span><span class="name">Gary Player</span><span class="majors">9</span></li>
+            <li class="is-ernie"><span class="pos">2</span><span class="name">Ernie Els</span><span class="majors">4</span></li>
+            <li><span class="pos">2</span><span class="name">Bobby Locke</span><span class="majors">4</span></li>
+            <li><span class="pos">4</span><span class="name">Retief Goosen</span><span class="majors">2</span></li>
+            <li><span class="pos">5</span><span class="name">Louis Oosthuizen</span><span class="majors">1</span></li>
+            <li><span class="pos">5</span><span class="name">Charl Schwartzel</span><span class="majors">1</span></li>
+          </ol>
+          <div class="champions__foot">Career major championships</div>
+        </div>
         <div class="grid grid--3 mt-3">
           <div class="card">
             <h4>His name on the moment</h4>
@@ -111,13 +122,16 @@
 <!-- ============================== HOW IT WORKS ============================== -->
 <section class="section" id="how">
   <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">The product</p>
-      <h2>Every golfer's dream, gamified</h2>
-      <p class="sub">Every golfer dreams of a hole-in-one — the odds are <strong>1 in 12,500</strong>.<span class="small"> ¹</span> Get Lucky turns that dream into a frictionless digital challenge on the signature par-3 of every partner course.</p>
+    <div class="section-head--badge reveal">
+      <div class="section-head" style="margin-bottom:0;">
+        <p class="eyebrow">The product</p>
+        <h2>Every golfer's dream, gamified</h2>
+        <p class="sub">Every golfer dreams of a hole-in-one — the odds are <strong>1 in 12,500</strong>.<span class="small"> ¹</span> Get Lucky turns that dream into a frictionless digital challenge on the signature par-3 of every partner course — on <strong>our own platform</strong>, with no gatekeepers between us and the golfer.</p>
+      </div>
+      <img class="challenge-badge" src="assets/img/challenge-bordered.png" alt="Get Lucky Hole-in-1 Challenge badge" loading="lazy">
     </div>
     <div class="steps reveal" style="margin-top:2rem;">
-      <div class="step"><h4>Scan</h4><p>QR code on the tee or WhatsApp link — no app download needed.</p></div>
+      <div class="step"><h4>Scan</h4><p>QR code on the tee opens our web app — installable, no app store, nothing to download.</p></div>
       <div class="step"><h4>Pay</h4><p>Entry from R50 a swing. One tap for returning players.</p></div>
       <div class="step"><h4>Swing</h4><p>Take your shot on the signature par-3.</p></div>
       <div class="step"><h4>Verify</h4><p>Dual on-course cameras + AI shot tracer confirm the outcome instantly.</p></div>
@@ -125,8 +139,8 @@
     </div>
     <div class="phones reveal">
       <div>
-        <div class="phone" data-slot="app-entry"><span class="hint">App demo slot</span><strong>WhatsApp entry</strong><span class="hint">Chat-based, one-tap re-entry</span></div>
-        <p class="phone-caption">Conversational entry — the way golfers already transact</p>
+        <div class="phone" data-slot="app-entry"><span class="hint">App demo slot</span><strong>Web app entry</strong><span class="hint">Installable PWA, one-tap re-entry</span></div>
+        <p class="phone-caption">Our own platform, no gatekeepers — entry in seconds, no app store</p>
       </div>
       <div>
         <div class="phone" data-slot="app-verify"><span class="hint">App demo slot</span><strong>AI verification</strong><span class="hint">Live shot tracer & replay</span></div>
@@ -154,16 +168,17 @@
       <p class="chart-note">Endpoints from company reporting (R10k → R250k); intermediate months interpolated for illustration.</p>
     </div>
     <div class="grid grid--4 mt-4 reveal">
-      <div class="card tile"><span class="num">R3.1m</span><span class="usd">≈ $168k</span><span class="lbl">Total turnover in 6 months — R2.5m sponsorship + R600k player entries</span></div>
-      <div class="card tile"><span class="num">25×</span><span class="usd">R10k → R250k</span><span class="lbl">Monthly revenue growth July → December</span></div>
-      <div class="card tile"><span class="num">20</span><span class="usd">15,000 members reached</span><span class="lbl">Permanent installations at premium SA courses</span></div>
-      <div class="card tile"><span class="num">R1.0m</span><span class="usd">≈ $54k</span><span class="lbl">Proprietary camera & installation assets owned</span></div>
+      <div class="card tile tabular"><span class="num">R3.1m</span><span class="usd">≈ $168k</span><span class="lbl">Total turnover in 6 months — R2.5m sponsorship + R600k player entries</span></div>
+      <div class="card tile tabular"><span class="num">25×</span><span class="usd">R10k → R250k</span><span class="lbl">Monthly revenue growth July → December</span></div>
+      <div class="card tile tabular"><span class="num">25</span><span class="usd">20,000 members reached</span><span class="lbl">Permanent installations at premium SA courses — plus the top 100 live on the app</span></div>
+      <div class="card tile tabular"><span class="num">R1.0m</span><span class="usd">≈ $54k</span><span class="lbl">Proprietary camera & installation assets owned</span></div>
     </div>
     <div class="grid grid--2 mt-3 reveal">
-      <div class="card">
-        <span class="badge">Contracted</span>
+      <div class="card card--brand">
+        <img class="partnerlogo" src="assets/img/santam-logo-white.png" alt="Santam" loading="lazy">
+        <span class="badge badge--gold">Contracted</span>
         <h4 style="margin-top:0.7rem;">Santam — R9m over 3 years</h4>
-        <p class="small">Signed naming-rights sponsorship with one of South Africa's largest insurers: R2.5m (Y1) → R3.0m (Y2) → R3.5m (Y3). Contracted revenue, not a pipeline.</p>
+        <p class="small">Signed naming-rights sponsorship with one of South Africa's largest insurers (Authorised FSP 3416): R2.5m (Y1) → R3.0m (Y2) → R3.5m (Y3). Contracted revenue, not a pipeline — and the same underwriter stands behind every prize.</p>
       </div>
       <div class="card">
         <span class="badge">Contracted</span>
@@ -192,8 +207,15 @@
         <div>
           <span class="badge badge--live">Live now</span>
           <h3 style="margin-top:0.6rem;">The installed-course engine</h3>
-          <p>Permanent, always-on challenge holes at premium courses. Average entry R200: 10% rewards the course, 12% insures the prize — a <strong>66% gross-margin</strong> engine with every prize <strong>100% underwritten by Santam</strong>.</p>
-          <p class="meta">Skill-based competition, not gambling — no wagering, no odds-based payouts, no gaming licence required. Prizes pre-funded and insured.</p>
+          <p>Permanent, always-on challenge holes at premium courses. Average entry R200: 10% rewards the course, 12% insures the prize — a <strong>66% gross-margin</strong> engine with every prize <strong>100% underwritten by Santam (Authorised FSP 3416)</strong>.</p>
+          <div class="stakes tabular" aria-label="Stake ladder — entry to insured prize">
+            <span>R50 → <strong>R25,000</strong></span>
+            <span>R100 → <strong>R60,000</strong></span>
+            <span>R250 → <strong>R200,000</strong></span>
+            <span>R500 → <strong>R500,000</strong></span>
+            <span>R1,000 → <strong>R1,000,000</strong></span>
+          </div>
+          <p class="meta">Pick your stake, play for the matching insured prize. Skill-based competition, not gambling — no wagering, no odds-based payouts, no gaming licence required. Prizes pre-funded and insured.</p>
           <div class="econbar" aria-label="Revenue split per entry">
             <div class="econbar__bar">
               <div class="econbar__gl">78% Get Lucky</div>
@@ -217,8 +239,8 @@
         <div>
           <span class="badge badge--gold">The Ernie unlock — funded by this raise</span>
           <h3 style="margin-top:0.6rem;">The global subscription</h3>
-          <p><strong>$10 a month to play for a $10,000 insured prize on any verified ace</strong> — anywhere in the world. WhatsApp-native (3bn+ users<span class="small"> ²</span>), phone-verified, zero installation cost. Any par-3 on earth becomes a Get Lucky hole.</p>
-          <p class="meta">Premium installs create the legitimacy; the phone-based model creates the reach. Same brand, same insurer, global margin.</p>
+          <p><strong>$10 a month to play for a $10,000 insured prize on any verified ace</strong> — anywhere in the world. Subscribe on our own platform, pick any course and par-3, film the shot and submit in-app; video-plus-witness review confirms most aces inside 24 hours. Zero installation cost — any par-3 on earth becomes a Get Lucky hole.</p>
+          <p class="meta">Premium installs create the legitimacy; the phone-based model creates the reach. Same brand, same insurer, global margin — and no gatekeepers between us and the golfer.</p>
         </div>
       </div>
     </div>
@@ -230,8 +252,8 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Distribution</p>
-      <h2>20+ premium courses. Signed. Exclusive.</h2>
-      <p class="sub">Two-year auto-renewing partnerships with restraint of trade — a distribution moat a copycat can't rent. Metropolitan and Boschenmeer already run <em>two</em> challenge holes each.</p>
+      <h2>Top 100 courses on the app. 25 installed. Exclusive.</h2>
+      <p class="sub">The challenge is live on the app at 100 of South Africa's top courses, with permanent installations at 25 partner courses on two-year auto-renewing partnerships with restraint of trade — a distribution moat a copycat can't rent. Metropolitan and Boschenmeer already run <em>two</em> challenge holes each.</p>
     </div>
     <div class="logowall reveal" aria-label="Partner golf courses">
       <div><img src="assets/img/course-paarl.png" alt="Paarl Golf Club — Boschenmeer Golf Estate" loading="lazy"></div>
@@ -252,7 +274,7 @@
 </section>
 
 <!-- ============================== GROWTH ENGINES ============================== -->
-<section class="section section--green" id="growth">
+<section class="section section--green topo" id="growth">
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Beyond the course</p>
@@ -317,13 +339,13 @@
     <div class="section-head reveal">
       <p class="eyebrow">The prize</p>
       <h2>What Ernie's name unlocks</h2>
-      <p class="sub">Golf is having its biggest boom since Tiger. <strong>112 million</strong> people play worldwide (excl. US/Mexico)<span class="small"> ⁵</span> and the US adds another <strong>48 million</strong><span class="small"> ⁶</span> — on track to pass 50 million in 2026. Ernie's founding partnership gives a South African platform instant credibility in each of these markets.</p>
+      <p class="sub">Golf is having its biggest boom since Tiger. <strong>112 million</strong> people play worldwide (excl. US/Mexico)<span class="small"> ⁵</span> and the US adds another <strong>48 million</strong><span class="small"> ⁶</span> — on track to pass 50 million in 2026, across <strong>38,000+ courses in 206 countries</strong><span class="small"> ⁷</span>. Underneath it sits our category: prize-indemnity / hole-in-one insurance, a <strong>$1.2bn market today heading for $2.4bn by 2033</strong> (8.1% CAGR)<span class="small"> ²</span> — and no consumer brand on top of it. Ernie's founding partnership gives a South African platform instant credibility in each of these markets.</p>
     </div>
     <div class="grid grid--4 reveal">
       <div class="card region">
-        <p class="flagline">United Kingdom</p>
+        <p class="flagline">United Kingdom &amp; Europe</p>
         <span class="bignum">20-yr high</span>
-        <p>2025 was Great Britain's biggest year for rounds played since records began (+14% YoY). 1,735 clubs in England alone. Ernie won two Opens here — the market knows his name like its own.</p>
+        <p>2025 was Great Britain's biggest year for rounds played since records began (+14% YoY) — 3,101 courses in the UK, 1,050 in Germany, 804 in France<span class="small"> ⁷</span>. Ernie won two Opens here; the market knows his name like its own.</p>
       </div>
       <div class="card region">
         <p class="flagline">United States</p>
@@ -368,7 +390,7 @@
         <h3>The downside is insured</h3>
         <ul>
           <li><strong>R9m already contracted</strong> (Santam) — over half the 2026 revenue line is signed, not hoped for.</li>
-          <li><strong>Prize risk is 100% underwritten by Santam</strong> — the scariest liability in the model simply isn't ours.</li>
+          <li><strong>Prize risk is 100% underwritten by Santam (Authorised FSP 3416)</strong> — the scariest liability in the model simply isn't ours.</li>
           <li><strong>66% gross margin</strong> in the driver model; the digital rung carries almost no marginal cost.</li>
           <li>Driver-based model: 4% churn, conservative growth steps (10.5% → 8% → 7%/mo).</li>
           <li>Independent DCF values the business at <strong>R57–78m today</strong> — you're entering at R36m pre.</li>
@@ -376,11 +398,11 @@
       </div>
       <div class="card lens">
         <span class="role">The COO's road</span>
-        <h3>The playbook already ran 20×</h3>
+        <h3>The playbook already ran 25×</h3>
         <ul>
-          <li>Course acquisition is a <strong>solved, repeatable process</strong> — 20 installs in 6 months, inbound demand growing.</li>
+          <li>Course acquisition is a <strong>solved, repeatable process</strong> — 25 installs, inbound demand growing, live on the app at 100 top courses.</li>
           <li><strong>Exclusive 2-year auto-renew contracts</strong> with restraint of trade lock the distribution.</li>
-          <li>WhatsApp-native platform: <strong>zero-install distribution</strong> to 3bn+ users; no app-store friction.</li>
+          <li>First-party platform: <strong>an installable web app we own end-to-end</strong> — no app-store friction, no gatekeepers.</li>
           <li>R1m of owned camera assets; install cost falls with every unit.</li>
           <li>The global rung needs <strong>no new physical infrastructure at all</strong>.</li>
         </ul>
@@ -402,7 +424,7 @@
 </section>
 
 <!-- ============================== FINANCIALS ============================== -->
-<section class="section section--deep" id="financials">
+<section class="section section--deep topo" id="financials">
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">The numbers</p>
@@ -457,19 +479,19 @@
 </section>
 
 <!-- ============================== THE DEAL ============================== -->
-<section class="section section--green" id="deal">
+<section class="section section--green halftone" id="deal">
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">The deal</p>
       <h2>R4m buys 10% of the category leader</h2>
     </div>
-    <div class="dealcard reveal">
-      <dl>
+    <div class="dealcard bracket reveal">
+      <dl class="tabular">
         <div><dt>Raising</dt><dd>R4.0m<span class="usd">≈ $216k</span></dd></div>
         <div><dt>Equity offered</dt><dd>10%</dd></div>
         <div><dt>Pre-money</dt><dd>R36m<span class="usd">≈ $1.95m</span></dd></div>
         <div><dt>Post-money</dt><dd>R40m<span class="usd">≈ $2.16m</span></dd></div>
-        <div><dt>Founder ownership</dt><dd>90%</dd></div>
+        <div><dt>Ernie Els founding stake</dt><dd>5%</dd></div>
         <div><dt>Independent DCF</dt><dd>R57–78m</dd></div>
       </dl>
       <div>
@@ -493,8 +515,9 @@
     </div>
     <div class="grid grid--2 mt-4 reveal">
       <div class="circle">
+        <div class="circle__img"><img src="assets/img/ernie-trophies.jpg" alt="Ernie Els with the South African Open trophies" loading="lazy"></div>
         <h3>The Founding Investor Circle</h3>
-        <p class="small">This is the round where the founders still own 90% and a Hall-of-Famer just took his stake. <strong>10% of the company is available. When it's allocated, this price never exists again.</strong> Every later investor will pay for the growth you're funding now.</p>
+        <p class="small">This is the round where a Hall-of-Famer just took his founding stake. <strong>10% of the company is available. When it's allocated, this price never exists again.</strong> Every later investor will pay for the growth you're funding now.</p>
         <p class="small" style="opacity:0.8;">And yes — for the rest of your life, you get to say you invested alongside Ernie Els before the world caught on.</p>
       </div>
       <div class="card">
@@ -540,10 +563,7 @@
         <p>A decade of award-winning campaigns (The Duchess, Suncamino, Platō Coffee). Owns the brand's look, feel and story.</p>
       </div>
       <div class="team">
-        <div class="portrait-slot" data-slot="ernie-headshot" style="aspect-ratio:1;">
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          <span class="hint">Photo to come</span>
-        </div>
+        <img src="assets/img/ernie-headshot.jpg" alt="Ernie Els" loading="lazy">
         <h4>Ernie Els</h4>
         <span class="role">Founding Partner — 5%</span>
         <p>Four majors, 70+ worldwide wins, World Golf Hall of Fame. His name, his network, his standing — as a founding shareholder, not a hired face.</p>
@@ -578,7 +598,7 @@
       </details>
       <details>
         <summary>Who else does this? What's the moat?</summary>
-        <div class="faq__body"><p>An always-on, permanently installed, AI-verified hole-in-one platform is a world first. The only meaningful local competitor was acquired and rebranded into Get Lucky at launch. Globally, hole-in-one products are one-off event promotions, not platforms. The moat: speed of rollout, exclusive locked-in course contracts, owned verification tech and the WhatsApp-native journey — now compounded by Ernie's name on the category.</p></div>
+        <div class="faq__body"><p>An always-on, permanently installed, AI-verified hole-in-one platform is a world first. The only meaningful local competitor was acquired and rebranded into Get Lucky at launch. Globally, hole-in-one products are one-off event promotions, not platforms. The moat: speed of rollout, exclusive locked-in course contracts, owned verification tech and a first-party platform we control end-to-end — now compounded by Ernie's name on the category.</p></div>
       </details>
       <details>
         <summary>The deck shows two entry models — how do they fit together?</summary>
@@ -586,11 +606,11 @@
       </details>
       <details>
         <summary>What stops golfers from entering?</summary>
-        <div class="faq__body"><p>Confidence, not interest. Money-back-if-you-hit-the-green promo days reframed the decision and doubled entries (~25% of entrants hit the green). The WhatsApp platform removes the remaining friction: one-tap re-entry, stored payment details, no forms at the tee.</p></div>
+        <div class="faq__body"><p>Confidence, not interest. Money-back-if-you-hit-the-green promo days reframed the decision and doubled entries (~25% of entrants hit the green). Our own web app removes the remaining friction: one-tap re-entry, stored payment details, no forms at the tee.</p></div>
       </details>
       <details>
         <summary>What exactly am I buying in this round?</summary>
-        <div class="faq__body"><p>Equity in Get Lucky Golf Club (Pty) Ltd: 10% of the company for R4m at a R40m post-money valuation, alongside founders holding 90% and Ernie Els's founding 5% stake. Full terms, the cap table and the driver-based valuation model are in the dataroom.</p></div>
+        <div class="faq__body"><p>Equity in Get Lucky Golf Club (Pty) Ltd: 10% of the company for R4m at a R40m post-money valuation, alongside the founders and Ernie Els's founding 5% stake. Full terms, the cap table and the driver-based valuation model are in the dataroom.</p></div>
       </details>
     </div>
   </div>
@@ -598,6 +618,9 @@
 
 <!-- ============================== CONTACT ============================== -->
 <section class="section section--deep contact-cta" id="contact">
+  <div class="cta-bg" aria-hidden="true">
+    <img src="assets/img/ernie-open-bunker.jpg" alt="" loading="lazy">
+  </div>
   <div class="wrap reveal">
     <p class="eyebrow" style="justify-content:center;">The first tee is waiting</p>
     <p class="big">Some rounds you watch.<br>This one you own.</p>
@@ -616,10 +639,10 @@
 
 <footer class="footer">
   <div class="wrap">
-    <img src="assets/img/logo-getlucky.png" alt="Get Lucky Golf Club" width="72" height="62" style="filter:brightness(0) invert(0.92);opacity:0.85;">
+    <img src="assets/img/logo-dark-bg.png" alt="Get Lucky Golf Club" width="110" style="opacity:0.9;">
     <p class="legal">Get Lucky Golf Club (Pty) Ltd · Registration 2025/047585/07 · johannes@getluckygolfclub.com · +27 60 961 5091</p>
     <p class="legal">This page is an invitation to discuss a private investment and does not constitute an offer to the public in terms of the Companies Act, 2008. All forward-looking figures — including forecasts, valuations and investor returns — are illustrative, based on stated milestones and current operating assumptions, and are not a guarantee of return. Investment in early-stage businesses carries risk, including the loss of capital. Independent advice is recommended.</p>
-    <p class="legal">Sources: ¹ National Hole-in-One Registry via The Hustle · ² Meta Q1 2025 (TechCrunch) · ³ Golfbreaks/GolfWRX; Fortune Business Insights; NGF · ⁴ GOLF.com; Seoulz; Forbes · ⁵ The R&amp;A Global Golf Participation 2025 · ⁶ National Golf Foundation 2026. Full citations in the <a href="dataroom.html">dataroom</a>.</p>
+    <p class="legal">Sources: ¹ National Hole-in-One Registry via The Hustle · ² Company research — prize-indemnity market reports · ³ Golfbreaks/GolfWRX; Fortune Business Insights; NGF · ⁴ GOLF.com; Seoulz; Forbes · ⁵ The R&amp;A Global Golf Participation 2025 · ⁶ National Golf Foundation 2026 · ⁷ The R&amp;A Golf Around the World. Full citations in the <a href="dataroom.html">dataroom</a>.</p>
   </div>
 </footer>
 

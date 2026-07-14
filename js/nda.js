@@ -87,14 +87,16 @@
       .then(function (data) {
         data.claims.forEach(function (c) {
           var a = document.createElement("a");
-          a.href = c.url;
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
+          if (c.url) {
+            a.href = c.url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+          }
           var claim = document.createElement("span");
           claim.textContent = c.claim + " — " + c.source;
           var type = document.createElement("span");
           type.className = "type";
-          type.textContent = "Source";
+          type.textContent = c.url ? "Source" : "Company";
           a.appendChild(claim);
           a.appendChild(type);
           list.appendChild(a);

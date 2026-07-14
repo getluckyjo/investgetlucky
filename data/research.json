@@ -173,13 +173,31 @@
       "usedIn": ["triangulation"]
     },
     {
-      "id": "whatsapp-users",
-      "claim": "WhatsApp passed 3 billion monthly active users (Meta, Q1 2025)",
-      "value": "3bn+ MAU",
-      "source": "TechCrunch / Meta Q1 2025 earnings call",
-      "url": "https://techcrunch.com/2025/05/01/whatsapp-now-has-more-than-3-billion-users/",
-      "accessed": "2026-07-13",
-      "usedIn": ["ladder", "triangulation"]
+      "id": "hio-insurance-market",
+      "claim": "Prize-indemnity / hole-in-one insurance is a $1.2bn market today, projected to reach $2.4bn by 2033 (8.1% CAGR)",
+      "value": "$1.2bn → $2.4bn by 2033",
+      "source": "Company research — prize-indemnity market reports (not independently verified)",
+      "url": "",
+      "accessed": "2026-07-14",
+      "usedIn": ["market"]
+    },
+    {
+      "id": "world-courses",
+      "claim": "There are 38,000+ golf courses across 206 of the world's 251 countries",
+      "value": "38,000+ courses / 206 countries",
+      "source": "The R&A — Golf Around the World (via National Golf Foundation)",
+      "url": "https://www.ngf.org/ras-golf-around-the-world-report/",
+      "accessed": "2026-07-14",
+      "usedIn": ["market"]
+    },
+    {
+      "id": "europe-course-counts",
+      "claim": "Course counts in key European markets: UK 3,101, Germany 1,050, France 804",
+      "value": "UK 3,101 / DE 1,050 / FR 804",
+      "source": "The R&A — Golf Around the World",
+      "url": "https://www.ngf.org/short-game/golf-around-the-world/",
+      "accessed": "2026-07-14",
+      "usedIn": ["market"]
     },
     {
       "id": "ernie-bio",

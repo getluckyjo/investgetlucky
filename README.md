@@ -44,8 +44,6 @@ every acceptance is then POSTed there as JSON (name, email, company, timestamp).
 
 | Slot | Where | What to supply |
 |---|---|---|
-| `ernie-portrait` | Ernie section | licensed portrait, ~4:5, ≥1200px |
-| `ernie-headshot` | Team row | licensed headshot, square |
 | Ernie pull-quote | Ernie section | a real quote from Ernie |
 | `app-entry` / `app-verify` / `app-winner` | How it works | app demo screens, 9:19.5 |
 | Wide video slot | How it works (optional) | ace/winner reel, 16:9 |
