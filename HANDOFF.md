@@ -135,6 +135,20 @@ Still **TODO** (none started):
    `--no-sandbox`) screenshots at 360/768/1200/1600; horizontal-overflow check;
    link check; numbers grep vs model.json; NDA flow. Commit + push.
 
+## Copy-tightening pass (2026-07-14, user-approved brief)
+
+The public page was restructured 14 → 9 bands for a 60–90-second investor
+read: Distribution folded into Traction; How-it-works + Money-model merged;
+Growth engines + Market merged into one Upside section; CFO/COO/CMO
+triangulation merged into Financials ("Why these numbers hold", 6 bullets).
+Copy cut ~50%; CTAs unified ("Open the dataroom" / "Book a call with the
+founder"); course wall cut to 6 names + "+ 19 more"; subscriber chart and
+empty phone-demo placeholders removed (slots documented in README; charts.js
+no-ops on the missing canvas). All contracted numbers, disclaimers,
+"not yet contracted" labels and the skill-not-gambling wording preserved.
+Old anchor ids (#how #growth #courses #doneDeal) alias into the merged
+sections.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
