@@ -288,17 +288,16 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 }
 
 /* --- how it works -------------------------------------------------------- */
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9.5rem, 100%), 1fr)); gap: 1rem; counter-reset: step; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9.5rem, 100%), 1fr)); gap: 1rem; }
 .step { position: relative; padding: 1.2rem 1.1rem 1.1rem; background: var(--white); border-radius: var(--radius); border: 1px solid rgba(52,82,48,0.12); }
-.step::before {
-  counter-increment: step; content: counter(step);
+.step__icon {
   position: absolute; top: -0.9rem; left: 1rem;
   width: 1.9rem; height: 1.9rem; border-radius: 50%;
   background: var(--gold); color: var(--green-ink);
-  font-family: var(--font-display); font-weight: 700; font-size: 1rem;
   display: flex; align-items: center; justify-content: center;
   box-shadow: var(--shadow-soft);
 }
+.step__icon svg { width: 1.05rem; height: 1.05rem; }
 .step h4 { margin-bottom: 0.3rem; }
 .step p { font-size: var(--step--1); font-family: var(--font-ui); margin: 0; line-height: 1.5; }
 
