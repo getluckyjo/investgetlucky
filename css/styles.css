@@ -346,7 +346,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 /* --- traction timeline ---------------------------------------------------- */
 .sparkline-wrap { background: var(--white); color: var(--green-ink); border-radius: var(--radius); border: 1px solid rgba(52,82,48,0.12); box-shadow: var(--shadow-soft); padding: clamp(1.2rem, 3vw, 2rem); }
 .sparkline-wrap h3 { color: var(--green); }
-.sparkline-wrap .chart-note { font-family: var(--font-ui); font-size: 0.76rem; opacity: 0.65; margin: 0.6rem 0 0; }
+.sparkline-wrap .chart-note { font-family: var(--font-ui); font-size: 0.74rem; opacity: 0.65; margin: 0.6rem 0 0; }
 .chart-box { position: relative; width: 100%; }
 .chart-box canvas { width: 100% !important; }
 
@@ -416,7 +416,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .engine__body { padding: clamp(1.3rem, 3vw, 2rem); display: grid; gap: 1.4rem; }
 .engine .mathpanel {
   background: rgba(24,39,22,0.45); border-radius: 10px; padding: 1.1rem 1.3rem;
-  font-family: var(--font-ui); font-size: 0.92rem;
+  font-family: var(--font-ui); font-size: 0.95rem;
 }
 .engine .mathpanel .line { display: flex; justify-content: space-between; gap: 1rem; padding: 0.34rem 0; border-bottom: 1px dashed rgba(246,244,225,0.2); }
 .engine .mathpanel .line:last-child { border-bottom: 0; font-weight: 700; color: var(--gold-soft); }
@@ -436,7 +436,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .upside-stats { display: grid; gap: 1.3rem; align-content: center; }
 .ustat { border-left: 3px solid var(--gold); padding: 0.1rem 0 0.1rem 1.1rem; font-family: var(--font-ui); font-size: 0.9rem; line-height: 1.5; opacity: 0.95; }
 .ustat .num { display: block; font-family: var(--font-display); font-weight: 700; font-size: var(--step-3); color: var(--gold-soft); line-height: 1.05; margin-bottom: 0.15rem; }
-.engines-head { margin: clamp(2.2rem, 5vw, 3.5rem) 0 var(--space-3); font-size: var(--step-2); }
+.engines-head { margin: clamp(2.2rem, 5vw, 3.5rem) 0 var(--space-3); }
 .chiprow { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .chiprow span {
   font-family: var(--font-ui); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.05em;
@@ -446,7 +446,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 
 .funnel { display: grid; gap: 0.55rem; max-width: 46rem; margin-top: var(--space-3); }
 .funnel > div {
-  color: var(--cream); font-family: var(--font-ui); font-size: 0.92rem;
+  color: var(--cream); font-family: var(--font-ui); font-size: 0.95rem;
   padding: 0.85rem 1.2rem; border-radius: 8px;
   display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
 }
@@ -508,7 +508,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .team .portrait-slot { padding: 0.8rem; }
 .team h4 { margin: 0.9rem 0 0.1rem; }
 .team .role { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); display: block; margin-bottom: 0.5rem; }
-.team p { font-family: var(--font-ui); font-size: 0.88rem; line-height: 1.55; }
+.team p { font-family: var(--font-ui); font-size: 0.9rem; line-height: 1.55; }
 
 /* --- strategic advisor card ------------------------------------------------------------ */
 .advisor {
@@ -519,7 +519,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 }
 .advisor h4 { color: var(--cream); }
 .advisor .eyebrow { color: var(--gold); }
-.advisor__role { display: block; font-family: var(--font-ui); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,225,0.65); margin-bottom: 0.6rem; }
+.advisor__role { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,240,225,0.65); margin-bottom: 0.6rem; }
 .advisor p:last-child { font-family: var(--font-ui); font-size: 0.95rem; line-height: 1.6; margin: 0; max-width: 62ch; }
 .advisor__photo {
   flex: none; width: clamp(6rem, 10vw, 8rem); aspect-ratio: 1; border-radius: 50%;
@@ -677,7 +677,7 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .appstep__no { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.15; color: var(--gold-text); min-width: 1.3ch; }
 .appstep.is-active .appstep__no { color: var(--green); }
 .appstep strong { display: block; font-family: var(--font-display); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--green); }
-.appstep small { display: block; font-family: var(--font-ui); font-size: 0.84rem; line-height: 1.5; margin-top: 0.2rem; opacity: 0.85; }
+.appstep small { display: block; font-family: var(--font-ui); font-size: var(--step--1); line-height: 1.5; margin-top: 0.2rem; opacity: 0.85; }
 .appdemo__note { opacity: 0.6; margin: var(--space-2) 0 0; }
 
 .appphone {
