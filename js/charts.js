@@ -139,9 +139,9 @@
     (function () {
       var c = box("chart-pnl", 260);
       if (!c) return;
-      var years = m.deckForecast.years;
-      var rev = m.deckForecast.revenueZAR;
-      var marginPct = m.deckForecast.ebitdaMarginPct;
+      var years = m.modelForecast.years;
+      var rev = m.modelForecast.revenueZAR;
+      var marginPct = m.modelForecast.ebitdaMarginPct;
       var ebitda = rev.map(function (r, i) { return Math.round(r * marginPct[i] / 100); });
       var marginLabel = {
         id: "marginLabel",

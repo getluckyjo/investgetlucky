@@ -140,8 +140,12 @@ Still **TODO** (none started):
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
   Dean Burmester's 5% — the Dean pitch offers him 5% too). Confirm the cap-table
   wording before investor calls.
-- **2026 revenue**: deck R10.2m vs Ernie one-pager R7.7m vs model ~R11.2m. Public
-  page currently quotes the deck; dataroom quotes the model with a note.
+- ~~**2026 revenue**: deck R10.2m vs Ernie one-pager R7.7m vs model ~R11.2m.~~
+  **RESOLVED 2026-07-14**: user confirmed the valuation workbook
+  (GetLucky_Valuation_Model.xlsx) is the only source for cashflow/forecast
+  figures. Public page + dataroom now quote the model everywhere: revenue
+  R11.2m (2026) → R35.3m (2029) → R83.0m (2032), EBITDA proxy ~4.5% → ~10% →
+  ~18%, IRR ~34%. The 2025 deck forecast is retired from copy.
 - Ernie photos show sponsor logos (SAP, Boeing, Stanley, XXIO) — confirm usage
   rights/licensing before the site goes public.
 - 3-Year Cashflow Projections PDF still missing from the dataroom ("Soon" slot).

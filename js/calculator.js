@@ -23,7 +23,7 @@
 
   window.GL.model.then(function (m) {
     var deal = m ? m.deal : {
-      postMoneyZAR: 40000000, multiple2028: 2.42, multiple2032: 12.5, irr3yrPct: 30
+      postMoneyZAR: 40000000, multiple2028: 2.42, multiple2032: 12.5, irr3yrPct: 34
     };
     var fx = m ? m.fx : 18.5;
 

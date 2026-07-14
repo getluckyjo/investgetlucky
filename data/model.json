@@ -1,5 +1,5 @@
 {
-  "_note": "Canonical numbers for the site. Public page uses 'deck' figures; dataroom summary uses 'model' figures (see reconciliation). Edit here, not in HTML.",
+  "_note": "Canonical numbers for the site. ALL cashflow/forecast figures come from GetLucky_Valuation_Model.xlsx (user decision 2026-07-14) — the 2025 deck forecast is superseded and retained only as a dataroom document. Edit here, not in HTML.",
   "fx": 18.5,
   "deal": {
     "raiseZAR": 4000000,
@@ -12,7 +12,7 @@
     "value2028ZAR": 96800000,
     "stake2028ZAR": 9700000,
     "multiple2028": 2.42,
-    "irr3yrPct": 30,
+    "irr3yrPct": 34,
     "exit2032ZAR": 500000000,
     "multiple2032": 12.5,
     "allocation": {
@@ -71,27 +71,37 @@
     "globalSubUSDpm": 10,
     "globalPrizeUSD": 10000
   },
-  "deckForecast": {
-    "_source": "the-get-lucky-deck-2025.pdf slide 9 (public-page figures)",
+  "modelForecast": {
+    "_source": "GetLucky_Valuation_Model.xlsx — Valuation tab annual roll-up (supersedes the 2025 deck forecast)",
     "years": [
       2026,
-      2027,
-      2028
+      2029,
+      2032
     ],
     "revenueZAR": [
-      10200000,
-      20300000,
-      30800000
+      11187607,
+      35269011,
+      83039864
+    ],
+    "revenueUSD": [
+      604735,
+      1906433,
+      4488641
+    ],
+    "ebitdaProxyZAR": [
+      498795,
+      3546475,
+      15219615
     ],
     "ebitdaMarginPct": [
-      20,
-      40,
-      45
+      4.5,
+      10.1,
+      18.3
     ],
-    "opexZAR": [
-      8000000,
-      null,
-      17000000
+    "grossProfitUSD": [
+      399125,
+      1258246,
+      2962503
     ]
   },
   "valuationModel": {
