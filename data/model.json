@@ -1,0 +1,313 @@
+{
+  "_note": "Canonical numbers for the site. ALL cashflow/forecast figures come from GetLucky_Valuation_Model.xlsx (user decision 2026-07-14) — the 2025 deck forecast is superseded and retained only as a dataroom document. Edit here, not in HTML.",
+  "fx": 18.5,
+  "deal": {
+    "raiseZAR": 4000000,
+    "equityPct": 10,
+    "preMoneyZAR": 36000000,
+    "postMoneyZAR": 40000000,
+    "dcfLowZAR": 57000000,
+    "dcfHighZAR": 78000000,
+    "ernieStakePct": 5,
+    "value2028ZAR": 96800000,
+    "stake2028ZAR": 9700000,
+    "multiple2028": 2.42,
+    "irr3yrPct": 34,
+    "exit2032ZAR": 500000000,
+    "multiple2032": 12.5,
+    "allocation": {
+      "show": false,
+      "committedZAR": null,
+      "closeDate": null
+    }
+  },
+  "traction": {
+    "period": "Jul\u2013Dec 2025",
+    "turnoverZAR": 3100000,
+    "sponsorshipZAR": 2500000,
+    "entriesZAR": 600000,
+    "monthlyRevenueZAR": {
+      "2025-07": 10000,
+      "2025-12": 250000,
+      "_interim": "interpolated for sparkline \u2014 replace with actuals"
+    },
+    "capitalInvestedZAR": 3000000,
+    "cameraAssetsZAR": 1000000,
+    "installs": 25,
+    "appCourses": 100,
+    "memberReach": 20000,
+    "multiHoleCourses": [
+      "The Metropolitan Golf Club",
+      "Boschenmeer Golf Club"
+    ],
+    "santamDealZAR": 9000000,
+    "santamYears": [
+      2500000,
+      3000000,
+      3500000
+    ],
+    "shankysZAR": 900000,
+    "shankysBottles": 1800,
+    "promoDayEntryLiftPct": 100,
+    "promoDayGreenHitPct": 25
+  },
+  "unitEconomics": {
+    "avgEntryZAR": 200,
+    "swingFromZAR": 50,
+    "stakeLadderZAR": [
+      { "stake": 50, "prize": 25000 },
+      { "stake": 100, "prize": 60000 },
+      { "stake": 250, "prize": 200000 },
+      { "stake": 500, "prize": 500000 },
+      { "stake": 1000, "prize": 1000000 }
+    ],
+    "splitPct": {
+      "getLucky": 78,
+      "course": 10,
+      "insurance": 12
+    },
+    "membershipZARpm": 149,
+    "maxPrizeZAR": 1000000,
+    "globalSubUSDpm": 10,
+    "globalPrizeUSD": 10000
+  },
+  "modelForecast": {
+    "_source": "GetLucky_Valuation_Model.xlsx — Valuation tab annual roll-up (supersedes the 2025 deck forecast)",
+    "years": [
+      2026,
+      2029,
+      2032
+    ],
+    "revenueZAR": [
+      11187607,
+      35269011,
+      83039864
+    ],
+    "revenueUSD": [
+      604735,
+      1906433,
+      4488641
+    ],
+    "ebitdaProxyZAR": [
+      498795,
+      3546475,
+      15219615
+    ],
+    "ebitdaMarginPct": [
+      4.5,
+      10.1,
+      18.3
+    ],
+    "grossProfitUSD": [
+      399125,
+      1258246,
+      2962503
+    ]
+  },
+  "valuationModel": {
+    "_source": "GetLucky_Valuation_Model.xlsx (dataroom figures)",
+    "subsStart": 2000,
+    "subsMonthly": [
+      2130,
+      2268,
+      2416,
+      2573,
+      2740,
+      2918,
+      3108,
+      3310,
+      3525,
+      3754,
+      3998,
+      4258,
+      4429,
+      4606,
+      4790,
+      4981,
+      5181,
+      5388,
+      5603,
+      5828,
+      6061,
+      6303,
+      6555,
+      6818,
+      7022,
+      7233,
+      7450,
+      7673,
+      7903,
+      8140,
+      8385,
+      8636,
+      8895,
+      9162,
+      9437,
+      9720
+    ],
+    "netMonthlyGrowthPct": [
+      6.5,
+      4.0,
+      3.0
+    ],
+    "grossMonthlyGrowthPct": [
+      10.5,
+      8.0,
+      7.0
+    ],
+    "churnPctMonthly": 4.0,
+    "grossMarginPct": 66,
+    "insurancePremiumPctOfRevenue": 24,
+    "cacUSD": 12,
+    "subs2029": 9720,
+    "subs2032": 22900,
+    "revenueUSD": {
+      "2026": 604700,
+      "2029": 1906000,
+      "2032": 4489000
+    },
+    "valuationUSD": {
+      "2026": 2162000,
+      "2029": 5232000,
+      "2032": 27027000
+    },
+    "milestonesZAR": {
+      "2026": 40000000,
+      "2029": 96800000,
+      "2032": 500000000
+    },
+    "exitMultiple": 6,
+    "nearTermMultiple": 2.7,
+    "downside": {
+      "multiples": [
+        3,
+        4
+      ],
+      "exitZAR": [
+        250000000,
+        335000000
+      ]
+    },
+    "comps": "Strava / Peloton / Whoop engaged-community businesses trade 5\u201310\u00d7 revenue",
+    "ernieStakeZAR": {
+      "2026": 2000000,
+      "2029": 4840000,
+      "2032": 25000000
+    }
+  },
+  "growthEngines": {
+    "travel": {
+      "status": "In development \u2014 not yet contracted",
+      "attachUSD": 1,
+      "avgTripUSD": [
+        2000,
+        4000
+      ],
+      "illustrative": {
+        "golfersPerYr": 220000,
+        "attachRateUSD": [
+          1,
+          3
+        ],
+        "revenueUSD": [
+          220000,
+          660000
+        ]
+      }
+    },
+    "sim": {
+      "status": "In development \u2014 not yet contracted",
+      "entryUSD": 1,
+      "prizeUSD": 1000,
+      "illustrative": {
+        "note": "1% of Korea's 94M annual sim rounds at $1 = $940k/yr from one market, software-only"
+      }
+    }
+  },
+  "marketAnalysis": {
+    "_source": "Get Lucky App Market Analysis.pdf (company scenario doc)",
+    "regions": {
+      "USA": {
+        "tam": 25000000,
+        "sam": 20000000,
+        "somPct": 3,
+        "som": 600000,
+        "revenueUSD": [
+          11000000,
+          12000000
+        ]
+      },
+      "Europe": {
+        "tam": 12000000,
+        "sam": 8400000,
+        "somPct": 3,
+        "som": 252000,
+        "revenueUSD": [
+          3520000,
+          3520000
+        ]
+      },
+      "SouthAfrica": {
+        "tam": 150000,
+        "sam": 120000,
+        "somPct": 15,
+        "som": 18000,
+        "revenueUSD": [
+          804000,
+          804000
+        ]
+      },
+      "Japan": {
+        "tam": 10000000,
+        "sam": 8000000,
+        "somPct": 1,
+        "som": 80000,
+        "revenueUSD": [
+          5800000,
+          5800000
+        ]
+      }
+    },
+    "combinedUSD": [
+      21124000,
+      22124000
+    ],
+    "kpis": {
+      "cacUSD": [
+        5,
+        10
+      ],
+      "cltvUSD": [
+        60,
+        150
+      ],
+      "repeatEntryPct": [
+        40,
+        70
+      ],
+      "viralK": [
+        0.7,
+        1.0
+      ]
+    }
+  },
+  "company": {
+    "legalName": "Get Lucky Golf Club (Pty) Ltd",
+    "regNo": "2025 / 047585 / 07",
+    "email": "johannes@getluckygolfclub.com",
+    "phone": "+27 60 961 5091",
+    "courses": [
+      "Paarl Golf Club (Boschenmeer)",
+      "St Francis Links",
+      "Goose Valley",
+      "Atlantic Beach Estate",
+      "Mosselbaai",
+      "Umhlali Country Club",
+      "Serengeti Estates",
+      "Graceland Country Club",
+      "State Mines",
+      "San Lameer",
+      "The Metropolitan Golf Club"
+    ]
+  }
+}
