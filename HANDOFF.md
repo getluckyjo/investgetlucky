@@ -199,7 +199,11 @@ motion.
   R11.2m (2026) → R35.3m (2029) → R83.0m (2032), EBITDA proxy ~4.5% → ~10% →
   ~18%, IRR ~34%. The 2025 deck forecast is retired from copy.
 - Ernie photos show sponsor logos (SAP, Boeing, Stanley, XXIO) — confirm usage
-  rights/licensing before the site goes public.
+  rights/licensing before the site goes public. This now includes
+  `ernie-24th-ace.jpg` (Ernie section "acecard", added 2026-07-14 from the
+  user-uploaded `24th career ace.png`): cropped from a PGA Tour Champions
+  Instagram post, shows EY/SAP/Boeing/Stanley/Srixon branding — confirm the
+  photo itself may be used.
 - 3-Year Cashflow Projections PDF still missing from the dataroom ("Soon" slot).
 - NDA endpoint key (Formspree/similar) not yet provided — signatures currently
   stored browser-side only.
