@@ -1,5 +1,5 @@
-/* Investor return calculator. Pure math from data/model.json; the disclaimer
-   node (#calc-note) is part of the component and must stay attached. */
+/* Investor return calculator. Pure math from data/model.json; the page-level
+   disclaimer lives in the footer legal block. */
 
 (function () {
   "use strict";

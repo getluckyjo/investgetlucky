@@ -219,6 +219,15 @@ Footer source ⁴ now includes Grand View Research.
   `scripts/docs/` with regeneration instructions; keep them in sync with
   model.json / research.json when figures change.
 
+## Fine-print trim (2026-07-14, user decision)
+
+Per the user ("these are professional investors"), the three small-print
+notes in the Numbers section were REMOVED from the public page: both
+chart-notes (P&L + valuation bridge) and the calculator's #calc-note
+disclaimer. The comprehensive legal disclaimer in the page footer remains
+and is the sole risk/forward-looking statement on the public page — do not
+re-add per-component disclaimers without the user asking.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
