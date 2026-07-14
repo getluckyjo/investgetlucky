@@ -423,6 +423,17 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .whylist { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; font-family: var(--font-ui); font-size: 0.95rem; }
 .whylist li { padding-left: 1.5rem; position: relative; }
 .whylist li::before { content: "→"; position: absolute; left: 0; color: var(--gold-soft); }
+.whylist--icons { gap: 0.9rem; }
+.whylist--icons li { padding-left: 2.7rem; }
+.whylist--icons li::before { content: none; }
+.wl-icon {
+  position: absolute; left: 0; top: 0.05rem;
+  width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  background: var(--gold); color: var(--green-ink);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+.wl-icon svg { width: 1.05rem; height: 1.05rem; }
 
 /* --- market region cards ---------------------------------------------------- */
 .region { position: relative; }
