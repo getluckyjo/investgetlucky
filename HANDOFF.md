@@ -135,6 +135,14 @@ Still **TODO** (none started):
    `--no-sandbox`) screenshots at 360/768/1200/1600; horizontal-overflow check;
    link check; numbers grep vs model.json; NDA flow. Commit + push.
 
+## Ernie stake disclosure (2026-07-14, user decision)
+
+The public page no longer states Ernie's 5% figure anywhere — he is described
+as founding partner / founding owner / founding investor / "the top-playing
+South African golfer of all time" instead. The number remains only in the
+NDA-gated dataroom documents and internal model.json fields. Do not reintroduce
+the percentage into public copy.
+
 ## Copy-tightening pass (2026-07-14, user-approved brief)
 
 The public page was restructured 14 → 9 bands for a 60–90-second investor
