@@ -23,6 +23,7 @@ index.html        public pitch (single scroll)
 dataroom.html     NDA wall + gated documents
 css/styles.css    design system — brand tokens at the top
 js/main.js        reveal animations, counters, model loader
+js/appdemo.js     auto-advancing phone walkthrough of the global app
 js/charts.js      Chart.js charts (vendored: vendor/chart.umd.min.js)
 js/calculator.js  investor return calculator
 js/nda.js         NDA gate (client-side session; see below)
@@ -45,7 +46,8 @@ every acceptance is then POSTed there as JSON (name, email, company, timestamp).
 | Slot | Where | What to supply |
 |---|---|---|
 | Ernie pull-quote | Ernie section | a real quote from Ernie |
-| `app-entry` / `app-verify` / `app-winner` | How it works | app demo screens, 9:19.5 |
+| App demo screens | `#app` phone walkthrough (product section) | real app screenshots, 9:19.5 portrait — replace the inner markup of each `.appscreen` in `index.html` with a single `<img class="appscreen__bg">` (keep the outer div + aria attributes; auto-advance keeps working) |
+| App demo video | same phone frame (optional) | screen-recording of the real flow — swap the four `.appscreen` divs for one `<video autoplay muted loop playsinline>` inside `.appphone` and drop `js/appdemo.js` |
 | Wide video slot | How it works (optional) | ace/winner reel, 16:9 |
 | Allocation meter | Deal section | set `deal.allocation` in `data/model.json` (`show: true`, `committedZAR`, `closeDate`) |
 | 3-year cashflow PDF | Dataroom | referenced in deck slide 9, not yet in repo |

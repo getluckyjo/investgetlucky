@@ -640,6 +640,139 @@ section[id], header[id], span[id] { scroll-margin-top: 5.2rem; }
 .contact-cta .cta-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
 .contact-cta::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(22,38,26,0.87) 0%, rgba(22,38,26,0.8) 55%, rgba(22,38,26,0.92) 100%); }
 
+/* --- app demo (auto-advancing phone walkthrough of the global product) -------------------------
+   Concept screens drawn in CSS; swap for real screenshots/video when supplied (README). */
+.appdemo {
+  display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(1.8rem, 5vw, 4rem); align-items: center;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+@media (max-width: 860px) { .appdemo { grid-template-columns: 1fr; } }
+.appdemo__copy h3 { font-size: var(--step-3); }
+.appdemo__steps { list-style: none; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: 0.7rem; }
+.appstep {
+  display: grid; grid-template-columns: auto 1fr; gap: 0.9rem; align-items: start;
+  width: 100%; text-align: left; cursor: pointer;
+  background: var(--white); border: 1.5px solid rgba(52, 82, 48, 0.14); border-radius: var(--radius);
+  padding: 0.85rem 1rem 0.9rem; font: inherit; color: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.appstep:hover { border-color: var(--gold); }
+.appstep.is-active { border-color: var(--gold); background: rgba(201, 169, 78, 0.1); box-shadow: var(--shadow-soft); }
+.appstep__no { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.15; color: var(--gold-text); min-width: 1.3ch; }
+.appstep.is-active .appstep__no { color: var(--green); }
+.appstep strong { display: block; font-family: var(--font-display); font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--green); }
+.appstep small { display: block; font-family: var(--font-ui); font-size: 0.84rem; line-height: 1.5; margin-top: 0.2rem; opacity: 0.85; }
+.appdemo__note { opacity: 0.6; margin: var(--space-2) 0 0; }
+
+.appphone {
+  width: min(17.5rem, 88vw); aspect-ratio: 9 / 18.5; margin-inline: auto;
+  border-radius: 2.6rem; border: 3px solid var(--green-ink);
+  background: var(--green-deep); color: var(--cream);
+  box-shadow: 0 24px 60px rgba(24, 39, 22, 0.35);
+  position: relative; overflow: hidden; isolation: isolate;
+}
+.appphone::before {
+  content: ""; position: absolute; top: 0.55rem; left: 50%; transform: translateX(-50%);
+  width: 32%; height: 0.8rem; background: var(--green-ink); border-radius: 999px; z-index: 40;
+}
+.appphone__progress { position: absolute; top: 1.75rem; left: 0.9rem; right: 0.9rem; display: flex; gap: 0.4rem; z-index: 30; }
+.appphone__progress i { flex: 1; height: 3px; border-radius: 999px; background: rgba(253, 252, 245, 0.35); position: relative; overflow: hidden; }
+.appphone__progress i::after { content: ""; position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; }
+.appphone__progress i.is-done::after { transform: none; }
+.appphone__progress i.is-active::after { animation: appdemo-fill var(--appdemo-interval, 4.2s) linear forwards; }
+@keyframes appdemo-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .appphone__progress i.is-active::after { transform: none; } }
+
+.appscreen { position: absolute; inset: 0; display: flex; flex-direction: column; opacity: 0; transition: opacity 0.5s ease; pointer-events: none; }
+.appscreen.is-active { opacity: 1; z-index: 10; }
+.appscreen__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.appscreen__shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22, 38, 26, 0.6) 0%, rgba(22, 38, 26, 0.3) 42%, rgba(22, 38, 26, 0.9) 88%); }
+.appscreen__shade--film { background: linear-gradient(180deg, rgba(22, 38, 26, 0.55) 0%, rgba(22, 38, 26, 0.12) 40%, rgba(22, 38, 26, 0.62) 100%); }
+.appscreen__body { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2.9rem 1.2rem 1.5rem; }
+
+/* screen 1 — home */
+.apphome__logo { width: 58%; margin: auto auto 0.9rem; filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.45)); }
+.apphome__price { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-soft); }
+.apphome__prize { font-family: var(--font-display); font-size: 2.15rem; line-height: 0.95; text-transform: uppercase; color: var(--cream); margin-top: 0.3rem; }
+.apphome__sub { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.04em; opacity: 0.85; margin-top: 0.45rem; }
+.appbtn {
+  display: inline-block; font-family: var(--font-display); font-size: 0.92rem;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  background: var(--gold); color: var(--green-ink); border-radius: 999px;
+  padding: 0.6rem 1.5rem; margin-top: 0.9rem;
+}
+.appbtn--center { margin: auto auto 0; text-align: center; position: relative; z-index: 2; }
+
+/* screen 2 — choose course */
+.appscreen--courses { background: linear-gradient(175deg, var(--green-deep) 0%, var(--green-ink) 90%); padding: 2.9rem 0.9rem 1.4rem; }
+.appbar { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; padding: 0.3rem 0.25rem 0.75rem; position: relative; z-index: 2; }
+.appbar__title { font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--cream); white-space: nowrap; }
+.appbar__hint { font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); white-space: nowrap; }
+.appcourses { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; position: relative; z-index: 2; }
+.appcourses li {
+  display: flex; align-items: center; gap: 0.65rem;
+  background: rgba(246, 244, 225, 0.07); border: 1px solid rgba(246, 244, 225, 0.16);
+  border-radius: 12px; padding: 0.55rem 0.7rem;
+}
+.appcourses li.is-selected { border-color: var(--gold); background: rgba(201, 169, 78, 0.16); }
+.appthumb {
+  flex: none; width: 2.15rem; height: 2.15rem; border-radius: 50%;
+  overflow: hidden; border: 1px solid rgba(246, 244, 225, 0.35); background: var(--green);
+}
+.appthumb img { width: 100%; height: 100%; object-fit: cover; }
+.appcourse { min-width: 0; }
+.appcourse strong { display: block; font-family: var(--font-ui); font-size: 0.76rem; font-weight: 700; line-height: 1.3; color: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.appcourse small { display: block; font-family: var(--font-ui); font-size: 0.64rem; color: rgba(246, 244, 225, 0.72); }
+.apptick { margin-left: auto; color: var(--gold-soft); font-weight: 700; }
+
+/* screen 3 — film the shot */
+.appfilm__tracer { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+.appfilm__tracer path {
+  fill: none; stroke: var(--gold-soft); stroke-width: 2.5; stroke-linecap: round;
+  stroke-dasharray: 6 8; filter: drop-shadow(0 0 6px rgba(232, 212, 139, 0.7));
+  animation: appdemo-tracer 2.4s linear infinite;
+}
+.appfilm__tracer circle { fill: var(--gold-soft); filter: drop-shadow(0 0 6px rgba(232, 212, 139, 0.9)); }
+@keyframes appdemo-tracer { to { stroke-dashoffset: -56; } }
+.appfilm__hud { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; gap: 0.6rem; padding: 2.6rem 0.9rem 0; }
+.appfilm__rec { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); background: rgba(22, 38, 26, 0.65); border-radius: 999px; padding: 0.3rem 0.65rem; }
+.appfilm__rec i { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--red-flag); animation: appdemo-rec 1.2s steps(2, jump-none) infinite; }
+@keyframes appdemo-rec { 50% { opacity: 0.25; } }
+.appfilm__hole {
+  text-align: right; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 700; line-height: 1.35; color: var(--cream);
+  background: rgba(22, 38, 26, 0.72); border: 1px solid rgba(246, 244, 225, 0.22); border-radius: 10px; padding: 0.4rem 0.6rem;
+}
+.appfilm__hole small { display: block; font-size: 0.6rem; font-weight: 600; color: var(--gold-soft); }
+.appfilm__foot { position: relative; z-index: 2; margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 0.7rem; padding-bottom: 1.2rem; }
+.appfilm__track { font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); background: rgba(22, 38, 26, 0.65); border-radius: 999px; padding: 0.3rem 0.75rem; }
+.appfilm__shutter { width: 3rem; height: 3rem; border-radius: 50%; border: 3px solid var(--cream); background: rgba(176, 64, 47, 0.92); box-shadow: 0 0 0 4px rgba(22, 38, 26, 0.4); }
+
+/* screen 4 — verified ace */
+.appscreen--win {
+  background:
+    radial-gradient(130% 65% at 50% 0%, rgba(201, 169, 78, 0.45), transparent 60%),
+    linear-gradient(170deg, var(--green) 0%, var(--green-deep) 80%);
+}
+.appwin__badge { margin-top: auto; font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-ink); background: var(--gold); border-radius: 999px; padding: 0.3rem 0.8rem; }
+.appwin__ace { font-family: var(--font-display); font-size: 3.2rem; line-height: 0.9; text-transform: uppercase; color: var(--gold-soft); margin-top: 0.9rem; text-shadow: 0 6px 26px rgba(0, 0, 0, 0.35); }
+.appwin__amount { font-family: var(--font-display); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--cream); margin-top: 0.4rem; }
+.appwin__sub { font-family: var(--font-ui); font-size: 0.64rem; letter-spacing: 0.04em; opacity: 0.85; margin-top: 0.35rem; }
+.appwin__checks { list-style: none; width: 100%; margin: 1.1rem 0 0; padding: 0; display: grid; gap: 0.45rem; font-family: var(--font-ui); font-size: 0.68rem; }
+.appwin__checks li {
+  display: flex; justify-content: space-between; gap: 0.6rem; text-align: left;
+  background: rgba(22, 38, 26, 0.5); border: 1px solid rgba(246, 244, 225, 0.18);
+  border-radius: 10px; padding: 0.5rem 0.7rem;
+}
+.appwin__checks .state { color: var(--gold-soft); font-weight: 700; white-space: nowrap; }
+.appupload {
+  margin-top: auto; width: 100%;
+  font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold-soft); text-align: center;
+  border: 1.5px dashed rgba(232, 212, 139, 0.75); border-radius: 12px;
+  background: rgba(201, 169, 78, 0.1); padding: 0.7rem 0.6rem;
+}
+
 /* --- misc ------------------------------------------------------------------------------------ */
 .center { text-align: center; }
 .mt-4 { margin-top: var(--space-4); }
