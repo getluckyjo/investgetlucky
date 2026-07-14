@@ -200,10 +200,11 @@ motion.
   ~18%, IRR ~34%. The 2025 deck forecast is retired from copy.
 - Ernie photos show sponsor logos (SAP, Boeing, Stanley, XXIO) — confirm usage
   rights/licensing before the site goes public. This now includes
-  `ernie-24th-ace.jpg` (Ernie section "acecard", added 2026-07-14 from the
-  user-uploaded `24th career ace.png`): cropped from a PGA Tour Champions
-  Instagram post, shows EY/SAP/Boeing/Stanley/Srixon branding — confirm the
-  photo itself may be used.
+  `ernie-24th-ace.jpg` (now THE Ernie-section portrait, per the user
+  2026-07-14, replacing `ernie-portrait.jpg` which is free again; cropped
+  from a PGA Tour Champions Instagram post of the user-uploaded
+  `24th career ace.png`): shows EY/SAP/Boeing/Stanley/Srixon branding —
+  confirm the photo itself may be used.
 - 3-Year Cashflow Projections PDF still missing from the dataroom ("Soon" slot).
 - NDA endpoint key (Formspree/similar) not yet provided — signatures currently
   stored browser-side only.
