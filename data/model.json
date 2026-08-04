@@ -8,12 +8,12 @@
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
     "ernieStakePct": 5,
-    "value2028ZAR": 187428972,
-    "stake2028ZAR": 28114346,
-    "multiple2028": 3.51,
-    "irr3yrPct": 52,
-    "exit2032ZAR": 470994220,
-    "multiple2032": 8.8,
+    "value2028ZAR": 160653405,
+    "stake2028ZAR": 24098011,
+    "multiple2028": 3.01,
+    "irr3yrPct": 44,
+    "exit2032ZAR": 403709331,
+    "multiple2032": 7.6,
     "allocation": {
       "show": false,
       "committedZAR": null,
@@ -248,7 +248,7 @@
     "route": "Ernie Els holds direct relationships with the target operators and opens the door himself.",
     "sensitivity2029": {
       "_note": "Adoption range around the plan, with every other stream held at plan. Upsell revenue moves with simulator volume, so it is recomputed per row rather than held flat.",
-      "nearTermMultiple": 3.5,
+      "nearTermMultiple": 3.0,
       "postMoneyZAR": 53333333,
       "rows": [
         {
@@ -257,8 +257,8 @@
           "simZAR": 3999700,
           "upsellZAR": 3326574,
           "totalZAR": 44595285,
-          "valuationZAR": 156083498,
-          "investorMultiple": 2.93
+          "valuationZAR": 133785855,
+          "investorMultiple": 2.51
         },
         {
           "attachRatePct": 1.5,
@@ -266,8 +266,8 @@
           "simZAR": 11999100,
           "upsellZAR": 4283024,
           "totalZAR": 53551135,
-          "valuationZAR": 187428972,
-          "investorMultiple": 3.51
+          "valuationZAR": 160653405,
+          "investorMultiple": 3.01
         },
         {
           "attachRatePct": 3.0,
@@ -275,8 +275,8 @@
           "simZAR": 23998200,
           "upsellZAR": 5717699,
           "totalZAR": 66984910,
-          "valuationZAR": 234447185,
-          "investorMultiple": 4.4
+          "valuationZAR": 200954730,
+          "investorMultiple": 3.77
         }
       ]
     }
@@ -460,30 +460,30 @@
     },
     "milestonesZAR": {
       "2026": 53333333,
-      "2029": 187428972,
-      "2032": 470994220
+      "2029": 160653405,
+      "2032": 403709331
     },
-    "exitMultiple": 3.5,
-    "nearTermMultiple": 3.5,
+    "exitMultiple": 3.0,
+    "nearTermMultiple": 3.0,
     "comps": "Strava / Peloton / Whoop engaged-community businesses trade 5–10× revenue",
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
       "2026": 2666667,
-      "2029": 9371449,
-      "2032": 23549711
+      "2029": 8032670,
+      "2032": 20185467
     },
     "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
-    "multipleBasis": "3.5x revenue, flat at every forward milestone. Engaged-community subscription businesses (Strava, Peloton, Whoop) trade at 5-10x revenue, so 3.5x sits 30% below the bottom of that band — a discount for being private and pre-scale, not a stretch. Raised from 2.5x 2026-08-04 on user instruction: SA investors respond to vision, and 3.5x is still inside a defensible range.",
+    "multipleBasis": "3.0x revenue, flat at every forward milestone. Engaged-community subscription businesses (Strava, Peloton, Whoop) trade at 5-10x revenue, so 3.0x sits 40% below the bottom of that band — a discount for being private and pre-scale. Settled at 3.0x 2026-08-04 after 2.5x and 3.5x were both trialled.",
     "entryMultipleImplied": 4.77,
-    "compUpside": "Not in the plan: at the 5-10x comp band, 2032 would be R673m-R1346m against the R471m carried here.",
+    "compUpside": "Not in the plan: at the 5-10x comp band, 2032 would be R673m-R1346m against the R404m carried here.",
     "billionHorizon": {
-      "_note": "The R1bn mark, stated as a horizon rather than a modelled milestone — it sits BEYOND the 2032 model window. Arithmetic is shown so it reads as a trajectory, not a slogan: at a flat 3.5x, R1bn needs about R286m of revenue. On the plan's own long-term growth rate (1.8% monthly, the same rate used to extend 2029 to 2032) revenue passes that level roughly three and a half years after 2032.",
+      "_note": "The R1bn mark, stated as a horizon rather than a modelled milestone — it sits BEYOND the 2032 model window. At a flat 3.0x, R1bn needs about R333m of revenue. On the plan's own long-term growth rate (1.8% monthly, the same rate used to extend 2029 to 2032) revenue passes that level a little over four years after 2032.",
       "targetValuationZAR": 1000000000,
-      "revenueRequiredZAR": 285714286,
-      "arrivesAround": 2036,
-      "revenue2036ZAR": 316840636,
-      "valuation2036ZAR": 1108942227,
-      "basis": "Same flat 3.5x multiple, no expansion assumed"
+      "revenueRequiredZAR": 333333333,
+      "arrivesAround": 2037,
+      "revenue2037ZAR": 392477001,
+      "valuation2037ZAR": 1177431004,
+      "basis": "Same flat 3.0x multiple, no expansion assumed"
     }
   },
   "growthEngines": {
