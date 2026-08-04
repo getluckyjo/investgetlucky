@@ -187,6 +187,29 @@ user may still upload real app screens + a video — swap instructions in README
 "Assets wanted". Pauses on hover, stops off-screen, no autoplay under reduced
 motion.
 
+**Parked for the app build — the Srixon optic-yellow ball colour (2026-08-04).**
+User asked whether to make it the highlight colour on the investment page, then
+decided against it: *"let's stick to the current more grounded visual identity
+and bring the ball colour into the app later."* Nothing was changed — the gold
+tokens (`--gold` #c9a94e / `--gold-soft` #e8d48b / `--gold-text` #94742a) are
+untouched.
+
+Why it was the right call for the pitch page, and why the app is different: the
+accent has ~60 usages in `css/styles.css` and roughly half are small text on
+cream — eyebrows, `.usd` sub-labels, `.modeltable .mut`, `.doclist .type`,
+`.upsell__price`. Optic yellow cannot carry small text on a light surface, so
+each of those would need a dark olive derivative — meaning the ball colour would
+only ever show on badges and buttons while the text stayed dark. Cost of a
+rebrand, a fraction of the effect.
+
+In the app it earns its place, because the surfaces are dark and it can be a
+state signal rather than decoration: the shot tracer (`.appfilm__tracer`
+stroke + the drop-shadow glow), the live/filming state, and the win screen
+(`.appwin__ace`). Ernie plays a yellow ball, so on a dark viewfinder it reads as
+a product detail, not a palette choice. Sample the exact hex from the ball
+image the user supplied rather than guessing — it is a green-leaning fluorescent
+yellow, not a warm yellow.
+
 ## Upside section redesign (2026-07-14, user request)
 
 `#market` rebuilt for scannability: funnel (widened bars) beside a 3-stat
