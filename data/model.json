@@ -8,12 +8,12 @@
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
     "ernieStakePct": 5,
-    "value2028ZAR": 135200000,
-    "stake2028ZAR": 20280000,
-    "multiple2028": 2.54,
-    "irr3yrPct": 36,
-    "exit2032ZAR": 744000000,
-    "multiple2032": 13.9,
+    "value2028ZAR": 147000000,
+    "stake2028ZAR": 22050000,
+    "multiple2028": 2.76,
+    "irr3yrPct": 40,
+    "exit2032ZAR": 807000000,
+    "multiple2032": 15.1,
     "allocation": {
       "show": false,
       "committedZAR": null,
@@ -130,34 +130,46 @@
           108108,
           486486
         ]
+      },
+      "inPlayUpsells": {
+        "ZAR": [
+          0,
+          4283024,
+          10532313
+        ],
+        "USD": [
+          0,
+          231515,
+          569314
+        ]
       }
     },
     "revenueZAR": [
       11187607,
-      49268111,
-      124037464
+      53551135,
+      134569777
     ],
     "revenueUSD": [
-      604735,
-      2663141,
-      6704728
+      604736,
+      2894656,
+      7274042
     ],
     "ebitdaProxyZAR": [
       498795,
-      10746025,
-      36618415
+      13529991,
+      43464418
     ],
     "ebitdaMarginPct": [
       4.5,
-      21.8,
-      29.5
+      25.3,
+      32.3
     ],
     "grossProfitUSD": [
       399125,
       1258246,
       2962503
     ],
-    "_streams": "Revenue is built from three reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, modelled off one subscriber build, and including the contracted Santam sponsorship in South Africa), simulators, and territorySponsorship (the Santam deal repeated with an anchor insurer partner in each new market). revenueZAR is the total. Report as composition — never as a base plan plus optional add-ons."
+    "_streams": "Revenue is built from four reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, including the contracted Santam sponsorship), simulators, territorySponsorship (the Santam deal repeated per market) and inPlayUpsells (the add-on menu, which attaches to attempts already in the model and never creates new volume). revenueZAR is the total. Report as composition."
   },
   "simulatorChannel": {
     "_note": "A core revenue stream in the plan, not optional upside. Launches 2027 once the integration this round funds is built. Ramp and sensitivity are modelled in the Simulator tab of the pro forma workbook.",
@@ -229,7 +241,7 @@
     "agreementStatus": "No operator agreement is signed as at August 2026. State this once, plainly, in the dataroom assumptions and the simulator document risk section — do not repeat it as a badge or a caveat on every figure.",
     "route": "Ernie Els holds direct relationships with the target operators and opens the door himself.",
     "sensitivity2029": {
-      "_note": "Adoption range around the plan. Standard modelling discipline — present as a range, not as a doubt.",
+      "_note": "Adoption range around the plan, with every other stream held at plan. Upsell revenue moves with simulator volume, so it is recomputed per row rather than held flat.",
       "nearTermMultiple": 2.744619,
       "postMoneyZAR": 53333333,
       "rows": [
@@ -237,25 +249,28 @@
           "attachRatePct": 0.5,
           "label": "Conservative adoption",
           "simZAR": 3999700,
-          "totalZAR": 39268711,
-          "valuationZAR": 107800000,
-          "investorMultiple": 2.02
+          "upsellZAR": 3326574,
+          "totalZAR": 44595285,
+          "valuationZAR": 122400000.0,
+          "investorMultiple": 2.29
         },
         {
           "attachRatePct": 1.5,
           "label": "The plan",
           "simZAR": 11999100,
-          "totalZAR": 47268111,
-          "valuationZAR": 129733000,
-          "investorMultiple": 2.43
+          "upsellZAR": 4283024,
+          "totalZAR": 53551135,
+          "valuationZAR": 147000000.0,
+          "investorMultiple": 2.76
         },
         {
           "attachRatePct": 3.0,
           "label": "Strong adoption",
           "simZAR": 23998200,
-          "totalZAR": 59267211,
-          "valuationZAR": 162700000,
-          "investorMultiple": 3.05
+          "upsellZAR": 5717699,
+          "totalZAR": 66984910,
+          "valuationZAR": 183800000.0,
+          "investorMultiple": 3.45
         }
       ]
     }
@@ -311,6 +326,64 @@
     },
     "ebitdaMarginPct": 60,
     "status": "South Africa contracted; new-territory partners appointed at market entry"
+  },
+  "inPlayUpsells": {
+    "_note": "The add-on menu sold at the moment of maximum intent — after a golfer has paid and is standing over the ball. Upsells attach to attempts ALREADY in the model (subscriber rounds and simulator challenges); they never create new volume, so there is no double-count with the other streams. Launches 2027 with the app build this round funds.",
+    "status": "Launching 2027 — built with the app, funded by this round",
+    "menu": [
+      {
+        "name": "Jackpot upgrade",
+        "price": "$100",
+        "insured": true,
+        "detail": "Trade up mid-round: $100 buys a shot at a $100,000 insured prize instead of the standard pot."
+      },
+      {
+        "name": "Double up",
+        "price": "$5",
+        "insured": true,
+        "detail": "Doubles your prize if you ace it. Cheapest yes on the menu and the highest attach."
+      },
+      {
+        "name": "Three for two",
+        "price": "2x entry",
+        "insured": true,
+        "detail": "Three swings for the price of two. Raises attempts per visit without touching the prize."
+      },
+      {
+        "name": "Nearest the pin",
+        "price": "$3",
+        "insured": true,
+        "detail": "A guaranteed prize if you finish inside three feet. Monetises the 12,499 attempts out of 12,500 that are not an ace — the single biggest lever on perceived value."
+      },
+      {
+        "name": "The highlight reel",
+        "price": "$3",
+        "insured": false,
+        "detail": "The produced clip of your shot, scored and branded, ready to post. No insurance component — pure margin, and every share is marketing."
+      },
+      {
+        "name": "The group pot",
+        "price": "$10 a head",
+        "insured": false,
+        "detail": "A fourball buys in, closest to the pin takes the pot, Get Lucky takes a fee. Turns a solo purchase into four."
+      }
+    ],
+    "assumptions": {
+      "_note": "Attach rates are set against the price point of the underlying entry: a golfer paying ~R200 a swing is a very different buyer to one paying $1 in a simulator, so the two are modelled separately.",
+      "coreAttachPct": 12,
+      "coreAvgUSD": 5.0,
+      "coreBasis": "Subscriber rounds — subscribers x 4 rounds/month x 12",
+      "simAttachPct": 5,
+      "simAvgUSD": 2.0,
+      "simBasis": "Simulator challenges from the simulator ramp",
+      "getLuckyNetPct": 55,
+      "ebitdaMarginPct": 65
+    },
+    "revenueZAR": {
+      "2026": 0,
+      "2029": 4283024,
+      "2032": 10532313
+    }
   },
   "valuationModel": {
     "_source": "GetLucky_Valuation_Model.xlsx (dataroom figures)",
@@ -381,8 +454,8 @@
     },
     "milestonesZAR": {
       "2026": 53333333,
-      "2029": 135200000,
-      "2032": 744000000
+      "2029": 147000000,
+      "2032": 807000000
     },
     "exitMultiple": 6,
     "nearTermMultiple": 2.744619,
@@ -400,8 +473,8 @@
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
       "2026": 2666667,
-      "2029": 6760000,
-      "2032": 37200000
+      "2029": 7350000,
+      "2032": 40350000
     }
   },
   "growthEngines": {

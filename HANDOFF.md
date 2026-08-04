@@ -384,6 +384,46 @@ the container cannot open any xlsx, so `recalc.py` cannot run and the files
 carry no cached values; the formula graph was evaluated independently
 (0 failures, 0 bad refs, every output tied to `model.json`).
 
+## IN-PLAY UPSELLS ADDED AS A REVENUE STREAM (2026-08-04, later still)
+
+User: *"I also want to add on upsells as a revenue stream - like buy a shot at
+$100 000 now for $100 / Double up your winnings for $5... come up with more
+ideas and build into the model."*
+
+**The menu** (six items, `inPlayUpsells.menu` in model.json, block under the
+ladder in `#model`): jackpot upgrade $100 for a $100,000 shot · double up $5 ·
+three swings for the price of two · **nearest the pin $3** (a guaranteed prize
+inside three feet — the one that monetises the 12,499 shots in 12,500 that are
+not an ace, and the biggest lever on perceived value) · the highlight reel $3
+(no insurance component, so pure margin, and every share is marketing) · the
+group pot $10 a head (turns one purchase into four).
+
+**Modelling discipline — the important part.** Upsells attach to attempts
+**already in the model** (subscriber rounds + simulator challenges) and never
+create new volume, so they cannot double-count another stream. Split by price
+point, because a golfer paying ~R200 a swing is a different buyer to one paying
+$1 in a sim:
+- Course & app: **12% attach at $5 average**, on subscribers x 4 rounds/month x 12
+- Simulators: **5% attach at $2**
+- Get Lucky nets **55%** (higher than the 46% sim entry share — part of the menu
+  carries no insurance), at a **65% EBITDA margin**. Launches 2027 with the app.
+- **These attach rates are Claude's proposal, not user-supplied.** Live inputs
+  on the new Upsells tab.
+
+**Resulting numbers.** Upsells R4.3m (2029) / R10.5m (2032). Revenue R11.2m →
+**R53.6m** → **R134.6m**. EBITDA ~4.5% → ~25% → ~32%. Milestones R53.3m →
+**R147m** → **R807m**. Investor return **2.76× and ~40% IRR**.
+
+**Watch the IRR.** Stacking four streams has walked the three-year return from
+34% → 36% → 40%. Each step is defensible on its own inputs, but ~40% is high
+enough that a sceptical investor may discount the whole model rather than argue
+a line item. If it needs tempering, the cleanest lever is the upsell attach rate
+on the Upsells tab, not the multiple.
+
+**Workbook**: seven tabs now — new **Upsells** tab (menu, attach assumptions,
+volume and revenue) and the Valuation tab rebuilt to five revenue rows with
+EBITDA split four ways.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
