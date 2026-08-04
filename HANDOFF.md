@@ -524,6 +524,45 @@ all along.
 and `compUpside`; the old `downside` block (3-4x) was removed, since 3-4x now
 sits *above* the base case and reads as upside rather than downside.
 
+## MULTIPLE SETTLED AT 3.0x + THE BILLION-RAND HORIZON (2026-08-04, final)
+
+Trialled 2.5x, then 3.5x on the user's instruction (*"SA investors like to see
+blue sky vision and its not at all over ambitious - plus I would like to get to
+a billion valuation"*), then **settled at 3.0x**. The 3.5x version was never
+merged; only 3.0x reached a PR.
+
+Multiple settled at **3.0x**, still flat at every forward milestone and still
+below the comp band: engaged-community businesses (Strava, Peloton, Whoop) trade
+at 5-10x, so 3.0x sits **40% under the bottom** of it. Entry stays at the 4.77x
+the round implies, so the multiple still compresses.
+
+Milestones R53.3m -> **R160.7m** -> **R404m**. Investor return **3.01x at three
+years, ~44% IRR**, 7.6x at 2032.
+
+**Watch the IRR — it is now ~44%.** It has travelled 34 -> 36 -> 40 -> 36 -> 52
+-> 44 across the day as levers moved. Each step is arithmetically sound, but the
+higher end of that range is where an institutional investor may stop engaging
+with the line items and discount the model wholesale. The user's judgement is that SA angel/HNW
+investors respond to vision, and that call is theirs — but if a future reader
+wonders why the return looks aggressive, the multiple is the single lever: 2.5x
+gives ~36%, 3.0x gives ~44%, 3.5x gives ~52%. Nothing else needs to move.
+
+**The billion-rand horizon.** Handled as a dated trajectory, NOT a modelled
+milestone, and it must stay that way. At a flat 3.0x, R1bn needs ~R333m of
+revenue against the R134.6m modelled for 2032. Carrying the plan's own long-term
+growth rate (1.8% monthly — the same rate already used to extend 2029 to 2032)
+revenue passes that level a little over four years later, so **R1bn lands around
+2037 (R392m revenue -> R1.18bn)**. No new assumption is introduced and no
+multiple expansion is assumed.
+
+It is presented on the public page as "The billion-rand mark is a trajectory,
+not a slogan", with the arithmetic shown line by line and an explicit statement
+that it sits **outside the plan being underwritten** — the deal is priced
+against the R404m 2032 figure. Keep that separation: the moment R1bn is
+presented as a modelled milestone, the model stops being defensible.
+
+New `valuationModel.billionHorizon` block carries the figures.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
