@@ -1,4 +1,7 @@
 /* Get Lucky dataroom documents — matches the Ernie one-pager style */
+/* Page geometry lives here so `chrome --headless --print-to-pdf` reproduces the
+   dataroom PDFs without any margin flags. See scripts/docs/README.md. */
+@page { size: A4; margin: 16mm 19mm 15mm; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: Arial, Helvetica, sans-serif;

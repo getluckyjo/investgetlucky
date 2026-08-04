@@ -116,7 +116,7 @@
       "source": "Forbes / Seoulz — Korea Screen Golf Industry 2026",
       "url": "https://www.forbes.com/sites/erikmatuszewski/2026/05/09/golfzon-growth-includes-game-changing-indoor-venue-set-for-us-debut/",
       "accessed": "2026-07-13",
-      "usedIn": ["growth-sim"]
+      "usedIn": ["growth-sim", "financials"]
     },
     {
       "id": "korea-sim-rounds",
@@ -125,7 +125,7 @@
       "source": "GOLF.com — Inside South Korea's obsessive love of the game",
       "url": "https://golf.com/news/golf-fixation-inside-south-koreas-obsessive-love-golf/",
       "accessed": "2026-07-13",
-      "usedIn": ["growth-sim"]
+      "usedIn": ["growth-sim", "financials"]
     },
     {
       "id": "korea-screen-industry",
@@ -143,7 +143,7 @@
       "source": "InsightAce Analytic / Grand View Research",
       "url": "https://www.grandviewresearch.com/industry-analysis/golf-simulator-market-report",
       "accessed": "2026-07-13",
-      "usedIn": ["growth-sim"]
+      "usedIn": ["growth-sim", "financials"]
     },
     {
       "id": "us-offcourse-golfers",
