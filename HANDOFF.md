@@ -487,6 +487,43 @@ figures. New "The plan is costed, not just forecast" block on the public page
 (`#financials`). `.mathpanel` CSS was unscoped from `.engine` so it can be
 reused there.
 
+## VALUATION MULTIPLE FLATTENED TO 2.5x (2026-08-04, last change of the day)
+
+User: *"Let's bring down the revenue multiples and make them linear as an
+investor would expect... But still market related."*
+
+**The problem.** The multiples were 4.77x implied at entry, **2.744619x** at
+2029, then **6x** at 2032 — dipping and then spiking. That shape reads as three
+numbers chosen to hit a target rather than a method, and it is the first thing
+a sceptical investor picks at.
+
+**Now: one flat 2.5x revenue multiple at every forward milestone.** The entry
+multiple stays whatever the round implies (R53.3m post / R11.2m revenue =
+**4.77x**), so the multiple **compresses** as the company scales — the direction
+an investor expects — and no multiple expansion is assumed anywhere. The
+milestones move only with revenue.
+
+**Why 2.5x is still market-related.** Engaged-community subscription businesses
+(Strava, Peloton, Whoop) trade at 5-10x revenue. The plan applies roughly half
+the bottom of that band, discounted for being private, pre-scale and
+mid-execution. Anchored to the market, deliberately on the conservative side of
+it. Framed on the site as: if the business were ever rated at the comp band,
+2032 would be R673m-R1,346m against the R336m carried — explicitly not in the
+plan.
+
+**Numbers.** Milestones R53.3m -> **R133.9m** -> **R336m** (was R147m / R807m).
+Investor return **2.51x at three years, ~36% IRR**, 6.3x at 2032. Revenue,
+EBITDA and the cost base are untouched.
+
+Note this also delivers the mid-30s IRR the user asked for earlier, which
+cutting the upsell attach could not reach (that lever floors at 36.4% because
+simulators and sponsorship already carry 2029). The multiple was the right lever
+all along.
+
+`valuationModel` gained `_multiplePolicy`, `multipleBasis`, `entryMultipleImplied`
+and `compUpside`; the old `downside` block (3-4x) was removed, since 3-4x now
+sits *above* the base case and reads as upside rather than downside.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
