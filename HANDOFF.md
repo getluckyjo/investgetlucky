@@ -326,6 +326,64 @@ failures, 0 bad sheet references, and every 2026/2029/2032 output tied to
 `data/model.json` within 0.3%. If you have a working Excel/LibreOffice, opening
 and re-saving each workbook once will bake the cached values back in.
 
+## SIMULATORS MOVED INTO THE CORE PLAN + TERRITORY SPONSORSHIP (2026-08-04, later)
+
+User: *"Build the simulator into the core plan from the start and don't make it
+feel like its an add on or may not happen."* Then: *"take out independent DCF as
+its no longer current"* and *"work in market related sponsorship revenue per
+target territory with Santam partner brands in each."*
+
+**Simulators are now a revenue stream, not a growth engine.**
+- `growthEngines.sim` → top-level **`simulatorChannel`**. Status changed from
+  "In development — not yet contracted" to **"Launching 2027 — integration
+  funded by this round"**.
+- Added as **rung 4** of the ladder in `#model`, a peer of the global
+  subscription, with its own 46/30/24 split bar. Section sub now reads "Four
+  ways to sell that swing".
+- `#market` reordered: sponsorship and simulators (both in plan) first, travel
+  (still uncounted) last. Heading: "Two streams in the plan. One still uncounted."
+- Removed everywhere: the base-plan-vs-layer split, "strip it out", the
+  "what happens if the partnership never lands" FAQ (replaced with **"How real
+  is the simulator business?"**), the 0% sensitivity row on the public site, and
+  the repeated "not contracted" badges.
+- **One honest disclosure retained, deliberately** — do not delete: operator
+  agreements are not yet signed. It appears once each in the dataroom
+  assumptions, the simulator PDF risk table, the doc footers, and the workbook
+  Simulator tab. The 0% attach case survives as a *live input* on that tab
+  ("set the attach rate to zero"), not as a headline caveat.
+
+**Territory sponsorship is a third reported stream.** Sized off the one hard
+precedent — Santam's signed R9m over three years in a ~150k-golfer market:
+- United States R2.0m/yr from 2029 → R4.0m by 2032 · Europe R3.0m/yr from 2030
+  · Japan R2.0m/yr from 2031. Total in plan: **R2.0m (2029) → R9.0m (2032)**.
+- Set deliberately BELOW the SA run-rate at entry in markets many times the
+  size. Not scaled linearly off golfer counts — that produces numbers no sponsor
+  would sign. Every figure is a live input on the new **Sponsorship** tab.
+- South African sponsorship stays inside the coursesAndApp stream (off the
+  monthly build), so nothing is double-counted.
+- **These per-territory figures are Claude's proposal, not user-supplied.**
+  If Johannes wants different numbers, change the Sponsorship tab and
+  `territorySponsorship.territories` in `model.json`.
+
+**Independent DCF removed.** `deal.dcfLowZAR` / `dcfHighZAR` deleted; the deal
+card row is now Minimum ticket; the FAQ and doc-faq answers rebuilt. The price
+argument is now carried entirely by the plan. **Do not reinstate the R57–78m
+range without a fresh valuation.**
+
+**Resulting numbers.** Revenue R11.2m → **R49.3m** → **R124.0m** (courses & app
+R11.2/35.3/83.0 + simulators 0/12.0/32.0 + sponsorship 0/2.0/9.0). EBITDA ~4.5%
+→ ~22% → ~30%. Milestones R53.3m → **R135.2m** → **R744m**. Investor return
+**2.54× and ~36% IRR** (up from 2.42×/~34% at the old R4m price) — the headline
+argument for the reprice is now "you pay more and get a better return, because
+the bigger cheque funds the two streams that produce it".
+
+**Workbooks**: new **Sponsorship** tab; Valuation tab rebuilt to report
+courses & app / simulators / territory sponsorship / total, with EBITDA split
+three ways. Six tabs now. Same verification caveat as before — LibreOffice in
+the container cannot open any xlsx, so `recalc.py` cannot run and the files
+carry no cached values; the formula graph was evaluated independently
+(0 failures, 0 bad refs, every output tied to `model.json`).
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
