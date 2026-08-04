@@ -241,6 +241,91 @@ summary as trajectory+assumptions tables, public fine-print removed, nav CTA
 resized. Awaiting next steps: possible real app screenshots/video for the
 phone demo (swap instructions in README), plus the open flags below.
 
+## RAISE REPRICED TO R8m / 15% (2026-08-04)
+
+User: "We want to push the raise to R8M for 15% ... to make sense of the higher
+valuation we want to build in the income projection from partnering with a
+global simulator like golf zon."
+
+**New terms.** R8.0m for 15% — R45,333,333 pre / R53,333,333 post (exact:
+8 ÷ 0.15). Minimum ticket unchanged at R1m. Independent DCF unchanged at
+R57–78m, so the round *still* prices ~20% below the DCF floor — that is the
+lead justification for the price, ahead of the simulator story.
+
+**The simulator channel moved from uncounted upside into the model.** Built as
+a separable layer, never blended:
+- Unit: $1 entry, $1,000 insured prize, split **46 / 30 / 24** (Get Lucky /
+  operator / insurer). Operator gets more than a course's 10% because it brings
+  venues, software and distribution; Get Lucky installs no hardware.
+- Volume: attach rate against **South Korea's ~94M annual sim rounds only**.
+  0.3% (2027) → 0.8% (2028) → 1.5% (2029) → 4.0% (2032). Golfzon's non-Korea
+  venues and every other operator are excluded.
+- Revenue to Get Lucky: R2.4m / R6.4m / **R12.0m (2029)** / R32.0m (2032),
+  at ~50% EBITDA margin.
+
+**Resulting numbers.** Base plan unchanged (R11.2m → R35.3m → R83.0m). Totals
+R11.2m → R47.3m → R115.0m. EBITDA ~4.5% → ~20% → ~27%. Milestones R53.3m →
+R129.7m (2.7446× revenue — the multiple implied by the published R96.8m base-plan milestone) → R690m (6× revenue).
+
+**Why the investor return is unchanged — this is the point of the reprice.**
+2.43× at three years and ~34% IRR, identical to the R4m/10% round. The higher
+price is offset exactly by the higher plan. Lead with this on any investor call
+where the R40m number was already quoted.
+
+**Honesty guardrails (do not remove).**
+- `growthEngines.sim.status` stays **"In development — not yet contracted"**.
+  Nothing is signed with Golfzon. Badge on the public panel reads "In the plan
+  — target partner, not yet contracted".
+- The **0% attach sensitivity row is published** — dataroom table 3, the
+  simulator PDF, and the FAQ: no partnership → R35.3m 2029 revenue, R96.8m
+  milestone, 1.82× not 2.43×.
+- Base plan and simulator layer are reported **separately everywhere** — site
+  chart is stacked, dataroom trajectory table has three revenue rows, and
+  `model.json` carries `revenueZAR` / `simRevenueZAR` / `totalRevenueZAR`.
+- `index.html` no longer claims "every upside is uncounted" — that bullet was
+  false once simulators entered the plan. Replaced with two bullets: the sim
+  line is deliberately small, and travel/cross-sport/other operators remain out.
+
+**Use of funds rebalanced** to 20 / 25 / 20 / 20 / 15 — course expansion,
+global platform, **simulator integration**, market entry, ops. The 20%
+(~R1.6m) simulator slice is what makes the new revenue line defensible.
+
+**New dataroom document**: `scripts/docs/doc-simulator.html` →
+`assets/docs/get-lucky-simulator-channel.pdf` (market, target operators, unit
+economics, ramp, sensitivity, what the raise funds, principal risks). All three
+dataroom PDFs regenerated; `doc-style.css` now carries an `@page` rule so
+`chrome --headless --print-to-pdf` reproduces A4 without margin flags.
+
+## WORKBOOKS REBUILT FOR THE SIMULATOR CHANNEL (2026-08-04)
+
+`GetLucky_Pro Forma .xlsx` (shipped to the dataroom as
+`assets/docs/get-lucky-pro-forma.xlsx`) and `GetLucky_Valuation_Model.xlsx`
+both gained a **Simulator** tab and a rewritten **Valuation** tab.
+
+- **Simulator tab**: status block (NOT CONTRACTED, lead target Golfzon, Ernie
+  route), unit economics ($1 entry / $1,000 prize / 46-30-24 split with a
+  shares-total-100% check), volume basis (94M Korea rounds), the annual attach
+  ramp 2026–2032, and the four-row 2029 sensitivity. Every figure is a formula
+  off blue input cells, so an investor can change the attach rate and watch the
+  whole model move.
+- **Valuation tab** now reports `Base plan revenue` → `Simulator channel
+  revenue` → `Total annual revenue`, with EBITDA split base / simulator / total,
+  and a `base plan only, no simulator` ZAR memo.
+- Deal inputs updated: 15% / R8m / R53.3m post; near-term multiple set to
+  **2.744619**, the exact multiple implied by the published R96.8m base-plan
+  milestone (R96.8m ÷ R35.3m). That choice makes the base-plan-only memo land on
+  R96.8m exactly and the 2029 milestone on **R129.7m** — the site was moved from
+  R129.5m to R129.7m to match. Sensitivity valuations likewise R107.8m / R162.7m.
+
+**Verification note:** LibreOffice in the build container cannot open any xlsx
+(it fails on a trivial one-cell file too), so `scripts/recalc.py` could not run
+and the files carry **no cached formula values** — Excel will compute on first
+open, which is normal for openpyxl output. In its place the formula graph was
+evaluated independently (`evalwb.py`, a small spreadsheet evaluator): 0 formula
+failures, 0 bad sheet references, and every 2026/2029/2032 output tied to
+`data/model.json` within 0.3%. If you have a working Excel/LibreOffice, opening
+and re-saving each workbook once will bake the cached values back in.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
@@ -262,6 +347,19 @@ phone demo (swap instructions in README), plus the open flags below.
 - 3-Year Cashflow Projections PDF still missing from the dataroom ("Soon" slot).
 - NDA endpoint key (Formspree/similar) not yet provided — signatures currently
   stored browser-side only.
+- ~~**Golfzon relationship status unconfirmed.**~~ **RESOLVED 2026-08-04**: user
+  confirmed *"Ernie has direct links to the simulator partners and opens the
+  door."* Copy now states that Ernie has direct relationships with the target
+  operators and opens the door himself. Still **nothing signed** — the badge,
+  the status row and every "not contracted" disclosure stay exactly as they are
+  until an agreement exists.
+- ~~**The pro forma workbook does not contain the simulator channel.**~~
+  **RESOLVED 2026-08-04**: both workbooks now carry a **Simulator** tab (status,
+  unit economics, attach ramp, 2029 sensitivity) and the Valuation tab reports
+  base plan / simulator / total separately. Dataroom wording restored to "the
+  single source for every cashflow, forecast and simulator figure".
+- "90% founder ownership" wording: now also diluted by the 15% round (founder
+  ~76.5% if Ernie holds 5% pre-round). Recheck alongside the cap-table flag above.
 
 ## Environment notes (for the next session)
 

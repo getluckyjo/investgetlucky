@@ -80,7 +80,8 @@
     document.getElementById("allocation-fill").style.flex = String(pct);
     document.getElementById("allocation-fill").textContent = Math.round(pct) + "% committed";
     document.getElementById("allocation-rest").style.flex = String(100 - pct);
-    var txt = "R" + (alloc.committedZAR / 1e6).toFixed(2).replace(/\.?0+$/, "") + "m of R4m committed";
+    var fmtM = function (v) { return "R" + (v / 1e6).toFixed(2).replace(/\.?0+$/, "") + "m"; };
+    var txt = fmtM(alloc.committedZAR) + " of " + fmtM(m.deal.raiseZAR) + " committed";
     if (alloc.closeDate) txt += " · round closes " + alloc.closeDate;
     document.getElementById("allocation-text").textContent = txt;
     meter.hidden = false;

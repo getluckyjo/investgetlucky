@@ -8,6 +8,7 @@
   if (typeof Chart === "undefined") return;
 
   var GREEN = "#478f41";
+  var GREEN_LIGHT = "#8fc089"; /* simulator layer — same family as base revenue, clear luminance step */
   var GOLD = "#b07c10";
   var INK = "#16261a";
   var GRID = "rgba(24, 39, 22, 0.08)";
@@ -140,14 +141,18 @@
       var c = box("chart-pnl", 260);
       if (!c) return;
       var years = m.modelForecast.years;
-      var rev = m.modelForecast.revenueZAR;
+      var base = m.modelForecast.revenueZAR;
+      var sim = m.modelForecast.simRevenueZAR;
+      var total = m.modelForecast.totalRevenueZAR;
       var marginPct = m.modelForecast.ebitdaMarginPct;
-      var ebitda = rev.map(function (r, i) { return Math.round(r * marginPct[i] / 100); });
+      var ebitda = m.modelForecast.ebitdaProxyZAR;
+      /* Revenue is stacked so the base plan and the simulator channel stay visibly
+         separate — an investor must be able to read the floor without the partnership. */
       var marginLabel = {
         id: "marginLabel",
         afterDatasetsDraw: function (chart) {
           var ctx = chart.ctx;
-          var meta = chart.getDatasetMeta(1);
+          var meta = chart.getDatasetMeta(2);
           ctx.save();
           ctx.font = "700 12px " + FONT.family;
           ctx.fillStyle = INK;
@@ -163,8 +168,9 @@
         data: {
           labels: years,
           datasets: [
-            { label: "Revenue", data: rev, backgroundColor: GREEN, borderRadius: 4, maxBarThickness: 56 },
-            { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: GOLD, borderRadius: 4, maxBarThickness: 56 }
+            { label: "Base plan revenue", data: base, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Simulator channel", data: sim, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: GOLD, stack: "ebitda", borderRadius: 4, maxBarThickness: 56 }
           ]
         },
         options: {
@@ -174,14 +180,25 @@
             tooltip: {
               callbacks: {
                 label: function (ctx) {
-                  var s = ctx.dataset.label.split(" ")[0] + ": " + fmtR(ctx.parsed.y);
-                  if (ctx.datasetIndex === 1) s += " (" + marginPct[ctx.dataIndex] + "% margin)";
+                  var s = ctx.dataset.label + ": " + fmtR(ctx.parsed.y);
+                  if (ctx.datasetIndex === 2) s += " (" + marginPct[ctx.dataIndex] + "% margin)";
                   return s;
+                },
+                footer: function (items) {
+                  var i = items[0].dataIndex;
+                  return "Total revenue: " + fmtR(total[i]);
                 }
               }
             }
           },
-          scales: baseScales(function (v) { return fmtR(v); })
+          scales: {
+            x: { stacked: true, grid: { display: false }, border: { color: GRID } },
+            y: {
+              stacked: true, grid: { color: GRID }, border: { display: false },
+              ticks: { callback: function (v) { return fmtR(v); }, maxTicksLimit: 6 },
+              beginAtZero: true
+            }
+          }
         },
         plugins: [marginLabel]
       });

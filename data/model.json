@@ -2,19 +2,20 @@
   "_note": "Canonical numbers for the site. ALL cashflow/forecast figures come from GetLucky_Valuation_Model.xlsx (user decision 2026-07-14) — the 2025 deck forecast is superseded and retained only as a dataroom document. Edit here, not in HTML.",
   "fx": 18.5,
   "deal": {
-    "raiseZAR": 4000000,
-    "equityPct": 10,
-    "preMoneyZAR": 36000000,
-    "postMoneyZAR": 40000000,
+    "_note": "Round repriced 2026-08-04: R8.0m for 15%. Pre/post are exact (8 / 0.15 = 53,333,333). Forward milestones rise with the simulator channel (see growthEngines.sim), so the investor multiple and IRR are unchanged from the R4m/10% round — that equivalence is the point of the reprice. Pre-money still sits below dcfLowZAR.",
+    "raiseZAR": 8000000,
+    "equityPct": 15,
+    "preMoneyZAR": 45333333,
+    "postMoneyZAR": 53333333,
     "dcfLowZAR": 57000000,
     "dcfHighZAR": 78000000,
     "ernieStakePct": 5,
-    "value2028ZAR": 96800000,
-    "stake2028ZAR": 9700000,
-    "multiple2028": 2.42,
+    "value2028ZAR": 129733000,
+    "stake2028ZAR": 19459950,
+    "multiple2028": 2.43,
     "irr3yrPct": 34,
-    "exit2032ZAR": 500000000,
-    "multiple2032": 12.5,
+    "exit2032ZAR": 690000000,
+    "multiple2032": 12.9,
     "allocation": {
       "show": false,
       "committedZAR": null,
@@ -75,6 +76,7 @@
   },
   "modelForecast": {
     "_source": "GetLucky_Valuation_Model.xlsx — Valuation tab annual roll-up (supersedes the 2025 deck forecast)",
+    "_layering": "revenueZAR is the BASE PLAN — subscriptions + sponsorship only, unchanged from the R4m round and the figure an investor underwrites without any simulator partnership. simRevenueZAR is the modelled simulator channel (growthEngines.sim). totalRevenueZAR is the sum and is what the valuation milestones are struck off. Always publish the three separately; never show the total alone.",
     "years": [
       2026,
       2029,
@@ -90,15 +92,35 @@
       1906433,
       4488641
     ],
+    "simRevenueZAR": [
+      0,
+      11999100,
+      31997600
+    ],
+    "simRevenueUSD": [
+      0,
+      648600,
+      1729600
+    ],
+    "totalRevenueZAR": [
+      11187607,
+      47268111,
+      115037464
+    ],
+    "totalRevenueUSD": [
+      604735,
+      2555033,
+      6218241
+    ],
     "ebitdaProxyZAR": [
       498795,
-      3546475,
-      15219615
+      9546025,
+      31218415
     ],
     "ebitdaMarginPct": [
       4.5,
-      10.1,
-      18.3
+      20.2,
+      27.1
     ],
     "grossProfitUSD": [
       399125,
@@ -174,12 +196,18 @@
       "2032": 27027000
     },
     "milestonesZAR": {
-      "2026": 40000000,
+      "2026": 53333333,
+      "2029": 129733000,
+      "2032": 690000000
+    },
+    "milestonesBasePlanZAR": {
+      "_note": "Same milestones with the simulator channel stripped out — the floor if no operator partnership lands.",
+      "2026": 53333333,
       "2029": 96800000,
       "2032": 500000000
     },
     "exitMultiple": 6,
-    "nearTermMultiple": 2.7,
+    "nearTermMultiple": 2.744619,
     "downside": {
       "multiples": [
         3,
@@ -192,9 +220,10 @@
     },
     "comps": "Strava / Peloton / Whoop engaged-community businesses trade 5\u201310\u00d7 revenue",
     "ernieStakeZAR": {
-      "2026": 2000000,
-      "2029": 4840000,
-      "2032": 25000000
+      "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
+      "2026": 2666667,
+      "2029": 6486650,
+      "2032": 34500000
     }
   },
   "growthEngines": {
@@ -218,11 +247,46 @@
       }
     },
     "sim": {
+      "_note": "Promoted from uncounted optionality to a modelled revenue line 2026-08-04 \u2014 this is the channel the R8m raise funds and the reason the forward milestones rise. STATUS IS UNCHANGED: no operator agreement is signed. Every public mention must carry the status string below.",
       "status": "In development \u2014 not yet contracted",
+      "leadPartner": "Golfzon",
+      "targetOperators": [
+        "Golfzon",
+        "Trackman",
+        "Full Swing",
+        "Foresight Sports",
+        "X-Golf",
+        "Topgolf Swing Suite",
+        "Kakao VX"
+      ],
       "entryUSD": 1,
       "prizeUSD": 1000,
-      "illustrative": {
-        "note": "1% of Korea's 94M annual sim rounds at $1 = $940k/yr from one market, software-only"
+      "revenueSplitPct": {
+        "_note": "Operator takes 30% \u2014 more than a course's 10% because the operator brings the venues, the software and the distribution, and Get Lucky installs no hardware. Insurance premium held at 24%, matching the on-course model.",
+        "getLucky": 46,
+        "operator": 30,
+        "insurance": 24
+      },
+      "koreaRoundsBase": 94000000,
+      "_volumeBasis": "Attach rate applied to ~94M annual simulator rounds in South Korea alone (research.json: korea-sim-rounds) \u2014 Golfzon's home network. Golfzon's non-Korea venues and every other operator on targetOperators are excluded from the model.",
+      "ramp": [
+        { "year": 2026, "attachRatePct": 0, "challenges": 0, "grossUSD": 0, "getLuckyUSD": 0, "getLuckyZAR": 0, "note": "Integration year \u2014 no revenue modelled" },
+        { "year": 2027, "attachRatePct": 0.3, "challenges": 282000, "grossUSD": 282000, "getLuckyUSD": 129720, "getLuckyZAR": 2399820 },
+        { "year": 2028, "attachRatePct": 0.8, "challenges": 752000, "grossUSD": 752000, "getLuckyUSD": 345920, "getLuckyZAR": 6399520 },
+        { "year": 2029, "attachRatePct": 1.5, "challenges": 1410000, "grossUSD": 1410000, "getLuckyUSD": 648600, "getLuckyZAR": 11999100 },
+        { "year": 2032, "attachRatePct": 4.0, "challenges": 3760000, "grossUSD": 3760000, "getLuckyUSD": 1729600, "getLuckyZAR": 31997600 }
+      ],
+      "ebitdaMarginPct": 50,
+      "sensitivity2029": {
+        "_note": "Published openly. The 0% row is the honest downside \u2014 no partnership, base plan only.",
+        "nearTermMultiple": 2.744619,
+        "postMoneyZAR": 53333333,
+        "rows": [
+          { "attachRatePct": 0, "label": "No operator partnership lands", "simZAR": 0, "totalZAR": 35269011, "valuationZAR": 96800000, "investorMultiple": 1.82 },
+          { "attachRatePct": 0.5, "label": "Slow adoption", "simZAR": 3999700, "totalZAR": 39268711, "valuationZAR": 107800000, "investorMultiple": 2.02 },
+          { "attachRatePct": 1.5, "label": "The plan", "simZAR": 11999100, "totalZAR": 47268111, "valuationZAR": 129733000, "investorMultiple": 2.43 },
+          { "attachRatePct": 3.0, "label": "Strong adoption", "simZAR": 23998200, "totalZAR": 59267211, "valuationZAR": 162700000, "investorMultiple": 3.05 }
+        ]
       }
     }
   },
