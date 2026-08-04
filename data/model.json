@@ -2,20 +2,18 @@
   "_note": "Canonical numbers for the site. ALL cashflow/forecast figures come from GetLucky_Valuation_Model.xlsx (user decision 2026-07-14) — the 2025 deck forecast is superseded and retained only as a dataroom document. Edit here, not in HTML.",
   "fx": 18.5,
   "deal": {
-    "_note": "Round repriced 2026-08-04: R8.0m for 15%. Pre/post are exact (8 / 0.15 = 53,333,333). Forward milestones rise with the simulator channel (see growthEngines.sim), so the investor multiple and IRR are unchanged from the R4m/10% round — that equivalence is the point of the reprice. Pre-money still sits below dcfLowZAR.",
+    "_note": "Round repriced 2026-08-04: R8.0m for 15%. Pre/post are exact (8 / 0.15 = 53,333,333). The price is justified by the plan itself — four revenue rungs plus territory sponsorship — not by an external valuation opinion. The independent DCF was removed 2026-08-04: it is out of date and must not be reinstated without a fresh one.",
     "raiseZAR": 8000000,
     "equityPct": 15,
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
-    "dcfLowZAR": 57000000,
-    "dcfHighZAR": 78000000,
     "ernieStakePct": 5,
-    "value2028ZAR": 129733000,
-    "stake2028ZAR": 19459950,
-    "multiple2028": 2.43,
-    "irr3yrPct": 34,
-    "exit2032ZAR": 690000000,
-    "multiple2032": 12.9,
+    "value2028ZAR": 147000000,
+    "stake2028ZAR": 22050000,
+    "multiple2028": 2.76,
+    "irr3yrPct": 40,
+    "exit2032ZAR": 807000000,
+    "multiple2032": 15.1,
     "allocation": {
       "show": false,
       "committedZAR": null,
@@ -23,14 +21,14 @@
     }
   },
   "traction": {
-    "period": "Jul 2025 \u2013 Jul 2026",
+    "period": "Jul 2025 – Jul 2026",
     "turnoverZAR": 4000000,
     "sponsorshipZAR": 2500000,
     "entriesZAR": 1500000,
     "entriesCount": 10000,
     "courseActivations": 800,
     "monthlyRevenueZAR": {
-      "_note": "historical endpoints (Jul\u2013Dec 2025), chart retired from public page",
+      "_note": "historical endpoints (Jul–Dec 2025), chart retired from public page",
       "2025-07": 10000,
       "2025-12": 250000
     },
@@ -58,11 +56,26 @@
     "avgEntryZAR": 200,
     "swingFromZAR": 50,
     "stakeLadderZAR": [
-      { "stake": 50, "prize": 25000 },
-      { "stake": 100, "prize": 60000 },
-      { "stake": 250, "prize": 200000 },
-      { "stake": 500, "prize": 500000 },
-      { "stake": 1000, "prize": 1000000 }
+      {
+        "stake": 50,
+        "prize": 25000
+      },
+      {
+        "stake": 100,
+        "prize": 60000
+      },
+      {
+        "stake": 250,
+        "prize": 200000
+      },
+      {
+        "stake": 500,
+        "prize": 500000
+      },
+      {
+        "stake": 1000,
+        "prize": 1000000
+      }
     ],
     "splitPct": {
       "getLucky": 66,
@@ -76,57 +89,301 @@
   },
   "modelForecast": {
     "_source": "GetLucky_Valuation_Model.xlsx — Valuation tab annual roll-up (supersedes the 2025 deck forecast)",
-    "_layering": "revenueZAR is the BASE PLAN — subscriptions + sponsorship only, unchanged from the R4m round and the figure an investor underwrites without any simulator partnership. simRevenueZAR is the modelled simulator channel (growthEngines.sim). totalRevenueZAR is the sum and is what the valuation milestones are struck off. Always publish the three separately; never show the total alone.",
     "years": [
       2026,
       2029,
       2032
     ],
+    "revenueStreamsZAR": {
+      "coursesAndApp": {
+        "ZAR": [
+          11187607,
+          35269011,
+          83039864
+        ],
+        "USD": [
+          604735,
+          1906433,
+          4488641
+        ]
+      },
+      "simulators": {
+        "ZAR": [
+          0,
+          11999100,
+          31997600
+        ],
+        "USD": [
+          0,
+          648600,
+          1729600
+        ]
+      },
+      "territorySponsorship": {
+        "ZAR": [
+          0,
+          2000000,
+          9000000
+        ],
+        "USD": [
+          0,
+          108108,
+          486486
+        ]
+      },
+      "inPlayUpsells": {
+        "ZAR": [
+          0,
+          4283024,
+          10532313
+        ],
+        "USD": [
+          0,
+          231515,
+          569314
+        ]
+      }
+    },
     "revenueZAR": [
       11187607,
-      35269011,
-      83039864
+      53551135,
+      134569777
     ],
     "revenueUSD": [
-      604735,
-      1906433,
-      4488641
-    ],
-    "simRevenueZAR": [
-      0,
-      11999100,
-      31997600
-    ],
-    "simRevenueUSD": [
-      0,
-      648600,
-      1729600
-    ],
-    "totalRevenueZAR": [
-      11187607,
-      47268111,
-      115037464
-    ],
-    "totalRevenueUSD": [
-      604735,
-      2555033,
-      6218241
+      604736,
+      2894656,
+      7274042
     ],
     "ebitdaProxyZAR": [
       498795,
-      9546025,
-      31218415
+      13529991,
+      43464418
     ],
     "ebitdaMarginPct": [
       4.5,
-      20.2,
-      27.1
+      25.3,
+      32.3
     ],
     "grossProfitUSD": [
       399125,
       1258246,
       2962503
-    ]
+    ],
+    "_streams": "Revenue is built from four reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, including the contracted Santam sponsorship), simulators, territorySponsorship (the Santam deal repeated per market) and inPlayUpsells (the add-on menu, which attaches to attempts already in the model and never creates new volume). revenueZAR is the total. Report as composition."
+  },
+  "simulatorChannel": {
+    "_note": "A core revenue stream in the plan, not optional upside. Launches 2027 once the integration this round funds is built. Ramp and sensitivity are modelled in the Simulator tab of the pro forma workbook.",
+    "status": "Launching 2027 — integration funded by this round",
+    "leadPartner": "Golfzon",
+    "targetOperators": [
+      "Golfzon",
+      "Trackman",
+      "Full Swing",
+      "Foresight Sports",
+      "X-Golf",
+      "Topgolf Swing Suite",
+      "Kakao VX"
+    ],
+    "entryUSD": 1,
+    "prizeUSD": 1000,
+    "revenueSplitPct": {
+      "_note": "Operator takes 30% — more than a course's 10% because the operator brings the venues, the software and the distribution, and Get Lucky installs no hardware. Insurance premium held at 24%, matching the on-course model.",
+      "getLucky": 46,
+      "operator": 30,
+      "insurance": 24
+    },
+    "koreaRoundsBase": 94000000,
+    "_volumeBasis": "Attach rate applied to ~94M annual simulator rounds in South Korea alone (research.json: korea-sim-rounds) — Golfzon's home network. Golfzon's non-Korea venues and every other operator on targetOperators are excluded from the model.",
+    "ramp": [
+      {
+        "year": 2026,
+        "attachRatePct": 0,
+        "challenges": 0,
+        "grossUSD": 0,
+        "getLuckyUSD": 0,
+        "getLuckyZAR": 0,
+        "note": "Integration year — no revenue modelled"
+      },
+      {
+        "year": 2027,
+        "attachRatePct": 0.3,
+        "challenges": 282000,
+        "grossUSD": 282000,
+        "getLuckyUSD": 129720,
+        "getLuckyZAR": 2399820
+      },
+      {
+        "year": 2028,
+        "attachRatePct": 0.8,
+        "challenges": 752000,
+        "grossUSD": 752000,
+        "getLuckyUSD": 345920,
+        "getLuckyZAR": 6399520
+      },
+      {
+        "year": 2029,
+        "attachRatePct": 1.5,
+        "challenges": 1410000,
+        "grossUSD": 1410000,
+        "getLuckyUSD": 648600,
+        "getLuckyZAR": 11999100
+      },
+      {
+        "year": 2032,
+        "attachRatePct": 4.0,
+        "challenges": 3760000,
+        "grossUSD": 3760000,
+        "getLuckyUSD": 1729600,
+        "getLuckyZAR": 31997600
+      }
+    ],
+    "ebitdaMarginPct": 50,
+    "agreementStatus": "No operator agreement is signed as at August 2026. State this once, plainly, in the dataroom assumptions and the simulator document risk section — do not repeat it as a badge or a caveat on every figure.",
+    "route": "Ernie Els holds direct relationships with the target operators and opens the door himself.",
+    "sensitivity2029": {
+      "_note": "Adoption range around the plan, with every other stream held at plan. Upsell revenue moves with simulator volume, so it is recomputed per row rather than held flat.",
+      "nearTermMultiple": 2.744619,
+      "postMoneyZAR": 53333333,
+      "rows": [
+        {
+          "attachRatePct": 0.5,
+          "label": "Conservative adoption",
+          "simZAR": 3999700,
+          "upsellZAR": 3326574,
+          "totalZAR": 44595285,
+          "valuationZAR": 122400000.0,
+          "investorMultiple": 2.29
+        },
+        {
+          "attachRatePct": 1.5,
+          "label": "The plan",
+          "simZAR": 11999100,
+          "upsellZAR": 4283024,
+          "totalZAR": 53551135,
+          "valuationZAR": 147000000.0,
+          "investorMultiple": 2.76
+        },
+        {
+          "attachRatePct": 3.0,
+          "label": "Strong adoption",
+          "simZAR": 23998200,
+          "upsellZAR": 5717699,
+          "totalZAR": 66984910,
+          "valuationZAR": 183800000.0,
+          "investorMultiple": 3.45
+        }
+      ]
+    }
+  },
+  "territorySponsorship": {
+    "_note": "Sponsorship is a proven, repeatable line, not a projection: Santam signed R9m over three years (R2.5m -> R3.0m -> R3.5m) to be attached to this product in South Africa, a ~150k-golfer market. Each target territory repeats that deal with an anchor insurer partner brand, phased by market-entry year. South African sponsorship already sits inside the coursesAndApp stream; this block is the additional territories only.",
+    "proofPoint": {
+      "market": "South Africa",
+      "partner": "Santam (Authorised FSP 3416)",
+      "status": "Contracted",
+      "dealZAR": 9000000,
+      "years": [
+        2500000,
+        3000000,
+        3500000
+      ],
+      "golferMarket": 150000
+    },
+    "_sizing": "New-territory deals are set below the SA run-rate at entry and grow with the installed base. They are NOT scaled linearly off golfer counts — sponsorship is negotiated and lumpy, and a linear scale off a 25M-golfer market would produce figures no sponsor would sign. Every figure here is a live input on the Sponsorship tab.",
+    "territories": [
+      {
+        "market": "United States",
+        "partner": "Anchor insurer partner — to be appointed",
+        "entryYear": 2029,
+        "annualZAR": {
+          "2029": 2000000,
+          "2032": 4000000
+        }
+      },
+      {
+        "market": "Europe",
+        "partner": "Anchor insurer partner — to be appointed",
+        "entryYear": 2030,
+        "annualZAR": {
+          "2029": 0,
+          "2032": 3000000
+        }
+      },
+      {
+        "market": "Japan",
+        "partner": "Anchor insurer partner — to be appointed",
+        "entryYear": 2031,
+        "annualZAR": {
+          "2029": 0,
+          "2032": 2000000
+        }
+      }
+    ],
+    "totalZAR": {
+      "2026": 0,
+      "2029": 2000000,
+      "2032": 9000000
+    },
+    "ebitdaMarginPct": 60,
+    "status": "South Africa contracted; new-territory partners appointed at market entry"
+  },
+  "inPlayUpsells": {
+    "_note": "The add-on menu sold at the moment of maximum intent — after a golfer has paid and is standing over the ball. Upsells attach to attempts ALREADY in the model (subscriber rounds and simulator challenges); they never create new volume, so there is no double-count with the other streams. Launches 2027 with the app build this round funds.",
+    "status": "Launching 2027 — built with the app, funded by this round",
+    "menu": [
+      {
+        "name": "Jackpot upgrade",
+        "price": "$100",
+        "insured": true,
+        "detail": "Trade up mid-round: $100 buys a shot at a $100,000 insured prize instead of the standard pot."
+      },
+      {
+        "name": "Double up",
+        "price": "$5",
+        "insured": true,
+        "detail": "Doubles your prize if you ace it. Cheapest yes on the menu and the highest attach."
+      },
+      {
+        "name": "Three for two",
+        "price": "2x entry",
+        "insured": true,
+        "detail": "Three swings for the price of two. Raises attempts per visit without touching the prize."
+      },
+      {
+        "name": "Nearest the pin",
+        "price": "$3",
+        "insured": true,
+        "detail": "A guaranteed prize if you finish inside three feet. Monetises the 12,499 attempts out of 12,500 that are not an ace — the single biggest lever on perceived value."
+      },
+      {
+        "name": "The highlight reel",
+        "price": "$3",
+        "insured": false,
+        "detail": "The produced clip of your shot, scored and branded, ready to post. No insurance component — pure margin, and every share is marketing."
+      },
+      {
+        "name": "The group pot",
+        "price": "$10 a head",
+        "insured": false,
+        "detail": "A fourball buys in, closest to the pin takes the pot, Get Lucky takes a fee. Turns a solo purchase into four."
+      }
+    ],
+    "assumptions": {
+      "_note": "Attach rates are set against the price point of the underlying entry: a golfer paying ~R200 a swing is a very different buyer to one paying $1 in a simulator, so the two are modelled separately.",
+      "coreAttachPct": 12,
+      "coreAvgUSD": 5.0,
+      "coreBasis": "Subscriber rounds — subscribers x 4 rounds/month x 12",
+      "simAttachPct": 5,
+      "simAvgUSD": 2.0,
+      "simBasis": "Simulator challenges from the simulator ramp",
+      "getLuckyNetPct": 55,
+      "ebitdaMarginPct": 65
+    },
+    "revenueZAR": {
+      "2026": 0,
+      "2029": 4283024,
+      "2032": 10532313
+    }
   },
   "valuationModel": {
     "_source": "GetLucky_Valuation_Model.xlsx (dataroom figures)",
@@ -197,14 +454,8 @@
     },
     "milestonesZAR": {
       "2026": 53333333,
-      "2029": 129733000,
-      "2032": 690000000
-    },
-    "milestonesBasePlanZAR": {
-      "_note": "Same milestones with the simulator channel stripped out — the floor if no operator partnership lands.",
-      "2026": 53333333,
-      "2029": 96800000,
-      "2032": 500000000
+      "2029": 147000000,
+      "2032": 807000000
     },
     "exitMultiple": 6,
     "nearTermMultiple": 2.744619,
@@ -218,17 +469,17 @@
         335000000
       ]
     },
-    "comps": "Strava / Peloton / Whoop engaged-community businesses trade 5\u201310\u00d7 revenue",
+    "comps": "Strava / Peloton / Whoop engaged-community businesses trade 5–10× revenue",
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
       "2026": 2666667,
-      "2029": 6486650,
-      "2032": 34500000
+      "2029": 7350000,
+      "2032": 40350000
     }
   },
   "growthEngines": {
     "travel": {
-      "status": "In development \u2014 not yet contracted",
+      "status": "In development — not yet contracted",
       "attachUSD": 1,
       "avgTripUSD": [
         2000,
@@ -243,49 +494,6 @@
         "revenueUSD": [
           220000,
           660000
-        ]
-      }
-    },
-    "sim": {
-      "_note": "Promoted from uncounted optionality to a modelled revenue line 2026-08-04 \u2014 this is the channel the R8m raise funds and the reason the forward milestones rise. STATUS IS UNCHANGED: no operator agreement is signed. Every public mention must carry the status string below.",
-      "status": "In development \u2014 not yet contracted",
-      "leadPartner": "Golfzon",
-      "targetOperators": [
-        "Golfzon",
-        "Trackman",
-        "Full Swing",
-        "Foresight Sports",
-        "X-Golf",
-        "Topgolf Swing Suite",
-        "Kakao VX"
-      ],
-      "entryUSD": 1,
-      "prizeUSD": 1000,
-      "revenueSplitPct": {
-        "_note": "Operator takes 30% \u2014 more than a course's 10% because the operator brings the venues, the software and the distribution, and Get Lucky installs no hardware. Insurance premium held at 24%, matching the on-course model.",
-        "getLucky": 46,
-        "operator": 30,
-        "insurance": 24
-      },
-      "koreaRoundsBase": 94000000,
-      "_volumeBasis": "Attach rate applied to ~94M annual simulator rounds in South Korea alone (research.json: korea-sim-rounds) \u2014 Golfzon's home network. Golfzon's non-Korea venues and every other operator on targetOperators are excluded from the model.",
-      "ramp": [
-        { "year": 2026, "attachRatePct": 0, "challenges": 0, "grossUSD": 0, "getLuckyUSD": 0, "getLuckyZAR": 0, "note": "Integration year \u2014 no revenue modelled" },
-        { "year": 2027, "attachRatePct": 0.3, "challenges": 282000, "grossUSD": 282000, "getLuckyUSD": 129720, "getLuckyZAR": 2399820 },
-        { "year": 2028, "attachRatePct": 0.8, "challenges": 752000, "grossUSD": 752000, "getLuckyUSD": 345920, "getLuckyZAR": 6399520 },
-        { "year": 2029, "attachRatePct": 1.5, "challenges": 1410000, "grossUSD": 1410000, "getLuckyUSD": 648600, "getLuckyZAR": 11999100 },
-        { "year": 2032, "attachRatePct": 4.0, "challenges": 3760000, "grossUSD": 3760000, "getLuckyUSD": 1729600, "getLuckyZAR": 31997600 }
-      ],
-      "ebitdaMarginPct": 50,
-      "sensitivity2029": {
-        "_note": "Published openly. The 0% row is the honest downside \u2014 no partnership, base plan only.",
-        "nearTermMultiple": 2.744619,
-        "postMoneyZAR": 53333333,
-        "rows": [
-          { "attachRatePct": 0, "label": "No operator partnership lands", "simZAR": 0, "totalZAR": 35269011, "valuationZAR": 96800000, "investorMultiple": 1.82 },
-          { "attachRatePct": 0.5, "label": "Slow adoption", "simZAR": 3999700, "totalZAR": 39268711, "valuationZAR": 107800000, "investorMultiple": 2.02 },
-          { "attachRatePct": 1.5, "label": "The plan", "simZAR": 11999100, "totalZAR": 47268111, "valuationZAR": 129733000, "investorMultiple": 2.43 },
-          { "attachRatePct": 3.0, "label": "Strong adoption", "simZAR": 23998200, "totalZAR": 59267211, "valuationZAR": 162700000, "investorMultiple": 3.05 }
         ]
       }
     }

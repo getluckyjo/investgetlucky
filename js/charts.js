@@ -8,7 +8,9 @@
   if (typeof Chart === "undefined") return;
 
   var GREEN = "#478f41";
-  var GREEN_LIGHT = "#8fc089"; /* simulator layer — same family as base revenue, clear luminance step */
+  var GREEN_LIGHT = "#8fc089"; /* second revenue stream — same family, clear luminance step */
+  var TEAL = "#2f6f6b";  /* third revenue stream — distinct hue, CVD-safe against both greens */
+  var SAND = "#7d8f5a";  /* fourth revenue stream — olive, separable from both greens and the teal */
   var GOLD = "#b07c10";
   var INK = "#16261a";
   var GRID = "rgba(24, 39, 22, 0.08)";
@@ -141,18 +143,21 @@
       var c = box("chart-pnl", 260);
       if (!c) return;
       var years = m.modelForecast.years;
-      var base = m.modelForecast.revenueZAR;
-      var sim = m.modelForecast.simRevenueZAR;
-      var total = m.modelForecast.totalRevenueZAR;
+      var streams = m.modelForecast.revenueStreamsZAR;
+      var courses = streams.coursesAndApp.ZAR;
+      var sim = streams.simulators.ZAR;
+      var spon = streams.territorySponsorship.ZAR;
+      var ups = streams.inPlayUpsells.ZAR;
+      var total = m.modelForecast.revenueZAR;
       var marginPct = m.modelForecast.ebitdaMarginPct;
       var ebitda = m.modelForecast.ebitdaProxyZAR;
-      /* Revenue is stacked so the base plan and the simulator channel stay visibly
-         separate — an investor must be able to read the floor without the partnership. */
+      /* Revenue stacked by stream — this is one plan's composition, courses and app
+         alongside simulators, not a base case with an optional extra on top. */
       var marginLabel = {
         id: "marginLabel",
         afterDatasetsDraw: function (chart) {
           var ctx = chart.ctx;
-          var meta = chart.getDatasetMeta(2);
+          var meta = chart.getDatasetMeta(4);
           ctx.save();
           ctx.font = "700 12px " + FONT.family;
           ctx.fillStyle = INK;
@@ -168,8 +173,10 @@
         data: {
           labels: years,
           datasets: [
-            { label: "Base plan revenue", data: base, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "Simulator channel", data: sim, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Courses & app subscription", data: courses, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Simulators", data: sim, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Territory sponsorship", data: spon, backgroundColor: TEAL, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "In-play upsells", data: ups, backgroundColor: SAND, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
             { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: GOLD, stack: "ebitda", borderRadius: 4, maxBarThickness: 56 }
           ]
         },
@@ -181,7 +188,7 @@
               callbacks: {
                 label: function (ctx) {
                   var s = ctx.dataset.label + ": " + fmtR(ctx.parsed.y);
-                  if (ctx.datasetIndex === 2) s += " (" + marginPct[ctx.dataIndex] + "% margin)";
+                  if (ctx.datasetIndex === 4) s += " (" + marginPct[ctx.dataIndex] + "% margin)";
                   return s;
                 },
                 footer: function (items) {

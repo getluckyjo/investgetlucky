@@ -187,6 +187,29 @@ user may still upload real app screens + a video — swap instructions in README
 "Assets wanted". Pauses on hover, stops off-screen, no autoplay under reduced
 motion.
 
+**Parked for the app build — the Srixon optic-yellow ball colour (2026-08-04).**
+User asked whether to make it the highlight colour on the investment page, then
+decided against it: *"let's stick to the current more grounded visual identity
+and bring the ball colour into the app later."* Nothing was changed — the gold
+tokens (`--gold` #c9a94e / `--gold-soft` #e8d48b / `--gold-text` #94742a) are
+untouched.
+
+Why it was the right call for the pitch page, and why the app is different: the
+accent has ~60 usages in `css/styles.css` and roughly half are small text on
+cream — eyebrows, `.usd` sub-labels, `.modeltable .mut`, `.doclist .type`,
+`.upsell__price`. Optic yellow cannot carry small text on a light surface, so
+each of those would need a dark olive derivative — meaning the ball colour would
+only ever show on badges and buttons while the text stayed dark. Cost of a
+rebrand, a fraction of the effect.
+
+In the app it earns its place, because the surfaces are dark and it can be a
+state signal rather than decoration: the shot tracer (`.appfilm__tracer`
+stroke + the drop-shadow glow), the live/filming state, and the win screen
+(`.appwin__ace`). Ernie plays a yellow ball, so on a dark viewfinder it reads as
+a product detail, not a palette choice. Sample the exact hex from the ball
+image the user supplied rather than guessing — it is a green-leaning fluorescent
+yellow, not a warm yellow.
+
 ## Upside section redesign (2026-07-14, user request)
 
 `#market` rebuilt for scannability: funnel (widened bars) beside a 3-stat
@@ -325,6 +348,104 @@ evaluated independently (`evalwb.py`, a small spreadsheet evaluator): 0 formula
 failures, 0 bad sheet references, and every 2026/2029/2032 output tied to
 `data/model.json` within 0.3%. If you have a working Excel/LibreOffice, opening
 and re-saving each workbook once will bake the cached values back in.
+
+## SIMULATORS MOVED INTO THE CORE PLAN + TERRITORY SPONSORSHIP (2026-08-04, later)
+
+User: *"Build the simulator into the core plan from the start and don't make it
+feel like its an add on or may not happen."* Then: *"take out independent DCF as
+its no longer current"* and *"work in market related sponsorship revenue per
+target territory with Santam partner brands in each."*
+
+**Simulators are now a revenue stream, not a growth engine.**
+- `growthEngines.sim` → top-level **`simulatorChannel`**. Status changed from
+  "In development — not yet contracted" to **"Launching 2027 — integration
+  funded by this round"**.
+- Added as **rung 4** of the ladder in `#model`, a peer of the global
+  subscription, with its own 46/30/24 split bar. Section sub now reads "Four
+  ways to sell that swing".
+- `#market` reordered: sponsorship and simulators (both in plan) first, travel
+  (still uncounted) last. Heading: "Two streams in the plan. One still uncounted."
+- Removed everywhere: the base-plan-vs-layer split, "strip it out", the
+  "what happens if the partnership never lands" FAQ (replaced with **"How real
+  is the simulator business?"**), the 0% sensitivity row on the public site, and
+  the repeated "not contracted" badges.
+- **One honest disclosure retained, deliberately** — do not delete: operator
+  agreements are not yet signed. It appears once each in the dataroom
+  assumptions, the simulator PDF risk table, the doc footers, and the workbook
+  Simulator tab. The 0% attach case survives as a *live input* on that tab
+  ("set the attach rate to zero"), not as a headline caveat.
+
+**Territory sponsorship is a third reported stream.** Sized off the one hard
+precedent — Santam's signed R9m over three years in a ~150k-golfer market:
+- United States R2.0m/yr from 2029 → R4.0m by 2032 · Europe R3.0m/yr from 2030
+  · Japan R2.0m/yr from 2031. Total in plan: **R2.0m (2029) → R9.0m (2032)**.
+- Set deliberately BELOW the SA run-rate at entry in markets many times the
+  size. Not scaled linearly off golfer counts — that produces numbers no sponsor
+  would sign. Every figure is a live input on the new **Sponsorship** tab.
+- South African sponsorship stays inside the coursesAndApp stream (off the
+  monthly build), so nothing is double-counted.
+- **These per-territory figures are Claude's proposal, not user-supplied.**
+  If Johannes wants different numbers, change the Sponsorship tab and
+  `territorySponsorship.territories` in `model.json`.
+
+**Independent DCF removed.** `deal.dcfLowZAR` / `dcfHighZAR` deleted; the deal
+card row is now Minimum ticket; the FAQ and doc-faq answers rebuilt. The price
+argument is now carried entirely by the plan. **Do not reinstate the R57–78m
+range without a fresh valuation.**
+
+**Resulting numbers.** Revenue R11.2m → **R49.3m** → **R124.0m** (courses & app
+R11.2/35.3/83.0 + simulators 0/12.0/32.0 + sponsorship 0/2.0/9.0). EBITDA ~4.5%
+→ ~22% → ~30%. Milestones R53.3m → **R135.2m** → **R744m**. Investor return
+**2.54× and ~36% IRR** (up from 2.42×/~34% at the old R4m price) — the headline
+argument for the reprice is now "you pay more and get a better return, because
+the bigger cheque funds the two streams that produce it".
+
+**Workbooks**: new **Sponsorship** tab; Valuation tab rebuilt to report
+courses & app / simulators / territory sponsorship / total, with EBITDA split
+three ways. Six tabs now. Same verification caveat as before — LibreOffice in
+the container cannot open any xlsx, so `recalc.py` cannot run and the files
+carry no cached values; the formula graph was evaluated independently
+(0 failures, 0 bad refs, every output tied to `model.json`).
+
+## IN-PLAY UPSELLS ADDED AS A REVENUE STREAM (2026-08-04, later still)
+
+User: *"I also want to add on upsells as a revenue stream - like buy a shot at
+$100 000 now for $100 / Double up your winnings for $5... come up with more
+ideas and build into the model."*
+
+**The menu** (six items, `inPlayUpsells.menu` in model.json, block under the
+ladder in `#model`): jackpot upgrade $100 for a $100,000 shot · double up $5 ·
+three swings for the price of two · **nearest the pin $3** (a guaranteed prize
+inside three feet — the one that monetises the 12,499 shots in 12,500 that are
+not an ace, and the biggest lever on perceived value) · the highlight reel $3
+(no insurance component, so pure margin, and every share is marketing) · the
+group pot $10 a head (turns one purchase into four).
+
+**Modelling discipline — the important part.** Upsells attach to attempts
+**already in the model** (subscriber rounds + simulator challenges) and never
+create new volume, so they cannot double-count another stream. Split by price
+point, because a golfer paying ~R200 a swing is a different buyer to one paying
+$1 in a sim:
+- Course & app: **12% attach at $5 average**, on subscribers x 4 rounds/month x 12
+- Simulators: **5% attach at $2**
+- Get Lucky nets **55%** (higher than the 46% sim entry share — part of the menu
+  carries no insurance), at a **65% EBITDA margin**. Launches 2027 with the app.
+- **These attach rates are Claude's proposal, not user-supplied.** Live inputs
+  on the new Upsells tab.
+
+**Resulting numbers.** Upsells R4.3m (2029) / R10.5m (2032). Revenue R11.2m →
+**R53.6m** → **R134.6m**. EBITDA ~4.5% → ~25% → ~32%. Milestones R53.3m →
+**R147m** → **R807m**. Investor return **2.76× and ~40% IRR**.
+
+**Watch the IRR.** Stacking four streams has walked the three-year return from
+34% → 36% → 40%. Each step is defensible on its own inputs, but ~40% is high
+enough that a sceptical investor may discount the whole model rather than argue
+a line item. If it needs tempering, the cleanest lever is the upsell attach rate
+on the Upsells tab, not the multiple.
+
+**Workbook**: seven tabs now — new **Upsells** tab (menu, attach assumptions,
+volume and revenue) and the Valuation tab rebuilt to five revenue rows with
+EBITDA split four ways.
 
 ## Open flags for the user (unresolved)
 
