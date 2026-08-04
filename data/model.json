@@ -10,8 +10,8 @@
     "dcfLowZAR": 57000000,
     "dcfHighZAR": 78000000,
     "ernieStakePct": 5,
-    "value2028ZAR": 129500000,
-    "stake2028ZAR": 19425000,
+    "value2028ZAR": 129733000,
+    "stake2028ZAR": 19459950,
     "multiple2028": 2.43,
     "irr3yrPct": 34,
     "exit2032ZAR": 690000000,
@@ -197,7 +197,7 @@
     },
     "milestonesZAR": {
       "2026": 53333333,
-      "2029": 129500000,
+      "2029": 129733000,
       "2032": 690000000
     },
     "milestonesBasePlanZAR": {
@@ -207,7 +207,7 @@
       "2032": 500000000
     },
     "exitMultiple": 6,
-    "nearTermMultiple": 2.74,
+    "nearTermMultiple": 2.744619,
     "downside": {
       "multiples": [
         3,
@@ -222,7 +222,7 @@
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
       "2026": 2666667,
-      "2029": 6485000,
+      "2029": 6486650,
       "2032": 34500000
     }
   },
@@ -279,13 +279,13 @@
       "ebitdaMarginPct": 50,
       "sensitivity2029": {
         "_note": "Published openly. The 0% row is the honest downside \u2014 no partnership, base plan only.",
-        "nearTermMultiple": 2.74,
+        "nearTermMultiple": 2.744619,
         "postMoneyZAR": 53333333,
         "rows": [
           { "attachRatePct": 0, "label": "No operator partnership lands", "simZAR": 0, "totalZAR": 35269011, "valuationZAR": 96800000, "investorMultiple": 1.82 },
-          { "attachRatePct": 0.5, "label": "Slow adoption", "simZAR": 3999700, "totalZAR": 39268711, "valuationZAR": 107600000, "investorMultiple": 2.02 },
-          { "attachRatePct": 1.5, "label": "The plan", "simZAR": 11999100, "totalZAR": 47268111, "valuationZAR": 129500000, "investorMultiple": 2.43 },
-          { "attachRatePct": 3.0, "label": "Strong adoption", "simZAR": 23998200, "totalZAR": 59267211, "valuationZAR": 162500000, "investorMultiple": 3.05 }
+          { "attachRatePct": 0.5, "label": "Slow adoption", "simZAR": 3999700, "totalZAR": 39268711, "valuationZAR": 107800000, "investorMultiple": 2.02 },
+          { "attachRatePct": 1.5, "label": "The plan", "simZAR": 11999100, "totalZAR": 47268111, "valuationZAR": 129733000, "investorMultiple": 2.43 },
+          { "attachRatePct": 3.0, "label": "Strong adoption", "simZAR": 23998200, "totalZAR": 59267211, "valuationZAR": 162700000, "investorMultiple": 3.05 }
         ]
       }
     }
