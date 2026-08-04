@@ -8,12 +8,12 @@
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
     "ernieStakePct": 5,
-    "value2028ZAR": 147000000,
-    "stake2028ZAR": 22050000,
-    "multiple2028": 2.76,
-    "irr3yrPct": 40,
-    "exit2032ZAR": 807000000,
-    "multiple2032": 15.1,
+    "value2028ZAR": 133877838,
+    "stake2028ZAR": 20081676,
+    "multiple2028": 2.51,
+    "irr3yrPct": 36,
+    "exit2032ZAR": 336424442,
+    "multiple2032": 6.3,
     "allocation": {
       "show": false,
       "committedZAR": null,
@@ -155,21 +155,27 @@
       7274042
     ],
     "ebitdaProxyZAR": [
-      498795,
-      13529991,
-      43464418
+      -701209,
+      8302090,
+      32175538
     ],
     "ebitdaMarginPct": [
-      4.5,
-      25.3,
-      32.3
+      -6.3,
+      15.5,
+      23.9
     ],
     "grossProfitUSD": [
       399125,
       1258246,
       2962503
     ],
-    "_streams": "Revenue is built from four reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, including the contracted Santam sponsorship), simulators, territorySponsorship (the Santam deal repeated per market) and inPlayUpsells (the add-on menu, which attaches to attempts already in the model and never creates new volume). revenueZAR is the total. Report as composition."
+    "_streams": "Revenue is built from four reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, including the contracted Santam sponsorship), simulators, territorySponsorship (the Santam deal repeated per market) and inPlayUpsells (the add-on menu, which attaches to attempts already in the model and never creates new volume). revenueZAR is the total. Report as composition.",
+    "_costBase": "Cost base raised 2026-08-04 on user instruction — \"increase the expenses & budgets to make sure we get the revenue\". Base opex R350k -> R450k/month and ops scaling 0.65 -> 0.68, plus lower per-stream EBITDA margins to fund delivery: simulators 50% -> 42% (integration engineering and operator marketing support), territory sponsorship 60% -> 52% (local activation and partner servicing), upsells 65% -> 60% (product build and payment costs). Annual opex roughly doubles by 2029. Revenue and the valuation milestones are UNCHANGED — the milestones are struck off revenue multiples, so a heavier cost base does not move them or the investor IRR; it makes the plan deliverable, not smaller.",
+    "opexZAR": [
+      5400000,
+      15160331,
+      27139582
+    ]
   },
   "simulatorChannel": {
     "_note": "A core revenue stream in the plan, not optional upside. Launches 2027 once the integration this round funds is built. Ramp and sensitivity are modelled in the Simulator tab of the pro forma workbook.",
@@ -237,12 +243,12 @@
         "getLuckyZAR": 31997600
       }
     ],
-    "ebitdaMarginPct": 50,
+    "ebitdaMarginPct": 42,
     "agreementStatus": "No operator agreement is signed as at August 2026. State this once, plainly, in the dataroom assumptions and the simulator document risk section — do not repeat it as a badge or a caveat on every figure.",
     "route": "Ernie Els holds direct relationships with the target operators and opens the door himself.",
     "sensitivity2029": {
       "_note": "Adoption range around the plan, with every other stream held at plan. Upsell revenue moves with simulator volume, so it is recomputed per row rather than held flat.",
-      "nearTermMultiple": 2.744619,
+      "nearTermMultiple": 2.5,
       "postMoneyZAR": 53333333,
       "rows": [
         {
@@ -251,8 +257,8 @@
           "simZAR": 3999700,
           "upsellZAR": 3326574,
           "totalZAR": 44595285,
-          "valuationZAR": 122400000.0,
-          "investorMultiple": 2.29
+          "valuationZAR": 111488212,
+          "investorMultiple": 2.09
         },
         {
           "attachRatePct": 1.5,
@@ -260,8 +266,8 @@
           "simZAR": 11999100,
           "upsellZAR": 4283024,
           "totalZAR": 53551135,
-          "valuationZAR": 147000000.0,
-          "investorMultiple": 2.76
+          "valuationZAR": 133877838,
+          "investorMultiple": 2.51
         },
         {
           "attachRatePct": 3.0,
@@ -269,8 +275,8 @@
           "simZAR": 23998200,
           "upsellZAR": 5717699,
           "totalZAR": 66984910,
-          "valuationZAR": 183800000.0,
-          "investorMultiple": 3.45
+          "valuationZAR": 167462275,
+          "investorMultiple": 3.14
         }
       ]
     }
@@ -324,7 +330,7 @@
       "2029": 2000000,
       "2032": 9000000
     },
-    "ebitdaMarginPct": 60,
+    "ebitdaMarginPct": 52,
     "status": "South Africa contracted; new-territory partners appointed at market entry"
   },
   "inPlayUpsells": {
@@ -377,7 +383,7 @@
       "simAvgUSD": 2.0,
       "simBasis": "Simulator challenges from the simulator ramp",
       "getLuckyNetPct": 55,
-      "ebitdaMarginPct": 65
+      "ebitdaMarginPct": 60
     },
     "revenueZAR": {
       "2026": 0,
@@ -454,28 +460,22 @@
     },
     "milestonesZAR": {
       "2026": 53333333,
-      "2029": 147000000,
-      "2032": 807000000
+      "2029": 133877838,
+      "2032": 336424442
     },
-    "exitMultiple": 6,
-    "nearTermMultiple": 2.744619,
-    "downside": {
-      "multiples": [
-        3,
-        4
-      ],
-      "exitZAR": [
-        250000000,
-        335000000
-      ]
-    },
+    "exitMultiple": 2.5,
+    "nearTermMultiple": 2.5,
     "comps": "Strava / Peloton / Whoop engaged-community businesses trade 5–10× revenue",
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
       "2026": 2666667,
-      "2029": 7350000,
-      "2032": 40350000
-    }
+      "2029": 6693892,
+      "2032": 16821222
+    },
+    "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
+    "multipleBasis": "2.5x revenue, flat. Engaged-community subscription businesses (Strava, Peloton, Whoop) trade at 5-10x revenue; this plan applies roughly half the bottom of that band, discounted for being private, pre-scale and mid-execution. Market-anchored but deliberately on the conservative side of it.",
+    "entryMultipleImplied": 4.77,
+    "compUpside": "Not in the plan: if the business were ever rated at the 5-10x comp band, 2032 would be R673m-R1346m against the R336m carried here."
   },
   "growthEngines": {
     "travel": {
@@ -583,5 +583,16 @@
       "San Lameer",
       "The Metropolitan Golf Club"
     ]
+  },
+  "fundingPlan": {
+    "_note": "The R8m is sized to fund the heavier cost base through the investment years and reach profitability without a further round. Peak cumulative drawdown ~R5.0m across 2026-2028, leaving ~R3m headroom.",
+    "peakDrawdownZAR": 5000000,
+    "drawdownYears": [
+      2026,
+      2027,
+      2028
+    ],
+    "profitableFrom": 2029,
+    "raiseZAR": 8000000
   }
 }

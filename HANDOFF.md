@@ -447,6 +447,83 @@ on the Upsells tab, not the multiple.
 volume and revenue) and the Valuation tab rebuilt to five revenue rows with
 EBITDA split four ways.
 
+## COST BASE RAISED TO FUND THE PLAN (2026-08-04, later still)
+
+User first asked to cut upsell attach to bring the IRR into the mid-30s, then
+changed direction mid-task: *"Instead of pulling back on real opportunities
+rather increase the expenses & budgets to make sure we get the revenue... show
+real revenue potential across all channels but increase the expenses to make it
+feasible."* The revenue cuts were reverted before they shipped.
+
+**Revenue and valuation milestones are UNCHANGED** — R11.2m / R53.6m / R134.6m,
+milestones R53.3m / R147m / R807m, investor return 2.76x and ~40% IRR.
+
+**Read this before anyone asks why the IRR did not move.** The valuation
+milestones are struck off *revenue* multiples (2.744619x near-term, 6x exit),
+not EBITDA. A heavier cost base therefore cannot change the milestones or the
+investor IRR — it makes the plan deliverable, not smaller. If the IRR itself
+ever needs to come down, the only levers are lower revenue or a switch to an
+EBITDA-based valuation method; adding cost will not do it.
+
+**What changed.** Base opex R350k -> **R450k/month**, ops scaling 0.65 -> 0.68,
+and per-stream EBITDA margins cut to carry delivery cost: simulators 50% ->
+**42%** (integration engineering, operator marketing support), territory
+sponsorship 60% -> **52%** (local activation, partner servicing), upsells 65% ->
+**60%** (product build, payment costs).
+
+**Resulting shape.** Annual operating cost R5.4m -> R15.2m -> R27.1m (roughly
+double the old plan by 2029). EBITDA **-R0.7m (-6.3%) in 2026**, R8.3m (15.5%)
+in 2029, R32.2m (23.9%) in 2032. 2026 is now a deliberate loss year.
+
+**Why R450k/month specifically.** Sized against funding, not feel. At R500k the
+peak cumulative drawdown across 2026-28 is ~R7.9m against an R8.0m raise — no
+headroom, not defensible. At R450k it is **~R5.0m, leaving ~R3m of headroom**,
+and the plan is cash-generative from 2029 without a further round. That claim is
+now made on the public page, so do not raise opex further without re-running the
+drawdown check.
+
+New `fundingPlan` block in model.json carries the drawdown and profitability
+figures. New "The plan is costed, not just forecast" block on the public page
+(`#financials`). `.mathpanel` CSS was unscoped from `.engine` so it can be
+reused there.
+
+## VALUATION MULTIPLE FLATTENED TO 2.5x (2026-08-04, last change of the day)
+
+User: *"Let's bring down the revenue multiples and make them linear as an
+investor would expect... But still market related."*
+
+**The problem.** The multiples were 4.77x implied at entry, **2.744619x** at
+2029, then **6x** at 2032 — dipping and then spiking. That shape reads as three
+numbers chosen to hit a target rather than a method, and it is the first thing
+a sceptical investor picks at.
+
+**Now: one flat 2.5x revenue multiple at every forward milestone.** The entry
+multiple stays whatever the round implies (R53.3m post / R11.2m revenue =
+**4.77x**), so the multiple **compresses** as the company scales — the direction
+an investor expects — and no multiple expansion is assumed anywhere. The
+milestones move only with revenue.
+
+**Why 2.5x is still market-related.** Engaged-community subscription businesses
+(Strava, Peloton, Whoop) trade at 5-10x revenue. The plan applies roughly half
+the bottom of that band, discounted for being private, pre-scale and
+mid-execution. Anchored to the market, deliberately on the conservative side of
+it. Framed on the site as: if the business were ever rated at the comp band,
+2032 would be R673m-R1,346m against the R336m carried — explicitly not in the
+plan.
+
+**Numbers.** Milestones R53.3m -> **R133.9m** -> **R336m** (was R147m / R807m).
+Investor return **2.51x at three years, ~36% IRR**, 6.3x at 2032. Revenue,
+EBITDA and the cost base are untouched.
+
+Note this also delivers the mid-30s IRR the user asked for earlier, which
+cutting the upsell attach could not reach (that lever floors at 36.4% because
+simulators and sponsorship already carry 2029). The multiple was the right lever
+all along.
+
+`valuationModel` gained `_multiplePolicy`, `multipleBasis`, `entryMultipleImplied`
+and `compUpside`; the old `downside` block (3-4x) was removed, since 3-4x now
+sits *above* the base case and reads as upside rather than downside.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
