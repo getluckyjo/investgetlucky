@@ -418,12 +418,13 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .engine__head { padding: clamp(1.3rem, 3vw, 2rem); border-bottom: 1px solid rgba(246,244,225,0.18); }
 .engine__head h3 { margin-bottom: 0.4rem; }
 .engine__body { padding: clamp(1.3rem, 3vw, 2rem); display: grid; gap: 1.4rem; }
-.engine .mathpanel {
+/* mathpanel is reused outside .engine (the costed-plan block), so keep it unscoped */
+.mathpanel {
   background: rgba(24,39,22,0.45); border-radius: 10px; padding: 1.1rem 1.3rem;
   font-family: var(--font-ui); font-size: 0.95rem;
 }
-.engine .mathpanel .line { display: flex; justify-content: space-between; gap: 1rem; padding: 0.34rem 0; border-bottom: 1px dashed rgba(246,244,225,0.2); }
-.engine .mathpanel .line:last-child { border-bottom: 0; font-weight: 700; color: var(--gold-soft); }
+.mathpanel .line { display: flex; justify-content: space-between; gap: 1rem; padding: 0.34rem 0; border-bottom: 1px dashed rgba(246,244,225,0.2); }
+.mathpanel .line:last-child { border-bottom: 0; font-weight: 700; color: var(--gold-soft); }
 .whylist { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; font-family: var(--font-ui); font-size: 0.95rem; }
 .whylist li { padding-left: 1.5rem; position: relative; }
 .whylist li::before { content: "→"; position: absolute; left: 0; color: var(--gold-soft); }

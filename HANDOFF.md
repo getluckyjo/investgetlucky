@@ -447,6 +447,46 @@ on the Upsells tab, not the multiple.
 volume and revenue) and the Valuation tab rebuilt to five revenue rows with
 EBITDA split four ways.
 
+## COST BASE RAISED TO FUND THE PLAN (2026-08-04, later still)
+
+User first asked to cut upsell attach to bring the IRR into the mid-30s, then
+changed direction mid-task: *"Instead of pulling back on real opportunities
+rather increase the expenses & budgets to make sure we get the revenue... show
+real revenue potential across all channels but increase the expenses to make it
+feasible."* The revenue cuts were reverted before they shipped.
+
+**Revenue and valuation milestones are UNCHANGED** — R11.2m / R53.6m / R134.6m,
+milestones R53.3m / R147m / R807m, investor return 2.76x and ~40% IRR.
+
+**Read this before anyone asks why the IRR did not move.** The valuation
+milestones are struck off *revenue* multiples (2.744619x near-term, 6x exit),
+not EBITDA. A heavier cost base therefore cannot change the milestones or the
+investor IRR — it makes the plan deliverable, not smaller. If the IRR itself
+ever needs to come down, the only levers are lower revenue or a switch to an
+EBITDA-based valuation method; adding cost will not do it.
+
+**What changed.** Base opex R350k -> **R450k/month**, ops scaling 0.65 -> 0.68,
+and per-stream EBITDA margins cut to carry delivery cost: simulators 50% ->
+**42%** (integration engineering, operator marketing support), territory
+sponsorship 60% -> **52%** (local activation, partner servicing), upsells 65% ->
+**60%** (product build, payment costs).
+
+**Resulting shape.** Annual operating cost R5.4m -> R15.2m -> R27.1m (roughly
+double the old plan by 2029). EBITDA **-R0.7m (-6.3%) in 2026**, R8.3m (15.5%)
+in 2029, R32.2m (23.9%) in 2032. 2026 is now a deliberate loss year.
+
+**Why R450k/month specifically.** Sized against funding, not feel. At R500k the
+peak cumulative drawdown across 2026-28 is ~R7.9m against an R8.0m raise — no
+headroom, not defensible. At R450k it is **~R5.0m, leaving ~R3m of headroom**,
+and the plan is cash-generative from 2029 without a further round. That claim is
+now made on the public page, so do not raise opex further without re-running the
+drawdown check.
+
+New `fundingPlan` block in model.json carries the drawdown and profitability
+figures. New "The plan is costed, not just forecast" block on the public page
+(`#financials`). `.mathpanel` CSS was unscoped from `.engine` so it can be
+reused there.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

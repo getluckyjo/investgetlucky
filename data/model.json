@@ -155,21 +155,27 @@
       7274042
     ],
     "ebitdaProxyZAR": [
-      498795,
-      13529991,
-      43464418
+      -701209,
+      8302090,
+      32175538
     ],
     "ebitdaMarginPct": [
-      4.5,
-      25.3,
-      32.3
+      -6.3,
+      15.5,
+      23.9
     ],
     "grossProfitUSD": [
       399125,
       1258246,
       2962503
     ],
-    "_streams": "Revenue is built from four reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, including the contracted Santam sponsorship), simulators, territorySponsorship (the Santam deal repeated per market) and inPlayUpsells (the add-on menu, which attaches to attempts already in the model and never creates new volume). revenueZAR is the total. Report as composition."
+    "_streams": "Revenue is built from four reported streams, all core to the plan: coursesAndApp (installed courses, membership and the global app subscription, including the contracted Santam sponsorship), simulators, territorySponsorship (the Santam deal repeated per market) and inPlayUpsells (the add-on menu, which attaches to attempts already in the model and never creates new volume). revenueZAR is the total. Report as composition.",
+    "_costBase": "Cost base raised 2026-08-04 on user instruction — \"increase the expenses & budgets to make sure we get the revenue\". Base opex R350k -> R450k/month and ops scaling 0.65 -> 0.68, plus lower per-stream EBITDA margins to fund delivery: simulators 50% -> 42% (integration engineering and operator marketing support), territory sponsorship 60% -> 52% (local activation and partner servicing), upsells 65% -> 60% (product build and payment costs). Annual opex roughly doubles by 2029. Revenue and the valuation milestones are UNCHANGED — the milestones are struck off revenue multiples, so a heavier cost base does not move them or the investor IRR; it makes the plan deliverable, not smaller.",
+    "opexZAR": [
+      5400000,
+      15160331,
+      27139582
+    ]
   },
   "simulatorChannel": {
     "_note": "A core revenue stream in the plan, not optional upside. Launches 2027 once the integration this round funds is built. Ramp and sensitivity are modelled in the Simulator tab of the pro forma workbook.",
@@ -237,7 +243,7 @@
         "getLuckyZAR": 31997600
       }
     ],
-    "ebitdaMarginPct": 50,
+    "ebitdaMarginPct": 42,
     "agreementStatus": "No operator agreement is signed as at August 2026. State this once, plainly, in the dataroom assumptions and the simulator document risk section — do not repeat it as a badge or a caveat on every figure.",
     "route": "Ernie Els holds direct relationships with the target operators and opens the door himself.",
     "sensitivity2029": {
@@ -324,7 +330,7 @@
       "2029": 2000000,
       "2032": 9000000
     },
-    "ebitdaMarginPct": 60,
+    "ebitdaMarginPct": 52,
     "status": "South Africa contracted; new-territory partners appointed at market entry"
   },
   "inPlayUpsells": {
@@ -377,7 +383,7 @@
       "simAvgUSD": 2.0,
       "simBasis": "Simulator challenges from the simulator ramp",
       "getLuckyNetPct": 55,
-      "ebitdaMarginPct": 65
+      "ebitdaMarginPct": 60
     },
     "revenueZAR": {
       "2026": 0,
@@ -583,5 +589,16 @@
       "San Lameer",
       "The Metropolitan Golf Club"
     ]
+  },
+  "fundingPlan": {
+    "_note": "The R8m is sized to fund the heavier cost base through the investment years and reach profitability without a further round. Peak cumulative drawdown ~R5.0m across 2026-2028, leaving ~R3m headroom.",
+    "peakDrawdownZAR": 5000000,
+    "drawdownYears": [
+      2026,
+      2027,
+      2028
+    ],
+    "profitableFrom": 2029,
+    "raiseZAR": 8000000
   }
 }
