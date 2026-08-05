@@ -563,6 +563,38 @@ presented as a modelled milestone, the model stops being defensible.
 
 New `valuationModel.billionHorizon` block carries the figures.
 
+## TWO UPSELLS PARKED (2026-08-04)
+
+User: *"remove upsell: nearest to the pin (no way to verify) and highlights reel
+for now."*
+
+Both removed from the plan and from every published surface. **Parked, not
+deleted** — they live on in `inPlayUpsells.parkedMenu` with the reason each is
+out, so they can come back when they can actually be delivered:
+
+- **Nearest the pin** — on-course proximity cannot be measured with the current
+  camera rig. Worth noting a simulator *can* measure it precisely, so this may
+  return on the simulator stream first even while it stays impossible on course.
+- **The highlight reel** — no video production pipeline exists yet.
+
+**Attach rates cut with the menu.** Core 12% -> **9%**, simulator 5% -> **4%**.
+A four-item menu without the two broadest-appeal items converts fewer buyers.
+Average spend held flat at $5 / $2, since the remaining items are the pricier
+ones. Upsell revenue R4.3m -> **R3.3m** (2029) and R10.5m -> **R8.1m** (2032).
+
+**Knock-on numbers.** Revenue R11.2m -> **R52.6m** -> **R132.1m**. EBITDA -6.3%
+-> **14.7%** -> **23.2%**. Milestones R53.3m -> **R157.7m** -> **R396m** at the
+unchanged flat 3.0x. Investor return **2.96x at three years, ~44% IRR**, 7.4x at
+2032.
+
+**One inconsistency left for the user to resolve.** The surviving *group pot*
+upsell is described as "closest to the pin takes it" — which needs the same
+proximity call that got nearest-the-pin parked. It is arguably fine because the
+fourball adjudicates among themselves rather than Get Lucky verifying for a
+payout, but if Get Lucky holds the pot and takes a fee it is the same problem.
+Either reframe it (pot goes to a verified ace, rolls over otherwise) or park it
+too. Raised with the user 2026-08-04; not changed unilaterally.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
