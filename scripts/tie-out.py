@@ -72,23 +72,29 @@ arithmetic("expected claim per entry", claim, ins["expectedClaimPerEntryUSD"], t
 arithmetic("loss ratio", claim / ins["premiumPerEntryUSD"] * 100, ins["lossRatioPct"], tol=0.1)
 arithmetic("tier mix totals 100%", sum(t["mixPct"] for t in ins["ladder"]), 100)
 
+# The retired-figure list below is hand-maintained and has collided three times
+# with values that were later reinstated (2.74x, 5.42x, ~34%, R53.3m). Before
+# adding a pattern, check it is not a number the model currently publishes;
+# before removing one, check the value is genuinely back in model.json.
+
 # --- 2. withdrawn figures must not survive anywhere -------------------------
 for pat, why in [
     (r"R4\.0m for 10%|R36m pre|R40m post", "withdrawn R4m/10% round"),
-    (r"2\.42×|12\.5×|~34%", "withdrawn round's returns"),
+    (r"2\.42×|12\.5×", "withdrawn round's returns"),
     (r"R147m|R807m", "pre-flattening milestones"),
     (r"Valuation \(2\.74|2\.74× revenue", "abandoned 2.74x REVENUE multiple (distinct from the 2.74x investor return)"),
     (r"R157\.7m|2\.96×|R396m|R132\.1m|R52\.6m", "superseded milestones"),
     (r"R177\.5m|R174\.6m|R371m|R365\.6m|R123\.7m|R121\.9m|R59\.2m|R58\.2m", "superseded v1/v2 milestones"),
     (r"3\.33×|3\.27×|6\.96×|6\.86×|4\.46×|4\.55×", "superseded v1/v2 multiples"),
     (r"9,715|18,465|104,946|199,474", "superseded v2 member and entry counts"),
-    (r"R113\.1m|2\.12×|5\.42×|4\.76×|R37\.7m", "superseded pre-repricing figures"),
-    (r"16\.9%|R47\.3m|R39\.3m|2\.74×|R129\.9m|6\.10×|3\.48×", "the solved-looking terms, replaced with round ones"),
-    (r"R53\.3m|R45\.3m pre|4\.77×", "the withdrawn R53.3m post-money"),
+    (r"R113\.1m|2\.12×|4\.76×|R37\.7m", "superseded pre-repricing figures"),
+    (r"16\.9%|R47\.3m|R39\.3m|2\.74×|R129\.9m|6\.10×|3\.48×", "the 16.9% pricing, superseded"),
+    (r"R47m post|R39m pre-money|2\.76×|6\.15×|2\.13%", "the 17% pricing, superseded"),
+    (r"4\.77×", "the entry multiple from the superseded 2026-start model"),
     (r"billion-rand|R1bn|R333m", "the billion-rand horizon, removed on instruction"),
     (r"Strava|Peloton|Whoop", "comparable band that does not survive scrutiny"),
     (r"engaged-community businesses trade|below the bottom of that band", "the withdrawn comp-band claim"),
-    (r"R45\.3m|R36m pre|R42m pre", "superseded pre-money figures"),
+    (r"R36m pre|R42m pre|R39\.3m pre", "superseded pre-money figures"),
 
     (r"closest to the pin takes", "proximity claim the rig cannot verify"),
     (r"same stage as Ernie", "overclaims the terms Ernie came in on"),
@@ -133,9 +139,9 @@ must_have("index.html", "What your R1m buys", "the investor-rights block")
 must_have("index.html", "Who buys this in 2032", "the exit narrative")
 must_have("index.html", "4.5×", "the stressed LTV/CAC, not just the flattering one")
 must_have("index.html", "2024 base", "the base year on the insurance-market stat")
-must_have("index.html", "17%", "the repriced equity")
-must_have("index.html", "R47m", "the repriced post-money")
-must_have("index.html", "R39m pre-money", "the round quoted on pre-money, as deals actually are")
+must_have("index.html", "15%", "the equity")
+must_have("index.html", "R53.3m", "the post-money")
+
 must_have("index.html", "At 2.5×", "the multiple sensitivity, so 3.0x reads as a choice")
 must_have("index.html", "Why R8m when the plan only draws", "the raise-size question, answered where it is asked")
 

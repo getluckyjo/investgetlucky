@@ -957,6 +957,39 @@ trade"** comp band that was supposedly removed two commits earlier.
 recomputes **every published USD conversion** against the ZAR figure at the
 stated FX. That check would have caught the R45.3m/$2.45m pair on its own.
 
+### 2026-08-05 (v6) — back to R8m for 15%
+
+The founder reinstated the original term. **R8.0m for 15% — R45.3m pre, R53.3m
+post.** Quoted equity-first, which is the convention for a round this size;
+R53.3m is the arithmetic consequence of a round 15%, not a number solved
+backwards, so it does not carry the tell that 16.9% did.
+
+**The return goes back to ~34%.** At a flat 3.0x, 2029 marks at 2.44x and 2032
+at 5.42x. The 40% shown a revision earlier required either 17% equity or a
+3.4x multiple; the founder chose the price over the return, knowingly.
+
+| | at 15% | at 17% (superseded) |
+|---|---|---|
+| Post-money | R53.3m | R47m |
+| 2029 multiple | **2.44x** | 2.76x |
+| IRR (3 yrs) | **~34%** | ~40% |
+| 2032 multiple | **5.42x** | 6.15x |
+| Entry multiple | 3.9x | 3.5x |
+
+Entry still compresses (3.9x -> 3.0x forward). R1m buys 1.88%. Multiple
+sensitivity republished: 2.5x / 3.0x / 3.5x -> 2.03x / 2.44x / 2.84x.
+
+**If 40% is wanted again at 15%,** the honest levers are 2029 revenue at R48.8m
+(+13%) or a 3.38x multiple. Both were priced and neither was taken.
+
+**Note on `scripts/tie-out.py`.** The hand-maintained retired-figure list
+collided **three times** this session with values that were later reinstated —
+2.74x, 5.42x, ~34% and R53.3m all had to be un-guarded when the price moved
+back. A comment now warns to check a pattern against the current model before
+adding or removing it. If the price moves again, expect the same friction: the
+guards are string-matched, not derived. Anchoring them to `model.json` values
+would be the better design and is not done.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
