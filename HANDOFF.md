@@ -633,6 +633,108 @@ isn't doubled. Site markup only — no numbers moved, PDFs unaffected.
 when there are four rungs. The simulator answer had grown to 203 words and is
 now ~130.
 
+## 2026-08-05 — Model rebuilt on the insurance structure; review blockers cleared
+
+The founder supplied `GetLucky_Insurance_Model.xlsx` (the Santam underwriting
+submission) and asked for a middle path between it and the site: the insurance
+model charges **per entry with no subscription**; the site sold a subscription
+with **unlimited attempts**. Those are not two presentations of one business —
+they are incompatible, and the site's version is the uninsurable one.
+
+**Why.** A subscription buying unlimited insured swings fixes the premium and
+leaves exposure open-ended. At 16 par-3 attempts a month against a $10
+subscription the cover runs above a 100% loss ratio. That is the mechanism
+behind the chartered accountant's D1 finding. Charging for the swing closes it:
+the premium arrives with the risk, every time.
+
+**The structure now published — three parts, one product:**
+1. **Membership** — R149/month locally, $10/month globally. Access only: the
+   app, the courses, member pricing. **Carries no prize risk.**
+2. **The entry** — one swing at one insured prize, at the tier the golfer
+   picks. 24% ceded as premium on that same swing.
+3. **Upsells** — added in the moment, on top of an entry.
+
+Sold in three places: installed courses, the global app, simulators.
+Verified from the insurance workbook: weighted average entry $17.00, premium
+$4.08, expected claim $1.30, **loss ratio 31.9%**, breakeven at **2.51×**
+amateur ace frequency.
+
+### The model was rebuilt, not patched
+
+`GetLucky_Pro_Forma_v2.xlsx` is new and is now the shipped pro forma. 84-month
+build (Jan 2026 – Dec 2032), calendar-year revenue, annual roll-up, cash
+rollforward. Evaluated independently: **0 formula failures, 0 bad sheet
+references**, and every output ties to `data/model.json`.
+
+| | 2026 | Dec 2029 | 2032 |
+|---|---|---|---|
+| Revenue (net of third-party shares) | R11.95m | R59.18m | R123.72m |
+| EBITDA | −R0.04m | R12.54m | R34.39m |
+| Margin | −0.4% | 21.2% | 27.8% |
+| Members / paid entries | 3,436 / 23,805 | 9,715 / 104,946 | 18,465 / 199,474 |
+| Milestone at flat 3.0× | R53.3m (round) | **R177.5m** | **R371.2m** |
+| Investor multiple on R8m | — | **3.33×** | **6.96×** |
+
+IRR **42.4%**, stated on its real basis: money in Q3 2026 to the 31 Dec 2029
+milestone, 3.4 years, an unrealised mark on a private holding. Entry multiple
+4.46×, so it still compresses. Peak cumulative drawdown **R4.04m**.
+
+### Blockers cleared from the three-reviewer audit
+
+- **Insurance premium was double-deducted** in both legacy workbooks (the 24%
+  is already inside the 66% gross margin; C21+C22+C23 = 100%). Fixed. "2026
+  loses money on purpose" was an artefact of that bug and is gone.
+- **SA sponsorship was extrapolated to 9× the contracted amount** by
+  `Valuation!E8 = C34 * E6/$C$6`, inside a stream labelled "contracted". Now
+  held flat at the R3.5m run-rate after the deal expires in 2028.
+- **Rungs 1 and 2 contributed R0** to the old forecast while leading the page.
+  The rebuild has pay-per-play as a real line.
+- **Milestone year** was 2028 in the workbooks and 2029 on the site. Re-anchored
+  to Dec 2029 throughout; `model.json` keys renamed `*2028` → `*2029`.
+- **Trailing R4.0m is now on the page** with the forecast explicitly labelled.
+- **Comp band removed.** Peloton trades near 1×; Strava and Whoop are private.
+  The multiple is now argued from evidence, not borrowed.
+- **Calculator fallback deleted** — it silently republished the withdrawn R40m
+  round whenever `model.json` failed to load, and its two self-checks failed on
+  every page load.
+- **`fmtR()` printed `R-50000000`** on the revenue chart's y-axis. Fixed.
+- **Contrast:** `--gold-text` → `#7a5d20` (4.68:1 on the worst background, was
+  3.33:1 across ~60 usages). Focus ring given a two-tone halo — the old gold
+  ring was 1.99:1 on cream, invisible on ~70% of the page.
+- **The ask moved from screen 22 to screen 2** — deal band under the hero,
+  sticky mobile bar, course wall cut 24 → 6.
+- **Risk section added** (`#risk`): five named risks with true mitigations,
+  including the no-simulator case (2029 → R47.2m, 2.65×).
+- **Group pot** no longer claims to adjudicate proximity.
+- **NDA gate is now real** — `middleware.js` + `api/nda-accept.js`, signed
+  cookie, fails closed if `NDA_SECRET` is unset. **Not yet verified on a
+  deploy.**
+
+### New: `scripts/tie-out.py`
+
+41 checks, run before any PDF regeneration. Asserts model internal consistency
+(streams sum to revenue, cost stack sums to cost, milestones = 3.0× revenue,
+insurance ladder arithmetic) and greps every surface for withdrawn figures. It
+caught two live stragglers on its first run — this is the check whose absence
+caused every drift bug in this repo.
+
+### Open — needs the founder
+
+- **The insurance submission and the investment plan assume different worlds.**
+  The submission carries a 200,000-player Ernie Partner Network (PGA, Golf
+  Breaks, YGT, 100 partner courses) reaching **144,091 registered players** and
+  **R403m of year-3 entry revenue**. The investment plan has no partner network
+  and reaches 9,715 members. Both are 36-month views of the same company. If
+  Santam and an investor ever compare documents, that gap needs an answer.
+  The plan deliberately takes the conservative side; the network is upside that
+  is **not counted anywhere**.
+- Cap table, management accounts, signed Santam agreement and the written legal
+  opinion are all confirmed available and **still not published**. Each closes a
+  named finding.
+- Per-course unit economics need real figures before the panel can be built.
+- Ace video and a named course-partner testimonial need assets.
+- `NDA_SECRET` must be set in Vercel or the dataroom documents return 503.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

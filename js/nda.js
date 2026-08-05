@@ -1,16 +1,16 @@
 /* NDA gate for the dataroom.
-   Pattern: client-side session gate (deterrent + audit trail, not real auth).
-   Interface kept compatible with the donafuego module so it can be swapped in:
-     recordNda(payload) -> Promise, hasNdaSession() -> bool.
-
-   Optional server-side recorder: set NDA_ENDPOINT to a Formspree/Resend-backed
-   URL (e.g. "https://formspree.io/f/XXXX") and every signature is POSTed there
-   as JSON. Left empty, signatures are stored in localStorage only. */
+   The documents themselves are gated server-side by middleware.js, which checks
+   a signed cookie issued by /api/nda-accept. This module handles the form and
+   the in-page reveal; it is no longer the thing standing between a visitor and
+   a confidential file, and it must not be treated as if it were.
+   If the server call fails the gate does NOT open — the documents would 302
+   back here anyway, and a page that looks unlocked while every download
+   redirects is worse than an honest error. */
 
 (function () {
   "use strict";
 
-  var NDA_ENDPOINT = ""; // e.g. "https://formspree.io/f/yourFormId"
+  var NDA_ENDPOINT = "/api/nda-accept";
   var SESSION_KEY = "gl-nda-accepted";
   var AUDIT_KEY = "gl-nda-audit";
 
@@ -27,13 +27,13 @@
       localStorage.setItem(AUDIT_KEY, JSON.stringify(audit));
     } catch (e) { /* storage unavailable — gate still opens for this view */ }
 
-    if (!NDA_ENDPOINT) return Promise.resolve();
     return fetch(NDA_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(payload)
-    }).catch(function (err) {
-      console.warn("NDA recorder unreachable — local record kept", err);
+    }).then(function (r) {
+      if (!r.ok) throw new Error("NDA acceptance failed (" + r.status + ")");
+      return r.json();
     });
   }
 
@@ -72,6 +72,10 @@
       show(room);
       window.scrollTo({ top: 0 });
       loadSources();
+    }).catch(function (err) {
+      error.textContent = "We could not record your acceptance, so the documents stay locked. Please try again, or email johannes@getluckygolfclub.com.";
+      error.style.display = "block";
+      console.warn(err);
     });
   });
 
