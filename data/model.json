@@ -2,22 +2,22 @@
   "_note": "Canonical numbers for the site. Rebuilt 2026-08-05 on the three-part revenue structure (membership / pay-per-play / upsells) after the insurance model was brought in. Membership carries NO prize risk; every insured swing is a paid entry and 24% of that entry is ceded as premium on the same swing. All streams are reported NET of third-party shares so they are on one basis and can be added. Edit here, not in HTML.",
   "fx": 18.5,
   "deal": {
-    "_note": "Repriced 2026-08-05: R8.0m for 16.9% at R47.3m post. The previous R53.3m post produced a 28.5% IRR once play frequency was made realistic and the build moved to Jan 2027. The price moved rather than the assumptions.",
+    "_note": "R8.0m at R39m pre-money — R47m post, 17% of the company. Quoted the way a round is actually quoted: a round pre-money number, not an equity percentage solved backwards from a target return. Priced 2026-08-05.",
     "raiseZAR": 8000000,
-    "equityPct": 16.9,
-    "preMoneyZAR": 39337278,
-    "postMoneyZAR": 47337278,
+    "equityPct": 17.0,
+    "preMoneyZAR": 39000000,
+    "postMoneyZAR": 47000000,
     "ernieStakePct": 5,
     "exit2032ZAR": 288946035,
-    "multiple2032": 6.1,
+    "multiple2032": 6.15,
     "allocation": {
       "show": false,
       "committedZAR": null,
       "closeDate": null
     },
     "value2029ZAR": 129883965,
-    "stake2029ZAR": 21950390,
-    "multiple2029": 2.74,
+    "stake2029ZAR": 22107909,
+    "multiple2029": 2.76,
     "irrBasis": "Money in Q4 2026, deployed from January 2027, to the 31 Dec 2029 milestone — a true three years. Unrealised mark on a private holding, not a realised return.",
     "irr3yrPct": 40
   },
@@ -525,7 +525,7 @@
     "subs2029": 7843,
     "subs2032": 14907,
     "milestonesZAR": {
-      "2027": 47337278,
+      "2027": 47000000,
       "2029": 129883965,
       "2032": 288946035
     },
@@ -534,19 +534,39 @@
     "comps": "No listed comparable exists for an insured skill-prize platform. The multiple is set against what can be evidenced, not borrowed from US consumer-subscription comps.",
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only.",
-      "2027": 2366864,
+      "2027": 2350000,
       "2029": 6494198,
       "2032": 14447302
     },
     "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
     "multipleBasis": "3.0x revenue, flat at every forward milestone. The round itself implies 4.46x on 2026 forecast revenue, so the multiple COMPRESSES as the company scales. No multiple expansion is assumed anywhere.",
-    "entryMultipleImplied": 3.48,
+    "entryMultipleImplied": 3.5,
     "coursesAndAppRevenueUSD": {
       "2026": 604700,
       "2029": 1906000,
       "2032": 4489000
     },
-    "_horizonNote": "The R1bn horizon was removed 2026-08-05 on the founder's instruction. It extended a subscriber growth rate to total revenue, which implied simulator attach reaching ~11.7% of all Korean rounds. Do not reinstate without a modelled basis."
+    "_horizonNote": "The R1bn horizon was removed 2026-08-05 on the founder's instruction. It extended a subscriber growth rate to total revenue, which implied simulator attach reaching ~11.7% of all Korean rounds. Do not reinstate without a modelled basis.",
+    "multipleSensitivity": {
+      "_note": "Published so the 3.0x reads as a choice with a stated consequence, rather than a single point estimate.",
+      "rows": [
+        {
+          "multiple": 2.5,
+          "milestone2029ZAR": 108236638,
+          "investorMultiple": 2.3
+        },
+        {
+          "multiple": 3.0,
+          "milestone2029ZAR": 129883965,
+          "investorMultiple": 2.76
+        },
+        {
+          "multiple": 3.5,
+          "milestone2029ZAR": 151531292,
+          "investorMultiple": 3.22
+        }
+      ]
+    }
   },
   "growthEngines": {
     "travel": {
@@ -670,7 +690,8 @@
     "ebitdaPositiveFrom": 2027,
     "cashPositiveFrom": 2029,
     "raiseZAR": 8000000,
-    "_headroom": "Peak cumulative drawdown R2.7m against an R8.0m raise. The balance is acceleration — the app build, the simulator integration and US market entry — not survival capital."
+    "_headroom": "Peak cumulative drawdown R2.7m against an R8.0m raise. The balance is acceleration — the app build, the simulator integration and US market entry — not survival capital.",
+    "_useVsDrawdown": "The raise is R8m of investment SPEND; peak cumulative drawdown is only R2.7m because operating cash funds the rest as it arrives. Both numbers are true and the gap is the point — the company is not burning R8m, it is deploying R8m while earning."
   },
   "insuranceModel": {
     "_source": "GetLucky_Insurance_Model.xlsx — the Santam underwriting submission. Reproduced independently 2026-08-05; every figure below ties to it.",

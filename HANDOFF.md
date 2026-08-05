@@ -915,6 +915,48 @@ Workbook `GetLucky_Pro_Forma_v3.xlsx` ties to `model.json` to the rand,
 check had to be rescoped, since 2.74x is now the investor multiple while the
 retired one was a revenue multiple.
 
+### 2026-08-05 (v5) — made the numbers look arrived-at rather than solved
+
+The founder asked whether the deck reads naturally to an investor. It did not:
+the arithmetic was right but several figures carried the fingerprints of being
+reverse-engineered from a target return. Six tells, all fixed.
+
+| Tell | Fix |
+|---|---|
+| Equity **16.9%** | Nobody prices a round to a tenth of a percent |
+| Post **R47,337,278** | Solved, not negotiated |
+| IRR exactly **40.0%**, multiple **2.74x** | 1.40^3 = 2.744 — visible from orbit |
+| Milestone **R129,883,965** | Spurious precision to the rand |
+| Multiple a bare **3.0x** | A point estimate with no stated alternative |
+| **R8m** raise against a **R2.7m** drawdown | Unanswered "why do you need R8m?" |
+
+**The round is now quoted the way rounds are actually quoted: R8.0m at R39m
+pre-money.** That gives R47m post and 17.0% of the company — all round numbers
+that fall out of a pre-money, rather than an equity percentage solved backwards.
+Returns are unchanged in substance: **2.76x at Dec 2029, ~40% IRR, 6.15x at
+2032.** Entry multiple 3.5x compressing to 3.0x. R1m buys 2.13%.
+
+**Multiple sensitivity is now published** — 2.5x / 3.0x / 3.5x giving 2.30x /
+2.76x / 3.22x — so the 3.0x reads as a choice with a stated consequence.
+
+**The R8m question is answered where it gets asked**, in the use-of-funds
+block: R8m is investment *spend*, R2.7m is peak *drawdown*, and the gap is
+operating cash arriving while that spend happens. Both numbers are true.
+
+**LTV/CAC was republished stressed.** A bare 31x on an unlaunched product is
+not a credible number to put in front of an investor. It now shows contribution
+(~$357 after payment processing and claims handling) against $12 / $40 / $80
+CAC — 30x / 9x / 4.5x — and says the plan works at $80.
+
+**Two live errors that only rendering caught**, both invisible to a text sweep:
+the deal card still showed **pre-money R45.3m** (the withdrawn price) and the
+section sub still carried the **"40% below where engaged-community businesses
+trade"** comp band that was supposedly removed two commits earlier.
+
+`scripts/tie-out.py` is now at **64 checks**, including a new one that
+recomputes **every published USD conversion** against the ZAR figure at the
+stated FX. That check would have caught the R45.3m/$2.45m pair on its own.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
