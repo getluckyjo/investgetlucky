@@ -563,6 +563,69 @@ presented as a modelled milestone, the model stops being defensible.
 
 New `valuationModel.billionHorizon` block carries the figures.
 
+## TWO UPSELLS PARKED (2026-08-04)
+
+User: *"remove upsell: nearest to the pin (no way to verify) and highlights reel
+for now."*
+
+Both removed from the plan and from every published surface. **Parked, not
+deleted** — they live on in `inPlayUpsells.parkedMenu` with the reason each is
+out, so they can come back when they can actually be delivered:
+
+- **Nearest the pin** — on-course proximity cannot be measured with the current
+  camera rig. Worth noting a simulator *can* measure it precisely, so this may
+  return on the simulator stream first even while it stays impossible on course.
+- **The highlight reel** — no video production pipeline exists yet.
+
+**Attach rates cut with the menu.** Core 12% -> **9%**, simulator 5% -> **4%**.
+A four-item menu without the two broadest-appeal items converts fewer buyers.
+Average spend held flat at $5 / $2, since the remaining items are the pricier
+ones. Upsell revenue R4.3m -> **R3.3m** (2029) and R10.5m -> **R8.1m** (2032).
+
+**Knock-on numbers.** Revenue R11.2m -> **R52.6m** -> **R132.1m**. EBITDA -6.3%
+-> **14.7%** -> **23.2%**. Milestones R53.3m -> **R157.7m** -> **R396m** at the
+unchanged flat 3.0x. Investor return **2.96x at three years, ~44% IRR**, 7.4x at
+2032.
+
+**One inconsistency left for the user to resolve.** The surviving *group pot*
+upsell is described as "closest to the pin takes it" — which needs the same
+proximity call that got nearest-the-pin parked. It is arguably fine because the
+fourball adjudicates among themselves rather than Get Lucky verifying for a
+payout, but if Get Lucky holds the pot and takes a fee it is the same problem.
+Either reframe it (pot goes to a verified ace, rolls over otherwise) or park it
+too. Raised with the user 2026-08-04; not changed unilaterally.
+
+## SITE TIGHTENED FOR A SEASONED-INVESTOR READ (2026-08-04)
+
+User: *"We have added a lot and I am worried it reads too long. Run through the
+site and make it super tight — as if seasoned investors are looking at the
+opportunity. Also remove any mention of old price — this is the new deck (the
+old one never went out). Use read more dropdowns as needed."*
+
+**The old price is gone everywhere.** The R4m / R40m round and every "against
+2.42x and ~34% at the old price" comparison is removed from the site and the
+FAQ PDF — including the whole "Why is the price higher now?" Q&A, which only
+made sense against a deck that was never sent. **Do not reintroduce it.** The
+deal now stands on its own terms rather than as a comparison.
+
+**Word count 3,470 -> ~2,900** on `index.html` without losing a single number.
+The cuts were prose, not substance.
+
+**New `.more` component** in `css/styles.css` — an inline "read more" that
+collapses supporting detail while leaving the claim visible. Gold on light
+surfaces, brighter gold on dark ones. Used three times:
+- Costed-plan card -> the funding detail behind "How it is funded"
+- Billion-rand card -> the arithmetic table behind "The arithmetic"
+- Upsell block -> the four menu cards behind "See the menu"
+
+The pattern to follow if more collapsing is needed: **the number stays visible,
+the reasoning goes behind the toggle.** Never hide a figure an investor needs to
+evaluate the deal.
+
+**Also fixed:** the FAQ still asked "How do the two entry models fit together?"
+when there are four rungs. The simulator answer had grown to 203 words and is
+now ~130.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

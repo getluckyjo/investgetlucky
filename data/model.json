@@ -8,12 +8,12 @@
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
     "ernieStakePct": 5,
-    "value2028ZAR": 160653405,
-    "stake2028ZAR": 24098011,
-    "multiple2028": 3.01,
+    "value2028ZAR": 157656339,
+    "stake2028ZAR": 23648451,
+    "multiple2028": 2.96,
     "irr3yrPct": 44,
-    "exit2032ZAR": 403709331,
-    "multiple2032": 7.6,
+    "exit2032ZAR": 396383967,
+    "multiple2032": 7.4,
     "allocation": {
       "show": false,
       "committedZAR": null,
@@ -134,35 +134,35 @@
       "inPlayUpsells": {
         "ZAR": [
           0,
-          4283024,
-          10532313
+          3284002,
+          8090525
         ],
         "USD": [
           0,
-          231515,
-          569314
+          177514,
+          437326
         ]
       }
     },
     "revenueZAR": [
       11187607,
-      53551135,
-      134569777
+      52552113,
+      132127989
     ],
     "revenueUSD": [
       604736,
-      2894656,
-      7274042
+      2840655,
+      7142053
     ],
     "ebitdaProxyZAR": [
       -701209,
-      8302090,
-      32175538
+      7702677,
+      30710465
     ],
     "ebitdaMarginPct": [
       -6.3,
-      15.5,
-      23.9
+      14.7,
+      23.2
     ],
     "grossProfitUSD": [
       399125,
@@ -255,28 +255,28 @@
           "attachRatePct": 0.5,
           "label": "Conservative adoption",
           "simZAR": 3999700,
-          "upsellZAR": 3326574,
-          "totalZAR": 44595285,
-          "valuationZAR": 133785855,
-          "investorMultiple": 2.51
+          "upsellZAR": 2518842,
+          "totalZAR": 43787553,
+          "valuationZAR": 131362659,
+          "investorMultiple": 2.46
         },
         {
           "attachRatePct": 1.5,
           "label": "The plan",
           "simZAR": 11999100,
-          "upsellZAR": 4283024,
-          "totalZAR": 53551135,
-          "valuationZAR": 160653405,
-          "investorMultiple": 3.01
+          "upsellZAR": 3284002,
+          "totalZAR": 52552113,
+          "valuationZAR": 157656339,
+          "investorMultiple": 2.96
         },
         {
           "attachRatePct": 3.0,
           "label": "Strong adoption",
           "simZAR": 23998200,
-          "upsellZAR": 5717699,
-          "totalZAR": 66984910,
-          "valuationZAR": 200954730,
-          "investorMultiple": 3.77
+          "upsellZAR": 4431742,
+          "totalZAR": 65698953,
+          "valuationZAR": 197096859,
+          "investorMultiple": 3.7
         }
       ]
     }
@@ -356,18 +356,6 @@
         "detail": "Three swings for the price of two. Raises attempts per visit without touching the prize."
       },
       {
-        "name": "Nearest the pin",
-        "price": "$3",
-        "insured": true,
-        "detail": "A guaranteed prize if you finish inside three feet. Monetises the 12,499 attempts out of 12,500 that are not an ace — the single biggest lever on perceived value."
-      },
-      {
-        "name": "The highlight reel",
-        "price": "$3",
-        "insured": false,
-        "detail": "The produced clip of your shot, scored and branded, ready to post. No insurance component — pure margin, and every share is marketing."
-      },
-      {
         "name": "The group pot",
         "price": "$10 a head",
         "insured": false,
@@ -375,11 +363,11 @@
       }
     ],
     "assumptions": {
-      "_note": "Attach rates are set against the price point of the underlying entry: a golfer paying ~R200 a swing is a very different buyer to one paying $1 in a simulator, so the two are modelled separately.",
-      "coreAttachPct": 12,
+      "_note": "Attach rates are set against the price point of the underlying entry, and deliberately below typical experiential benchmarks — the menu is unproven until it ships in 2027. Cut again 2026-08-04 (12% -> 9% core, 5% -> 4% sim) when nearest-the-pin and the highlight reel were parked: a four-item menu without the two broadest-appeal items converts fewer buyers. Average spend held flat, since the remaining items are the pricier ones.",
+      "coreAttachPct": 9,
       "coreAvgUSD": 5.0,
       "coreBasis": "Subscriber rounds — subscribers x 4 rounds/month x 12",
-      "simAttachPct": 5,
+      "simAttachPct": 4,
       "simAvgUSD": 2.0,
       "simBasis": "Simulator challenges from the simulator ramp",
       "getLuckyNetPct": 55,
@@ -387,8 +375,27 @@
     },
     "revenueZAR": {
       "2026": 0,
-      "2029": 4283024,
-      "2032": 10532313
+      "2029": 3284002,
+      "2032": 8090525
+    },
+    "parkedMenu": {
+      "_note": "Removed from the plan 2026-08-04 — parked, not abandoned. Neither is modelled and neither should appear on the site until it can actually be delivered. Nearest-the-pin returns if a rig can measure proximity (simulators already can, so it may come back on that stream first). The highlight reel returns when there is a production pipeline.",
+      "items": [
+        {
+          "name": "Nearest the pin",
+          "price": "$3",
+          "insured": true,
+          "detail": "A guaranteed prize if you finish inside three feet. Monetises the 12,499 attempts out of 12,500 that are not an ace — the single biggest lever on perceived value.",
+          "parkedReason": "Verification: on-course proximity to the pin cannot be measured with the current camera rig."
+        },
+        {
+          "name": "The highlight reel",
+          "price": "$3",
+          "insured": false,
+          "detail": "The produced clip of your shot, scored and branded, ready to post. No insurance component — pure margin, and every share is marketing.",
+          "parkedReason": "Needs a video production pipeline that does not exist yet."
+        }
+      ]
     }
   },
   "valuationModel": {
@@ -460,8 +467,8 @@
     },
     "milestonesZAR": {
       "2026": 53333333,
-      "2029": 160653405,
-      "2032": 403709331
+      "2029": 157656339,
+      "2032": 396383967
     },
     "exitMultiple": 3.0,
     "nearTermMultiple": 3.0,
@@ -469,8 +476,8 @@
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only — never on the public page (HANDOFF.md).",
       "2026": 2666667,
-      "2029": 8032670,
-      "2032": 20185467
+      "2029": 7882817,
+      "2032": 19819198
     },
     "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
     "multipleBasis": "3.0x revenue, flat at every forward milestone. Engaged-community subscription businesses (Strava, Peloton, Whoop) trade at 5-10x revenue, so 3.0x sits 40% below the bottom of that band — a discount for being private and pre-scale. Settled at 3.0x 2026-08-04 after 2.5x and 3.5x were both trialled.",
@@ -481,8 +488,8 @@
       "targetValuationZAR": 1000000000,
       "revenueRequiredZAR": 333333333,
       "arrivesAround": 2037,
-      "revenue2037ZAR": 392477001,
-      "valuation2037ZAR": 1177431004,
+      "revenue2037ZAR": 385355450,
+      "valuation2037ZAR": 1156066349,
       "basis": "Same flat 3.0x multiple, no expansion assumed"
     }
   },
