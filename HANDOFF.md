@@ -622,6 +622,13 @@ The pattern to follow if more collapsing is needed: **the number stays visible,
 the reasoning goes behind the toggle.** Never hide a figure an investor needs to
 evaluate the deal.
 
+**Extended 2026-08-05** to the three `#market` engine cards, on the same rule:
+the `.mathpanel` table (and the simulator operator chiprow) stay open, the
+trailing paragraph beneath each one now sits behind a toggle — "Why it repeats"
+(territory sponsorship), "Why Golfzon" (simulators), "Why it matters" (travel).
+`.engine__body .more { margin-top: 0 }` added so the card's 1.4rem grid gap
+isn't doubled. Site markup only — no numbers moved, PDFs unaffected.
+
 **Also fixed:** the FAQ still asked "How do the two entry models fit together?"
 when there are four rungs. The simulator answer had grown to 203 words and is
 now ~130.

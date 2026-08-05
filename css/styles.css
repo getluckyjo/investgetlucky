@@ -835,6 +835,8 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 
 /* --- inline "read more" — collapses supporting detail without hiding the claim --- */
 .more { margin-top: var(--space-2); }
+/* inside the engine cards the grid gap already spaces it */
+.engine__body .more { margin-top: 0; }
 .more > summary {
   cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--font-ui); font-size: 0.82rem; font-weight: 700;
