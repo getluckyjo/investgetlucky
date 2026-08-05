@@ -79,7 +79,7 @@ for pat, why in [
     (r"R157\.7m|2\.96×|R396m|R132\.1m|R52\.6m", "superseded milestones"),
     (r"4\.77×", "superseded entry multiple"),
     (r"Strava|Peloton|Whoop", "comparable band that does not survive scrutiny"),
-    (r"unlimited attempts|unlimited swings", "unbounded insured exposure"),
+
     (r"closest to the pin takes", "proximity claim the rig cannot verify"),
     (r"same stage as Ernie", "overclaims the terms Ernie came in on"),
     (r"22,886|9,720|2,130 subscribers", "superseded subscriber counts"),
@@ -88,6 +88,23 @@ for pat, why in [
     must_not(pat, why)
 
 # --- 3. figures the page must actually carry --------------------------------
+def unlimited_must_be_counterfactual():
+    """"Unlimited" may appear only as the thing we explain we do NOT do."""
+    global checks
+    checks += 1
+    ok = ("cannot", "533%", "would be", "not unlimited", "no one will write")
+    for f, s in text.items():
+        for mo in re.finditer(r"unlimited", s, re.I):
+            # tags split sentences, so judge a window rather than a fragment
+            window = s[max(0, mo.start() - 220): mo.end() + 220]
+            if not any(k in window for k in ok):
+                fails.append(f"{f}: 'unlimited' stated as a product claim, not a counterfactual "
+                             f"— {window[200:320].strip()!r}")
+
+
+unlimited_must_be_counterfactual()
+
+
 def must_have(f, needle, why):
     global checks
     checks += 1
@@ -99,6 +116,8 @@ must_have("index.html", "FORECAST", "the forecast label on the headline")
 must_have("index.html", 'id="risk"', "the risk section")
 must_have("index.html", "31.9%", "the insurance loss ratio")
 must_have("index.html", "2.51×", "the breakeven ace multiple")
+must_have("index.html", "533%", "the unlimited-swings counterfactual")
+must_have("index.html", "four insured swings", "the capped allowance that makes the blend work")
 
 print(f"tie-out: {checks} checks")
 if fails:

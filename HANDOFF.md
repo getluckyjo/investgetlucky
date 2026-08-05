@@ -735,6 +735,63 @@ caused every drift bug in this repo.
 - Ace video and a named course-partner testimonial need assets.
 - `NDA_SECRET` must be set in Vercel or the dataroom documents return 503.
 
+### 2026-08-05 (later) — the blend: capped allowance, not unlimited
+
+The founder asked for a structure that keeps subscription revenue (what
+investors pay for) without unlimited insured swings (what no insurer will
+write). The resolution is that **"unlimited" was the problem, not
+"subscription"**.
+
+**Membership now includes 4 insured swings a month at the $500 tier.** A capped
+allowance is a known exposure, so it can be priced: 4 x $500 x 8e-5 = $0.16 of
+expected claim, covered by ceding **5% of the subscription** ($0.50). Everything
+above that is a **trade-up bought on the tee** at the submission's own ladder —
+$5 for $2,500 up to $100 for $100,000 — carrying the full 24% premium.
+
+| per member per month | |
+|---|---|
+| included-swing expected claim | $0.16 |
+| premium ceded on the membership (5%) | $0.50 |
+| trade-up premium (24% of $17 avg) | $4.08 |
+| trade-up expected claim | $1.30 |
+| **blended loss ratio** | **31.9%** |
+
+**The blend is neutral to the insurer** — 31.9% is identical to pay-per-play
+alone, because the included swings are priced at the same target. The
+counterfactual is now published: 16 attempts a month at the $10,000 tier is
+$12.80 of expected claim against $2.40 of premium, a **533% loss ratio**. That
+is the version the site used to sell.
+
+Restated (membership now reported net of the 5% premium):
+
+| | 2026 | Dec 2029 | 2032 |
+|---|---|---|---|
+| Revenue | R11.73m | R58.21m | R121.87m |
+| EBITDA margin | −2.1% | 20.0% | 26.8% |
+| Milestone at 3.0x | R53.3m | R174.6m | R365.6m |
+| Investor multiple | — | 3.27x | 6.86x |
+
+IRR 41.7%. Entry multiple 4.55x. Peak drawdown R4.25m. EBITDA positive 2028,
+cumulative cash positive 2029. Workbook ties to `model.json` **to the rand**.
+
+`scripts/tie-out.py` now has 43 checks, including one that allows the word
+"unlimited" only inside a 220-character window containing the counterfactual —
+so the explanation can stay and the product claim cannot come back.
+
+### Video
+
+`golf-day-video.mp4` (uploaded to main, 32.8s, 1280x720, 14.2MB) is now
+`assets/video/golf-day.mp4`, embedded in `#traction` with `preload="metadata"`
+so it costs nothing until played, and a one-year immutable cache header.
+
+**Not verified in this environment, and not compressed.** Both the bundled
+ffmpeg (a stripped Playwright screen-recording build) and headless Chromium
+lack H.264 decoders, so playback could not be confirmed, no poster frame could
+be extracted, and no transcode was possible. Before launch: confirm it plays,
+generate a poster, and re-encode at CRF ~26 — 14MB is heavy even lazy-loaded.
+It is captioned as an activation day, not as an ace; do not relabel it without
+watching it.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
