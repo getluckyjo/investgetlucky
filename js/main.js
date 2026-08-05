@@ -36,6 +36,10 @@
       if (!t0) t0 = t;
       var p = Math.min((t - t0) / DURATION, 1);
       var eased = 1 - Math.pow(1 - p, 3);
+      /* Start at 88% of target: a count-up that runs 1 -> 9 briefly displays
+         "R1m" and "R5m" for a figure that is contracted at R9m. A flourish is
+         fine; showing a wrong number, however briefly, is not. */
+      eased = 0.88 + 0.12 * eased;
       var v = decimals > 0
         ? (target * eased).toFixed(decimals)
         : Math.round(target * eased).toLocaleString("en-US");

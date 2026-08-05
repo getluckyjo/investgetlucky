@@ -792,6 +792,79 @@ generate a poster, and re-encode at CRF ~26 — 14MB is heavy even lazy-loaded.
 It is captioned as an activation day, not as an ace; do not relabel it without
 watching it.
 
+### 2026-08-05 (v3) — founder review comments applied
+
+Nine comments came back on `INVESTOR-REVIEW.md`. Three changed the model
+materially, and the return moved a long way as a result. That is stated up
+front because it is the most important consequence of the session.
+
+**Model changes**
+- **Build now starts January 2027** (was Jan 2026), so **Dec 2029 is a true
+  three-year milestone**. IRR is a clean 3-year figure, no longer 3.4 years.
+- **Play frequency cut from 4 rounds a month to 2** — 48 insured attempts a
+  year was not defensible. 8 par-3 attempts a month, 6.25% converted, so 0.5
+  paid trade-ups per member per month.
+- **Installed courses are now a modelled revenue line**: 25 today, +25 a year
+  (100 by 2029, 175 by 2032), 400 entries per course per year at the realised
+  R150 average, 66% retained. Positioned as proof and brand — R3.5m of the
+  R37.7m 2029 forecast — with the digital channel carrying R22.1m.
+- **The billion-rand horizon is removed** everywhere, on instruction.
+- SA sponsorship stays flat at ~R3.5m; growth comes from new territories
+  (confirmed).
+
+| | 2027 | Dec 2029 | 2032 |
+|---|---|---|---|
+| Revenue | R11.19m | R37.70m | R96.32m |
+| EBITDA margin | −6.5% | 20.7% | 29.3% |
+| Milestone at 3.0x | R53.3m | **R113.1m** | **R288.9m** |
+| Investor multiple | — | **2.12x** | **5.42x** |
+
+**IRR 28.5%, down from 41.7%.** The price is fixed at R53.3m post, so the
+whole effect of a realistic play frequency and a later start lands on the
+return. Entry multiple 4.76x. Peak drawdown R4.22m against the R8m raise.
+The workbook (`GetLucky_Pro_Forma_v3.xlsx`) ties to `model.json` **to the
+rand**, 0 formula failures.
+
+Cost base was retuned twice: the first pass put peak drawdown at R17.1m,
+which is not fundable by an R8m raise; the second overcorrected to R1.4m with
+47% margins. Central budget settled at R9.5m / R24m / R55m.
+
+**Content changes**
+- Risk section trimmed to **three questions with clear answers** (Santam,
+  simulator operators, regulators). The two without clean answers — the
+  unlaunched global product and the founding team's software background —
+  move to the dataroom rather than sitting on the public page.
+- **Cloud & Things added as technology partner**, led by the former CTO of
+  Capitec Bank. This closes the "no engineer on an entirely software plan"
+  finding: the engineering is a partner already in place, not a hire.
+- Added **LTV/CAC** (~$378 against $12, ~31x), **"What your R1m buys"**
+  (rights and protections), and **"Who buys this in 2032"** (named acquirers
+  plus the honest dividend-paying option).
+- **The $1.2bn insurance stat is defensible after all.** 1.2 x 1.081^9 = 2.41,
+  so the 8.1% CAGR is right off a **2024** base — the site simply never stated
+  the base year. Now it does. Note the published range is wide: other reports
+  put the prize-indemnity market at $12.7bn and $22.4bn on broader
+  definitions.
+
+**Design**
+- All images converted to WebP at display size: **3.6MB -> 0.89MB (75%)** on
+  the bulk set, plus the hero and Ernie images. Intrinsic width/height stamped
+  on every `<img>` (CLS). Originals deleted.
+- Carousel now pauses on touch (WCAG 2.2.2). Count-up starts at 88% of target
+  so a contracted R9m never briefly renders as "R1m". Bracket corners fixed
+  (the image painted over `::before`). Math panel on light cards fixed from
+  1.91:1.
+- `scripts/tie-out.py` is up to **51 checks**.
+
+**Still open**
+- The second video is "saved in downloads" — not reachable from this
+  container. `assets/video/golf-day.mp4` is the one from `main`, still
+  unverified and uncompressed (no H.264 decoder here).
+- Per-course economics panel deliberately NOT built: the founder notes not all
+  courses perform alike and wants the emphasis on digital.
+- Chart.js is still eager-loaded; the chart no-JS fallback tables are still
+  not built.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

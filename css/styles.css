@@ -1040,3 +1040,7 @@ h1, h2, h3 { overflow-wrap: break-word; }
 .section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel .line:last-child {
   color: var(--gold-text);
 }
+
+/* --- bracket corners: the image painted over ::before, so only one showed --- */
+.portrait-slot img { z-index: 0; }
+.bracket::before, .bracket::after { z-index: 2; }

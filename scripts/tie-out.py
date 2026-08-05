@@ -77,7 +77,10 @@ for pat, why in [
     (r"R147m|R807m", "pre-flattening milestones"),
     (r"2\.74×", "abandoned 2.74x multiple"),
     (r"R157\.7m|2\.96×|R396m|R132\.1m|R52\.6m", "superseded milestones"),
-    (r"4\.77×", "superseded entry multiple"),
+    (r"R177\.5m|R174\.6m|R371m|R365\.6m|R123\.7m|R121\.9m|R59\.2m|R58\.2m", "superseded v1/v2 milestones"),
+    (r"3\.33×|3\.27×|6\.96×|6\.86×|4\.46×|4\.55×", "superseded v1/v2 multiples"),
+    (r"9,715|18,465|104,946|199,474", "superseded v2 member and entry counts"),
+    (r"billion-rand|R1bn|R333m", "the billion-rand horizon, removed on instruction"),
     (r"Strava|Peloton|Whoop", "comparable band that does not survive scrutiny"),
 
     (r"closest to the pin takes", "proximity claim the rig cannot verify"),
@@ -118,6 +121,11 @@ must_have("index.html", "31.9%", "the insurance loss ratio")
 must_have("index.html", "2.51×", "the breakeven ace multiple")
 must_have("index.html", "533%", "the unlimited-swings counterfactual")
 must_have("index.html", "four insured swings", "the capped allowance that makes the blend work")
+must_have("index.html", "Cloud &amp; Things", "the technology partner")
+must_have("index.html", "What your R1m buys", "the investor-rights block")
+must_have("index.html", "Who buys this in 2032", "the exit narrative")
+must_have("index.html", "31×", "the LTV/CAC ratio")
+must_have("index.html", "2024 base", "the base year on the insurance-market stat")
 
 print(f"tie-out: {checks} checks")
 if fails:

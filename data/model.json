@@ -8,18 +8,18 @@
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
     "ernieStakePct": 5,
-    "exit2032ZAR": 365619545,
-    "multiple2032": 6.86,
+    "exit2032ZAR": 288946035,
+    "multiple2032": 5.42,
     "allocation": {
       "show": false,
       "committedZAR": null,
       "closeDate": null
     },
-    "value2029ZAR": 174622468,
-    "stake2029ZAR": 26193370,
-    "multiple2029": 3.27,
-    "irrBasis": "Money in Q3 2026 to the 31 Dec 2029 milestone (3.4 years). Unrealised mark on a private holding, not a realised return.",
-    "irr3yrPct": 42
+    "value2029ZAR": 113085225,
+    "stake2029ZAR": 16962784,
+    "multiple2029": 2.12,
+    "irrBasis": "Money in Q4 2026, deployed from January 2027, to the 31 Dec 2029 milestone — a true three years. Unrealised mark on a private holding, not a realised return.",
+    "irr3yrPct": 28
   },
   "traction": {
     "period": "Jul 2025 – Jul 2026",
@@ -94,10 +94,10 @@
     "membershipNote": "Membership buys ACCESS — the app, the courses, member pricing. It carries no prize risk and insures nothing. Every shot at a prize is bought separately."
   },
   "modelForecast": {
-    "_source": "Rebuilt 2026-08-05. 48-month build Jan 2026 -> Dec 2029, extended to Dec 2032. Calendar-year revenue, not run-rate annualised.",
+    "_source": "Rebuilt 2026-08-05 (v3). Build starts JANUARY 2027 from ZERO members, so Dec 2029 is a true three-year milestone. Extended to Dec 2032. Calendar-year revenue.",
     "_basis": "ALL streams NET of third-party shares so they sit on one basis and can be added: membership 95% (5% ceded as premium for the included swings), pay-per-play 66% (24% insurer + 10% course removed), upsells 55%, simulators 46%, sponsorship 100%. Gross entry value, premium ceded and expected claims are memo lines below.",
     "years": [
-      2026,
+      2027,
       2029,
       2032
     ],
@@ -105,124 +105,139 @@
       "membership": {
         "ZAR": [
           4183716,
-          18444245,
-          35057495
+          13925676,
+          28301376
         ],
-        "note": "$10/month. Includes 4 insured swings a month at the $500 tier; 5% ceded as premium to cover them. Reported net of that."
+        "note": "$10/month. Includes 4 insured swings a month at the $500 tier; 5% ceded as premium. Net of that."
       },
       "payPerPlay": {
         "ZAR": [
-          4941189,
-          21783624,
-          41404747
+          2470594,
+          8223478,
+          16712707
         ],
-        "note": "Net 66% of gross value. The trade-up: buying a bigger prize than the membership includes."
+        "note": "Net 66%. The trade-up on the app — a bigger prize than the membership includes."
+      },
+      "installedCourses": {
+        "ZAR": [
+          1485000,
+          3465000,
+          6435000
+        ],
+        "note": "Net 66%. 25 courses today, +25 a year. Proof, brand and credibility — not the scale engine."
       },
       "inPlayUpsells": {
         "ZAR": [
-          108997,
-          480521,
-          913340
+          54498,
+          181400,
+          368663
         ],
-        "note": "Net 55%. Attaches to paid entries already counted."
+        "note": "Net 55%. Attaches to entries already counted."
       },
       "simulators": {
         "ZAR": [
           0,
-          11999100,
+          6399520,
           31997600
         ],
-        "note": "Net 46%. Launches 2027."
+        "note": "Net 46%. Launches 2028."
       },
       "sponsorship": {
         "ZAR": [
-          2500000,
+          3000000,
           5500000,
           12500000
         ],
-        "note": "SA contracted, capped at the R3.5m run-rate after 2028, plus new territories."
+        "note": "SA held flat at the contracted R3.5m run-rate; growth comes from new territories."
       }
     },
     "revenueZAR": [
-      11733901,
-      58207489,
-      121873182
+      11193809,
+      37695075,
+      96315345
     ],
     "costZAR": [
-      11980420,
-      46565404,
-      89179430
+      11918092,
+      29899894,
+      68072209
     ],
     "costStackZAR": {
       "paymentProcessing": [
-        362662,
-        1598825,
-        3038931
+        314890,
+        980947,
+        1966005
       ],
       "verificationAndClaimsOps": [
-        220196,
-        970750,
-        1845131
+        248848,
+        690215,
+        1346023
       ],
       "acquisitionCAC": [
         958850,
-        1339231,
-        2545513
+        1213126,
+        2054954
       ],
       "brandAndRetention": [
-        938712,
-        4656599,
-        9749855
+        895505,
+        3015606,
+        7705228
       ],
       "centralOpex": [
         9500000,
-        38000000,
-        72000000
+        24000000,
+        55000000
       ]
     },
     "ebitdaZAR": [
-      -246519,
-      11642085,
-      32693751
+      -724284,
+      7795180,
+      28243136
     ],
     "ebitdaMarginPct": [
-      -2.1,
-      20.0,
-      26.8
+      -6.5,
+      20.7,
+      29.3
     ],
     "capexZAR": [
-      4000000,
+      3500000,
       2200000,
       1500000
     ],
     "membersClosing": [
       3436,
-      9715,
-      18465
+      7843,
+      14907
     ],
     "paidEntries": [
-      23805,
-      104946,
-      199474
+      11902,
+      39618,
+      80516
     ],
     "memoZAR": {
       "grossEntryValue": [
-        7486650,
-        33005490,
-        62734465
+        5993325,
+        17709816,
+        35072283
       ],
       "premiumCeded": [
-        2016991,
-        8892067,
-        16901403
+        1658594,
+        4983286,
+        9906894
       ],
       "expectedClaims": [
-        642971,
-        2834589,
-        5387783
+        528977,
+        1589287,
+        3159525
       ]
     },
-    "_forecastWarning": "2026 is FORECAST, not history. Trailing actual is R4.0m (traction.trailingRevenueZAR). Never present the 2026 figure without that label."
+    "_forecastWarning": "Every figure here is FORECAST. Trailing actual is R4.0m (traction.trailingRevenueZAR). Members start at ZERO in Jan 2027 and ramp to the 2,000 conversion target over six months.",
+    "installedCourses": [
+      50,
+      100,
+      175
+    ],
+    "_playFrequency": "2 rounds a month x 4 par-3 holes = 8 attempts, 6.25% converted to a paid trade-up = 0.5 paid entries per member per month. Reduced from 4 rounds on the founder's instruction — 48 attempts a year was not realistic.",
+    "_physicalCourses": "25 installed today, +25 a year: 50 (2027), 100 (2029), 175 (2032). 400 entries per course per year at a realised R150 average, 66% retained. Deliberately modest — physical courses earn their place as proof and marketing; the digital channel is the scale."
   },
   "simulatorChannel": {
     "_note": "A core revenue stream in the plan, not optional upside. Launches 2027 once the integration this round funds is built. Ramp and sensitivity are modelled in the Simulator tab of the pro forma workbook.",
@@ -501,39 +516,31 @@
     "grossMarginPct": 66,
     "insurancePremiumPctOfRevenue": 24,
     "cacUSD": 12,
-    "subs2029": 9715,
-    "subs2032": 18465,
+    "subs2029": 7843,
+    "subs2032": 14907,
     "milestonesZAR": {
-      "2026": 53333333,
-      "2029": 174622468,
-      "2032": 365619545
+      "2027": 53333333,
+      "2029": 113085225,
+      "2032": 288946035
     },
     "exitMultiple": 3.0,
     "nearTermMultiple": 3.0,
     "comps": "No listed comparable exists for an insured skill-prize platform. The multiple is set against what can be evidenced, not borrowed from US consumer-subscription comps.",
     "ernieStakeZAR": {
-      "_note": "5% of each milestone. Dataroom only — never on the public page.",
-      "2026": 2666667,
-      "2029": 8731123,
-      "2032": 18280977
+      "_note": "5% of each milestone. Dataroom only.",
+      "2027": 2666667,
+      "2029": 5654261,
+      "2032": 14447302
     },
     "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
     "multipleBasis": "3.0x revenue, flat at every forward milestone. The round itself implies 4.46x on 2026 forecast revenue, so the multiple COMPRESSES as the company scales. No multiple expansion is assumed anywhere.",
-    "entryMultipleImplied": 4.55,
-    "billionHorizon": {
-      "_note": "R1bn needs about R333m of revenue at a flat 3.0x, against R123.7m modelled for 2032. Extending the plan's own long-term growth rate puts that a little over four years past 2032. It assumes the simulator, sponsorship and upsell streams grow in step with members — those are assumptions beyond the modelled window, not the plan.",
-      "targetValuationZAR": 1000000000,
-      "revenueRequiredZAR": 333333333,
-      "arrivesAround": 2037,
-      "revenue2037ZAR": null,
-      "valuation2037ZAR": null,
-      "basis": "Same flat 3.0x multiple, no expansion assumed"
-    },
+    "entryMultipleImplied": 4.76,
     "coursesAndAppRevenueUSD": {
       "2026": 604700,
       "2029": 1906000,
       "2032": 4489000
-    }
+    },
+    "_horizonNote": "The R1bn horizon was removed 2026-08-05 on the founder's instruction. It extended a subscriber growth rate to total revenue, which implied simulator attach reaching ~11.7% of all Korean rounds. Do not reinstate without a modelled basis."
   },
   "growthEngines": {
     "travel": {
@@ -644,21 +651,20 @@
   },
   "fundingPlan": {
     "_note": "Derived from the cash rollforward, not asserted. EBITDA less capex, cumulative from Jan 2026.",
-    "peakDrawdownZAR": 4246519,
-    "peakDrawdownYear": 2026,
+    "peakDrawdownZAR": 4224284,
+    "peakDrawdownYear": 2027,
     "cumulativeCashZAR": {
-      "2026": -4246519,
-      "2027": -4193591,
-      "2028": -962626,
-      "2029": 8479459,
-      "2030": 21190749,
-      "2031": 41035064,
-      "2032": 72228816
+      "2027": -4224284,
+      "2028": -3718212,
+      "2029": 1876968,
+      "2030": 14610959,
+      "2031": 33318786,
+      "2032": 60061922
     },
     "ebitdaPositiveFrom": 2028,
     "cashPositiveFrom": 2029,
     "raiseZAR": 8000000,
-    "_headroom": "Peak cumulative drawdown is R4.0m against an R8.0m raise. The balance funds the app build, the simulator integration and US market entry — it is acceleration capital, not survival capital, and the plan says so."
+    "_headroom": "Peak cumulative drawdown R4.2m against an R8.0m raise. The balance funds the app build, the simulator integration and US market entry."
   },
   "insuranceModel": {
     "_source": "GetLucky_Insurance_Model.xlsx — the Santam underwriting submission. Reproduced independently 2026-08-05; every figure below ties to it.",
@@ -706,11 +712,12 @@
     "_breakeven": "Aces would have to occur 2.51x more often than amateur odds predict before the cover stops making money.",
     "largestSingleEventUSD": 100000,
     "engagement": {
-      "roundsPerMemberPerMonth": 4,
+      "roundsPerMemberPerMonth": 2,
       "par3PerRound": 4,
-      "attemptsPerMemberPerMonth": 16,
+      "attemptsPerMemberPerMonth": 8,
       "entryConversionPct": 6.25,
-      "paidEntriesPerMemberPerMonth": 1.0
+      "paidEntriesPerMemberPerMonth": 0.5,
+      "_note": "Reduced from 4 rounds a month. 24 rounds a year is a keen amateur; 48 was not defensible."
     },
     "status": "Underwriting submission prepared for Santam via Indwe. No revised policy is bound on these terms as at August 2026.",
     "blendedStructure": {

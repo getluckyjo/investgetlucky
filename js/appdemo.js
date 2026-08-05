@@ -64,7 +64,8 @@
   });
 
   if (phone) {
-    phone.addEventListener("pointerenter", function () { paused = true; stop(); render(); });
+    phone.addEventListener("pointerdown", function () { paused = true; stop(); });
+  phone.addEventListener("pointerenter", function () { paused = true; stop(); render(); });
     phone.addEventListener("pointerleave", function () { paused = false; play(); render(); });
   }
 
