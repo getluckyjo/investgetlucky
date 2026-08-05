@@ -595,6 +595,37 @@ payout, but if Get Lucky holds the pot and takes a fee it is the same problem.
 Either reframe it (pot goes to a verified ace, rolls over otherwise) or park it
 too. Raised with the user 2026-08-04; not changed unilaterally.
 
+## SITE TIGHTENED FOR A SEASONED-INVESTOR READ (2026-08-04)
+
+User: *"We have added a lot and I am worried it reads too long. Run through the
+site and make it super tight — as if seasoned investors are looking at the
+opportunity. Also remove any mention of old price — this is the new deck (the
+old one never went out). Use read more dropdowns as needed."*
+
+**The old price is gone everywhere.** The R4m / R40m round and every "against
+2.42x and ~34% at the old price" comparison is removed from the site and the
+FAQ PDF — including the whole "Why is the price higher now?" Q&A, which only
+made sense against a deck that was never sent. **Do not reintroduce it.** The
+deal now stands on its own terms rather than as a comparison.
+
+**Word count 3,470 -> ~2,900** on `index.html` without losing a single number.
+The cuts were prose, not substance.
+
+**New `.more` component** in `css/styles.css` — an inline "read more" that
+collapses supporting detail while leaving the claim visible. Gold on light
+surfaces, brighter gold on dark ones. Used three times:
+- Costed-plan card -> the funding detail behind "How it is funded"
+- Billion-rand card -> the arithmetic table behind "The arithmetic"
+- Upsell block -> the four menu cards behind "See the menu"
+
+The pattern to follow if more collapsing is needed: **the number stays visible,
+the reasoning goes behind the toggle.** Never hide a figure an investor needs to
+evaluate the deal.
+
+**Also fixed:** the FAQ still asked "How do the two entry models fit together?"
+when there are four rungs. The simulator answer had grown to 203 words and is
+now ~130.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

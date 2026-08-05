@@ -832,3 +832,20 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .upsell strong { font-family: var(--font-display); letter-spacing: 0.02em; color: var(--green); }
 .upsell span { font-size: 0.85rem; line-height: 1.45; }
 .upsell__price { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--gold-text); letter-spacing: 0.02em; }
+
+/* --- inline "read more" — collapses supporting detail without hiding the claim --- */
+.more { margin-top: var(--space-2); }
+.more > summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-ui); font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text);
+  padding: 0.35rem 0; border-bottom: 1px solid transparent;
+}
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::after { content: "+"; font-size: 1.15rem; line-height: 1; color: var(--gold); }
+.more[open] > summary::after { content: "–"; }
+.more > summary:hover { border-bottom-color: var(--gold); }
+.section--green .more > summary, .section--deep .more > summary,
+.rung--hot .more > summary { color: var(--gold); }
+.more__body { padding-top: var(--space-2); }
+.more__body > *:last-child { margin-bottom: 0; }
