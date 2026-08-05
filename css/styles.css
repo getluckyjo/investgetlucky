@@ -1028,3 +1028,15 @@ h1, h2, h3 { overflow-wrap: break-word; }
   background: var(--green-ink); box-shadow: var(--shadow-soft);
 }
 .proofvideo figcaption { margin-top: 0.7rem; opacity: 0.75; }
+
+/* --- mathpanel on a light card: the dark-surface palette fell to ~1.9:1 --- */
+.section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel {
+  background: var(--cream);
+  color: var(--ink);
+}
+.section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel .line {
+  border-bottom-color: rgba(52, 82, 48, 0.22);
+}
+.section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel .line:last-child {
+  color: var(--gold-text);
+}
