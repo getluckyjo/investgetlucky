@@ -75,11 +75,13 @@ for pat, why in [
     (r"R4\.0m for 10%|R36m pre|R40m post", "withdrawn R4m/10% round"),
     (r"2\.42×|12\.5×|~34%", "withdrawn round's returns"),
     (r"R147m|R807m", "pre-flattening milestones"),
-    (r"2\.74×", "abandoned 2.74x multiple"),
+    (r"Valuation \(2\.74|2\.74× revenue", "abandoned 2.74x REVENUE multiple (distinct from the 2.74x investor return)"),
     (r"R157\.7m|2\.96×|R396m|R132\.1m|R52\.6m", "superseded milestones"),
     (r"R177\.5m|R174\.6m|R371m|R365\.6m|R123\.7m|R121\.9m|R59\.2m|R58\.2m", "superseded v1/v2 milestones"),
     (r"3\.33×|3\.27×|6\.96×|6\.86×|4\.46×|4\.55×", "superseded v1/v2 multiples"),
     (r"9,715|18,465|104,946|199,474", "superseded v2 member and entry counts"),
+    (r"R113\.1m|2\.12×|5\.42×|4\.76×|R37\.7m", "superseded pre-repricing figures"),
+    (r"R53\.3m|R45\.3m pre|4\.77×", "the withdrawn R53.3m post-money"),
     (r"billion-rand|R1bn|R333m", "the billion-rand horizon, removed on instruction"),
     (r"Strava|Peloton|Whoop", "comparable band that does not survive scrutiny"),
 
@@ -126,6 +128,8 @@ must_have("index.html", "What your R1m buys", "the investor-rights block")
 must_have("index.html", "Who buys this in 2032", "the exit narrative")
 must_have("index.html", "31×", "the LTV/CAC ratio")
 must_have("index.html", "2024 base", "the base year on the insurance-market stat")
+must_have("index.html", "16.9%", "the repriced equity")
+must_have("index.html", "R47.3m", "the repriced post-money")
 
 print(f"tie-out: {checks} checks")
 if fails:

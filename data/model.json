@@ -2,24 +2,24 @@
   "_note": "Canonical numbers for the site. Rebuilt 2026-08-05 on the three-part revenue structure (membership / pay-per-play / upsells) after the insurance model was brought in. Membership carries NO prize risk; every insured swing is a paid entry and 24% of that entry is ceded as premium on the same swing. All streams are reported NET of third-party shares so they are on one basis and can be added. Edit here, not in HTML.",
   "fx": 18.5,
   "deal": {
-    "_note": "Round: R8.0m for 15%. Pre/post exact (8/0.15=53,333,333). Milestone year is Dec 2029 throughout — the build runs 48 months from Jan 2026. Keys renamed from *2028 to *2029 on 2026-08-05 to match; js/calculator.js reads these.",
+    "_note": "Repriced 2026-08-05: R8.0m for 16.9% at R47.3m post. The previous R53.3m post produced a 28.5% IRR once play frequency was made realistic and the build moved to Jan 2027. The price moved rather than the assumptions.",
     "raiseZAR": 8000000,
-    "equityPct": 15,
-    "preMoneyZAR": 45333333,
-    "postMoneyZAR": 53333333,
+    "equityPct": 16.9,
+    "preMoneyZAR": 39337278,
+    "postMoneyZAR": 47337278,
     "ernieStakePct": 5,
     "exit2032ZAR": 288946035,
-    "multiple2032": 5.42,
+    "multiple2032": 6.1,
     "allocation": {
       "show": false,
       "committedZAR": null,
       "closeDate": null
     },
-    "value2029ZAR": 113085225,
-    "stake2029ZAR": 16962784,
-    "multiple2029": 2.12,
+    "value2029ZAR": 129883965,
+    "stake2029ZAR": 21950390,
+    "multiple2029": 2.74,
     "irrBasis": "Money in Q4 2026, deployed from January 2027, to the 31 Dec 2029 milestone — a true three years. Unrealised mark on a private holding, not a realised return.",
-    "irr3yrPct": 28
+    "irr3yrPct": 40
   },
   "traction": {
     "period": "Jul 2025 – Jul 2026",
@@ -136,11 +136,11 @@
       },
       "simulators": {
         "ZAR": [
-          0,
-          6399520,
+          2399820,
+          11999100,
           31997600
         ],
-        "note": "Net 46%. Launches 2028."
+        "note": "Net 46%, less 30% delivery cost. Integration starts on close and the channel launches H2 2027, so 2029 is year three at 1.5% attach."
       },
       "sponsorship": {
         "ZAR": [
@@ -152,14 +152,14 @@
       }
     },
     "revenueZAR": [
-      11193809,
-      37695075,
+      13593629,
+      43294655,
       96315345
     ],
     "costZAR": [
-      11918092,
-      29899894,
-      68072209
+      12830024,
+      33947591,
+      68671489
     ],
     "costStackZAR": {
       "paymentProcessing": [
@@ -178,25 +178,30 @@
         2054954
       ],
       "brandAndRetention": [
-        895505,
-        3015606,
+        1087490,
+        3463572,
         7705228
       ],
       "centralOpex": [
         9500000,
         24000000,
-        55000000
+        46000000
+      ],
+      "simulatorDelivery": [
+        719946,
+        3599730,
+        9599280
       ]
     },
     "ebitdaZAR": [
-      -724284,
-      7795180,
-      28243136
+      763605,
+      9347064,
+      27643856
     ],
     "ebitdaMarginPct": [
-      -6.5,
-      20.7,
-      29.3
+      5.6,
+      21.6,
+      28.7
     ],
     "capexZAR": [
       3500000,
@@ -237,7 +242,8 @@
       175
     ],
     "_playFrequency": "2 rounds a month x 4 par-3 holes = 8 attempts, 6.25% converted to a paid trade-up = 0.5 paid entries per member per month. Reduced from 4 rounds on the founder's instruction — 48 attempts a year was not realistic.",
-    "_physicalCourses": "25 installed today, +25 a year: 50 (2027), 100 (2029), 175 (2032). 400 entries per course per year at a realised R150 average, 66% retained. Deliberately modest — physical courses earn their place as proof and marketing; the digital channel is the scale."
+    "_physicalCourses": "25 installed today, +25 a year: 50 (2027), 100 (2029), 175 (2032). 400 entries per course per year at a realised R150 average, 66% retained. Deliberately modest — physical courses earn their place as proof and marketing; the digital channel is the scale.",
+    "_simulatorTiming": "The integration is engineering, funded on close (Q4 2026), so it is built while member growth ramps from Jan 2027. Launch H2 2027 makes 2029 year three of the channel at 1.5% attach. This is a judgement about sequencing, not a correction — launching a year later costs R5.6m of 2029 revenue."
   },
   "simulatorChannel": {
     "_note": "A core revenue stream in the plan, not optional upside. Launches 2027 once the integration this round funds is built. Ramp and sensitivity are modelled in the Simulator tab of the pro forma workbook.",
@@ -519,8 +525,8 @@
     "subs2029": 7843,
     "subs2032": 14907,
     "milestonesZAR": {
-      "2027": 53333333,
-      "2029": 113085225,
+      "2027": 47337278,
+      "2029": 129883965,
       "2032": 288946035
     },
     "exitMultiple": 3.0,
@@ -528,13 +534,13 @@
     "comps": "No listed comparable exists for an insured skill-prize platform. The multiple is set against what can be evidenced, not borrowed from US consumer-subscription comps.",
     "ernieStakeZAR": {
       "_note": "5% of each milestone. Dataroom only.",
-      "2027": 2666667,
-      "2029": 5654261,
+      "2027": 2366864,
+      "2029": 6494198,
       "2032": 14447302
     },
     "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
     "multipleBasis": "3.0x revenue, flat at every forward milestone. The round itself implies 4.46x on 2026 forecast revenue, so the multiple COMPRESSES as the company scales. No multiple expansion is assumed anywhere.",
-    "entryMultipleImplied": 4.76,
+    "entryMultipleImplied": 3.48,
     "coursesAndAppRevenueUSD": {
       "2026": 604700,
       "2029": 1906000,
@@ -651,20 +657,20 @@
   },
   "fundingPlan": {
     "_note": "Derived from the cash rollforward, not asserted. EBITDA less capex, cumulative from Jan 2026.",
-    "peakDrawdownZAR": 4224284,
+    "peakDrawdownZAR": 2736395,
     "peakDrawdownYear": 2027,
     "cumulativeCashZAR": {
-      "2027": -4224284,
-      "2028": -3718212,
-      "2029": 1876968,
-      "2030": 14610959,
-      "2031": 33318786,
-      "2032": 60061922
+      "2027": -2736395,
+      "2028": -470456,
+      "2029": 6676608,
+      "2030": 20702487,
+      "2031": 40358354,
+      "2032": 66502210
     },
-    "ebitdaPositiveFrom": 2028,
+    "ebitdaPositiveFrom": 2027,
     "cashPositiveFrom": 2029,
     "raiseZAR": 8000000,
-    "_headroom": "Peak cumulative drawdown R4.2m against an R8.0m raise. The balance funds the app build, the simulator integration and US market entry."
+    "_headroom": "Peak cumulative drawdown R2.7m against an R8.0m raise. The balance is acceleration — the app build, the simulator integration and US market entry — not survival capital."
   },
   "insuranceModel": {
     "_source": "GetLucky_Insurance_Model.xlsx — the Santam underwriting submission. Reproduced independently 2026-08-05; every figure below ties to it.",

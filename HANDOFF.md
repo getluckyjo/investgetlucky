@@ -865,6 +865,56 @@ which is not fundable by an R8m raise; the second overcorrected to R1.4m with
 - Chart.js is still eager-loaded; the chart no-JS fallback tables are still
   not built.
 
+### 2026-08-05 (v4) — repriced to hold a 40% IRR
+
+The v3 rebuild dropped the IRR to 28.5%. The founder asked what gets it back
+to 40%. There are only four levers, and they were sized before anything moved:
+
+| Lever | What 40% over 3 years costs |
+|---|---|
+| Revenue | 2029 must be R48.8m, up 29% |
+| Multiple | 3.88x instead of 3.0x |
+| Price | 19.4% for R8m — a 23% cut |
+| Time | Does not work: 2030 gives 32.3%, 2032 gives 32.5% |
+
+**Decision: change the price, not the assumptions.** Plus one sequencing
+change the founder backed.
+
+**Simulators launch H2 2027, not 2028.** When the build moved to Jan 2027 the
+simulator ramp slid with it, costing R5.6m of 2029 revenue. The integration is
+engineering funded on close (Q4 2026), so it can be built while member growth
+ramps — making 2029 year three of the channel at 1.5% attach. **This is a
+judgement about sequencing, not a correction**; it was nearly written up as a
+bug fix and it is not one. A simulator delivery cost of 30% of channel revenue
+was added at the same time — the stream previously flowed to EBITDA carrying
+only brand and central.
+
+**New terms: R8.0m for 16.9% at R47.3m post (R39.3m pre)** — an 11% cut from
+R53.3m.
+
+| | 2027 | Dec 2029 | 2032 |
+|---|---|---|---|
+| Revenue | R13.59m | R43.29m | R96.32m |
+| EBITDA margin | 5.6% | 21.6% | 28.7% |
+| Milestone at 3.0x | R47.3m | **R129.9m** | **R288.9m** |
+| Investor multiple | — | **2.74x** | **6.10x** |
+
+**IRR 40.0%** over three years. Entry multiple **3.48x** compressing to a flat
+3.0x forward. R1m buys 2.11%. Peak drawdown R2.7m.
+
+The multiple stayed at 3.0x deliberately. `HANDOFF.md` already records it
+moving 2.744 -> 2.5 -> 3.5 -> 3.0 in a single day; moving it again to land on
+a target IRR is the reverse-engineering the reviewer warned would make an
+investor discount the whole model. The price is the honest lever.
+
+Central budget retuned in the tail (R30m/R37m/R46m for 2030-32) because the
+first pass had EBITDA margin *falling* 2029 -> 2032.
+
+Workbook `GetLucky_Pro_Forma_v3.xlsx` ties to `model.json` to the rand,
+0 formula failures. `scripts/tie-out.py` at 55 checks — note the 2.74x stale
+check had to be rescoped, since 2.74x is now the investor multiple while the
+retired one was a revenue multiple.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
