@@ -159,9 +159,9 @@ behind geo-gated feature flags, only where a licensed route exists.
 - The category's scale is proven: **18Birdies reports 10m+ golfers** on a
   free scoring app. Golfers demonstrably adopt round-companion apps in the
   tens of millions.
-- The money-game niche specifically is proven but shallowly monetised:
-  Skins App (the category leader) charges $40/year flat and takes no share
-  of pots.
+- The money game itself is universal and still analogue — played in every
+  fourball, settled in the car park, tracked in chat groups. App attempts
+  to date are track-only or points-only: the category is open.
 - The prize-indemnity layer — Get Lucky's differentiated asset — sits on a
   **$1.2bn hole-in-one insurance market (2024 base)** with no consumer brand
   on top of it.
@@ -175,7 +175,6 @@ behind geo-gated feature flags, only where a licensed route exists.
 
 | Product | Money games | Touches money? | Takes a cut? | Monetisation |
 |---|---|---|---|---|
-| **Skins App** | Yes — category leader | No (Venmo deep-links) | **No** | $40/yr flat |
 | **18Birdies** | Track-only side games | No | No | Freemium subscription |
 | **Beezer Golf** | Yes + IOU ledger | Ledger only | No | Freemium |
 | **SettleUp Golf** | Settlement netting | No | No | Free |
@@ -183,11 +182,10 @@ behind geo-gated feature flags, only where a licensed route exists.
 | **PinSeeker** | Cash CTP on simulators | Yes (operator contests) | Entry fees | Blocked in 5 US states |
 | **Get Lucky** | Yes — full slip | **No — never** | **No — never** | **$10/mo app + insured jackpot** |
 
-The pattern is not an accident: every durable player converged on
-track-and-settle, no custody, no rake — because that is the structure that
-survives gambling law, app-store policy and payments regulation
-simultaneously. Get Lucky adopts the proven structure and adds the one layer
-none of them can copy.
+The structure is not an accident: track-and-settle, no custody, no rake is
+what survives gambling law, app-store policy and payments regulation
+simultaneously. Get Lucky is built on that structure from the first commit —
+and adds the one layer no tracker can copy.
 
 **Positioning, in one line: the only money-game app with a $100,000 insured
 jackpot on the slip.**
@@ -390,7 +388,7 @@ category's incumbents hold.
 | **Jackpot attach is unproven** | The decisive number. Measured by the 90-day pilot before the app ships — investors hold us to it |
 | **Santam's appetite for the peer-game wrapper** | Underwriting mechanics unchanged; brand context new. Written sign-off is a named gating milestone. The prize-indemnity market has 20+ carriers globally if terms move |
 | **P2P legal opinion** | The structure was designed from the statute backwards — no rake, no custody, subscription-for-app. Opinion commissioned before launch; Pride Mode is the compliant fallback everywhere |
-| **Category incumbents** | None can underwrite a jackpot; the leader monetises at $40/yr. Ernie's 18Birdies position converts the largest incumbent into a relationship |
+| **Category incumbents** | None can underwrite a jackpot — the moat is the insurance layer. Ernie's 18Birdies position converts the biggest adjacent platform into a relationship |
 | **Execution of a consumer app** | Cloud & Things (ex-Capitec CTO leadership) owns the build; the handicap/fairness engine is identified as the make-or-break component and staffed accordingly |
 
 ---
