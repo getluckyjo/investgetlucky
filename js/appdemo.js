@@ -15,7 +15,7 @@
   var phone = demo.querySelector(".appphone");
   if (!screens.length || screens.length !== steps.length) return;
 
-  var INTERVAL = 4200;
+  var INTERVAL = 6200;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var idx = 0;
   var timer = null;

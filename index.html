@@ -310,83 +310,101 @@
             </button>
           </li>
         </ol>
-        <p class="appdemo__note small">Concept screens — illustrative walkthrough of the app this raise funds.</p>
+        <p class="appdemo__note small">Product UI of the beta this raise funds — one Saturday fourball, slip to settlement.</p>
       </div>
       <div class="appdemo__device">
         <div class="appphone" role="group" aria-roledescription="carousel" aria-label="Get Lucky app walkthrough">
           <div class="appphone__progress" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i></div>
 
           <!-- 1 · The Slip -->
-          <div class="appscreen appscreen--home is-active" aria-hidden="false" aria-label="Step 1 — the fourball's slip">
-            <img width="640" height="427" class="appscreen__bg" src="assets/img/intl/pebble-beach.webp" alt="" loading="lazy" style="object-position:50% 45%;">
-            <div class="appscreen__shade" aria-hidden="true"></div>
-            <div class="appscreen__body">
-              <img width="560" height="419" class="apphome__logo" src="assets/img/logo-dark-bg.webp" alt="Get Lucky Golf Club" loading="lazy">
-              <span class="apphome__price">Saturday · 07:30 · Boschenmeer</span>
-              <span class="apphome__prize">The<br>Slip</span>
-              <span class="apphome__sub">Skins $10 · Dots $1 · Nassau $5 — and the group's $100K hole-in-one on the 7th</span>
-              <span class="appbtn">Send to the fourball</span>
+          <div class="appscreen appscreen--ui is-active" aria-hidden="false" aria-label="Step 1 — build the slip: players, games and the group jackpot">
+            <div class="appbar"><span class="appbar__title">The Slip</span><span class="appbar__hint">Sat 07:30 · Boschenmeer</span></div>
+            <div class="ap-card">
+              <span class="ap-cap">The four · handicaps applied</span>
+              <div class="ap-row"><span class="ap-ava">JR</span><span class="ap-who">Johannes<small>HC 12 · organiser</small></span><span class="ap-chip ap-chip--on">In</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--2">DK</span><span class="ap-who">Dave<small>HC 18 · gets 6 strokes</small></span><span class="ap-chip ap-chip--on">In</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--3">MB</span><span class="ap-who">Markus<small>HC 8 · gives 4</small></span><span class="ap-chip ap-chip--on">In</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--4">PV</span><span class="ap-who">Piet<small>HC 21 · gets 9 strokes</small></span><span class="ap-chip">Invited</span></div>
             </div>
+            <div class="ap-card">
+              <span class="ap-cap">The games</span>
+              <div class="ap-row"><span class="ap-who">Skins<small>carryovers on</small></span><span class="ap-amt">$10</span></div>
+              <div class="ap-row"><span class="ap-who">Nassau<small>presses allowed</small></span><span class="ap-amt">$5</span></div>
+              <div class="ap-row"><span class="ap-who">Dots<small>greenies · sandies · the snake</small></span><span class="ap-amt">$1</span></div>
+            </div>
+            <div class="ap-card ap-card--gold">
+              <div class="ap-row ap-row--bare"><span class="ap-who">$100K hole-in-one · the 7th<small>$100 each · any ace pays the group · Santam</small></span><span class="ap-chip ap-chip--gold">4 in</span></div>
+            </div>
+            <p class="ap-note">Your max exposure today · <strong>$187</strong> — shown before anyone accepts</p>
+            <span class="appbtn appbtn--sm">Send to the fourball</span>
+            <div class="ap-tabs" aria-hidden="true"><span class="on">Slip</span><span>Ledger</span><span>The Shot</span><span>Season</span></div>
           </div>
 
           <!-- 2 · Live ledger -->
-          <div class="appscreen appscreen--courses" aria-hidden="true" aria-label="Step 2 — the live ledger through the round">
-            <div class="appbar">
-              <span class="appbar__title">Live ledger — hole 11</span>
-              <span class="appbar__hint">Pot $84</span>
+          <div class="appscreen appscreen--ui" aria-hidden="true" aria-label="Step 2 — the live ledger through the round">
+            <div class="appbar"><span class="appbar__title">Live ledger</span><span class="appbar__hint">Thru 6 · pot $34</span></div>
+            <div class="ap-card">
+              <span class="ap-cap">Standings · thru 6</span>
+              <div class="ap-row"><span class="ap-ava">JR</span><span class="ap-who">Johannes<small>2 skins · greenie</small></span><span class="ap-amt ap-up">+$16</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--2">DK</span><span class="ap-who">Dave<small>birdie from the bunker</small></span><span class="ap-amt ap-up">+$9</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--3">MB</span><span class="ap-who">Markus<small>holds the snake</small></span><span class="ap-amt ap-dn">−$4</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--4">PV</span><span class="ap-who">Piet<small>pressed the front nine</small></span><span class="ap-amt ap-dn">−$21</span></div>
             </div>
-            <ul class="appcourses">
-              <li>
-                <span class="appcourse"><strong>Hole 9 · Skin $10</strong><small>Dave · birdie from the bunker</small></span>
-              </li>
-              <li>
-                <span class="appcourse"><strong>Hole 10 · halved</strong><small>Skin carries — $20 on the 11th</small></span>
-              </li>
-              <li class="is-selected">
-                <span class="appcourse"><strong>You · +$23</strong><small>2 skins · greenie · the snake is Piet's</small></span>
-                <span class="apptick" aria-hidden="true">▲</span>
-              </li>
-              <li>
-                <span class="appcourse"><strong>Piet · −$31</strong><small>Pressed the back nine — game on</small></span>
-              </li>
-              <li>
-                <span class="appcourse"><strong>Next: the 12th — the $100K hole</strong><small>Group jackpot live · cameras ready</small></span>
-              </li>
-            </ul>
-            <span class="appbtn appbtn--center">Enter hole 11 scores</span>
+            <div class="ap-card">
+              <span class="ap-cap">The round so far</span>
+              <div class="ap-row"><span class="ap-who">6th halved<small>skin carries — $20 rides on the 7th</small></span></div>
+              <div class="ap-row"><span class="ap-who">5th · skin $10 — Dave<small>net birdie · sandie dot</small></span></div>
+              <div class="ap-row"><span class="ap-who">4th · greenie Johannes<small>three-putt: the snake → Markus</small></span></div>
+            </div>
+            <div class="ap-card ap-card--gold">
+              <div class="ap-row ap-row--bare"><span class="ap-who">Next · the 7th is the $100K hole<small>group ticket armed · tee cam ready</small></span><span class="ap-chip ap-chip--gold">Live</span></div>
+            </div>
+            <span class="appbtn appbtn--sm">Enter hole 7 scores</span>
+            <div class="ap-tabs" aria-hidden="true"><span>Slip</span><span class="on">Ledger</span><span>The Shot</span><span>Season</span></div>
           </div>
 
-          <!-- 3 · Film the shot -->
-          <div class="appscreen appscreen--film" aria-hidden="true" aria-label="Step 3 — film the shot with course overlay and shot tracking">
-            <img width="640" height="479" class="appscreen__bg" src="assets/img/intl/japan-preserve.webp" alt="" loading="lazy" style="object-position:62% 50%;">
-            <div class="appscreen__shade appscreen__shade--film" aria-hidden="true"></div>
-            <svg class="appfilm__tracer" viewBox="0 0 270 555" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M 240 525 Q 218 150 126 372" />
-              <circle cx="126" cy="372" r="4" />
-            </svg>
-            <div class="appfilm__hud">
-              <span class="appfilm__rec"><i></i>Rec</span>
-              <span class="appfilm__hole">The $100K hole<small>Par 3 · 141 yd · the whole fourball is in</small></span>
+          <!-- 3 · The shot at $100K -->
+          <div class="appscreen appscreen--ui" aria-hidden="true" aria-label="Step 3 — the verified jackpot swing on the designated par-3">
+            <div class="appbar"><span class="appbar__title">The $100K hole</span><span class="appbar__hint">7th · Par 3 · 141 yd</span></div>
+            <div class="ap-view">
+              <img width="420" height="247" src="assets/img/courses/st-francis-links.webp" alt="" loading="lazy">
+              <span class="ap-view__rec"><i></i>Rec 00:07</span>
+              <span class="ap-view__tag">Swing 2 of 4</span>
+              <span class="ap-view__bar">Tee cam locked · ball GL-07 · GPS ✓</span>
             </div>
-            <div class="appfilm__foot">
-              <span class="appfilm__track">Shot tracking on · swing 2 of 4</span>
-              <span class="appfilm__shutter" aria-hidden="true"></span>
+            <div class="ap-card ap-card--gold">
+              <div class="ap-row ap-row--bare"><span class="ap-who">Group ticket<small>4 × $100 · any ace pays the group</small></span><span class="ap-amt ap-up">$100,000</span></div>
             </div>
+            <div class="ap-card">
+              <span class="ap-cap">Swing order</span>
+              <div class="ap-row"><span class="ap-ava">JR</span><span class="ap-who">Johannes</span><span class="ap-state">Filmed ✓</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--2">DK</span><span class="ap-who">Dave</span><span class="ap-state ap-state--live">Recording ●</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--3">MB</span><span class="ap-who">Markus</span><span class="ap-state ap-state--dim">Up next</span></div>
+              <div class="ap-row"><span class="ap-ava ap-ava--4">PV</span><span class="ap-who">Piet</span><span class="ap-state ap-state--dim">Waiting</span></div>
+            </div>
+            <p class="ap-note">Every swing filmed &amp; verified — underwritten by Santam</p>
+            <div class="ap-tabs" aria-hidden="true"><span>Slip</span><span>Ledger</span><span class="on">The Shot</span><span>Season</span></div>
           </div>
 
-          <!-- 4 · Ace / win -->
-          <div class="appscreen appscreen--win" aria-hidden="true" aria-label="Step 4 — verified ace, you won 10,000 dollars">
-            <div class="appscreen__body appscreen__body--win">
-              <span class="appwin__badge">Verified ace</span>
-              <span class="appwin__ace">Ace!</span>
-              <span class="appwin__amount">You won $10,000</span>
-              <span class="appwin__sub">100% underwritten by Santam</span>
-              <ul class="appwin__checks">
-                <li><span>Shot video</span><span class="state">Submitted ✓</span></li>
-                <li><span>Witness review</span><span class="state">In progress</span></li>
-              </ul>
-              <span class="appupload">⇪ Upload course certificate</span>
+          <!-- 4 · Settle on the 18th -->
+          <div class="appscreen appscreen--ui" aria-hidden="true" aria-label="Step 4 — netted settlement, the verified ace and the season ledger">
+            <div class="appbar"><span class="appbar__title">Settlement</span><span class="appbar__hint">18 holes · +$41</span></div>
+            <div class="ap-card ap-card--gold">
+              <span class="ap-cap">Verified ace · Dave on the 7th</span>
+              <div class="ap-row ap-row--bare"><span class="ap-who">The group ticket pays<small>video verified · claim opened with Santam</small></span><span class="ap-amt ap-up">$100,000</span></div>
             </div>
+            <div class="ap-card">
+              <span class="ap-cap">The money game · netted to 3 transfers</span>
+              <div class="ap-row"><span class="ap-who">Piet → Johannes<small>skins · nassau · dots</small></span><span class="ap-amt">$28</span><span class="ap-chip">SnapScan</span></div>
+              <div class="ap-row"><span class="ap-who">Dave → Johannes<small>net of the front-nine press</small></span><span class="ap-amt">$13</span><span class="ap-chip">EFT</span></div>
+              <div class="ap-row"><span class="ap-who">Markus → Dave<small>back-nine nassau</small></span><span class="ap-amt">$6</span><span class="ap-chip">Paid ✓</span></div>
+            </div>
+            <div class="ap-card">
+              <span class="ap-cap">Season ledger · updated</span>
+              <div class="ap-row"><span class="ap-ava ap-ava--2">DK</span><span class="ap-who">You vs Dave · all-time<small>27 rounds</small></span><span class="ap-amt ap-up">+$240</span></div>
+              <div class="ap-row"><span class="ap-who">Same four, Saturday 07:30?<small>one-tap rematch</small></span><span class="ap-chip ap-chip--gold">Send</span></div>
+            </div>
+            <div class="ap-tabs" aria-hidden="true"><span>Slip</span><span>Ledger</span><span>The Shot</span><span class="on">Season</span></div>
           </div>
 
         </div>
@@ -502,7 +520,7 @@
     <div class="section-head reveal">
       <p class="eyebrow">The numbers</p>
       <h2>R14.5m to R323m <span class="small" style="font-size:0.45em;letter-spacing:0.1em;">FORECAST</span><br>Two revenue lines. One KPI we never monetise.</h2>
-      <p class="sub">72 months from January 2027, subscribers from zero to 100,000, churn held at 5.5% throughout. Built to spend hard — brand at 15% of revenue, CAC $24 — because the target is aggressive and the costs must be too. Every cell is in the dataroom.</p>
+      <p class="sub">72 months from January 2027. Zero to 100,000 subscribers, churn held at 5.5% throughout. Built to spend hard — brand 15% of revenue, CAC $24. Every cell is in the dataroom.</p>
     </div>
     <div class="finance-grid reveal">
       <div class="sparkline-wrap">
@@ -516,7 +534,7 @@
     </div>
     <div class="card reveal mt-4" style="border-left:4px solid var(--gold);">
       <h3>Costed, not just forecast</h3>
-      <p>Every cost line is budgeted, not derived from a margin assumption. The full stack — payment processing, verification and claims operations, acquisition, brand, and central team — is published so the bridge from revenue to EBITDA is checkable.</p>
+      <p>Every cost is budgeted line by line, not derived from a margin — so the bridge from revenue to EBITDA is checkable.</p>
       <div class="mathpanel" aria-label="Revenue to EBITDA bridge, 2029" style="max-width:38rem;">
         <div class="line"><span>Revenue 2029 <span class="small">forecast</span></span><span>R61.7m</span></div>
         <div class="line"><span>Payment processing · verification <span class="small">(insured swings only — peer games verify themselves)</span></span><span>−R3.2m</span></div>
@@ -524,20 +542,25 @@
         <div class="line"><span>Central team, tech and market operations</span><span>−R28.0m</span></div>
         <div class="line"><span><strong>EBITDA 2029</strong></span><span><strong>R14.9m · 24.2%</strong></span></div>
       </div>
-      <div class="mathpanel mt-3" aria-label="What the multiple choice is worth" style="max-width:38rem;">
-        <div class="line"><span>At 2.5× — a conservative rating</span><span>R154.2m · 2.89×</span></div>
-        <div class="line"><span><strong>At 3.0× — what we use</strong></span><span><strong>R185.0m · 3.47×</strong></span></div>
-        <div class="line"><span>At 3.5× — a strong rating</span><span>R215.8m · 4.05×</span></div>
-      </div>
-      <p class="meta" style="margin-top:0.9rem;">The multiple is a choice, so here is what the choice is worth. We use 3.0× because it is the middle and because it is below the 3.69× we buy in at — the rating compresses as the company scales rather than expanding. Nothing in the plan requires a re-rating.</p>
+      <details class="more">
+        <summary>What the multiple choice is worth</summary>
+        <div class="more__body">
+          <div class="mathpanel" aria-label="What the multiple choice is worth" style="max-width:38rem;">
+            <div class="line"><span>At 2.5× — a conservative rating</span><span>R154.2m · 2.89×</span></div>
+            <div class="line"><span><strong>At 3.0× — what we use</strong></span><span><strong>R185.0m · 3.47×</strong></span></div>
+            <div class="line"><span>At 3.5× — a strong rating</span><span>R215.8m · 4.05×</span></div>
+          </div>
+          <p class="meta" style="margin-top:0.9rem;">3.0× is the middle — and below the 3.69× you buy in at, so the rating compresses as the company scales. Nothing in the plan requires a re-rating.</p>
+        </div>
+      </details>
       <details class="more">
         <summary>How it is funded</summary>
         <div class="more__body">
           <ul class="whylist">
-            <li>Peak cumulative drawdown is <strong>R6.0m</strong>, in 2027 — the plan spends hard and early on marketing and the platform, because 100,000 subscribers is not reached politely. EBITDA positive from 2028, cumulative cash from 2029, no further round assumed.</li>
-            <li>That leaves most of the raise deployable against growth rather than losses. It is <strong>acceleration capital, not survival capital</strong>: the app build, the simulator integration and US market entry, plus a buffer. We would rather say that than inflate a burn.</li>
-            <li>Central cost is a stated budget that hires ahead of revenue — R11m (2027), R28m (2029), R88m (2032) — not a percentage of a number we hope to hit.</li>
-            <li>Verification is charged per <em>insured</em> swing only — the fourball verifies its own games for free. That is a structural cost advantage the old model never had.</li>
+            <li>Peak drawdown <strong>R6.0m</strong> in 2027 — spent hard and early, because 100,000 subscribers is not reached politely. EBITDA positive 2028; no further round assumed.</li>
+            <li>The rest of the raise is <strong>acceleration capital, not survival capital</strong> — the app, the simulator integration, US entry, a buffer.</li>
+            <li>Central cost is a stated budget hiring ahead of revenue — R11m → R28m → R88m — not a hopeful percentage.</li>
+            <li>Verification is charged on <em>insured</em> swings only — the fourball verifies its own games free.</li>
           </ul>
         </div>
       </details>
@@ -553,30 +576,42 @@
         <div class="line"><span>Average life at 5.5% monthly churn</span><span>18 months</span></div>
         <div class="line"><span><strong>Contribution over a subscriber's life</strong></span><span><strong>~$288</strong></span></div>
       </div>
-      <p class="meta" style="margin-top:0.9rem;"><strong>Against acquisition cost:</strong> the plan carries <strong>$24 CAC</strong> on organizers — every slip seats three guests who cost nothing — a 12× ratio. At <strong>$50 it is 5.8×</strong>; at <strong>$80 it is 3.6×</strong>. The plan still works at $80. Churn is held at 5.5% a month, defended by group lock-in: nobody deletes the app while the season ledger says they're down to Dave.</p>
+      <p class="meta" style="margin-top:0.9rem;"><strong>~$288 contribution against $24 CAC — 12×.</strong> Every slip seats three guests who cost nothing.</p>
+      <details class="more">
+        <summary>Stress-tested</summary>
+        <div class="more__body">
+          <p class="small" style="margin:0;">At <strong>$50 CAC the ratio is 5.8×</strong>; at <strong>$80 it is 3.6×</strong> — the plan still works at $80. Churn is held at 5.5%/month, defended by group lock-in: nobody deletes the app while the season ledger says they're down to Dave.</p>
+        </div>
+      </details>
     </div>
 
     <div class="grid grid--2 mt-4 reveal">
       <div class="card">
         <h3>What your R1m buys</h3>
-        <ul class="whylist">
-          <li><strong>1.88% of the company</strong> in ordinary shares, on the same instrument as the founders.</li>
-          <li><strong>Pre-emption rights</strong> on future issues, so your stake is yours to defend.</li>
-          <li><strong>Tag-along</strong> on a founder sale — you leave when they leave, at the same price.</li>
-          <li><strong>Quarterly reporting</strong>: management accounts, member and entry numbers, claims and pipeline.</li>
-          <li><strong>A board seat</strong> is available to the lead investor in the round.</li>
+        <ul class="whylist whylist--icons">
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M7 9.5h10M7 13h6"/><circle cx="16.5" cy="15.5" r="1.6"/></svg></span><strong>1.88% in ordinary shares</strong> — the same instrument as the founders.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6z"/><path d="M12 8.5v4M12 15.4v.1"/></svg></span><strong>Pre-emption</strong> on future issues — your stake is yours to defend.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h13M13 6l6 6-6 6"/></svg></span><strong>Tag-along</strong> on a founder sale — same exit, same price.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h4.5"/><path d="M8.5 13h7M8.5 16.5h4.5"/></svg></span><strong>Quarterly reporting</strong> — accounts, members, claims, pipeline.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"/><path d="M5 20.5a7 7 0 0 1 14 0"/></svg></span><strong>A board seat</strong> for the lead investor.</li>
         </ul>
-        <p class="meta">No liquidation preference and no ratchet is being offered or asked for. Full terms in the subscription agreement — in the dataroom.</p>
+        <details class="more">
+          <summary>The fine print</summary>
+          <div class="more__body"><p class="small" style="margin:0;">No liquidation preference, no ratchet — offered or asked for. Full terms in the subscription agreement, in the dataroom.</p></div>
+        </details>
       </div>
       <div class="card">
         <h3>Who buys this in 2032</h3>
-        <ul class="whylist">
-          <li><strong>A golf super-app</strong> — the scoring and GPS platforms monetise thinly and cannot underwrite a prize; the money-game layer with $100,000 on a hole-in-one is the piece they would rather buy than build.</li>
-          <li><strong>A simulator network</strong> — Golfzon, Kakao VX. We become the prize layer on a platform that already has the venues and the customer.</li>
-          <li><strong>An insurer or prize-indemnity carrier</strong> — Santam, Sanlam, or a global specialist. They already carry the risk; buying the consumer distribution on top of it is the natural move.</li>
-          <li><strong>A golf-entertainment group</strong> — Topgolf, Drive Shack. An insured skill prize is the one thing their venues cannot manufacture themselves.</li>
+        <ul class="whylist whylist--icons">
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3"/></svg></span><strong>A golf super-app</strong> — buys the money-game layer it cannot underwrite.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20.5h8M12 16.5v4"/></svg></span><strong>A simulator network</strong> — Golfzon, Kakao VX — the prize layer on venues they already own.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z"/><path d="M12 12v6a2 2 0 0 1-4 0"/></svg></span><strong>An insurer</strong> — Santam, Sanlam or a global carrier, buying the distribution on risk it already carries.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4"/><path d="M6 5h12l-2.5 3.5L18 12H6"/></svg></span><strong>Golf entertainment</strong> — Topgolf, Drive Shack — the prize their venues cannot manufacture.</li>
         </ul>
-        <p class="meta">And the honest fourth option: a profitable, dividend-paying private company. On this plan it is cash-generative from 2029 and needs no further round, so a sale is a choice rather than a necessity.</p>
+        <details class="more">
+          <summary>The honest fourth option</summary>
+          <div class="more__body"><p class="small" style="margin:0;">A profitable, dividend-paying private company. Cash-generative from 2029 with no further round needed — a sale is a choice, not a necessity.</p></div>
+        </details>
       </div>
     </div>
 
@@ -598,13 +633,13 @@
       <div>
         <h3>Why these numbers hold</h3>
         <ul class="whylist whylist--icons">
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h4.5"/><path d="M9.3 14.6l1.8 1.8 3.6-4"/></svg></span><strong>R9m contracted:</strong> Santam is signed through 2028. The plan holds South African sponsorship flat at the R3.5m run-rate after that — renewal above it is upside we have not counted.</li>
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6z"/><path d="M9.3 11.8l1.9 1.9 3.5-3.9"/></svg></span><strong>Prize risk is the insurer's:</strong> 100% underwritten, and the premium is collected on the same swing that creates it — a 31.9% loss ratio, with 2.51× headroom before the cover stops paying.</li>
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M7 15l3.5-4 3 2.5L18 8"/></svg></span><strong>Costed to be delivered:</strong> total cost runs R16.5m → R46.8m → R197.2m, published line by line — brand and acquisition scale with the ambition. No further round is assumed.</li>
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.5l3 3-3 3"/><path d="M20 5.5H9a5 5 0 0 0-5 5"/><path d="M7 21.5l-3-3 3-3"/><path d="M4 18.5h11a5 5 0 0 0 5-5"/></svg></span><strong>The decisive number gets measured, not assumed:</strong> the 90-day pilot on our 25 flagship courses reads the jackpot attach rate before the app ships. We publish what it finds.</li>
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M10 9.2l5 2.8-5 2.8z"/></svg></span><strong>One multiple, and it compresses:</strong> you buy at 3.69× 2027 forecast revenue; every forward milestone is struck at a flat 3.0×. No re-rating is assumed anywhere. There is no listed comparable for an insured skill-prize platform, so the multiple is set against what we can evidence rather than borrowed from US consumer-subscription names.</li>
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 8.5v7M8.5 12h7"/></svg></span><strong>The simulator line is deliberately small:</strong> 1.5% of one country's sim rounds by 2029, against a network that already meters every shot. The dataroom models the full adoption range.</li>
-          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg></span><strong>Peer money is counted at zero:</strong> every rand your fourball plays for passes us untouched — no rake, ever. If a licensed route to a wallet opens later, that is upside the plan does not need.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h4.5"/><path d="M9.3 14.6l1.8 1.8 3.6-4"/></svg></span><strong>R9m contracted:</strong> Santam signed through 2028; SA sponsorship held flat after — renewal is uncounted upside.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6z"/><path d="M9.3 11.8l1.9 1.9 3.5-3.9"/></svg></span><strong>Prize risk is the insurer's:</strong> 100% underwritten, premium collected on the same swing — 31.9% loss ratio, 2.51× headroom.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M7 15l3.5-4 3 2.5L18 8"/></svg></span><strong>Costed to be delivered:</strong> R16.5m → R46.8m → R197.2m, published line by line. No further round assumed.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.5l3 3-3 3"/><path d="M20 5.5H9a5 5 0 0 0-5 5"/><path d="M7 21.5l-3-3 3-3"/><path d="M4 18.5h11a5 5 0 0 0 5-5"/></svg></span><strong>Measured, not assumed:</strong> the 90-day pilot reads the attach rate before the app ships — published either way.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M10 9.2l5 2.8-5 2.8z"/></svg></span><strong>One multiple, and it compresses:</strong> in at 3.69×, every milestone struck at a flat 3.0×. No re-rating assumed anywhere.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 8.5v7M8.5 12h7"/></svg></span><strong>The simulator line is small on purpose:</strong> 1.5% of one country's rounds by 2029; the dataroom models the range.</li>
+          <li><span class="wl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg></span><strong>Peer money counted at zero:</strong> no rake, ever. A licensed wallet later is upside the plan does not need.</li>
         </ul>
       </div>
     </div>
