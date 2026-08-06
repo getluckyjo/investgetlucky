@@ -1,16 +1,14 @@
-/* NDA gate for the dataroom.
-   Pattern: client-side session gate (deterrent + audit trail, not real auth).
-   Interface kept compatible with the donafuego module so it can be swapped in:
-     recordNda(payload) -> Promise, hasNdaSession() -> bool.
-
-   Optional server-side recorder: set NDA_ENDPOINT to a Formspree/Resend-backed
-   URL (e.g. "https://formspree.io/f/XXXX") and every signature is POSTed there
-   as JSON. Left empty, signatures are stored in localStorage only. */
+/* NDA step for the dataroom.
+   Per the founder (2026-08-06) there is no server-side lock on the documents —
+   the NDA form records who opened the room and /api/nda-accept emails the
+   founder a notification. The form must therefore never strand a real
+   investor: if the notify call fails, the room still opens and the failure
+   only goes to the console. */
 
 (function () {
   "use strict";
 
-  var NDA_ENDPOINT = ""; // e.g. "https://formspree.io/f/yourFormId"
+  var NDA_ENDPOINT = "/api/nda-accept";
   var SESSION_KEY = "gl-nda-accepted";
   var AUDIT_KEY = "gl-nda-audit";
 
@@ -27,13 +25,13 @@
       localStorage.setItem(AUDIT_KEY, JSON.stringify(audit));
     } catch (e) { /* storage unavailable — gate still opens for this view */ }
 
-    if (!NDA_ENDPOINT) return Promise.resolve();
     return fetch(NDA_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(payload)
-    }).catch(function (err) {
-      console.warn("NDA recorder unreachable — local record kept", err);
+    }).then(function (r) {
+      if (!r.ok) throw new Error("NDA acceptance failed (" + r.status + ")");
+      return r.json();
     });
   }
 
@@ -67,12 +65,15 @@
       document: "Get Lucky Golf investor dataroom NDA",
       acceptedAt: new Date().toISOString(),
       userAgent: navigator.userAgent
-    }).then(function () {
-      hide(wall);
-      show(room);
-      window.scrollTo({ top: 0 });
-      loadSources();
+    }).catch(function (err) {
+      /* Notification failed — the room opens anyway; the acceptance is
+         still in this visitor's localStorage audit trail. */
+      console.warn(err);
     });
+    hide(wall);
+    show(room);
+    window.scrollTo({ top: 0 });
+    loadSources();
   });
 
   // ---- sources list (from data/research.json) -------------------------------

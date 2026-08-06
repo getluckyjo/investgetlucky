@@ -18,13 +18,13 @@
   --green: #335231;
   --green-deep: #1e3120;
   --green-ink: #16261a;
-  --green-soft: #4a7a3d;
+  --green-soft: #437036;
   --cream: #f5f0e1;
   --cream-warm: #e8e0cc;
   --cream-dim: #e8e0cc;
   --gold: #c9a94e;
   --gold-soft: #e8d48b;
-  --gold-text: #94742a; /* darker gold for small text on light surfaces */
+  --gold-text: #7a5d20; /* darker gold for small text on light surfaces */
   --white: #fdfcf5;
   --red-flag: #b0402f;
 
@@ -70,9 +70,17 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--green); }
-a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
-  outline: 3px solid var(--gold); outline-offset: 2px;
+a:focus-visible, button:focus-visible, summary:focus-visible,
+input:focus-visible, details:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--green-ink);
+  border-radius: 4px;
 }
+/* the halo inverts on dark surfaces so the ring is visible on every background */
+.hero :focus-visible, .section--green :focus-visible,
+.section--deep :focus-visible, .footer :focus-visible,
+.rung--hot :focus-visible { box-shadow: 0 0 0 6px var(--cream); }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
@@ -533,7 +541,7 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
   border: 1px solid var(--gold); border-radius: var(--radius);
   padding: clamp(1.5rem, 3.5vw, 2.4rem);
 }
-.advisor h4 { color: var(--cream); }
+.advisor h3, .advisor h4 { color: var(--cream); }
 .advisor .eyebrow { color: var(--gold); }
 .advisor__role { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,240,225,0.65); margin-bottom: 0.6rem; }
 .advisor p:last-child { font-family: var(--font-ui); font-size: 0.95rem; line-height: 1.6; margin: 0; max-width: 62ch; }
@@ -664,7 +672,7 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 
 /* --- brand partner card (Santam) ---------------------------------------------------------------- */
 .card--brand { background: var(--green); border-color: var(--green); color: var(--cream); }
-.card--brand h4 { color: var(--cream); }
+.card--brand h3, .card--brand h4 { color: var(--cream); }
 .card--brand .partnerlogo { height: 1.7rem; width: auto; margin-bottom: 0.9rem; }
 .card--santam { display: grid; grid-template-columns: minmax(11rem, auto) 1fr; gap: clamp(1.2rem, 4vw, 3.5rem); align-items: center; }
 .card--santam p { max-width: 58ch; }
@@ -835,6 +843,8 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 
 /* --- inline "read more" — collapses supporting detail without hiding the claim --- */
 .more { margin-top: var(--space-2); }
+/* inside the engine cards the grid gap already spaces it */
+.engine__body .more { margin-top: 0; }
 .more > summary {
   cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--font-ui); font-size: 0.82rem; font-weight: 700;
@@ -849,3 +859,222 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .rung--hot .more > summary { color: var(--gold); }
 .more__body { padding-top: var(--space-2); }
 .more__body > *:last-child { margin-bottom: 0; }
+
+
+/* ============================================================================
+   Investor-review fixes — 2026-08-05
+   ========================================================================== */
+
+/* eyebrow on the deep-green band: --gold-text is too dark on it, gold-soft passes */
+.section--green .eyebrow { color: var(--gold-soft); }
+.appdemo__note { opacity: 0.75; }
+
+/* card and stake borders were 1.20:1 — present, but invisible */
+.card { border-color: rgba(52, 82, 48, 0.22); }
+.stakes span { border-color: rgba(52, 82, 48, 0.42); }
+
+/* tap targets: read-more toggles and contact links were 34px */
+.more > summary { padding: 0.7rem 0; min-height: 44px; }
+.contact-cta .links a { padding: 0.55rem 0; display: inline-block; }
+
+/* hover transforms stick after a tap on touch devices */
+@media (hover: none) {
+  .btn:hover, .card:hover, .coursecard:hover { transform: none; }
+}
+
+/* --- the deal band: the ask, directly under the hero --- */
+.dealband { background: var(--green-ink); color: var(--cream); }
+.dealband__inner {
+  display: flex; flex-wrap: wrap; align-items: center; gap: clamp(1rem, 4vw, 2.5rem);
+  padding: clamp(1rem, 3vw, 1.5rem) 0;
+}
+.dealband dl { display: flex; flex-wrap: wrap; gap: clamp(1rem, 4vw, 2.6rem); margin: 0; flex: 1 1 auto; }
+.dealband dl > div { display: grid; gap: 0.15rem; }
+.dealband dt {
+  font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-soft); margin: 0;
+}
+.dealband dd {
+  margin: 0; font-family: var(--font-display); font-size: clamp(1.25rem, 3.4vw, 1.7rem);
+  line-height: 1; letter-spacing: 0.01em;
+}
+.dealband .btn { flex: 0 0 auto; }
+
+/* --- mobile-only sticky ask --- */
+.dealbar { display: none; }
+@media (max-width: 900px) {
+  .dealbar {
+    position: fixed; inset: auto 0 0 0; z-index: 70;
+    display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+    background: var(--green-ink); color: var(--cream);
+    padding: 0.6rem clamp(1.1rem, 4vw, 2.5rem);
+    font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.04em;
+    box-shadow: 0 -6px 24px rgba(24, 39, 22, 0.35);
+  }
+  .dealbar .btn { padding: 0.5rem 1.1rem; font-size: 0.82rem; }
+  body { padding-bottom: 4.2rem; }
+}
+
+/* --- hero: get the CTAs and the proof above the fold --- */
+.hero { min-height: min(88vh, 60rem); }
+@media (max-width: 640px) {
+  .hero__logo { width: 118px; margin-bottom: var(--space-2); }
+  .hero h1 { font-size: clamp(2.3rem, 10vw, 3rem); }
+  .hero .lead, .section-head .sub { font-size: var(--step-0); max-width: 40ch; }
+  .statstrip { grid-template-columns: repeat(2, 1fr); }
+  .statstrip .lbl { font-size: 0.68rem; letter-spacing: 0.1em; }
+}
+
+/* --- mathpanel: label/value collapsed into two ragged 17ch columns --- */
+@media (max-width: 560px) {
+  .mathpanel .line { display: grid; grid-template-columns: 1fr; gap: 0.1rem; padding: 0.55rem 0; }
+  .mathpanel .line > span:last-child {
+    font-weight: 700; color: var(--gold-soft); font-variant-numeric: tabular-nums;
+  }
+  .mathpanel .line:last-child > span:last-child { color: var(--cream); }
+}
+
+/* --- funnel: the taper inverted at the punchline (f-plan forced to 100%) --- */
+@media (max-width: 640px) {
+  .funnel > div { display: grid; gap: 0.15rem; width: 100% !important; min-width: 0 !important; }
+  .funnel > div strong { font-size: 1.35rem; }
+  .funnel .f-sam { margin-right: 8%; }
+  .funnel .f-som { margin-right: 20%; }
+  .funnel .f-plan { margin-right: 34%; }
+}
+
+/* --- usebar: five 68px segments clipped their own labels --- */
+@media (max-width: 720px) {
+  .usebar { height: auto; display: grid; grid-template-columns: 1fr; border-radius: 8px; }
+  .usebar > div {
+    justify-content: space-between; padding: 0.5rem 0.8rem; text-align: left;
+    font-size: 0.78rem; letter-spacing: 0.04em;
+  }
+}
+
+/* --- econbar legend: the swatches all inherited text colour --- */
+.econbar__legend span::before {
+  content: ""; display: inline-block; width: 0.7em; height: 0.7em;
+  border-radius: 2px; margin-right: 0.45em; vertical-align: -0.05em;
+}
+.econbar__legend span:nth-child(1)::before { background: var(--green); }
+.econbar__legend span:nth-child(2)::before { background: var(--gold); }
+.econbar__legend span:nth-child(3)::before { background: var(--green-soft); }
+.econbar--ondark ~ .econbar__legend span:nth-child(1)::before { background: var(--cream); }
+.econbar--ondark ~ .econbar__legend span:nth-child(3)::before { background: var(--green-ink); }
+
+/* --- the slider was a 16px hit area on the one interactive control --- */
+.calc input[type="range"] { width: 100%; height: 44px; background: transparent; -webkit-appearance: none; appearance: none; }
+.calc input[type="range"]::-webkit-slider-runnable-track { height: 8px; border-radius: 999px; background: rgba(52, 82, 48, 0.18); }
+.calc input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 28px; height: 28px; margin-top: -10px; border-radius: 50%;
+  background: var(--green); border: 3px solid var(--white); box-shadow: var(--shadow-soft); cursor: grab;
+}
+.calc input[type="range"]::-moz-range-track { height: 8px; border-radius: 999px; background: rgba(52, 82, 48, 0.18); }
+.calc input[type="range"]::-moz-range-thumb {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--green); border: 3px solid var(--white);
+}
+
+/* --- scrollable data tables need to be reachable and to look scrollable --- */
+.tablescroll {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background:
+    linear-gradient(90deg, var(--white) 30%, transparent),
+    linear-gradient(270deg, var(--white) 30%, transparent) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgba(24, 39, 22, 0.18), transparent),
+    radial-gradient(farthest-side at 100% 50%, rgba(24, 39, 22, 0.18), transparent) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* --- typography: orphans, and four roles sharing one size --- */
+h1, h2, h3 { text-wrap: balance; }
+p.lead, .section-head .sub, .faq__body p { text-wrap: pretty; }
+h2 { line-height: 1.04; }
+h4, .step h3 { font-size: 1.06rem; letter-spacing: 0.04em; }
+.footer .legal { max-width: 66ch; }
+
+/* --- skip link --- */
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--green-ink); color: var(--cream); padding: 0.7rem 1.2rem;
+  font-family: var(--font-ui); font-size: 0.85rem;
+}
+.skip:focus { left: 0; }
+
+/* --- team: 2,070px for four people on mobile --- */
+@media (max-width: 640px) {
+  .team .grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .team img { width: 96px; }
+}
+
+/* --- no horizontal scroll, ever. Wide content scrolls inside its own box. --- */
+html { overflow-x: hidden; }
+body { overflow-x: clip; }
+h1, h2, h3 { overflow-wrap: break-word; }
+.hero h1 { max-width: min(17ch, 100%); }
+@media (max-width: 420px) {
+  .hero h1 { font-size: clamp(2rem, 8.6vw, 2.6rem); }
+  .dealband dl { gap: 1rem 1.6rem; }
+  .dealbar { font-size: 0.74rem; }
+  .dealbar .btn { padding: 0.45rem 0.9rem; font-size: 0.76rem; }
+}
+
+/* --- proof video: real footage beats a mockup, but 14MB must not load on sight --- */
+.proofvideo { margin: 0; }
+.proofvideo video {
+  width: 100%; height: auto; display: block; border-radius: 12px;
+  background: var(--green-ink); box-shadow: var(--shadow-soft);
+}
+.proofvideo figcaption { margin-top: 0.7rem; opacity: 0.75; }
+
+/* --- mathpanel on a light card: the dark-surface palette fell to ~1.9:1 --- */
+.section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel {
+  background: var(--cream);
+  color: var(--ink);
+}
+.section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel .line {
+  border-bottom-color: rgba(52, 82, 48, 0.22);
+}
+.section:not(.section--green):not(.section--deep):not(.hero) .card .mathpanel .line:last-child {
+  color: var(--gold-text);
+}
+
+/* --- bracket corners: the image painted over ::before, so only one showed --- */
+.portrait-slot img { z-index: 0; }
+.bracket::before, .bracket::after { z-index: 2; }
+
+/* --- jackpot ladder moved onto the dark rung with the pivot: restyle for it --- */
+.rung--hot .stakes span { border-color: rgba(246, 244, 225, 0.35); color: var(--cream); }
+.rung--hot .stakes span strong { color: var(--gold-soft); }
+
+/* --- founder polish round --- */
+/* footer: super tight */
+.footer { padding-block: 1.6rem 1.2rem; }
+.footer .wrap { display: grid; gap: 0.5rem; }
+.footer img { width: 110px !important; height: auto !important; margin: 0 auto 0.2rem; }
+.footer .legal { font-size: 0.68rem; line-height: 1.45; margin: 0; opacity: 0.75; }
+
+/* calculator: card treatment, big figures, no cramped-table look */
+.calc {
+  background: var(--white); border-radius: 14px; padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow: var(--shadow-soft); border: 1px solid rgba(52, 82, 48, 0.18);
+}
+.calc h3 { color: var(--green); margin-top: 0; }
+.calc .amount {
+  font-family: var(--font-display); font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  color: var(--green-ink); line-height: 1; margin: 0.4rem 0 1rem;
+}
+.calc .amount .usd { font-family: var(--font-ui); font-size: 0.9rem; color: var(--gold-text); font-weight: 600; margin-left: 0.5rem; }
+.calc table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
+.calc tr + tr th, .calc tr + tr td { border-top: 1px solid rgba(52, 82, 48, 0.14); }
+.calc th[scope="row"] {
+  text-align: left; font-family: var(--font-ui); font-weight: 500; font-size: 0.85rem;
+  color: rgba(24, 39, 22, 0.75); padding: 0.7rem 0.8rem 0.7rem 0;
+}
+.calc td {
+  text-align: right; font-family: var(--font-display); font-size: 1.25rem;
+  color: var(--green); padding: 0.55rem 0; font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.calc tr:last-child td { color: var(--gold-text); }

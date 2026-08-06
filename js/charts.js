@@ -18,11 +18,16 @@
 
   Chart.defaults.font = FONT;
   Chart.defaults.color = "rgba(24, 39, 22, 0.72)";
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    Chart.defaults.animation = false;
+  }
 
   function fmtR(v) {
-    if (v >= 1e6) return "R" + (v / 1e6).toFixed(v % 1e6 === 0 ? 0 : 1) + "m";
-    if (v >= 1e3) return "R" + Math.round(v / 1e3) + "k";
-    return "R" + v;
+    var s = v < 0 ? "-" : "", a = Math.abs(v);
+    if (a >= 1e8) return "R" + s + Math.round(a / 1e6) + "m";
+    if (a >= 1e6) return "R" + s + (a / 1e6).toFixed(a % 1e6 === 0 ? 0 : 1) + "m";
+    if (a >= 1e3) return "R" + s + Math.round(a / 1e3) + "k";
+    return "R" + s + Math.round(a);
   }
 
   function box(id, h) {
@@ -144,26 +149,28 @@
       if (!c) return;
       var years = m.modelForecast.years;
       var streams = m.modelForecast.revenueStreamsZAR;
-      var courses = streams.coursesAndApp.ZAR;
+      var subs = streams.subscriptions.ZAR;
+      var jack = streams.insuredJackpot.ZAR;
+      var crs = streams.installedCourses.ZAR;
       var sim = streams.simulators.ZAR;
-      var spon = streams.territorySponsorship.ZAR;
-      var ups = streams.inPlayUpsells.ZAR;
+      var spon = streams.sponsorship.ZAR;
       var total = m.modelForecast.revenueZAR;
       var marginPct = m.modelForecast.ebitdaMarginPct;
-      var ebitda = m.modelForecast.ebitdaProxyZAR;
+      var ebitda = m.modelForecast.ebitdaZAR;
       /* Revenue stacked by stream — this is one plan's composition, courses and app
          alongside simulators, not a base case with an optional extra on top. */
       var marginLabel = {
         id: "marginLabel",
         afterDatasetsDraw: function (chart) {
           var ctx = chart.ctx;
-          var meta = chart.getDatasetMeta(4);
+          var meta = chart.getDatasetMeta(5);
           ctx.save();
           ctx.font = "700 12px " + FONT.family;
           ctx.fillStyle = INK;
           ctx.textAlign = "center";
           meta.data.forEach(function (bar, i) {
-            ctx.fillText(marginPct[i] + "%", bar.x, bar.y - 6);
+            var neg = ebitda[i] < 0;
+            ctx.fillText(marginPct[i] + "%", bar.x, neg ? bar.base + 16 : bar.y - 6);
           });
           ctx.restore();
         }
@@ -173,11 +180,12 @@
         data: {
           labels: years,
           datasets: [
-            { label: "Courses & app subscription", data: courses, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "Simulators", data: sim, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "Territory sponsorship", data: spon, backgroundColor: TEAL, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "In-play upsells", data: ups, backgroundColor: SAND, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: GOLD, stack: "ebitda", borderRadius: 4, maxBarThickness: 56 }
+            { label: "Subscriptions", data: subs, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Insured jackpot", data: jack, backgroundColor: GOLD, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Installed courses", data: crs, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Simulators", data: sim, backgroundColor: TEAL, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Sponsorship", data: spon, backgroundColor: "#8a6f2e", stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: SAND, stack: "ebitda", borderRadius: 4, maxBarThickness: 56 }
           ]
         },
         options: {
@@ -188,7 +196,7 @@
               callbacks: {
                 label: function (ctx) {
                   var s = ctx.dataset.label + ": " + fmtR(ctx.parsed.y);
-                  if (ctx.datasetIndex === 4) s += " (" + marginPct[ctx.dataIndex] + "% margin)";
+                  if (ctx.datasetIndex === 5) s += " (" + marginPct[ctx.dataIndex] + "% margin)";
                   return s;
                 },
                 footer: function (items) {
