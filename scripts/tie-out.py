@@ -14,7 +14,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 m = json.loads((ROOT / "data/model.json").read_text())
 SURFACES = ["index.html", "dataroom.html",
             "scripts/docs/doc-faq.html", "scripts/docs/doc-market.html",
-            "scripts/docs/doc-simulator.html"]
+            "scripts/docs/doc-simulator.html",
+            "scripts/docs/doc-ernie.html", "scripts/docs/doc-ernie-commercial.html"]
 text = {f: (ROOT / f).read_text() for f in SURFACES}
 fails, checks = [], 0
 
