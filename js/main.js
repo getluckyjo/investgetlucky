@@ -19,8 +19,22 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    }, { threshold: 0, rootMargin: "0px 0px -25% 0px" });
     revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  // --- mobile deal bar: appears only after the hero has been read ----------
+  var dealbar = document.querySelector(".dealbar");
+  var hero = document.querySelector(".hero");
+  if (dealbar && hero && "IntersectionObserver" in window) {
+    var dbio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        dealbar.classList.toggle("dealbar--on", !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    dbio.observe(hero);
+  } else if (dealbar) {
+    dealbar.classList.add("dealbar--on");
   }
 
   // --- hero stat counters ---------------------------------------------------

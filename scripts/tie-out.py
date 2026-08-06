@@ -97,6 +97,7 @@ for pat, why in [
     (r"10% management fee|10% of pots|% of the pot|rake of", "a rake — the peer layer is free, permanently"),
     (r"trade-up", "the tee-side trade-up loop, replaced by the slip"),
     (r"20m\+ subscribers|20 million subscribers", "the unverified 18Birdies figure — verified figure is 10m+"),
+    (r"draws R2\.3m|R2\.3m is peak", "stale peak-drawdown figure — current model peak drawdown is R6.0m"),
     (r"(?i)\bpivot|\bprevious plan|\bprevious product|\bold plan|\bold model|\bold product|\bold solitary|honestly stated", "pivot/old-plan framing — this is a fresh launch built on the proof of concept; pitch, never apologise"),
 ]:
     must_not(pat, why)
