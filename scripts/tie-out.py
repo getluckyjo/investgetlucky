@@ -97,7 +97,7 @@ for pat, why in [
     (r"10% management fee|10% of pots|% of the pot|rake of", "a rake — the peer layer is free, permanently"),
     (r"trade-up", "the tee-side trade-up loop, replaced by the slip"),
     (r"20m\+ subscribers|20 million subscribers", "the unverified 18Birdies figure — verified figure is 10m+"),
-    (r"(?i)\bpivot|\bprevious plan|\bprevious product|\bold plan|\bold model|honestly stated", "pivot/old-plan framing — this is a fresh launch built on the proof of concept; pitch, never apologise"),
+    (r"(?i)\bpivot|\bprevious plan|\bprevious product|\bold plan|\bold model|\bold product|\bold solitary|honestly stated", "pivot/old-plan framing — this is a fresh launch built on the proof of concept; pitch, never apologise"),
 ]:
     must_not(pat, why)
 
@@ -105,7 +105,7 @@ for pat, why in [
 for extra in ["scripts/docs/doc-plan.html", "GetLucky_Business_Plan.md"]:
     checks += 1
     s_extra = (ROOT / extra).read_text()
-    for mo in re.finditer(r"(?i)\bpivot|\bprevious plan|\bprevious product|\bold plan|\bold model|honestly stated", s_extra):
+    for mo in re.finditer(r"(?i)\bpivot|\bprevious plan|\bprevious product|\bold plan|\bold model|\bold product|\bold solitary|honestly stated", s_extra):
         fails.append(f"{extra}: pivot/old-plan framing — found {mo.group(0)!r}")
 
 # --- 3. figures the page must actually carry --------------------------------

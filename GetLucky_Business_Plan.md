@@ -1,7 +1,7 @@
 # Get Lucky Golf Club — Business Plan
 
 **A golf day in your pocket.**
-Draft v1 for founder review · August 2026 · Confidential
+August 2026 · Confidential
 
 ---
 
@@ -99,7 +99,7 @@ but the strongest reason the group returns next Saturday.
 
 ### The jackpot, group-pooled
 
-The single biggest design change from the old product. The fourball buys the
+The design decision the whole product turns on: the fourball buys the
 jackpot together at slip creation. Consequences:
 
 - The three playing partners stop being reluctant camera operators and
@@ -124,9 +124,9 @@ ratio, 2.51× breakeven** on ace frequency.
 | The insurer's (the jackpot) | Get Lucky — filmed, AI shot tracer, claims process | Full verification, exactly as proven on 25 installed courses |
 
 This division is the product's legal spine as much as its operational one.
-Closest-to-the-pin and longest drive — previously impossible because the
-company cannot measure proximity — return as peer-verified games, because
-the fourball can.
+Closest-to-the-pin and longest drive ship as peer-verified games: the
+company never needs to measure proximity, because the fourball is standing
+on the green and can.
 
 ### The retention spine
 
@@ -251,7 +251,7 @@ Two revenue engines, one KPI engine:
 | **Subscription** | $10/month for the app. Organizer-pays: creating games requires a subscription; invited players get a full guest experience for the round, with the subscribe prompt after first settlement | The recurring line |
 | **Insured jackpot** | Group-pooled entries at $1–$100 tiers, 66% retained after 24% premium and course share where applicable | The margin engine |
 | **Peer GMV** | Money staked in peer games. **Revenue: zero, permanently.** Reported as the engagement KPI that drives both lines above | The growth engine |
-| Sponsorship | Slips, settlement cards, the 19th-hole moment, order-of-merit boards — far richer inventory than the old product. SA contracted at R3.5m run-rate, held flat; new territories at entry | Supporting |
+| Sponsorship | Slips, settlement cards, the 19th-hole moment, order-of-merit boards — the richest sponsor inventory in golf apps. SA contracted at R3.5m run-rate, held flat; new territories at entry | Supporting |
 | Simulators (2027+) | The slip inside operator software; machine-verified insured CTP formats (a market PinSeeker has validated) | Supporting |
 | Installed courses | 25 flagship jackpot holes, instant camera verification, +25/year | Proof & brand |
 
@@ -272,11 +272,11 @@ already happens in every fourball on earth, plus one genuinely open
 question (jackpot attach — see §8) that the 90-day pilot measures before
 the app ships.
 
-What improves is everything around the ARPU:
+Everything around the ARPU is built to compound:
 
 - **Churn**: group lock-in, the season ledger and unsettled IOUs defend a
-  5–6%/month assumption; the honest range for the old solitary product was
-  10–15%. Lifetime roughly doubles.
+  5–6%/month assumption — solitary consumer apps honestly run 10–15%.
+  Group products roughly double the lifetime.
 - **CAC**: every slip invites three golfers who experience the full product
   before paying anything. Blended acquisition cost falls toward the cost of
   acquiring organizers only.
