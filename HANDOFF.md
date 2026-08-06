@@ -990,6 +990,48 @@ adding or removing it. If the price moves again, expect the same friction: the
 guards are string-matched, not derived. Anchoring them to `model.json` values
 would be the better design and is not done.
 
+## 2026-08-05 (v7) — THE PIVOT: peer-to-peer golf games as the core product
+
+The founder pinned the product-market-fit problem: filming a swing for a
+1-in-12,500 prize is high effort against a reward 99% of members would never
+experience. New core product, founder's sketch: "a golf day in your pocket" —
+the fourball's bet slip (skins, formats, stakes), live ledger, 19th-hole
+settlement, with the insured hole-in-one as the house jackpot on the slip.
+
+A product-strategist review (consumer audit, competitive scan, SA/US
+regulatory analysis) shaped the final structure. Decisions locked:
+
+- **No rake, ever, anywhere — modelled at zero.** SA's informal-bet exemption
+  (NGA s4) dies the moment anyone takes a fee from the bet; the US precedent
+  (BetOpenly C&D, Arizona) hit a 1% commission. Every durable competitor
+  (Skins App $40/yr flat, 18Birdies, Beezer, SettleUp) converged on
+  track-and-settle, no custody, no cut. Get Lucky adopts that structure.
+- **Monetisation: $10/mo subscription for APP ACCESS (organizer-pays, no
+  bundled swings) + insured jackpot entries.** The swing-bundle blend and its
+  5%-ceded maths die; insurance reverts to the pure Santam submission
+  ($17 avg entry, $4.08 premium, 31.9% loss ratio, 2.51x breakeven).
+- **Jackpot is GROUP-POOLED** — the fourball buys in together at slip
+  creation; filming collapses 16 events/round -> 4 swings on one staged hole.
+- **USD-led global launch, honour mode first** (no custody anywhere; wallet
+  is a geo-flagged licensed-market unlock). Pride Mode (points) is the
+  default state and the restrictive-market fallback.
+- **Deal unchanged: R8m for 15%.** Ernie participates in THIS round
+  (founder's clarification — "same stage as Ernie" framing sanctioned).
+- **Verified: Ernie Els was the first official investor in 18Birdies**
+  (Forbes, 2017-07-31); 18Birdies claims 10m+ golfers (own site/App Store).
+  The founder's "20m+ subscribers" figure did NOT verify — use 10m+.
+- **The decisive metric is jackpot attach on a group slip** (modelled
+  20/35/55%). A 90-day manual pilot across the 25 installed courses measures
+  it before the app is finished — named investor-visible milestone.
+- Gating items before launch: P2P legal opinion (the existing HIO opinion
+  does NOT cover it), Santam written sign-off on the wrapper, Ernie's counsel
+  sign-off, geo-flags from commit one.
+
+**Delivery sequence (founder-approved): D1 business plan -> founder review ->
+D2 model rebuild -> D3 site rebuild.** D1 is `GetLucky_Business_Plan.md`
+(this commit). D2/D3 DO NOT START until the founder signs off D1 — the site
+still carries the pre-pivot product and numbers, deliberately.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
