@@ -1081,6 +1081,60 @@ the dark rung — `.rung--hot .stakes` override added.
   the subscription agreement in the dataroom should evidence it.
 - NDA_SECRET still unset in Vercel — dataroom docs 503 on the preview.
 
+## 2026-08-06 (v9) — FOUNDER POLISH ROUND: 18 updates, Ernie corrected, 100k model
+
+The founder reviewed the pivot preview and returned 18 changes. Two were
+material fact corrections, one was a model rebuild; the rest copy/design.
+
+### The two fact corrections (supersede v8)
+- **Ernie does NOT invest cash in this round.** He holds **5% NON-DILUTING
+  for name, likeness and network** — stated once, softly (deal card, FAQ,
+  docs, `model.json` deal note). All "invests in this round" phrasing
+  removed site-wide; tie-out now BANS it. v8's "Ernie-in-this-round" flag
+  is dead.
+- **18Birdies dialled way back** — it's a third-party investment of
+  Ernie's, not our channel. One soft line survives, in Ernie's credibility
+  list ("first official investor in 18Birdies"). Standalone FAQ deleted;
+  market framing back to the 160M total golfer funnel. "10m+" verified;
+  "20m+" was never verifiable and is banned by tie-out.
+
+### The model (recalibrated: pivot.py → model.json → workbook v4)
+- **100,183 subscribers by Dec 2032** (founder: "more aggressive — 100 000
+  by 2032"): growth 13/12/11% gross monthly, LT 10.9%, churn held 5.5%.
+- **CAC $24** (was $12), brand 15% of revenue, CENTRAL front-loaded
+  (R11m/28m/88m in 2027/29/32) → **peak drawdown R6.03m** (founder asked
+  ~R6m; the delta vs the R8m raise is labelled acceleration capital).
+- Headlines: revenue R14.5m → R61.7m → R322.6m; EBITDA −11.2/24.2/38.9%;
+  milestone R185.0m · **3.47×** · IRR ~51%; 2032 R967.8m · **18.15×**.
+  2029: subs 15,085 · actives 42,237 · slips 93,508 · GMV $3.7m (rev zero).
+- **Use of funds: App 25 · Legal & ops 25 · Market & brand 25 · Sims 15 ·
+  Pilot 10.** Workbook v4 retuned and re-evaluated: 0 failures, ties exact.
+
+### Copy & design (index.html + css)
+- Hero H1: "Invest with **Ernie** in the future of golf gamification";
+  lead leads with "a golf day in your pocket… $100,000 for a hole-in-one".
+- "$100K for a hole-in-one" naming (insured jackpot survives only where
+  "insured" does legal work). Santam strip redesigned ("R9m over three
+  years — signed" + schedule). Course wall restored to ALL 24 courses.
+- Video moved to a fun-extra section just above CONTACT. Risk = exactly
+  3 straight cards, each with "The solution:". Small copy → `.more`
+  dropdowns. App screens rebuilt to the slip flow (Slip → live ledger →
+  the $100K shot filmed → ACE). Calculator redesigned (white card, big
+  figure, tabular numerals). Footer tightened, logo 120px.
+- Simulator stream clarified as TWO routes: modelled operator integration
+  (Korea attach, R12m 2029) + the organic route (any sim bay, no deal
+  needed, counted in app numbers) — no double count.
+- **Cloud & Things tile**: rebuilt from WebSearch facts (cloudandthings.io
+  unreachable from the container; AWS Partner, SA engineering firm). Dark
+  tile with a text wordmark — **the real logo file is a founder asset ask**.
+
+### Verification
+- `scripts/tie-out.py` reworked: 62 checks green; guards ban pre-100k
+  figures (R133.1m/R291.6m/2.50×/5.47×/14,061…), Ernie cash-investment
+  claims, rake language, 18Birdies 20m+.
+- Business plan §7 restated to the pro forma (was preliminary ~R48m/7,500
+  subs; LTV/CAC now against the $24 CAC).
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

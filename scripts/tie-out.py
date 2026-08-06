@@ -90,6 +90,9 @@ for pat, why in [
     (r"R113\.1m|2\.12×|4\.76×|R37\.7m", "superseded pre-repricing figures"),
     (r"billion-rand|R1bn|R333m", "the billion-rand horizon, removed on instruction"),
     (r"R43\.3m|R96\.3m|2\.44×|5\.42×|R130m|R289m", "pre-pivot milestones and multiples"),
+    (r"R133\.1m|R291\.6m|2\.50×|5\.47×|3\.77×|14,061|7,398|39,371|20,714", "the pre-100k model figures"),
+    (r"investing in this round|invests in this round|backs this round with his own money", "Ernie cash-investment claim — he holds 5% non-diluting for name/likeness/network"),
+    (r"first investor in the app 10m\+", "18Birdies as our channel — it is Ernie's third-party investment"),
     (r"four insured swings|included swings|capped allowance|533%", "the swing-bundle blend, removed with the pivot"),
     (r"10% management fee|10% of pots|% of the pot|rake of", "a rake — the peer layer is free, permanently"),
     (r"trade-up", "the tee-side trade-up loop, replaced by the slip"),
@@ -128,7 +131,7 @@ must_have("index.html", "group", "the group-pooled jackpot")
 must_have("index.html", "31.9%", "the insurance loss ratio")
 must_have("index.html", "2.51×", "the breakeven ace multiple")
 must_have("index.html", "90-day", "the pilot milestone")
-must_have("index.html", "10m+", "the verified 18Birdies figure")
+
 must_have("index.html", "Pride Mode", "the points-only default and restrictive-market fallback")
 must_have("index.html", "Cloud &amp; Things", "the technology partner")
 must_have("index.html", "What your R1m buys", "the investor-rights block")
@@ -136,8 +139,8 @@ must_have("index.html", "2024 base", "the base year on the insurance-market stat
 must_have("index.html", "15%", "the equity")
 must_have("index.html", "R53.3m", "the post-money")
 must_have("index.html", "At 2.5×", "the multiple sensitivity")
-must_have("index.html", "R133.1m", "the 2029 milestone")
-must_have("index.html", "2.50×", "the 2029 investor multiple")
+must_have("index.html", "R185", "the 2029 milestone")
+must_have("index.html", "3.47×", "the 2029 investor multiple")
 
 
 # every published USD conversion must equal the ZAR figure at the stated FX

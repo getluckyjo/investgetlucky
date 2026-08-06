@@ -2,24 +2,31 @@
   "_note": "Canonical numbers for the site. PIVOTED 2026-08-05 (founder-approved business plan): the core product is peer-to-peer money games ('a golf day in your pocket') — free forever, no rake, no custody — monetised by a $10/month subscription for app access (organizer-pays) and group-pooled insured jackpot entries. Peer GMV is a KPI with ZERO revenue attached, permanently: the SA informal-bet exemption dies if anyone takes a fee, and the US precedent (BetOpenly C&D) hit a 1% commission. Edit here, not in HTML.",
   "fx": 18.5,
   "deal": {
-    "_note": "R8.0m for 15% — R45.3m pre / R53.3m post. Ernie Els participates in THIS round. Unchanged through the pivot; the forecast was rebuilt and the return landed where it landed.",
+    "_note": "R8.0m for 15% — R45.3m pre / R53.3m post. Ernie Els holds 5% NON-DILUTING for name, likeness and network — he does not invest cash in this round. State once, softly; never as a badge.",
     "raiseZAR": 8000000,
     "equityPct": 15.0,
     "preMoneyZAR": 45333333,
     "postMoneyZAR": 53333333,
     "ernieStakePct": 5,
-    "exit2032ZAR": 291628573,
-    "multiple2032": 5.47,
+    "exit2032ZAR": 967785758,
+    "multiple2032": 18.15,
     "allocation": {
       "show": false,
       "committedZAR": null,
       "closeDate": null
     },
-    "value2029ZAR": 133115141,
-    "stake2029ZAR": 19967271,
-    "multiple2029": 2.5,
+    "value2029ZAR": 184982908,
+    "stake2029ZAR": 27747436,
+    "multiple2029": 3.47,
     "irrBasis": "Money in Q4 2026, deployed from January 2027, to the 31 Dec 2029 milestone — a true three years. Unrealised mark on a private holding.",
-    "irr3yrPct": 36
+    "irr3yrPct": 51,
+    "useOfFunds": {
+      "appBuild": 25,
+      "legalAndOps": 25,
+      "marketEntryAndBrand": 25,
+      "simulators": 15,
+      "pilot": 10
+    }
   },
   "traction": {
     "period": "Jul 2025 – Jul 2026",
@@ -104,19 +111,19 @@
     "revenueStreamsZAR": {
       "subscriptions": {
         "ZAR": [
-          4403911,
-          14213999,
-          28101120
+          4603578,
+          24712697,
+          164963962
         ],
         "note": "$10/month for app access. Organizer-pays; invited players ride free for the round."
       },
       "insuredJackpot": {
         "ZAR": [
-          2848450,
-          9193615,
-          18175804
+          2977594,
+          15984172,
+          106698691
         ],
-        "note": "Group-pooled entries on the slip, $1–$100 tiers, net 66%. The margin engine."
+        "note": "The $100,000 hole-in-one, group-pooled on the slip. Net 66%. The margin engine."
       },
       "installedCourses": {
         "ZAR": [
@@ -144,97 +151,97 @@
       }
     },
     "revenueZAR": [
-      14137181,
-      44371714,
-      97209524
+      14465993,
+      61660969,
+      322595253
     ],
     "costZAR": [
-      12912496,
-      33694351,
-      71044755
+      16091944,
+      46758791,
+      197185163
     ],
     "costStackZAR": {
       "paymentProcessing": [
-        329092,
-        1001812,
-        1961707
+        340953,
+        1625434,
+        10091359
       ],
       "verificationAndClaimsOps": [
-        354542,
-        1020236,
-        1978205
+        364325,
+        1534672,
+        8684484
       ],
       "acquisitionCAC": [
-        1032400,
-        1347698,
-        2439701
+        2216768,
+        6349540,
+        42020032
       ],
       "brandAndRetention": [
-        1696462,
-        5324606,
-        11665143
+        2169899,
+        9249145,
+        48389288
       ],
       "centralOpex": [
-        9500000,
-        25000000,
-        53000000
+        11000000,
+        28000000,
+        88000000
       ]
     },
-    "_costNotes": "Verification is charged per INSURED swing only — peer games verify themselves, a structural cost advantage of the pivot. CAC on organizers only (invited seats are free acquisition). Brand at 12% of revenue — a global consumer app spends real money on brand. Central is a stated budget.",
+    "_costNotes": "Verification per INSURED swing only. CAC $24 per gross new organizer. Brand & retention 15% of revenue — a global consumer build spends hard on brand. Central is a stated budget scaling to a 100k-subscriber platform (R11m 2027 -> R88m 2032).",
     "ebitdaZAR": [
-      1224685,
-      10677363,
-      26164769
+      -1625952,
+      14902178,
+      125410090
     ],
     "ebitdaMarginPct": [
-      8.7,
-      24.1,
-      26.9
+      -11.2,
+      24.2,
+      38.9
     ],
     "capexZAR": [
-      3500000,
-      2200000,
-      1500000
+      4400000,
+      2500000,
+      2500000
     ],
     "subscribersClosing": [
-      3436,
-      7398,
-      14061
+      3727,
+      15085,
+      100183
     ],
     "activePlayers": [
-      9620,
-      20714,
-      39371
+      10434,
+      42237,
+      280514
     ],
     "moneySlipsPerYear": [
-      16663,
-      53783,
-      106329
+      17419,
+      93508,
+      624188
     ],
     "peerGMVUSD": {
       "values": [
-        666538,
-        2151308,
-        4253142
+        696758,
+        3740300,
+        24967519
       ],
       "revenueZAR": 0,
       "_note": "Money staked between players. Get Lucky's share: ZERO, permanently. Reported because it is the engagement engine that drives both revenue lines."
     },
     "memoZAR": {
       "jackpotGross": [
-        4315833,
-        13929719,
-        27539098
+        4511507,
+        24218443,
+        161664683
       ],
       "premiumCeded": [
-        1575800,
-        4603133,
-        8949383
+        1622762,
+        7072426,
+        41139524
       ],
       "expectedClaims": [
-        502680,
-        1468399,
-        2854853
+        517661,
+        2256104,
+        13123508
       ]
     },
     "engagement": {
@@ -243,12 +250,14 @@
       "jackpotAttachPct": 35,
       "avgTicketUSD": 10,
       "grossGrowthPctMonthly": [
+        13,
         12,
-        9.5,
-        8
+        11
       ],
       "churnPctMonthly": 5.5,
-      "_note": "Churn WORSENED from the old 4% to 5.5% deliberately — defended by group lock-in, vs the 10–15% a solitary product deserves. Attach 35% is the decisive assumption; the pilot measures it."
+      "_note": "Churn WORSENED from the old 4% to 5.5% deliberately — defended by group lock-in, vs the 10–15% a solitary product deserves. Attach 35% is the decisive assumption; the pilot measures it.",
+      "grossGrowthLongTermPct": 10.9,
+      "_growthNote": "Founder-set aggressive build: 100,000 subscribers by Dec 2032, carried by the invite loop plus a paid marketing budget sized for it (brand 15% of revenue, CAC $24). Churn held at 5.5%."
     },
     "_forecastWarning": "Every figure is FORECAST. Subscribers start at ZERO in Jan 2027. Trailing actual: R4.0m (traction.trailingRevenueZAR) — framed as engagement proof (10,000 entries, 800 activations, 60,000 members), per founder."
   },
@@ -464,25 +473,25 @@
     "grossMarginPct": 66,
     "insurancePremiumPctOfRevenue": 24,
     "cacUSD": 12,
-    "subs2029": 7398,
-    "subs2032": 14061,
+    "subs2029": 15085,
+    "subs2032": 100183,
     "milestonesZAR": {
       "2027": 53333333,
-      "2029": 133115141,
-      "2032": 291628573
+      "2029": 184982908,
+      "2032": 967785758
     },
     "exitMultiple": 3.0,
     "nearTermMultiple": 3.0,
     "comps": "No listed comparable exists for an insured skill-prize platform. The multiple is set against what can be evidenced, not borrowed from US consumer-subscription comps.",
     "ernieStakeZAR": {
-      "_note": "Founding 5% plus participation in this round. Dataroom only.",
+      "_note": "5% non-diluting, for name/likeness/network. Dataroom only.",
       "2027": 2666667,
-      "2029": 6655757,
-      "2032": 14581429
+      "2029": 9249145,
+      "2032": 48389288
     },
     "_multiplePolicy": "One flat revenue multiple at every forward milestone (2026-08-04). The previous shape — 4.77x implied at entry, 2.74x at 2029, 6x at 2032 — dipped then spiked, which reads as three numbers picked to hit a target rather than a method. A single multiple is what an investor expects, and it means the milestones move only with revenue. Entry stays at whatever the round implies (R53.3m post / R11.2m revenue = 4.8x), so the multiple COMPRESSES as the company scales — the direction a sceptic expects.",
     "multipleBasis": "3.0x revenue, flat at every forward milestone. The round implies 3.77x on 2027 forecast revenue, so the multiple compresses. No re-rating assumed anywhere.",
-    "entryMultipleImplied": 3.77,
+    "entryMultipleImplied": 3.69,
     "coursesAndAppRevenueUSD": {
       "2026": 604700,
       "2029": 1906000,
@@ -494,18 +503,18 @@
       "rows": [
         {
           "multiple": 2.5,
-          "milestone2029ZAR": 110929284,
-          "investorMultiple": 2.08
+          "milestone2029ZAR": 154152424,
+          "investorMultiple": 2.89
         },
         {
           "multiple": 3.0,
-          "milestone2029ZAR": 133115141,
-          "investorMultiple": 2.5
+          "milestone2029ZAR": 184982908,
+          "investorMultiple": 3.47
         },
         {
           "multiple": 3.5,
-          "milestone2029ZAR": 155300998,
-          "investorMultiple": 2.91
+          "milestone2029ZAR": 215813393,
+          "investorMultiple": 4.05
         }
       ]
     }
@@ -619,20 +628,20 @@
   },
   "fundingPlan": {
     "_note": "Derived from the cash rollforward, not asserted. EBITDA less capex, cumulative from Jan 2026.",
-    "peakDrawdownZAR": 2275315,
+    "peakDrawdownZAR": 6025952,
     "peakDrawdownYear": 2027,
     "cumulativeCashZAR": {
-      "2027": -2275315,
-      "2028": 1442844,
-      "2029": 9920206,
-      "2030": 23430087,
-      "2031": 41817356,
-      "2032": 66482125
+      "2027": -6025952,
+      "2028": -4532632,
+      "2029": 7869546,
+      "2030": 36326581,
+      "2031": 95272419,
+      "2032": 218182509
     },
-    "ebitdaPositiveFrom": 2027,
-    "cashPositiveFrom": 2028,
+    "ebitdaPositiveFrom": 2028,
+    "cashPositiveFrom": 2029,
     "raiseZAR": 8000000,
-    "_headroom": "Peak cumulative drawdown R2.3m against the R8.0m raise. The raise is investment spend — the app build (Cloud & Things), the pilot, the sign-offs, market entry — funded without waiting for the cash the plan earns alongside it.",
+    "_headroom": "Peak cumulative drawdown ~R6.0m against the R8.0m raise — the build spends hard and early on marketing and the platform because the target is 100,000 subscribers by 2032.",
     "_useVsDrawdown": "The raise is R8m of investment SPEND; peak cumulative drawdown is only R2.7m because operating cash funds the rest as it arrives. Both numbers are true and the gap is the point — the company is not burning R8m, it is deploying R8m while earning."
   },
   "insuranceModel": {
@@ -707,7 +716,7 @@
       "90-day manual pilot across the 25 installed courses measuring jackpot attach"
     ],
     "decisiveMetric": "Jackpot attach rate on a group slip — modelled 20/35/55% (sceptic/base/bull); measured by the pilot before the app ships.",
-    "verified18Birdies": "Ernie Els was the FIRST official investor in 18Birdies (Forbes, 2017). 18Birdies claims 10m+ golfers (own site / App Store). Use 10m+, never the unverified 20m figure."
+    "verified18Birdies": "Ernie was the first official investor in 18Birdies (Forbes 2017). Used SOFTLY — one line in his credibility list only. It is his third-party investment, not our channel; the market story is the 160M golfer market."
   },
   "_retired": {
     "inPlayUpsells": "Folded into the pivot: dots/junk and side pots are PEER games (no Get Lucky fee); the jackpot upgrade IS the jackpot tiers. Removed 2026-08-05."

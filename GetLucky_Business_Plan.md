@@ -29,8 +29,7 @@ four-major champion who was also the **first official investor in
 10m+ registered golfers. The proof of concept proved golfers engage. This
 round builds the product they engage with daily.
 
-**The raise: R8.0m for 15% (R45.3m pre / R53.3m post).** Ernie Els
-participates in this round. Funds build the app (Cloud & Things, led by the
+**The raise: R8.0m for 15% (R45.3m pre / R53.3m post).** Ernie Els holds 5% non-diluting for name, likeness and network. Funds build the app (Cloud & Things, led by the
 former CTO of Capitec Bank), run a 90-day live pilot across the 25 installed
 courses, secure the legal and insurer sign-offs, and take the product to its
 first paying markets.
@@ -286,27 +285,28 @@ What improves is everything around the ARPU:
 - **CAC**: every slip invites three golfers who experience the full product
   before paying anything. Blended acquisition cost falls toward the cost of
   acquiring organizers only.
-- **LTV/CAC**: at base ($5.81 × 18-month life ≈ $105 LTV against $5–8
-  blended CAC) the ratio is 13–21×; it survives a $15 CAC at 7×.
+- **LTV/CAC**: at base ($5.81 × 18-month life ≈ $105 LTV against the
+  modelled $24 blended CAC) the ratio is ~4.4× — and every organizer's
+  three invited guests push the blended cost down from there.
 
-### Preliminary 2029 sizing (base case — full pro forma follows at D2)
+### 2029 sizing (base case — ties to the pro forma workbook to the rand)
 
-~7,500 subscribing organizers by Dec 2029 (the old plan's payer trajectory,
-now with a viral loop behind it) → ~21,000 active players → ~63,000 money
-slips/year (~$2.5m peer GMV, revenue zero):
+15,085 subscribing organizers by Dec 2029, building to 100,183 by 2032 —
+~42,200 active players in 2029 → ~93,500 money slips/year (~$3.7m peer GMV,
+revenue zero):
 
 | Line | 2029 (ZAR) |
 |---|---|
-| Subscriptions | ~R16.7m |
-| Insured jackpot (net) | ~R10.8m |
-| Sponsorship | ~R5.5m |
-| Simulators | ~R12.0m |
-| Installed courses | ~R3.5m |
-| **Total (preliminary)** | **~R48m** |
+| Subscriptions | R25.2m |
+| Insured jackpot (net) | R16.3m |
+| Sponsorship | R5.5m |
+| Simulators | R12.0m |
+| Installed courses | R3.5m |
+| **Total** | **R61.7m** |
 
-Sceptic ~R27m; bull ~R75m. The pro forma (D2) builds this on the existing
-72-month engine with the assumptions above as live inputs, and every figure
-on every surface will tie to it to the rand.
+Sceptic and bull ranges are carried in the dataroom. The pro forma builds
+this on the 72-month engine with the assumptions above as live inputs, and
+every figure on every surface ties to it to the rand.
 
 ---
 
@@ -371,7 +371,7 @@ to this milestone.
 ## 11. The raise
 
 **R8.0m for 15% — R45.3m pre-money, R53.3m post.** Minimum ticket R1m
-(1.88%). **Ernie Els participates in this round.**
+(1.88%). **Ernie Els is the founding partner — 5% non-diluting for name, likeness and network.**
 
 Use of funds: the app build (Cloud & Things), the 90-day pilot, the legal
 and insurer sign-offs, simulator integration groundwork, and market

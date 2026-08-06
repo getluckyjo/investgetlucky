@@ -672,7 +672,7 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 
 /* --- brand partner card (Santam) ---------------------------------------------------------------- */
 .card--brand { background: var(--green); border-color: var(--green); color: var(--cream); }
-.card--brand h4 { color: var(--cream); }
+.card--brand h3, .card--brand h4 { color: var(--cream); }
 .card--brand .partnerlogo { height: 1.7rem; width: auto; margin-bottom: 0.9rem; }
 .card--santam { display: grid; grid-template-columns: minmax(11rem, auto) 1fr; gap: clamp(1.2rem, 4vw, 3.5rem); align-items: center; }
 .card--santam p { max-width: 58ch; }
@@ -1048,3 +1048,33 @@ h1, h2, h3 { overflow-wrap: break-word; }
 /* --- jackpot ladder moved onto the dark rung with the pivot: restyle for it --- */
 .rung--hot .stakes span { border-color: rgba(246, 244, 225, 0.35); color: var(--cream); }
 .rung--hot .stakes span strong { color: var(--gold-soft); }
+
+/* --- founder polish round --- */
+/* footer: super tight */
+.footer { padding-block: 1.6rem 1.2rem; }
+.footer .wrap { display: grid; gap: 0.5rem; }
+.footer img { width: 110px !important; height: auto !important; margin: 0 auto 0.2rem; }
+.footer .legal { font-size: 0.68rem; line-height: 1.45; margin: 0; opacity: 0.75; }
+
+/* calculator: card treatment, big figures, no cramped-table look */
+.calc {
+  background: var(--white); border-radius: 14px; padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow: var(--shadow-soft); border: 1px solid rgba(52, 82, 48, 0.18);
+}
+.calc h3 { color: var(--green); margin-top: 0; }
+.calc .amount {
+  font-family: var(--font-display); font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  color: var(--green-ink); line-height: 1; margin: 0.4rem 0 1rem;
+}
+.calc .amount .usd { font-family: var(--font-ui); font-size: 0.9rem; color: var(--gold-text); font-weight: 600; margin-left: 0.5rem; }
+.calc table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
+.calc tr + tr th, .calc tr + tr td { border-top: 1px solid rgba(52, 82, 48, 0.14); }
+.calc th[scope="row"] {
+  text-align: left; font-family: var(--font-ui); font-weight: 500; font-size: 0.85rem;
+  color: rgba(24, 39, 22, 0.75); padding: 0.7rem 0.8rem 0.7rem 0;
+}
+.calc td {
+  text-align: right; font-family: var(--font-display); font-size: 1.25rem;
+  color: var(--green); padding: 0.55rem 0; font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.calc tr:last-child td { color: var(--gold-text); }
