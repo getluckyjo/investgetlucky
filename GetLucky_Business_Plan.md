@@ -1,7 +1,7 @@
 # Get Lucky Golf Club — Business Plan
 
 **A golf day in your pocket.**
-Draft v1 for founder review · August 2026 · Confidential
+August 2026 · Confidential
 
 ---
 
@@ -36,30 +36,26 @@ first paying markets.
 
 ---
 
-## 2. Why we pivoted — the consumer evidence
+## 2. Why the money game — the consumer evidence
 
-The previous product asked a golfer to pay per swing at an insured
-hole-in-one, filming every attempt. The arithmetic against it is unforgiving:
+Twelve months and 10,000 paid entries of proof of concept taught us exactly
+what the product has to be, and the design principles are behavioural:
 
-- At amateur odds of 1-in-12,500 and a realistic 8 attempts a month, the
-  probability of a member hitting an ace in a year is **0.77%**. Over an
-  average membership life, **99 out of 100 members would never once
-  experience the thing they joined for.** Behavioural science has a name for
-  a reward schedule that never pays: extinction.
-- Filming was worse than it looked. Four players × four par-3s is **16
-  filming interruptions per fourball round**, each one requiring a playing
-  partner's time and patience, on the holes where pace-of-play pressure is
-  highest — and most recorded swings are shots the player would rather
-  forget.
-- The purchase moment — solo, on the tee, under a clock — is the single
-  worst moment in golf to sell anything.
+- **Reward every hole.** At amateur odds of 1-in-12,500, a hole-in-one is a
+  rare event by design — the jackpot, not the game. A skins game with a
+  dots layer pays somebody on **every hole**: 25–54 personal win events per
+  player per year, the most reinforcing reward schedule in consumer
+  products.
+- **Make verification social.** The fourball is standing right there for
+  every peer game. Filming is reserved for the one staged hole with
+  $100,000 on it — a highlight of the round, not an interruption to it.
+- **Sell on Thursday night.** The slip lands in the group chat when the
+  weekend is being planned — the one moment social contagion sells for us,
+  three playing partners at a time.
 
-The money game fixes all three at once. Someone wins **every hole**. A skins
-game with a dots layer produces 25–54 personal win events per player per
-year — a reinforcement gap of roughly **4,000×** over the old model.
-Verification becomes social: the fourball is standing right there. And the
-buying moment moves to Thursday night, when the slip goes to the group chat
-and social contagion works for us instead of against us.
+The insured hole-in-one takes its strongest position: the lottery ticket at
+the till of a shop you were coming to anyway — with the fourball's whole
+money game built around it.
 
 The hole-in-one does not disappear — it gets a better job. It stops being
 the reason to open the app and becomes the jackpot on the slip: the lottery
@@ -103,7 +99,7 @@ but the strongest reason the group returns next Saturday.
 
 ### The jackpot, group-pooled
 
-The single biggest design change from the old product. The fourball buys the
+The design decision the whole product turns on: the fourball buys the
 jackpot together at slip creation. Consequences:
 
 - The three playing partners stop being reluctant camera operators and
@@ -128,9 +124,9 @@ ratio, 2.51× breakeven** on ace frequency.
 | The insurer's (the jackpot) | Get Lucky — filmed, AI shot tracer, claims process | Full verification, exactly as proven on 25 installed courses |
 
 This division is the product's legal spine as much as its operational one.
-Closest-to-the-pin and longest drive — previously impossible because the
-company cannot measure proximity — return as peer-verified games, because
-the fourball can.
+Closest-to-the-pin and longest drive ship as peer-verified games: the
+company never needs to measure proximity, because the fourball is standing
+on the green and can.
 
 ### The retention spine
 
@@ -255,7 +251,7 @@ Two revenue engines, one KPI engine:
 | **Subscription** | $10/month for the app. Organizer-pays: creating games requires a subscription; invited players get a full guest experience for the round, with the subscribe prompt after first settlement | The recurring line |
 | **Insured jackpot** | Group-pooled entries at $1–$100 tiers, 66% retained after 24% premium and course share where applicable | The margin engine |
 | **Peer GMV** | Money staked in peer games. **Revenue: zero, permanently.** Reported as the engagement KPI that drives both lines above | The growth engine |
-| Sponsorship | Slips, settlement cards, the 19th-hole moment, order-of-merit boards — far richer inventory than the old product. SA contracted at R3.5m run-rate, held flat; new territories at entry | Supporting |
+| Sponsorship | Slips, settlement cards, the 19th-hole moment, order-of-merit boards — the richest sponsor inventory in golf apps. SA contracted at R3.5m run-rate, held flat; new territories at entry | Supporting |
 | Simulators (2027+) | The slip inside operator software; machine-verified insured CTP formats (a market PinSeeker has validated) | Supporting |
 | Installed courses | 25 flagship jackpot holes, instant camera verification, +25/year | Proof & brand |
 
@@ -271,17 +267,16 @@ Two revenue engines, one KPI engine:
 | **Jackpot revenue / active (net 66%)** | $0.42 | $2.31 | $7.84 |
 | **Total / active / month** | **$2.92** | **$5.81** | **$12.84** |
 
-Honestly stated: this is **~25% lower revenue per head than the old model
-claimed** — on assumptions that are enormously more believable. The old
-model rested on a 6.25% tee-side conversion nobody had ever observed. This
-one rests on behaviour that already happens in every fourball on earth, plus
-one genuinely open question (jackpot attach — see §8).
+Struck deliberately conservative — every input rests on behaviour that
+already happens in every fourball on earth, plus one genuinely open
+question (jackpot attach — see §8) that the 90-day pilot measures before
+the app ships.
 
-What improves is everything around the ARPU:
+Everything around the ARPU is built to compound:
 
 - **Churn**: group lock-in, the season ledger and unsettled IOUs defend a
-  5–6%/month assumption; the honest range for the old solitary product was
-  10–15%. Lifetime roughly doubles.
+  5–6%/month assumption — solitary consumer apps honestly run 10–15%.
+  Group products roughly double the lifetime.
 - **CAC**: every slip invites three golfers who experience the full product
   before paying anything. Blended acquisition cost falls toward the cost of
   acquiring organizers only.
@@ -313,7 +308,7 @@ every figure on every surface ties to it to the rand.
 ## 8. The one number that decides this business — and the 90-day pilot
 
 Under this plan, most of the gross margin still comes from the insured
-jackpot. The pivot makes that purchase far more likely — a group decision,
+jackpot. The group slip makes that purchase far more likely — a group decision,
 one staged hole, a shareable moment — but "more likely" is a hypothesis
 until measured. **The jackpot attach rate on a group slip is the number the
 whole model swings on.** We have modelled 20% / 35% / 55%. Nobody on earth

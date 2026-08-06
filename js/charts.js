@@ -224,8 +224,8 @@
       var c = box("chart-bridge", 240);
       if (!c) return;
       var ms = m.valuationModel.milestonesZAR;
-      var labels = ["2026 — this round", "2029 — 3-year plan", "2032 — exit vision"];
-      var vals = [ms["2026"], ms["2029"], ms["2032"]];
+      var labels = ["This round", "2029 — 3-year plan", "2032 — exit vision"];
+      var vals = [ms["2027"], ms["2029"], ms["2032"]];
       var valueLabel = {
         id: "valueLabel",
         afterDatasetsDraw: function (chart) {

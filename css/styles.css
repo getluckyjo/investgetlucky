@@ -744,87 +744,97 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 .appscreen__shade--film { background: linear-gradient(180deg, rgba(22, 38, 26, 0.55) 0%, rgba(22, 38, 26, 0.12) 40%, rgba(22, 38, 26, 0.62) 100%); }
 .appscreen__body { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2.9rem 1.2rem 1.5rem; }
 
-/* screen 1 — home */
-.apphome__logo { width: 58%; margin: auto auto 0.9rem; filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.45)); }
-.apphome__price { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-soft); }
-.apphome__prize { font-family: var(--font-display); font-size: 2.15rem; line-height: 0.95; text-transform: uppercase; color: var(--cream); margin-top: 0.3rem; }
-.apphome__sub { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.04em; opacity: 0.85; margin-top: 0.45rem; }
+/* --- app beta UI — shared design system for the four product screens --- */
 .appbtn {
   display: inline-block; font-family: var(--font-display); font-size: 0.92rem;
   text-transform: uppercase; letter-spacing: 0.07em;
   background: var(--gold); color: var(--green-ink); border-radius: 999px;
   padding: 0.6rem 1.5rem; margin-top: 0.9rem;
 }
-.appbtn--center { margin: auto auto 0; text-align: center; position: relative; z-index: 2; }
+.appbtn--sm { font-size: 0.78rem; padding: 0.5rem 1.25rem; margin: 0.15rem auto 0; text-align: center; }
 
-/* screen 2 — choose course */
-.appscreen--courses { background: linear-gradient(175deg, var(--green-deep) 0%, var(--green-ink) 90%); padding: 2.9rem 0.9rem 1.4rem; }
-.appbar { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; padding: 0.3rem 0.25rem 0.75rem; position: relative; z-index: 2; }
+.appbar { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; position: relative; z-index: 2; padding: 0.15rem 0.15rem 0.3rem; }
 .appbar__title { font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--cream); white-space: nowrap; }
-.appbar__hint { font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); white-space: nowrap; }
-.appcourses { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; position: relative; z-index: 2; }
-.appcourses li {
-  display: flex; align-items: center; gap: 0.65rem;
-  background: rgba(246, 244, 225, 0.07); border: 1px solid rgba(246, 244, 225, 0.16);
-  border-radius: 12px; padding: 0.55rem 0.7rem;
-}
-.appcourses li.is-selected { border-color: var(--gold); background: rgba(201, 169, 78, 0.16); }
-.appthumb {
-  flex: none; width: 2.15rem; height: 2.15rem; border-radius: 50%;
-  overflow: hidden; border: 1px solid rgba(246, 244, 225, 0.35); background: var(--green);
-}
-.appthumb img { width: 100%; height: 100%; object-fit: cover; }
-.appcourse { min-width: 0; }
-.appcourse strong { display: block; font-family: var(--font-ui); font-size: 0.76rem; font-weight: 700; line-height: 1.3; color: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.appcourse small { display: block; font-family: var(--font-ui); font-size: 0.64rem; color: rgba(246, 244, 225, 0.72); }
-.apptick { margin-left: auto; color: var(--gold-soft); font-weight: 700; }
+.appbar__hint { font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold-soft); white-space: nowrap; }
 
-/* screen 3 — film the shot */
-.appfilm__tracer { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
-.appfilm__tracer path {
-  fill: none; stroke: var(--gold-soft); stroke-width: 2.5; stroke-linecap: round;
-  stroke-dasharray: 6 8; filter: drop-shadow(0 0 6px rgba(232, 212, 139, 0.7));
-  animation: appdemo-tracer 2.4s linear infinite;
+.appscreen--ui {
+  background: linear-gradient(175deg, var(--green-deep) 0%, var(--green-ink) 92%);
+  padding: 2.8rem 0.75rem 0.7rem; gap: 0.42rem;
 }
-.appfilm__tracer circle { fill: var(--gold-soft); filter: drop-shadow(0 0 6px rgba(232, 212, 139, 0.9)); }
-@keyframes appdemo-tracer { to { stroke-dashoffset: -56; } }
-.appfilm__hud { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; gap: 0.6rem; padding: 2.6rem 0.9rem 0; }
-.appfilm__rec { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); background: rgba(22, 38, 26, 0.65); border-radius: 999px; padding: 0.3rem 0.65rem; }
-.appfilm__rec i { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--red-flag); animation: appdemo-rec 1.2s steps(2, jump-none) infinite; }
+
+.ap-card {
+  background: rgba(246, 244, 225, 0.055); border: 1px solid rgba(246, 244, 225, 0.14);
+  border-radius: 12px; padding: 0.5rem 0.6rem;
+}
+.ap-card--gold { border-color: rgba(201, 169, 78, 0.6); background: rgba(201, 169, 78, 0.12); }
+.ap-cap {
+  display: block; font-family: var(--font-ui); font-size: 0.53rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft);
+  margin-bottom: 0.15rem;
+}
+.ap-row { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0; font-family: var(--font-ui); }
+.ap-row--bare { padding: 0.1rem 0; }
+.ap-row--bare .ap-who, .ap-row--bare .ap-who small { white-space: normal; overflow: visible; }
+.ap-row + .ap-row { border-top: 1px solid rgba(246, 244, 225, 0.08); }
+.ap-who { flex: 1; min-width: 0; font-size: 0.7rem; font-weight: 600; line-height: 1.25; color: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ap-who small { display: block; font-size: 0.57rem; font-weight: 500; color: rgba(246, 244, 225, 0.62); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ap-amt { margin-left: auto; font-size: 0.72rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--cream); white-space: nowrap; }
+.ap-up { color: var(--gold-soft); }
+.ap-dn { color: #dc9885; }
+.ap-ava {
+  flex: none; width: 1.5rem; height: 1.5rem; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--font-ui); font-size: 0.54rem; font-weight: 800; color: var(--green-ink);
+  background: var(--gold-soft);
+}
+.ap-ava--2 { background: #a9c4a1; }
+.ap-ava--3 { background: #d9c9a3; }
+.ap-ava--4 { background: #b7d3ce; }
+.ap-chip {
+  flex: none; font-family: var(--font-ui); font-size: 0.5rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
+  color: rgba(246, 244, 225, 0.85); border: 1px solid rgba(246, 244, 225, 0.3);
+  border-radius: 999px; padding: 0.18rem 0.5rem;
+}
+.ap-chip--on { color: var(--gold-soft); border-color: rgba(232, 212, 139, 0.65); }
+.ap-chip--gold { color: var(--green-ink); background: var(--gold); border-color: var(--gold); }
+.ap-state { margin-left: auto; font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; color: var(--gold-soft); white-space: nowrap; }
+.ap-state--live { color: #e8a196; }
+.ap-state--dim { color: rgba(246, 244, 225, 0.45); font-weight: 600; }
+.ap-note { font-family: var(--font-ui); font-size: 0.58rem; line-height: 1.4; text-align: center; color: rgba(246, 244, 225, 0.68); margin: 0.05rem 0 0; }
+.ap-note strong { color: var(--cream); }
+.ap-tabs { margin-top: auto; display: flex; border-top: 1px solid rgba(246, 244, 225, 0.12); padding-top: 0.4rem; }
+.ap-tabs span { flex: 1; text-align: center; font-family: var(--font-ui); font-size: 0.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(246, 244, 225, 0.42); padding: 0.2rem 0; white-space: nowrap; }
+.ap-tabs .on { color: var(--gold-soft); }
+
+/* screen 3 — contained viewfinder */
+.ap-view { position: relative; border-radius: 12px; overflow: hidden; height: 6.6rem; border: 1px solid rgba(246, 244, 225, 0.2); flex: none; }
+.ap-view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ap-view::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(22, 38, 26, 0.35), transparent 40%, rgba(22, 38, 26, 0.55) 92%); }
+.ap-view__rec {
+  position: absolute; z-index: 2; top: 0.4rem; left: 0.4rem; display: inline-flex; align-items: center; gap: 0.3rem;
+  font-family: var(--font-ui); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--cream); background: rgba(22, 38, 26, 0.7); border-radius: 999px; padding: 0.2rem 0.5rem;
+}
+.ap-view__rec i { width: 0.42rem; height: 0.42rem; border-radius: 50%; background: var(--red-flag); animation: appdemo-rec 1.2s steps(2, jump-none) infinite; }
 @keyframes appdemo-rec { 50% { opacity: 0.25; } }
-.appfilm__hole {
-  text-align: right; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 700; line-height: 1.35; color: var(--cream);
-  background: rgba(22, 38, 26, 0.72); border: 1px solid rgba(246, 244, 225, 0.22); border-radius: 10px; padding: 0.4rem 0.6rem;
+.ap-view__tag {
+  position: absolute; z-index: 2; top: 0.4rem; right: 0.4rem;
+  font-family: var(--font-ui); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-soft); background: rgba(22, 38, 26, 0.7); border-radius: 999px; padding: 0.2rem 0.5rem;
 }
-.appfilm__hole small { display: block; font-size: 0.6rem; font-weight: 600; color: var(--gold-soft); }
-.appfilm__foot { position: relative; z-index: 2; margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 0.7rem; padding-bottom: 1.2rem; }
-.appfilm__track { font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); background: rgba(22, 38, 26, 0.65); border-radius: 999px; padding: 0.3rem 0.75rem; }
-.appfilm__shutter { width: 3rem; height: 3rem; border-radius: 50%; border: 3px solid var(--cream); background: rgba(176, 64, 47, 0.92); box-shadow: 0 0 0 4px rgba(22, 38, 26, 0.4); }
+.ap-view__bar {
+  position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; text-align: center;
+  font-family: var(--font-ui); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(246, 244, 225, 0.85); padding: 0.3rem 0.4rem;
+}
 
-/* screen 4 — verified ace */
-.appscreen--win {
-  background:
-    radial-gradient(130% 65% at 50% 0%, rgba(201, 169, 78, 0.45), transparent 60%),
-    linear-gradient(170deg, var(--green) 0%, var(--green-deep) 80%);
-}
-.appwin__badge { margin-top: auto; font-family: var(--font-ui); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-ink); background: var(--gold); border-radius: 999px; padding: 0.3rem 0.8rem; }
-.appwin__ace { font-family: var(--font-display); font-size: 3.2rem; line-height: 0.9; text-transform: uppercase; color: var(--gold-soft); margin-top: 0.9rem; text-shadow: 0 6px 26px rgba(0, 0, 0, 0.35); }
-.appwin__amount { font-family: var(--font-display); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--cream); margin-top: 0.4rem; }
-.appwin__sub { font-family: var(--font-ui); font-size: 0.64rem; letter-spacing: 0.04em; opacity: 0.85; margin-top: 0.35rem; }
-.appwin__checks { list-style: none; width: 100%; margin: 1.1rem 0 0; padding: 0; display: grid; gap: 0.45rem; font-family: var(--font-ui); font-size: 0.68rem; }
-.appwin__checks li {
-  display: flex; justify-content: space-between; gap: 0.6rem; text-align: left;
-  background: rgba(22, 38, 26, 0.5); border: 1px solid rgba(246, 244, 225, 0.18);
-  border-radius: 10px; padding: 0.5rem 0.7rem;
-}
-.appwin__checks .state { color: var(--gold-soft); font-weight: 700; white-space: nowrap; }
-.appupload {
-  margin-top: auto; width: 100%;
-  font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--gold-soft); text-align: center;
-  border: 1.5px dashed rgba(232, 212, 139, 0.75); border-radius: 12px;
-  background: rgba(201, 169, 78, 0.1); padding: 0.7rem 0.6rem;
-}
+/* screen 5 — the ace */
+.appscreen--ace { background: radial-gradient(120% 55% at 50% 18%, rgba(201, 169, 78, 0.4), transparent 62%), linear-gradient(175deg, var(--green-deep) 0%, var(--green-ink) 92%); }
+.ap-ace { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0.7rem 0 0.5rem; }
+.ap-ace__badge { font-family: var(--font-ui); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-ink); background: var(--gold); border-radius: 999px; padding: 0.24rem 0.7rem; }
+.ap-ace__word { font-family: var(--font-display); font-size: 2.9rem; line-height: 0.9; text-transform: uppercase; color: var(--gold-soft); margin-top: 0.55rem; text-shadow: 0 6px 26px rgba(0, 0, 0, 0.35); }
+.ap-ace__amt { font-family: var(--font-display); font-size: 1.45rem; letter-spacing: 0.02em; color: var(--cream); margin-top: 0.3rem; font-variant-numeric: tabular-nums; }
+.ap-ace__sub { font-family: var(--font-ui); font-size: 0.62rem; color: rgba(246, 244, 225, 0.78); margin-top: 0.2rem; }
 
 /* --- misc ------------------------------------------------------------------------------------ */
 .center { text-align: center; }
