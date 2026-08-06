@@ -366,9 +366,9 @@ to this milestone.
 **R8.0m for 15% — R45.3m pre-money, R53.3m post.** Minimum ticket R1m
 (1.88%). **Ernie Els is the founding partner — 5% non-diluting for name, likeness and network.**
 
-Use of funds: the app build (Cloud & Things), the 90-day pilot, the legal
-and insurer sign-offs, simulator integration groundwork, and market
-operations through to cash generation. The full financial model, cash
+Use of funds: the app build (Cloud & Things) 25%, ops & team 25%, market
+entry and brand 25%, simulator integration 15%, and the 90-day pilot 10% —
+through to cash generation. The full financial model, cash
 rollforward and milestone schedule follow in the pro forma (D2) and the
 dataroom.
 
