@@ -98,6 +98,7 @@ for pat, why in [
     (r"trade-up", "the tee-side trade-up loop, replaced by the slip"),
     (r"20m\+ subscribers|20 million subscribers", "the unverified 18Birdies figure — verified figure is 10m+"),
     (r"draws R2\.3m|R2\.3m is peak", "stale peak-drawdown figure — current model peak drawdown is R6.0m"),
+    (r"9\.5% → 8%|Long-term 7\.3%", "stale growth calibration — current model is 13/12/11 gross, 10.9% long-term"),
     (r"(?i)\bpivot|\bprevious plan|\bprevious product|\bold plan|\bold model|\bold product|\bold solitary|honestly stated", "pivot/old-plan framing — this is a fresh launch built on the proof of concept; pitch, never apologise"),
 ]:
     must_not(pat, why)
