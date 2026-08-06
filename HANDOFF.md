@@ -1151,8 +1151,8 @@ material fact corrections, one was a model rebuild; the rest copy/design.
   cookie gate) is DELETED; documents are no longer server-locked.
   `/api/nda-accept.js` now records the acceptance and emails
   johannes@getluckygolfclub.com via Resend when `RESEND_API_KEY` is set in
-  Vercel (free resend.com account; a site cannot send email without some
-  provider). Without the key, every acceptance still logs to the Vercel
+  Vercel (key created 2026-08-06, send-only, domain-locked; founder added
+  it to Vercel the same day — sender dataroom@getluckygolfclub.com). Without the key, every acceptance still logs to the Vercel
   function log. `js/nda.js` now fails OPEN — a failed notify never blocks
   an investor. Note: anyone with a direct file URL can now fetch a
   document without touching the form; the founder accepted that trade.
