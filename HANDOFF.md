@@ -1032,6 +1032,55 @@ D2 model rebuild -> D3 site rebuild.** D1 is `GetLucky_Business_Plan.md`
 (this commit). D2/D3 DO NOT START until the founder signs off D1 — the site
 still carries the pre-pivot product and numbers, deliberately.
 
+## 2026-08-05 (v8) — D2+D3 SHIPPED: the site, model and dataroom are the pivot
+
+The founder approved the business plan verbatim and said run to done. Done.
+
+**D2 — the model.** `GetLucky_Pro_Forma_v4.xlsx` (v3 deleted): 72-month build
+from Jan 2027, subscribers from zero at 12/9.5/8% gross with churn WORSENED to
+5.5%, actives at 2.8x, slips at 1 money round per active per month, jackpot at
+35% attach x $10 ticket net 66%, peer GMV a zero-revenue memo. Ties to
+`model.json` to the rand, 0 formula failures, first evaluation. Insurance tab
+is the pure Santam submission (blend deleted). Numbers:
+R14.1m -> R44.4m -> R97.2m; EBITDA 8.7/24.1/26.9%; milestones R53.3m / R133.1m
+/ R291.6m at flat 3.0x; investor 2.50x / IRR ~36% / 5.47x; entry 3.77x; peak
+drawdown R2.3m.
+
+**D3 — the surfaces.** index.html rebuilt: hero "A golf day in your pocket";
+the Slip walkthrough (build/send/play/jackpot hole/settle) replaces the old
+three-part model; three-layer money story (peer free forever / $10 sub /
+group-pooled jackpot); engines = sponsorship, simulators (indoor money game),
+and "Peer stakes — the line we never touch" (GMV at R0 by design; travel
+engine deleted); risk section = attach->pilot / Santam sign-off / the
+two-layer gambling answer; deal = same terms, Ernie INVESTING IN THIS ROUND
+(founder-sanctioned framing restored), use-of-funds re-cut (app build 35 /
+pilot 10 / sims 15 / market 25 / legal&ops 15), milestone list now leads with
+the P2P opinion + Santam sign-off + 90-day pilot; FAQ rewritten incl. the
+18Birdies question; appdemo re-scripted; footer carries the peer-money
+disclaimer. charts.js on the new five streams. All four PDFs regenerated,
+including the NEW `get-lucky-business-plan.pdf` (from `doc-plan.html`).
+Dataroom: three tables restated, assumptions table rewritten for the pivot,
+business plan added to the doclist.
+
+**tie-out.py: 60 checks green.** Pivot guards: no rake language anywhere, no
+blend/"included swings"/533%, no trade-up, the unverified "20m+" 18Birdies
+figure banned (verified figure 10m+ — Ernie was its FIRST official investor,
+Forbes 2017). One catch during renders: the deal band still showed R47m post
+(the 17%-era price) — the guard only matched "R47m post"; fixed and the guard
+widened to ">R47m<". The stakes ladder also went invisible when it moved onto
+the dark rung — `.rung--hot .stakes` override added.
+
+### Open for the founder
+- The pilot, the P2P legal opinion, Santam's written sign-off and Ernie's
+  counsel sign-off are now PUBLISHED milestones — they need to actually happen.
+- Cap table, management accounts, Santam agreement and the existing HIO
+  opinion: still unpublished in the dataroom, all confirmed available.
+- The appdemo concept screens still show the old solo-challenge UI imagery;
+  captions are re-scripted but new slip/ledger mock screens are an asset ask.
+- Ernie-in-this-round framing is used site-wide on the founder's instruction;
+  the subscription agreement in the dataroom should evidence it.
+- NDA_SECRET still unset in Vercel — dataroom docs 503 on the preview.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

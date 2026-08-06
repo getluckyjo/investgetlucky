@@ -149,9 +149,9 @@
       if (!c) return;
       var years = m.modelForecast.years;
       var streams = m.modelForecast.revenueStreamsZAR;
-      var mem = streams.membership.ZAR;
-      var ppp = streams.payPerPlay.ZAR;
-      var ups = streams.inPlayUpsells.ZAR;
+      var subs = streams.subscriptions.ZAR;
+      var jack = streams.insuredJackpot.ZAR;
+      var crs = streams.installedCourses.ZAR;
       var sim = streams.simulators.ZAR;
       var spon = streams.sponsorship.ZAR;
       var total = m.modelForecast.revenueZAR;
@@ -180,12 +180,12 @@
         data: {
           labels: years,
           datasets: [
-            { label: "Membership", data: mem, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "Pay-per-play", data: ppp, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "In-play upsells", data: ups, backgroundColor: SAND, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Subscriptions", data: subs, backgroundColor: GREEN, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Insured jackpot", data: jack, backgroundColor: GOLD, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
+            { label: "Installed courses", data: crs, backgroundColor: GREEN_LIGHT, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
             { label: "Simulators", data: sim, backgroundColor: TEAL, stack: "rev", borderRadius: 4, maxBarThickness: 56 },
             { label: "Sponsorship", data: spon, backgroundColor: "#8a6f2e", stack: "rev", borderRadius: 4, maxBarThickness: 56 },
-            { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: GOLD, stack: "ebitda", borderRadius: 4, maxBarThickness: 56 }
+            { label: "EBITDA (margin shown)", data: ebitda, backgroundColor: SAND, stack: "ebitda", borderRadius: 4, maxBarThickness: 56 }
           ]
         },
         options: {

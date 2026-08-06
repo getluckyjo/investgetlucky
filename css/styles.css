@@ -1044,3 +1044,7 @@ h1, h2, h3 { overflow-wrap: break-word; }
 /* --- bracket corners: the image painted over ::before, so only one showed --- */
 .portrait-slot img { z-index: 0; }
 .bracket::before, .bracket::after { z-index: 2; }
+
+/* --- jackpot ladder moved onto the dark rung with the pivot: restyle for it --- */
+.rung--hot .stakes span { border-color: rgba(246, 244, 225, 0.35); color: var(--cream); }
+.rung--hot .stakes span strong { color: var(--gold-soft); }
