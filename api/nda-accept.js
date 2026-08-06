@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         method: 'POST',
         headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: 'Get Lucky Dataroom <onboarding@resend.dev>',
+          from: 'Get Lucky Dataroom <dataroom@getluckygolfclub.com>',
           to: [NOTIFY_TO],
           subject: `Dataroom opened: ${name}${company ? ' — ' + company : ''}`,
           text: [
