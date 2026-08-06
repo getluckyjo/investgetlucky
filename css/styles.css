@@ -1131,3 +1131,26 @@ h1, h2, h3 { overflow-wrap: break-word; }
 #faq .section-head h2 { font-size: var(--step-3); }
 #faq .faq { max-width: 46rem; }
 #faq.section { padding-block: clamp(2.6rem, 5vw, 4rem); }
+
+/* ============================================================================
+   Pass 3 — rhythm. A single line of display type on an empty field before
+   each promoted peak; the mobile deal bar waits until the hero is read.
+   ========================================================================== */
+.breather { padding-block: clamp(4.5rem, 12vw, 8.5rem); }
+.breather p {
+  margin: 0; text-align: center;
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: var(--step-3); line-height: 1.05; letter-spacing: 0.02em;
+  color: var(--green); text-wrap: balance;
+}
+.breather--section { display: block; }
+
+/* slimmer sticky nav — same content, less toll */
+.nav__inner { padding-block: 0.45rem; }
+.nav__logo img { height: 38px; }
+
+/* the mobile ask waits for scroll depth (js adds .dealbar--on past the hero) */
+@media (max-width: 900px) {
+  .dealbar { transform: translateY(110%); transition: transform 0.25s ease; }
+  .dealbar--on { transform: none; }
+}
