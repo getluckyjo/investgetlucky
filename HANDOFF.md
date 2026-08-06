@@ -1079,7 +1079,8 @@ the dark rung — `.rung--hot .stakes` override added.
   captions are re-scripted but new slip/ledger mock screens are an asset ask.
 - Ernie-in-this-round framing is used site-wide on the founder's instruction;
   the subscription agreement in the dataroom should evidence it.
-- NDA_SECRET still unset in Vercel — dataroom docs 503 on the preview.
+- ~~NDA_SECRET still unset in Vercel — dataroom docs 503 on the preview.~~
+  **RESOLVED 2026-08-06**: founder dropped the hard gate — see v10 below.
 
 ## 2026-08-06 (v9) — FOUNDER POLISH ROUND: 18 updates, Ernie corrected, 100k model
 
@@ -1134,6 +1135,27 @@ material fact corrections, one was a model rebuild; the rest copy/design.
   claims, rake language, 18Birdies 20m+.
 - Business plan §7 restated to the pro forma (was preliminary ~R48m/7,500
   subs; LTV/CAC now against the $24 CAC).
+
+## 2026-08-06 (v10) — Cloud & Things logo redrawn; NDA gate becomes notify-on-open
+
+- **Cloud & Things logo**: the founder supplied the mark (stacked cloud /
+  ampersand / pill, line art). Redrawn as a clean SVG at
+  `assets/img/cloudandthings-logo.svg` (cloud + pill stroked, ampersand
+  glyph outline from Liberation Sans via fontTools) and placed on a white
+  tile in the team section — replaces the text-wordmark placeholder. The
+  v9 "real logo is an asset ask" flag is closed. Also caught and fixed:
+  Ernie's team-card role still read "Founding Partner & Investor" —
+  now "Founding Partner".
+- **NDA gate**: founder decision — *"no need for NDA secret — just send me
+  an email if someone opens it."* `middleware.js` (the fail-closed signed-
+  cookie gate) is DELETED; documents are no longer server-locked.
+  `/api/nda-accept.js` now records the acceptance and emails
+  johannes@getluckygolfclub.com via Resend when `RESEND_API_KEY` is set in
+  Vercel (free resend.com account; a site cannot send email without some
+  provider). Without the key, every acceptance still logs to the Vercel
+  function log. `js/nda.js` now fails OPEN — a failed notify never blocks
+  an investor. Note: anyone with a direct file URL can now fetch a
+  document without touching the form; the founder accepted that trade.
 
 ## Open flags for the user (unresolved)
 

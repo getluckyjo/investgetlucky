@@ -1,11 +1,9 @@
-/* NDA gate for the dataroom.
-   The documents themselves are gated server-side by middleware.js, which checks
-   a signed cookie issued by /api/nda-accept. This module handles the form and
-   the in-page reveal; it is no longer the thing standing between a visitor and
-   a confidential file, and it must not be treated as if it were.
-   If the server call fails the gate does NOT open — the documents would 302
-   back here anyway, and a page that looks unlocked while every download
-   redirects is worse than an honest error. */
+/* NDA step for the dataroom.
+   Per the founder (2026-08-06) there is no server-side lock on the documents —
+   the NDA form records who opened the room and /api/nda-accept emails the
+   founder a notification. The form must therefore never strand a real
+   investor: if the notify call fails, the room still opens and the failure
+   only goes to the console. */
 
 (function () {
   "use strict";
@@ -67,16 +65,15 @@
       document: "Get Lucky Golf investor dataroom NDA",
       acceptedAt: new Date().toISOString(),
       userAgent: navigator.userAgent
-    }).then(function () {
-      hide(wall);
-      show(room);
-      window.scrollTo({ top: 0 });
-      loadSources();
     }).catch(function (err) {
-      error.textContent = "We could not record your acceptance, so the documents stay locked. Please try again, or email johannes@getluckygolfclub.com.";
-      error.style.display = "block";
+      /* Notification failed — the room opens anyway; the acceptance is
+         still in this visitor's localStorage audit trail. */
       console.warn(err);
     });
+    hide(wall);
+    show(room);
+    window.scrollTo({ top: 0 });
+    loadSources();
   });
 
   // ---- sources list (from data/research.json) -------------------------------
