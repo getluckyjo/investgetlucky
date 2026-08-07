@@ -1209,6 +1209,51 @@ simulator SDK as a forward-compatibility outline only.
   agree with the spec and are cited by line), `data/model.json`,
   `vercel.json` (assets/docs inherits noindex + no-store). No PR opened.
 
+## 2026-08-07 (v12) — The investor demo: a tappable MVP of The Slip
+
+Founder ask: "build a demo of the app to show investors — make sure it
+looks like a real MVP — taking golfers UX as the most important thing."
+Built as a standalone, dependency-free web app at **`/demo.html`**
+(+ `css/demo.css`, `js/demo.js`), phone-first: full-bleed app on mobile,
+framed device + context rail on desktop. Guided story ("Tap through
+Saturday") with a coach bar and skip, or free-roam across the four tabs.
+
+- **The story**: Thursday slip builder (rematch prefill, live stake
+  steppers, tier sheet, the $187 exposure line with a worked breakdown
+  sheet — table-stakes caps doing the maths) → accepts streaming in
+  ("guests ride free") → lock → Saturday live ledger thru 6 → the 7th:
+  arming checklist (GPS ✓ · ball GL-07 ✓ · tee cam ✓), filmed swings with
+  an animated tracer, **Dave's verified ace** ($100,000 count-up, claim
+  checklist to FSP 3416, confetti) → hole-7 score entry with the
+  attestation handoff (**"Confirm as Markus"** — one enters, one
+  confirms; Dave's 1 locked by the tee cam) → back-nine feed → settlement
+  (insurer card separate, netted to 3 transfers, rail chips with
+  mark-as-paid and an IOU carry) → season (crest, pair bars, the IOU and
+  the snake riding forward) → one-tap rematch → end card.
+- **The maths is real**: standings fold from per-hole events, settlement
+  nets from standings, and a load-time self-check throws if the script
+  drifts. The canonical path reproduces the public concept screens to the
+  dollar (+16/+9/−4/−21 thru 6; final +$41; Piet→Johannes $28,
+  Dave→Johannes $13, Markus→Dave $6; exposure $187). If a viewer changes
+  hole-7 scores or dots, the ledger and settlement recompute honestly
+  (greedy minimal netting) and stay zero-sum.
+- **The optic yellow is now sampled, not parked**: `#eefa5a`, taken from
+  the ball in the founder's supplied ace photo (`24th career ace.png`),
+  green-leaning fluorescent exactly as v4 predicted. Used strictly as the
+  state signal — tracer, live/recording, verified badge — never
+  decoration. The v4 "parked for the app build" flag is now resolved.
+- **Integration**: linked from the `#app` section of `index.html` ("Hold
+  it yourself — tap through the live demo →") and as a `Live` row in the
+  dataroom doclist. `demo.html` + `js/demo.js` added to tie-out SURFACES
+  with three new must_have anchors — **79 checks, all green**. The demo
+  carries `noindex` and a favicon; Google Fonts is blocked in-sandbox as
+  ever (Inter falls back; PosterGothic is local and renders).
+- **QA**: driven end-to-end headless (390×844 touch + 1440×900 desktop),
+  16 screenshots reviewed, zero console/page errors beyond the known
+  sandbox font block. Two UX bugs found by the driver and fixed: the
+  coach bar intercepted taps (now pointer-transparent with scroll
+  clearance) and stacked toasts (now single-instance).
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

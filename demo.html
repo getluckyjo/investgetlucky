@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#16261a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="robots" content="noindex">
+<title>The Slip — Get Lucky Golf · investor demo</title>
+<link rel="icon" type="image/png" href="assets/img/logo-getlucky.png">
+<meta name="description" content="Tap through one Saturday fourball, slip to settlement. Product demo of the app this raise builds.">
+<link rel="preload" href="assets/fonts/PosterGothicRoundATF-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/demo.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+</head>
+<body>
+
+<!-- Desktop rail: context beside the device. Hidden on phones — on a phone the demo IS the app. -->
+<aside class="rail" aria-hidden="true">
+  <img class="rail__logo" src="assets/img/logo-color.webp" alt="">
+  <h1 class="rail__title">The Slip</h1>
+  <p class="rail__sub">One Saturday fourball, slip to settlement — the app this raise builds, as the golfer will hold it.</p>
+  <ul class="rail__points">
+    <li>The peer game is free forever — the app keeps score and never touches the pot</li>
+    <li>The $100,000 insured hole-in-one rides on the slip, verified on camera</li>
+    <li>Guests ride free: three of these four never paid a cent</li>
+  </ul>
+  <p class="rail__hint">Best held in one hand — open this page on your phone.</p>
+</aside>
+
+<!-- The device -->
+<main class="device" id="device">
+  <div class="device__notch" aria-hidden="true"></div>
+
+  <div class="statusbar" aria-hidden="true">
+    <span class="statusbar__time" id="sb-time">21:02</span>
+    <span class="statusbar__day" id="sb-day">Thu</span>
+    <span class="statusbar__right">
+      <svg class="sb-ico" viewBox="0 0 16 12" width="15" height="11"><rect x="0" y="8" width="3" height="4" rx="0.8"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="0.8"/><rect x="9" y="3" width="3" height="9" rx="0.8"/><rect x="13.5" y="0.5" width="2.5" height="11.5" rx="0.8" opacity="0.35"/></svg>
+      <span class="sb-batt"><i id="sb-batt-fill" style="width:86%"></i></span>
+    </span>
+  </div>
+
+  <div class="screen" id="screen" aria-live="polite"></div>
+
+  <nav class="tabs" id="tabs" aria-label="App sections">
+    <button class="tab is-on" data-tab="slip"><span class="tab__ico">▤</span>Slip</button>
+    <button class="tab" data-tab="ledger"><span class="tab__ico">±</span>Ledger</button>
+    <button class="tab" data-tab="shot"><span class="tab__ico">◉</span>The Shot</button>
+    <button class="tab" data-tab="season"><span class="tab__ico">☰</span>Season</button>
+  </nav>
+
+  <div class="coach" id="coach" hidden>
+    <p class="coach__text" id="coach-text"></p>
+    <div class="coach__meta"><span class="coach__dots" id="coach-dots"></span><button class="coach__skip" id="coach-skip" type="button">Skip ahead</button></div>
+  </div>
+</main>
+
+<script src="js/demo.js" defer></script>
+</body>
+</html>

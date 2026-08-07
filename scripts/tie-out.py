@@ -16,7 +16,8 @@ SURFACES = ["index.html", "dataroom.html",
             "scripts/docs/doc-faq.html", "scripts/docs/doc-market.html",
             "scripts/docs/doc-simulator.html",
             "scripts/docs/doc-ernie.html", "scripts/docs/doc-ernie-commercial.html",
-            "scripts/docs/doc-app.html", "GetLucky_App_Requirements.md"]
+            "scripts/docs/doc-app.html", "GetLucky_App_Requirements.md",
+            "demo.html", "js/demo.js"]
 text = {f: (ROOT / f).read_text() for f in SURFACES}
 fails, checks = [], 0
 
@@ -164,6 +165,9 @@ must_have("scripts/docs/doc-app.html", "jackpot attach", "the pilot's decisive m
 must_have("scripts/docs/doc-app.html", "zero prize risk", "the subscription includes no swings")
 must_have("GetLucky_App_Requirements.md", "one enters, one confirms", "the peer attestation model")
 must_have("GetLucky_App_Requirements.md", "zero prize risk", "subscription = app access only")
+must_have("demo.html", "never touches the pot", "the demo carries the peer-layer honesty line")
+must_have("demo.html", "ride free", "guests never pay, in the demo too")
+must_have("js/demo.js", "one enters, one confirms", "the attestation model is in the product demo")
 
 
 # every published USD conversion must equal the ZAR figure at the stated FX
