@@ -1254,6 +1254,31 @@ Saturday") with a coach bar and skip, or free-roam across the four tabs.
   coach bar intercepted taps (now pointer-transparent with scroll
   clearance) and stacked toasts (now single-instance).
 
+## 2026-08-07 (v13) — Demo smoothness pass + the skins board
+
+Founder ask: "run through the UX and the design to make it super smooth —
+also maybe a section on the skins entry per hole." Changes to
+`js/demo.js` / `css/demo.css` only:
+
+- **Skins, hole by hole** (the new section): an 18-cell board — winner's
+  initials in their avatar colour, "→" for halved-carries, the 7th ringed
+  gold. Appears inline on the Ledger once the back nine finishes, and from
+  the settlement via "Skins, hole by hole →". Every cell opens a detail
+  sheet: the hole's story line, the skin result, and the attestation pair
+  ("Entered by Markus · confirmed by Piet") — the one-enters-one-confirms
+  model made visible on every single hole. Board data (`SKINS` in
+  demo.js) is consistent with the feed labels and the carried pots.
+- **Smoothness**: coach captions cut to one–two lines and the panel
+  slimmed; pulsing CTAs now auto-scroll into view when they arm; act
+  changes get a screen-level fade; settlement rail taps update the chip
+  in place instead of re-rendering the card (no animation restarts, and
+  the season +$227→+$240 bump now happens exactly once); the exposure
+  figure pulses when a stake changes; a big optic "In!!" beat lands on
+  the viewfinder before the cut to the ace screen; sticky app-bar
+  gradient made more opaque so scrolled text no longer ghosts through.
+- QA re-driven end-to-end headless (plus the new board + hole-sheet
+  steps); tie-out still 79 green.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
