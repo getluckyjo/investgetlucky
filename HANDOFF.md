@@ -1157,6 +1157,103 @@ material fact corrections, one was a model rebuild; the rest copy/design.
   an investor. Note: anyone with a direct file URL can now fetch a
   document without touching the form; the founder accepted that trade.
 
+## 2026-08-07 (v11) — App UX & technical requirements: master spec + dataroom PDF
+
+The founder asked to build the full app-flow UX and technical requirements
+from the approved business plan. Decisions confirmed with him first:
+master spec + condensed dataroom PDF; PWA-first web core with wrapped
+iOS/Android store builds (one codebase, guests always join by link); scope =
+golfer app + 90-day pilot instrumentation + verification/claims ops console,
+simulator SDK as a forward-compatibility outline only.
+
+- **`GetLucky_App_Requirements.md`** (repo root, new): the master working
+  spec v1.0 for the founder and Cloud & Things. §0–§26 + glossary: the legal
+  spine as numbered product principles; roles/account model (guests are the
+  same account later promoted); the four-tab IA mapped line-by-line to the
+  six concept screens plus a 34-screen inventory; fifteen end-to-end flows
+  (slip → guest accept → lock → one-enters-one-confirms scoring → live
+  ledger → The Shot → claim → settlement → season, plus Pride Mode,
+  responsible play, mid-round edges, offline); the rules/handicap/netting
+  engines; the jackpot layer (USD ladder only — the ZAR stake ladder is the
+  installed-course product, never mixed); verification + claims state
+  machine; settlement rails as unilateral public link formats; data model
+  (~28 entities); analytics with **the pinned attach definition** (paid
+  ticket ÷ locked slips) shared verbatim by app, pilot and readouts; NFRs;
+  anti-fraud; ops console; pilot instrumentation (capture instrument = the
+  guest PWA slip-lite writing the same records, so pilot metric == app
+  metric structurally); the v1.0 cut against Q4 2026 / Q1 2027 / Q4 2027;
+  and an open-decisions register (§25) that flags rather than invents the
+  founder's calls: WHS/GHIN licensing, group-claim ownership/tax, billing
+  processor + store IAP posture, R149-vs-$10 price architecture, guest data
+  retention, refund terms, per-market Pride/jackpot interplay.
+- **New dataroom document**: `scripts/docs/doc-app.html` →
+  `assets/docs/get-lucky-app-requirements.pdf` (4 pages, house doc style,
+  printed via the README pipeline). Registered in `dataroom.html` directly
+  under the business plan: "App requirements — the build blueprint". Reads
+  as evidence the app this raise builds is specified before it is built.
+- **tie-out.py**: `doc-app.html` AND `GetLucky_App_Requirements.md` added to
+  `SURFACES` — both fact-bearing, both now protected by the full must_not
+  battery — plus 8 new must_have anchors (attestation line, never-touch,
+  Pride Mode, ride free, jackpot attach, zero prize risk). 76 checks, all
+  green. Consequence for future editors: the master spec cannot use the
+  banned framings (the p-word, "included swings", competitor names, etc.);
+  its traceability table therefore refers to the model.json launch block
+  descriptively rather than by that block's literal key name.
+- **`.vercelignore`**: `/GetLucky_App_Requirements.md` added — the master
+  spec carries the anti-fraud model and ops internals, so it stays off the
+  public deploy; investors get the gated PDF. **Flag for the founder**:
+  `GetLucky_Business_Plan.md` and `INVESTOR-REVIEW.md` at the root are NOT
+  ignored and are publicly fetchable on the deployed site today. Same
+  treatment (add to .vercelignore) is a one-line change if unintended.
+- Deliberately untouched: `index.html` (the six concept screens already
+  agree with the spec and are cited by line), `data/model.json`,
+  `vercel.json` (assets/docs inherits noindex + no-store). No PR opened.
+
+## 2026-08-07 (v12) — The investor demo: a tappable MVP of The Slip
+
+Founder ask: "build a demo of the app to show investors — make sure it
+looks like a real MVP — taking golfers UX as the most important thing."
+Built as a standalone, dependency-free web app at **`/demo.html`**
+(+ `css/demo.css`, `js/demo.js`), phone-first: full-bleed app on mobile,
+framed device + context rail on desktop. Guided story ("Tap through
+Saturday") with a coach bar and skip, or free-roam across the four tabs.
+
+- **The story**: Thursday slip builder (rematch prefill, live stake
+  steppers, tier sheet, the $187 exposure line with a worked breakdown
+  sheet — table-stakes caps doing the maths) → accepts streaming in
+  ("guests ride free") → lock → Saturday live ledger thru 6 → the 7th:
+  arming checklist (GPS ✓ · ball GL-07 ✓ · tee cam ✓), filmed swings with
+  an animated tracer, **Dave's verified ace** ($100,000 count-up, claim
+  checklist to FSP 3416, confetti) → hole-7 score entry with the
+  attestation handoff (**"Confirm as Markus"** — one enters, one
+  confirms; Dave's 1 locked by the tee cam) → back-nine feed → settlement
+  (insurer card separate, netted to 3 transfers, rail chips with
+  mark-as-paid and an IOU carry) → season (crest, pair bars, the IOU and
+  the snake riding forward) → one-tap rematch → end card.
+- **The maths is real**: standings fold from per-hole events, settlement
+  nets from standings, and a load-time self-check throws if the script
+  drifts. The canonical path reproduces the public concept screens to the
+  dollar (+16/+9/−4/−21 thru 6; final +$41; Piet→Johannes $28,
+  Dave→Johannes $13, Markus→Dave $6; exposure $187). If a viewer changes
+  hole-7 scores or dots, the ledger and settlement recompute honestly
+  (greedy minimal netting) and stay zero-sum.
+- **The optic yellow is now sampled, not parked**: `#eefa5a`, taken from
+  the ball in the founder's supplied ace photo (`24th career ace.png`),
+  green-leaning fluorescent exactly as v4 predicted. Used strictly as the
+  state signal — tracer, live/recording, verified badge — never
+  decoration. The v4 "parked for the app build" flag is now resolved.
+- **Integration**: linked from the `#app` section of `index.html` ("Hold
+  it yourself — tap through the live demo →") and as a `Live` row in the
+  dataroom doclist. `demo.html` + `js/demo.js` added to tie-out SURFACES
+  with three new must_have anchors — **79 checks, all green**. The demo
+  carries `noindex` and a favicon; Google Fonts is blocked in-sandbox as
+  ever (Inter falls back; PosterGothic is local and renders).
+- **QA**: driven end-to-end headless (390×844 touch + 1440×900 desktop),
+  16 screenshots reviewed, zero console/page errors beyond the known
+  sandbox font block. Two UX bugs found by the driver and fixed: the
+  coach bar intercepted taps (now pointer-transparent with scroll
+  clearance) and stacked toasts (now single-instance).
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly

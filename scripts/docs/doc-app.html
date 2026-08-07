@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="doc-style.css">
+<title>Get Lucky Golf — App Requirements</title>
+</head>
+<body>
+
+<img class="logo" src="http://localhost:8123/assets/img/logo-color.webp" alt="Get Lucky Golf Club">
+
+<h1>GET LUCKY GOLF <span class="x">×</span> THE APP</h1>
+<p class="subtitle">The build blueprint — the full app flow, specified before it is built · August 2026 · Confidential</p>
+<hr class="rule">
+
+<p class="lead"><strong>What this document is.</strong> The condensed summary of the working specification behind the app build — every flow from Thursday-night slip to 18th-green settlement, the verification and claims machinery, the pilot instrumentation and the v1.0 cut, written down before a line of production code. The full specification is the document Cloud &amp; Things build from and the document the build is held to. This is the version an investor can read in ten minutes.</p>
+<p class="badge">Specified before it is built — working spec v1.0 drives the build</p>
+
+<h2>The spine the whole product hangs on</h2>
+<p>Two kinds of money, two regimes, never mixed. Every screen, flow and API in the specification is downstream of this table:</p>
+<table>
+  <thead><tr><th>Whose money</th><th>Who verifies</th><th>Get Lucky's role</th></tr></thead>
+  <tr><td>The players' — skins, nassau, dots, teams</td><td>The fourball: <strong>one enters, one confirms</strong></td><td><strong>None.</strong> We keep score. We <strong>never touch</strong> the pot, hold nothing, adjudicate nothing — zero from peer games, permanently</td></tr>
+  <tr><td>The insurer's — the jackpot</td><td>Get Lucky: filmed, verified, claims process</td><td>Full verification, exactly as proven on the 25 installed courses</td></tr>
+</table>
+<p>The subscription buys the app and only the app — games, ledger, handicaps, history. It includes no swings and carries <strong>zero prize risk</strong>: every insured swing is a separate paid entry, with 24% of that entry ceded as premium on the same swing that creates the risk. These aren't policies that can drift; they are written into the spec as constitutional requirements every build ticket cites.</p>
+
+<h2>The app in four tabs</h2>
+<table>
+  <tr><td class="label">Slip</td><td>Build, send, accept and read the bet card — the seven-step slip built in under a minute.</td></tr>
+  <tr><td class="label">Ledger</td><td>The live round: standings with reason strings, the hole-by-hole feed, score entry, settlement at the end.</td></tr>
+  <tr><td class="label">The Shot</td><td>Everything insurer-side: the group ticket, arming, filming, verification, the claim tracker.</td></tr>
+  <tr><td class="label">Season</td><td>The memory: lifetime ledger against each named mate, groups, one-tap rematch.</td></tr>
+</table>
+<p class="note">This is the same four-tab architecture as the six concept screens on the investment page — the spec maps to those screens line by line and extends them to a full 34-screen inventory with every state drawn.</p>
+
+<h2>Slip to settlement — the golfer's flow, specified end to end</h2>
+<table>
+  <tr><td class="label">The slip</td><td>Course, the four, handicaps pulled and overridable (the app never argues with the group), the game stack with per-game stakes, the jackpot layer — then send. Fifteen flows specified with steps, states, edge cases and acceptance criteria.</td></tr>
+  <tr><td class="label">Guests join by link</td><td>An invited player opens the slip in any browser — nothing to download, nothing to pay. Guests <strong>ride free</strong>, forever; the full slip and their own maximum exposure in plain currency are shown before they accept. Every slip is three product demos.</td></tr>
+  <tr><td class="label">Lock at the first tee</td><td>After lock, nothing about the accepted terms changes — no player's exposure can ever exceed the number they accepted. Late joins, drop-outs, no-shows and rained-off rounds all have specified resolutions.</td></tr>
+  <tr><td class="label">Scoring</td><td>One enters, one confirms — every result carries two attestations from two different players. Disputes resolve inside the fourball by design; there is no referee desk, because the product's legal spine forbids one.</td></tr>
+  <tr><td class="label">The live ledger</td><td>Derived, never hand-edited. Skins carry, presses arm, dots stack — and every line explains itself. Nobody argues on the 18th, because nobody can.</td></tr>
+  <tr><td class="label">Settlement</td><td>Netted to the provable minimum of transfers — "Dave → Johannes $13. Done." — deep-linked into the payment app each mate already uses. Get Lucky routes nothing and holds nothing; an unsettled balance carries forward as the reason the group returns next Saturday.</td></tr>
+</table>
+
+<h2>The engines under it</h2>
+<p><strong>The rules engine</strong> is specified format by format — skins with carryovers, nassau with press caps, better-ball, the dots catalogue including the snake — as one pure, deterministic module: same slip, same results, same answer on every phone, with the worked examples shipping as the test suite. <strong>The handicap and fairness engine</strong> — named in the business plan as the make-or-break component — is specified to make every stroke explainable: sources labelled, allowances visible as presets, overrides always winning, the maths one tap away. <strong>The netting algorithm</strong> is provably minimal and checks itself to the cent before a settlement card ever renders.</p>
+
+<h2>The jackpot, verified</h2>
+<table>
+  <tr><td class="label">The ladder</td><td>$1 → $500 · $5 → $2,500 · $10 → $10,000 · $50 → $50,000 · $100 → $100,000 — one tier per group ticket, 24% of every entry ceded as premium on the swing that creates the risk.</td></tr>
+  <tr><td class="label">Group-pooled</td><td>The fourball buys in together at slip creation; any participating ace pays the group. Four swings on one designated hole — each a separately paid entry — so filming is a highlight, not an interruption.</td></tr>
+  <tr><td class="label">Two verification lanes</td><td>On the 25 installed courses: the camera rig and shot tracer, near-instant, exactly as proven over 10,000 entries. On any other course: film-and-submit in-app — ball registered and marked, GPS-fenced, watermarked at capture — reviewed inside 24 hours against a published checklist.</td></tr>
+  <tr><td class="label">Claim to payout</td><td>A specified state machine from verified ace to paid claim: evidence package assembled by the app, claim opened with the insurer through the broker, KYC in-app, and the prize paid by the insurer directly to the winners — never through Get Lucky, never from anyone's pocket.</td></tr>
+</table>
+
+<h2>Built to launch anywhere</h2>
+<table>
+  <tr><td class="label">Platform</td><td>Web-first with wrapped iOS and Android builds from one codebase: guests need only a link, organisers get first-class push and camera. No second codebase, ever.</td></tr>
+  <tr><td class="label">Offline-first</td><td>Golf courses have dead zones, so the full round — scoring, ledger, filming, arming — works with zero signal and syncs cleanly after. Conflicts resolve by attestation, never by clock.</td></tr>
+  <tr><td class="label">Geo-gates from the first commit</td><td>Market × feature × mode flags are architecture, not an afterthought — a named gating milestone. Unknown market? The app defaults to points and no jackpot, automatically.</td></tr>
+  <tr><td class="label">Pride Mode default</td><td>The identical game in points is the default state of every new slip and the compliant mode wherever real-money play is restricted — feature-complete, not a consolation.</td></tr>
+  <tr><td class="label">Responsible play in v1</td><td>Maximum exposure before every acceptance, table-stakes caps, self-set loss limits with cooling-off, "even it up" prompts — shipping in v1 regardless of what any regulator requires.</td></tr>
+</table>
+
+<h2>Measured before it ships — the pilot is designed, not improvised</h2>
+<p>The <strong>jackpot attach</strong> rate on a group slip is the number the whole model swings on — modelled at 35% of slips (20% sceptic / 55% bull) and never before observed, because nobody has offered this product. The 90-day pilot across the 25 installed courses measures it with the app's own instruments: the capture tool is the guest web slip, cut down, writing the same records and firing the same analytics events the app will fire — so the pilot's attach number and the app's attach number are <strong>the same measurement by construction</strong>, not a spreadsheet translated after the fact. Course staff log every fourball offered, so slip-creation share has a real denominator. Three numbers come out: what share of fourballs create a slip, what share of slips add the jackpot, and what they pay. Above ~30%, the plan is conservative. Below ~15%, the company course-corrects with the capital intact.</p>
+
+<h2>The v1.0 cut &amp; the milestones</h2>
+<table>
+  <thead><tr><th>When</th><th>What</th></tr></thead>
+  <tr><td><strong>Q4 2026</strong></td><td>Pilot kit live on production infrastructure · geo-flag and analytics foundations · the game engines built and test-vectored first · legal opinion and insurer sign-off milestones run alongside</td></tr>
+  <tr><td><strong>Q1 2027</strong></td><td><strong>v1.0 launches — USD-led, global, honour mode:</strong> the seven-step slip · skins, nassau with presses, better-ball, dots · one-enters-one-confirms scoring · live ledger · the jackpot on installed and open courses · claims · netted settlement with the carry-forward ledger · season ledger and rematch · Pride Mode default · the full responsible-play set · offline round loop · push</td></tr>
+  <tr><td><strong>Q4 2027</strong></td><td>Simulator SDK — the spec keeps the engines venue-agnostic and the verifier pluggable now, so the slip drops into operator software without a rebuild</td></tr>
+</table>
+<p class="note">Later, by design: order of merit and society leagues, custom crests, banter cards, fields of five-plus, extra rails and languages. Never in this plan: wallets, custody, or any touch of peer money.</p>
+
+<h2>Open decisions — flagged, not fudged</h2>
+<p>The spec closes with a register of the decisions that belong to the founder, counsel or the insurer rather than to a build team — handicap-data licensing, the legal ownership and tax treatment of a group claim, the billing processor and app-store posture, pricing architecture across markets, data-retention periods. Each is named, owned and dated, with a holding position specified so the build never stalls waiting. A specification that pretended to settle these would be weaker, not stronger.</p>
+
+<div class="footer">
+  <p>Confidential — distributed under NDA. This document summarises a working product specification; it is not an offer, and forward-looking figures are illustrative, based on stated assumptions, and not a guarantee of return. Peer-game figures describe player-to-player stakes in which Get Lucky has no participation and takes no fee. Insurer arrangements are subject to the gating milestones stated in the business plan. Get Lucky Golf Club (Pty) Ltd · Registration 2025/047585/07.</p>
+<p class="contact">Johannes le Roux — Founder &amp; Managing Director, Get Lucky Golf<br>johannes@getluckygolfclub.com · +27 60 961 5091</p>
+</div>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 # Gated copies for the dataroom live under /assets/docs (kept deployed).
 /HANDOFF.md
 /README.md
+/GetLucky_App_Requirements.md
 /*.pdf
 /*.xlsx
 /*.jpg
