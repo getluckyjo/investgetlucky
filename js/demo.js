@@ -58,6 +58,17 @@
     { h: 18, label: "18th · skin $10 — Johannes · the snake bites Dave",     deltas: [5, -1, 0, -4] }
   ];
 
+  // The skins line, hole by hole — who took the skin, where it carried.
+  // "C" = halved, skin carries. Hole 7 is the staged hole: Dave's verified
+  // ace takes the skin and the carry with it.
+  var SKINS = [
+    { h: 1, s: "C" }, { h: 2, s: "J" }, { h: 3, s: "M" }, { h: 4, s: "J" },
+    { h: 5, s: "D" }, { h: 6, s: "C" }, { h: 7, s: "D", gold: true },
+    { h: 8, s: "J" }, { h: 9, s: "M" }, { h: 10, s: "M" }, { h: 11, s: "J" },
+    { h: 12, s: "P" }, { h: 13, s: "C" }, { h: 14, s: "J" }, { h: 15, s: "M" },
+    { h: 16, s: "J" }, { h: 17, s: "C" }, { h: 18, s: "J" }
+  ];
+
   // The concept-screen settlement card, used verbatim on the canonical path.
   var CANONICAL_NETS = [41, -7, -6, -28];
   var CANONICAL_TRANSFERS = [
@@ -154,6 +165,7 @@
     final: null,
     transfers: null,
     paid: {},                 // transfer index -> "paid" | "iou"
+    seasonBumped: false,
     storyDone: false
   };
 
@@ -189,6 +201,11 @@
   function $(sel) { return $screen.querySelector(sel); }
   function $all(sel) { return Array.prototype.slice.call($screen.querySelectorAll(sel)); }
 
+  function revealPulse() {
+    // When a step hands the golfer a pulsing CTA, make sure it is on screen.
+    var el = $screen.querySelector(".pulse");
+    if (el && el.scrollIntoView) el.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+  }
   function setClock(day, time, batt) {
     $sbDay.textContent = day; $sbTime.textContent = time;
     if (batt) $sbBatt.style.width = batt + "%";
@@ -250,6 +267,69 @@
           '<span class="who">' + p.name + "<small>" + esc(reasons[p.id] || "") + "</small></span>" +
           '<span class="amt ' + (v >= 0 ? "up" : "dn") + '">' + money(v) + "</span></div>";
       }).join("") + "</div>";
+  }
+  function holeStory(hn) {
+    if (hn === 7) return "The staged hole. Dave's verified ace — the skin, the carry, and the group's $" + (S.tier.prize / 1000) + "K ticket, all his and theirs.";
+    var r = FRONT.concat(BACK).filter(function (x) { return x.h === hn; })[0];
+    return r ? r.label : "Halved — the skin carries.";
+  }
+  function attestPair(hn) {
+    // Deterministic pair per hole: someone enters, someone else confirms.
+    var order = ["J", "D", "M", "P"];
+    var a = order[hn % 4], b = order[(hn + 1) % 4];
+    var name = function (id) { return PLAYERS.filter(function (p) { return p.id === id; })[0].name; };
+    return "Entered by " + name(a) + " · confirmed by " + name(b);
+  }
+  function skinsBoardCard(extraClass) {
+    function cell(x) {
+      var cls = "scell" + (x.s === "C" ? " scell--carry" : "") + (x.gold ? " scell--gold" : "");
+      var body;
+      if (x.s === "C") body = "<b>→</b>";
+      else {
+        var p = PLAYERS.filter(function (q) { return q.id === x.s; })[0];
+        body = '<span class="sini" style="background:var(--ava-' + x.s.toLowerCase() + ')">' + p.ini + "</span>";
+      }
+      return '<button class="' + cls + '" data-hole="' + x.h + '"><small>' + x.h + "</small>" + body + "</button>";
+    }
+    return '<div class="card ' + (extraClass || "") + '"><span class="cap">Skins · hole by hole — tap a hole</span>' +
+      '<div class="sboard">' + SKINS.slice(0, 9).map(cell).join("") + "</div>" +
+      '<div class="sboard">' + SKINS.slice(9).map(cell).join("") + "</div>" +
+      '<div class="sboard-legend"><span>initials — skin won</span><span>→ halved · carries</span><span style="color:var(--gold-soft)">7 — the $' + (S.tier.prize / 1000) + "K hole</span></div></div>";
+  }
+  function openHoleSheet(hn) {
+    var x = SKINS[hn - 1];
+    var result = x.s === "C"
+      ? "Halved — no skin paid; the pot rides to the next hole."
+      : PLAYERS.filter(function (p) { return p.id === x.s; })[0].name + " takes the skin.";
+    openSheet(
+      "<h3>Hole " + hn + (x.gold ? ' · the $' + (S.tier.prize / 1000) + "K hole" : "") + "</h3>" +
+      '<div class="card card--flat" style="margin-top:0.2rem">' +
+      '<div class="row row--bare"><span class="who">' + esc(holeStory(hn)) + "</span></div>" +
+      '<div class="row"><span class="who">Skins</span><span class="state">' + esc(result) + "</span></div>" +
+      '<div class="row"><span class="who" style="font-weight:600;color:var(--cream-mut);font-size:0.78rem">' + esc(attestPair(hn)) +
+      " — two attestations on every hole. The app keeps score and adjudicates nothing.</span>" +
+      (x.gold ? '<span class="chip chip--optic">Verified</span>' : "") + "</div></div>" +
+      '<button class="btn btn--sm" id="hole-back" style="margin-top:0.5rem">All 18</button>',
+      function (sheet) {
+        sheet.querySelector("#hole-back").addEventListener("click", openBoardSheet);
+      }
+    );
+  }
+  function openBoardSheet() {
+    openSheet(
+      "<h3>The skins line</h3>" + skinsBoardCard("card--flat") +
+      '<p class="note">Every skin traces to an entered-and-confirmed hole. Halved holes carry the pot — the reason the 7th had $20 riding before anyone swung.</p>',
+      function (sheet) {
+        sheet.querySelectorAll("[data-hole]").forEach(function (b) {
+          b.addEventListener("click", function () { openHoleSheet(+b.getAttribute("data-hole")); });
+        });
+      }
+    );
+  }
+  function wireBoard(root) {
+    (root || $screen).querySelectorAll("[data-hole]").forEach(function (b) {
+      b.addEventListener("click", function () { openHoleSheet(+b.getAttribute("data-hole")); });
+    });
   }
   function feedCard(rows, cap) {
     return '<div class="card feed enter-2"><span class="cap">' + (cap || "The round so far") + "</span>" +
@@ -317,7 +397,11 @@
         idx = Math.min(steps.length - 1, Math.max(0, idx + (+b.getAttribute("data-d"))));
         g.stake = steps[idx];
         wrap.querySelector("b").textContent = "$" + g.stake;
-        document.getElementById("exp").textContent = "$" + exposureTotal();
+        var exp = document.getElementById("exp");
+        exp.textContent = "$" + exposureTotal();
+        exp.classList.remove("flash");
+        void exp.offsetWidth;
+        exp.classList.add("flash");
       });
     });
     $("#exp-open").addEventListener("click", openExposureSheet);
@@ -397,6 +481,7 @@
           var btn = document.getElementById("to-sat");
           btn.disabled = false; btn.classList.add("pulse");
           coachFor(2.5);
+          revealPulse();
         }
       }, reduceMotion ? 50 * (i + 1) : s.t);
     });
@@ -449,6 +534,7 @@
           var btn = document.getElementById("film");
           btn.disabled = false; btn.classList.add("pulse");
           coachFor(4.5);
+          revealPulse();
         }
       }, reduceMotion ? 40 * (i + 1) : 650 * (i + 1));
     });
@@ -522,8 +608,12 @@
       tracerPlay(svg, s.path, reduceMotion ? 1 : s.ms, function () {
         if (s.ace) {
           document.getElementById("shot-result").innerHTML = '<span style="color:var(--optic);font-weight:800">Tracking… it\'s tight on the flag —</span>';
-          setTimeout(function () { go(6); }, reduceMotion ? 120 : 900);
           clearInterval(recTimer);
+          setTimeout(function () {
+            var view = $screen.querySelector(".view");
+            if (view) view.insertAdjacentHTML("beforeend", '<span class="in-flash">In!!</span>');
+            setTimeout(function () { go(6); }, reduceMotion ? 80 : 850);
+          }, reduceMotion ? 40 : 550);
           return;
         }
         st.textContent = "Filmed ✓"; st.className = "state";
@@ -567,6 +657,7 @@
           var btn = document.getElementById("to-scores");
           btn.disabled = false; btn.classList.add("pulse");
           coachFor(6.5);
+          revealPulse();
         }
       }, reduceMotion ? 60 * (i + 1) : c.t);
     });
@@ -622,6 +713,7 @@
         btn.textContent = "Confirm as Markus";
         btn.classList.add("pulse");
         coachFor(7.5);
+        revealPulse();
       } else if (!S.confirmed) {
         S.confirmed = true;
         S.hole7 = hole7Deltas();
@@ -652,9 +744,12 @@
         computeFinal();
         var hint = document.getElementById("thru-hint");
         if (hint) hint.textContent = "18 holes · " + money(S.final[0]);
+        feed.insertAdjacentHTML("afterend", skinsBoardCard("enter"));
+        wireBoard();
         var btn = document.getElementById("to-settle");
         btn.disabled = false; btn.classList.add("pulse");
         coachFor(8.5);
+        revealPulse();
         return;
       }
       var r = picks[shown];
@@ -687,30 +782,39 @@
         return '<div class="row transfer"><span class="who">' + names[t.from] + " → " + names[t.to] +
           "<small>" + esc(t.sub) + '</small></span><span class="amt">$' + t.amt + "</span>" + railChip(t, i) + "</div>";
       }).join("") + "</div>" +
+      '<button class="linkline enter-3" id="board-open">Skins, hole by hole →</button>' +
       '<div class="card enter-3"><span class="cap">Season ledger · updated</span>' +
-      '<div class="row"><span class="ava ava--d">DK</span><span class="who">You vs Dave · all-time<small>27 rounds</small></span><span class="amt up" id="szn-dave">+$227</span></div>' +
+      '<div class="row"><span class="ava ava--d">DK</span><span class="who">You vs Dave · all-time<small>27 rounds</small></span><span class="amt up" id="szn-dave">' + (S.seasonBumped ? "+$240" : "+$227") + "</span></div>" +
       '<div class="row"><span class="who">Same four, Saturday 07:30?<small>one-tap rematch — the IOU rides along</small></span><span class="chip chip--gold" id="rematch">Send</span></div></div>' +
       '<p class="note" style="text-align:center;color:var(--cream-mut);font-size:0.75rem">Deep-links into the payment app each pair already uses. Get Lucky routes nothing and holds nothing.</p>';
 
-    var dave = document.getElementById("szn-dave");
-    setTimeout(function () { if (dave.isConnected) dave.textContent = "+$240"; }, reduceMotion ? 100 : 1400);
+    if (!S.seasonBumped) {
+      setTimeout(function () {
+        var dave = document.getElementById("szn-dave");
+        S.seasonBumped = true;
+        if (dave && dave.isConnected) dave.textContent = "+$240";
+      }, reduceMotion ? 100 : 1400);
+    }
 
     $all("[data-t]").forEach(function (b) {
       b.addEventListener("click", function () {
         var i = +b.getAttribute("data-t");
         var t = S.transfers[i];
+        var chipHtml;
         if (i === 1) {
           S.paid[i] = "iou";
+          chipHtml = '<span class="chip">IOU · Sat</span>';
           toast("No stress — carried to Saturday as an IOU");
         } else {
           S.paid[i] = "paid";
+          chipHtml = '<span class="chip chip--paid">Paid ✓</span>';
           toast(t.rail + " opens — $" + t.amt + " prefilled, reference “Boschenmeer Sat”");
         }
-        renderSettlement();
-        var done = S.transfers.some(function (_, k) { return S.paid[k]; });
-        if (done) coachFor(9.5);
+        b.outerHTML = chipHtml; // surgical: no re-render, nothing else moves
+        coachFor(9.5);
       });
     });
+    $("#board-open").addEventListener("click", openBoardSheet);
     $("#rematch").addEventListener("click", function () { go(10); });
     coachFor(9);
   }
@@ -738,6 +842,7 @@
       '<button class="btn enter-4 pulse" id="send-rematch">Same four, Saturday 07:30 — send</button>';
     $("#send-rematch").addEventListener("click", function () { go(11); });
     coachFor(10);
+    revealPulse();
   }
 
   function renderEnd() {
@@ -792,20 +897,20 @@
   ];
 
   var COACH = {
-    1:   "Thursday night. The slip is a <strong>rematch</strong> — four mates, three games, one insured jackpot. Nudge a stake, tap the <strong>i</strong> for the exposure maths, then <strong>send it</strong>.",
-    2:   "The card lands in the group chat. Watch the accepts come in — <strong>Piet plays free as a guest</strong>, nothing to download.",
-    2.5: "All four in, exposure shown to every man before he tapped. <strong>It locks at the first tee.</strong>",
-    3:   "Saturday. The ledger runs itself — skins carry, presses arm, dots stack. <strong>$20 rides on the 7th…</strong> and so does the group's $100K ticket.",
-    4:   "The staged hole. The app arms the ticket: <strong>GPS, the marked ball, the tee cam</strong>. Then everyone films everyone.",
+    1:   "Thursday night: a <strong>rematch</strong> slip. Nudge a stake, tap the <strong>i</strong> for the maths, then <strong>send it</strong>.",
+    2:   "The slip lands in the group chat — watch the accepts come in. <strong>Piet rides free.</strong>",
+    2.5: "All four in, exposure shown first. <strong>It locks at the first tee.</strong>",
+    3:   "Saturday. The ledger runs itself — and <strong>$20 rides on the 7th</strong>.",
+    4:   "The staged hole: <strong>GPS, marked ball, tee cam</strong>. Everyone films everyone.",
     4.5: "Armed. <strong>Film the swings.</strong>",
-    6:   "Dave's ball is in the hole. Watch the verification tick through — <strong>video, ball, GPS, claim</strong>. Santam pays the group, never the pot.",
-    6.5: "Claim open with the insurer. Now the golf continues — <strong>enter the hole like any other.</strong>",
-    7:   "Scores in two taps. Dave's 1 is <strong>locked by the tee cam</strong> — the fourball attests the rest.",
-    7.5: "One enters, one confirms. <strong>Hand it to Markus.</strong>",
-    8.5: "Eleven more holes of skins, presses and dots — and the ledger never argued once. <strong>Settle on the 18th.</strong>",
-    9:   "The 19th hole. Insurer money on top, <strong>separate from the game</strong>. Below it: the whole day, netted to three transfers. Tap a rail — try Dave's.",
-    9.5: "One paid on the spot, one carried as an <strong>IOU</strong> — the reason this four is back next week. Now tap <strong>rematch</strong>.",
-    10:  "The memory. Lifetime ledgers, the crest, the IOU riding forward. <strong>Send Saturday's slip.</strong>"
+    6:   "Watch the verification tick — <strong>video, ball, GPS, claim</strong>.",
+    6.5: "Claim open. Now <strong>enter the hole like any other</strong>.",
+    7:   "Dave's 1 is <strong>locked by the tee cam</strong>. Score the rest in two taps.",
+    7.5: "One enters, one confirms — <strong>hand it to Markus</strong>.",
+    8.5: "Eleven more holes, zero arguments. Tap a hole on the board, then <strong>settle</strong>.",
+    9:   "Insurer money on top, the game below — three transfers. <strong>Tap a rail.</strong>",
+    9.5: "One paid, one an <strong>IOU</strong>. See the skins line, then <strong>rematch</strong>.",
+    10:  "The memory: ledgers, crest, the IOU riding forward. <strong>Send Saturday's slip.</strong>"
   };
 
   function coach(key) {
@@ -835,6 +940,7 @@
     GAMES[0].stake = 10; GAMES[1].stake = 5; GAMES[2].stake = 1;
     S.hole7 = null; S.scores = { J: 3, D: 1, M: 3, P: 4 }; S.sandieM = false;
     S.entered = false; S.confirmed = false; S.final = null; S.transfers = null; S.paid = {};
+    S.seasonBumped = false;
   }
 
   function go(i) {
@@ -844,6 +950,9 @@
     S.act = i;
     setClock(act.day, act.time, act.batt);
     $screen.scrollTop = 0;
+    $screen.classList.remove("screen--in");
+    void $screen.offsetWidth;
+    $screen.classList.add("screen--in");
     act.render();
   }
 
