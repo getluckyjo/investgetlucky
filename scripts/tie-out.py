@@ -15,7 +15,8 @@ m = json.loads((ROOT / "data/model.json").read_text())
 SURFACES = ["index.html", "dataroom.html",
             "scripts/docs/doc-faq.html", "scripts/docs/doc-market.html",
             "scripts/docs/doc-simulator.html",
-            "scripts/docs/doc-ernie.html", "scripts/docs/doc-ernie-commercial.html"]
+            "scripts/docs/doc-ernie.html", "scripts/docs/doc-ernie-commercial.html",
+            "scripts/docs/doc-app.html", "GetLucky_App_Requirements.md"]
 text = {f: (ROOT / f).read_text() for f in SURFACES}
 fails, checks = [], 0
 
@@ -153,6 +154,16 @@ must_have("index.html", "R53.3m", "the post-money")
 must_have("index.html", "At 2.5×", "the multiple sensitivity")
 must_have("index.html", "R185", "the 2029 milestone")
 must_have("index.html", "3.47×", "the 2029 investor multiple")
+
+# the app requirements doc (dataroom PDF source) + the master spec at root
+must_have("scripts/docs/doc-app.html", "one enters, one confirms", "the peer attestation model")
+must_have("scripts/docs/doc-app.html", "never touch", "the zero-rake peer layer")
+must_have("scripts/docs/doc-app.html", "Pride Mode", "the points default and restrictive-market fallback")
+must_have("scripts/docs/doc-app.html", "ride free", "organizer-pays; guests never pay")
+must_have("scripts/docs/doc-app.html", "jackpot attach", "the pilot's decisive metric, measured the same way as the app")
+must_have("scripts/docs/doc-app.html", "zero prize risk", "the subscription includes no swings")
+must_have("GetLucky_App_Requirements.md", "one enters, one confirms", "the peer attestation model")
+must_have("GetLucky_App_Requirements.md", "zero prize risk", "subscription = app access only")
 
 
 # every published USD conversion must equal the ZAR figure at the stated FX

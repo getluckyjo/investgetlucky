@@ -1157,6 +1157,58 @@ material fact corrections, one was a model rebuild; the rest copy/design.
   an investor. Note: anyone with a direct file URL can now fetch a
   document without touching the form; the founder accepted that trade.
 
+## 2026-08-07 (v11) — App UX & technical requirements: master spec + dataroom PDF
+
+The founder asked to build the full app-flow UX and technical requirements
+from the approved business plan. Decisions confirmed with him first:
+master spec + condensed dataroom PDF; PWA-first web core with wrapped
+iOS/Android store builds (one codebase, guests always join by link); scope =
+golfer app + 90-day pilot instrumentation + verification/claims ops console,
+simulator SDK as a forward-compatibility outline only.
+
+- **`GetLucky_App_Requirements.md`** (repo root, new): the master working
+  spec v1.0 for the founder and Cloud & Things. §0–§26 + glossary: the legal
+  spine as numbered product principles; roles/account model (guests are the
+  same account later promoted); the four-tab IA mapped line-by-line to the
+  six concept screens plus a 34-screen inventory; fifteen end-to-end flows
+  (slip → guest accept → lock → one-enters-one-confirms scoring → live
+  ledger → The Shot → claim → settlement → season, plus Pride Mode,
+  responsible play, mid-round edges, offline); the rules/handicap/netting
+  engines; the jackpot layer (USD ladder only — the ZAR stake ladder is the
+  installed-course product, never mixed); verification + claims state
+  machine; settlement rails as unilateral public link formats; data model
+  (~28 entities); analytics with **the pinned attach definition** (paid
+  ticket ÷ locked slips) shared verbatim by app, pilot and readouts; NFRs;
+  anti-fraud; ops console; pilot instrumentation (capture instrument = the
+  guest PWA slip-lite writing the same records, so pilot metric == app
+  metric structurally); the v1.0 cut against Q4 2026 / Q1 2027 / Q4 2027;
+  and an open-decisions register (§25) that flags rather than invents the
+  founder's calls: WHS/GHIN licensing, group-claim ownership/tax, billing
+  processor + store IAP posture, R149-vs-$10 price architecture, guest data
+  retention, refund terms, per-market Pride/jackpot interplay.
+- **New dataroom document**: `scripts/docs/doc-app.html` →
+  `assets/docs/get-lucky-app-requirements.pdf` (4 pages, house doc style,
+  printed via the README pipeline). Registered in `dataroom.html` directly
+  under the business plan: "App requirements — the build blueprint". Reads
+  as evidence the app this raise builds is specified before it is built.
+- **tie-out.py**: `doc-app.html` AND `GetLucky_App_Requirements.md` added to
+  `SURFACES` — both fact-bearing, both now protected by the full must_not
+  battery — plus 8 new must_have anchors (attestation line, never-touch,
+  Pride Mode, ride free, jackpot attach, zero prize risk). 76 checks, all
+  green. Consequence for future editors: the master spec cannot use the
+  banned framings (the p-word, "included swings", competitor names, etc.);
+  its traceability table therefore refers to the model.json launch block
+  descriptively rather than by that block's literal key name.
+- **`.vercelignore`**: `/GetLucky_App_Requirements.md` added — the master
+  spec carries the anti-fraud model and ops internals, so it stays off the
+  public deploy; investors get the gated PDF. **Flag for the founder**:
+  `GetLucky_Business_Plan.md` and `INVESTOR-REVIEW.md` at the root are NOT
+  ignored and are publicly fetchable on the deployed site today. Same
+  treatment (add to .vercelignore) is a one-line change if unintended.
+- Deliberately untouched: `index.html` (the six concept screens already
+  agree with the spec and are cited by line), `data/model.json`,
+  `vercel.json` (assets/docs inherits noindex + no-store). No PR opened.
+
 ## Open flags for the user (unresolved)
 
 - **"90% founder ownership"** on the deal card predates Ernie's 5% (and possibly
