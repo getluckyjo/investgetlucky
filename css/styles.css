@@ -681,8 +681,9 @@ a.nav__cta { font-size: 0.88rem; padding: 0.52rem 1.2rem; }
 @media (max-width: 640px) { .card--santam { grid-template-columns: 1fr; gap: 1rem; } }
 
 /* --- how-it-works badge layout ------------------------------------------------------------------- */
-.section-head--badge { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; justify-content: space-between; }
-.section-head--badge .challenge-badge { width: clamp(110px, 14vw, 170px); flex: none; }
+.section-head--badge { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+.section-head--badge .section-head { flex: 0 1 auto; }
+.section-head--badge .challenge-badge { width: clamp(120px, 15vw, 185px); flex: none; margin-inline: auto; }
 @media (max-width: 640px) { .section-head--badge .challenge-badge { display: none; } }
 
 /* --- deal circle image accent --------------------------------------------------------------------- */
